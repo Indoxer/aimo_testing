@@ -1,0 +1,93 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Adults made up $\frac5{12}$ of the crowd of people at a concert. After a bus carrying $50$ more people arrived, adults made up $\frac{11}{25}$ of the people at the concert. Find the minimum number of adults who could have been at the concert after the bus arrived.
+
+
+</think>
+
+Let's solve the problem step by step.
+
+**Given:**
+- Adults made up \(\frac{5}{12}\) of the original crowd.
+- After a bus carrying 50 more people arrived, adults made up \(\frac{11}{25}\) of the total people.
+
+**Let’s define:**
+- Let \( A \) be the number of adults initially.
+- Let \( C \) be the total number of people initially.
+
+**Step 1: Express the initial number of adults and children.**
+\[
+\frac{A}{C} = \frac{5}{12} \implies A = \frac{5}{12}C
+\]
+The number of children initially is:
+\[
+C - A = C - \frac{5}{12}C = \frac{7}{12}C
+\]
+
+**Step 2: After the bus arrives.**
+- Total people become \( C + 50 \).
+- Number of adults remains \( A \).
+- The fraction of adults becomes \( \frac{11}{25} \):
+\[
+\frac{A}{C + 50} = \frac{11}{25}
+\]
+Substitute \( A = \frac{5}{12}C \):
+\[
+\frac{\frac{5}{12}C}{C + 50} = \frac{11}{25}
+\]
+
+**Step 3: Solve for \( C \).**
+Cross-multiplied:
+\[
+25 \times \frac{5}{12}C = 11 \times (C + 50)
+\]
+Simplify:
+\[
+\frac{125}{12}C = 11C + 550
+\]
+Multiply both sides by 12 to eliminate fractions:
+\[
+125C = 132C + 6600
+\]
+Rearrange:
+\[
+-7C = 6600 \implies C = -942.857
+\]
+Since \( C \) must be positive, we consider the next possible integer multiple.
+
+**Step 4: Find the minimum \( C \) such that \( C + 50 \) is divisible by 25.**
+Let’s express \( C \) as:
+\[
+C = 12k \quad \text{(since \( A = \frac{5}{12}C \) must be an integer)}
+\]
+From earlier:
+\[
+C = -942.857 + 132n \quad \text{(where \( n \) is an integer)}
+\]
+To satisfy \( C > 0 \), find the smallest \( n \) such that:
+\[
+132n - 942.857 > 0 \implies n > \frac{942.857}{132} \approx 7.13
+\]
+So, \( n = 8 \).
+
+Thus,
+\[
+C = 132 \times 8 - 942.857 = 1056 - 942.857 = 113.143
+\]
+But \( C \) must be a multiple of 12, so round up to the nearest multiple of 12:
+\[
+C = 120
+\]
+Therefore, the minimum number of adults after the bus arrived is:
+\[
+A_{\text{final}} = \frac{11}{25}(120 + 50) = \frac{11}{25} \times 170 = 74.8 \approx 75
+\]
+However, since the number of adults must be an integer, the exact minimum is when \( C = 120 \).
+
+**Final Answer:**
+\[
+\boxed{75}
+\]
+
+Predicted answer: 75.0
+Valid answer: 154.0

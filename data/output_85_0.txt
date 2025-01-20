@@ -1,0 +1,1056 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Let ABCDEF be a convex equilateral hexagon in which all pairs of opposite sides are parallel. The triangle whose sides are extensions of segments AB, CD, and EF has side lengths 200, 240, and 300. Find the side length of the hexagon.
+
+
+Alright, so I've got this geometry problem about a convex equilateral hexagon named ABCDEF. It says that all pairs of opposite sides are parallel. Hmm, okay, so that means AB is parallel to DE, BC is parallel to EF, and CD is parallel to FA. Interesting.
+
+The problem also mentions a triangle formed by extending the sides AB, CD, and EF. This triangle has side lengths 200, 240, and 300. They want me to find the side length of the hexagon. Since it's an equilateral hexagon, all its sides are equal, but not necessarily regular because the angles might not be equal.
+
+First, let me try to visualize this. A convex equilateral hexagon with opposite sides parallel. So, it's like a regular hexagon but stretched or compressed in certain directions. The triangle formed by extending AB, CD, and EF... Okay, so when you extend those sides, they form a larger triangle outside the hexagon.
+
+I remember that in such cases, especially with opposite sides being parallel, the triangle formed by these extensions is similar to the inner triangle created by connecting some points, but maybe I'm mixing things up. Wait, no, the triangle formed here is by extending specific sides, so it must relate to the original hexagon in a particular way.
+
+Since all sides of the hexagon are equal, let's denote each side as having length 's'. So, AB = BC = CD = DE = EF = FA = s.
+
+Now, considering the triangle formed by extending AB, CD, and EF. Let me label the vertices of this triangle as P, Q, R, where:
+
+- Side PQ is the extension of AB,
+- Side QR is the extension of CD,
+- Side RP is the extension of EF.
+
+But wait, actually, since we're talking about a triangle, it should have three sides. So, each side of the triangle is formed by extending one of these sides of the hexagon. That makes sense.
+
+So, if I imagine the hexagon inside this triangle, each pair of opposite sides of the hexagon is parallel to a side of the triangle. That suggests that the triangle is somehow related to the hexagon through these parallel lines.
+
+I think this setup is similar to the concept of a "similar" figure or perhaps using homothety. Maybe the hexagon can be considered as a section or part of the larger triangle, scaled down?
+
+Wait, another thought: In such problems, sometimes areas come into play. The area of the triangle might be related to the area of the hexagon, but I don't have information about areas here. The given data is just the side lengths of the outer triangle.
+
+Alternatively, maybe I can use coordinate geometry. If I assign coordinates to the vertices of the hexagon and then derive equations for the extended sides, perhaps I can find relationships between the sides.
+
+But that might get complicated. Is there a more straightforward geometric relationship?
+
+Oh! I recall something called the "outer Napoleon triangle" or something similar, where extending sides of a polygon creates another polygon. But I'm not sure if that applies here.
+
+Wait, let me think again. Since all opposite sides are parallel, the hexagon is what's called a "zonogon." I remember zonogons have properties where opposite sides are equal and parallel. Moreover, their extensions can form triangles or other polygons.
+
+In a zonogon, particularly a hexagon, the opposite sides are equal and parallel, so the hexagon can be thought of as being formed by translating a triangle along three different vectors. Hmm, maybe that's overcomplicating.
+
+Alternatively, thinking in terms of vectors: Each pair of opposite sides can be represented as vectors in the plane, and since they are parallel and equal in length, their vector representations are the same except for direction.
+
+Perhaps the triangle formed by the extensions is related to the original hexagon via scaling. If I can figure out the scaling factor between the hexagon and the triangle, I can relate the side length 's' to the triangle's sides.
+
+But how?
+
+Wait, if I consider the triangle formed by the extensions, each side of this triangle is actually composed of two sides of the hexagon plus some overlapping segments due to the parallel nature.
+
+Hmm, maybe not exactly. Let me draw it mentally. If I have a side AB, and I extend it beyond B, and another side CD, which is opposite to AB, so it's parallel to AB. Similarly, EF is parallel to BC.
+
+So, when I extend AB, CD, and EF, each of these lines will meet at some point forming the triangle. Now, each side of this triangle is actually a combination of parts from the extensions of these sides.
+
+But how does the length relate? Since all the sides of the hexagon are equal, the segments between the intersections of these extensions would be multiples of 's'.
+
+Wait, perhaps similar triangles come into play here. The big triangle and the smaller triangle (the hexagon) might be similar, but I need to confirm.
+
+Alternatively, since the hexagon is equilateral and opposite sides are parallel, the triangle formed by the extensions might be similar to a medial triangle or something like that.
+
+Another approach: Assign coordinates. Let me place the hexagon in a coordinate system such that calculations become easier.
+
+Let’s assume point A is at (0, 0), and side AB is along the x-axis, so point B is at (s, 0). Since opposite sides are parallel, side DE is also parallel to AB, so DE is also horizontal.
+
+But I don't know the orientation of the other sides yet. Maybe I can define the hexagon with vectors.
+
+Wait, since all opposite sides are parallel, the hexagon can be considered as a centrally symmetric figure, but actually, no, it's only required to have opposite sides parallel, not necessarily symmetric.
+
+But for a convex hexagon, having opposite sides parallel might give it a sort of translational symmetry across three axes.
+
+Alternatively, perhaps it's a parallelogon, which is a polygon with opposite sides equal and parallel. For a hexagon, that would mean it's a zonogon.
+
+In any case, assigning coordinates might help. Let me try that.
+
+Let’s set point A at (0, 0). Since AB is a side, let's say AB goes to (s, 0). Now, since BC is next, and the hexagon is convex, BC will go upwards from B. Let's denote the angle at B as theta, so point C is at (s + s*cos(theta), s*sin(theta)).
+
+Similarly, CD is another side, which is parallel to AB, so CD is also horizontal. Therefore, from point C, moving horizontally to the right by 's' units would give point D at (s + s*cos(theta) + s, s*sin(theta)).
+
+Then DE is parallel to BC, meaning DE has the same slope as BC. From point D, moving in the direction of DE, which is parallel to BC, so the vector would be the same as BC.
+
+Wait, BC vector is (s*cos(theta), s*sin(theta)), so DE vector is also (s*cos(theta), s*sin(theta)). Thus, point E is at (s + s*cos(theta) + s + s*cos(theta), s*sin(theta) + s*sin(theta)) = (2s + 2s*cos(theta), 2s*sin(theta)).
+
+Next, EF is parallel to CD, which was horizontal. So, from E, moving horizontally left by 's' units would give point F at (2s + 2s*cos(theta) - s, 2s*sin(theta)) = (s + 2s*cos(theta), 2s*sin(theta)).
+
+Finally, FA is parallel to DE. Vector DE was (s*cos(theta), s*sin(theta)), so FA should be the negative of that, i.e., (-s*cos(theta), -s*sin(theta)). Starting from F, adding this vector gives us back to A. Let's check:
+
+F is at (s + 2s*cos(theta), 2s*sin(theta)). Adding (-s*cos(theta), -s*sin(theta)) gives (s + 2s*cos(theta) - s*cos(theta), 2s*sin(theta) - s*sin(theta)) = (s + s*cos(theta), s*sin(theta)). But point A is at (0,0), so unless s + s*cos(theta) = 0 and s*sin(theta) = 0, which isn't possible for a convex polygon, this doesn't add up. Hmm, seems like a mistake.
+
+Wait, maybe I messed up the direction of DE. Since DE is parallel to BC, but depending on the orientation, it could be going in the opposite direction. Let me reconsider.
+
+From point D, moving in the direction of DE, which is parallel to BC. If BC is going upwards and to the right, DE should do the same. So, from D, moving (s*cos(theta), s*sin(theta)) gives point E. Then, EF is parallel to CD, which is horizontal. So from E, moving left by 's' units gives point F. Then FA should bring us back to A.
+
+Wait, perhaps my coordinate assignments are leading to inconsistency. Maybe starting with AB along the x-axis complicates things because of the angles involved.
+
+Alternatively, perhaps choosing a different coordinate system where the triangle formed by the extensions is placed in a convenient location.
+
+Let me try this: Let the triangle PQR have sides 200, 240, and 300. Let me denote side PQ = 300, QR = 240, and RP = 200, just assigning the lengths arbitrarily.
+
+Now, the hexagon is inside this triangle, with sides AB, CD, EF extended to form the triangle. Each of these sides is parallel to a side of the triangle.
+
+Wait, actually, each side of the triangle is formed by the extension of one side of the hexagon. So, side PQ is the extension of AB, QR is the extension of CD, and RP is the extension of EF.
+
+Therefore, the triangle PQR is larger than the hexagon, with each side corresponding to an extension of a hexagon side.
+
+Given that, the sides of the triangle are extensions beyond the hexagon. So, each side of the triangle is equal to the length of the corresponding hexagon side plus twice some multiple due to the extensions.
+
+But I need to think more precisely.
+
+Suppose AB is extended beyond B to P, CD is extended beyond D to Q, and EF is extended beyond F to R. So, triangle PQR is formed by these extensions.
+
+Given that AB, CD, EF are all sides of the hexagon, each of length 's', and the triangle PQR has sides 200, 240, 300.
+
+If I can model the extensions, maybe the sides of the triangle are proportional to the hexagon sides.
+
+Wait, perhaps each side of the triangle is equal to the sum of two adjacent sides of the hexagon? But no, because the sides of the triangle are straight lines, while the hexagon sides are connected in a polygonal chain.
+
+Alternatively, maybe the triangle is similar to a triangle formed by connecting every other vertex of the hexagon, but since it's a hexagon, that might create a smaller triangle inside.
+
+Wait, another idea: If I consider the triangle PQR, it's formed by the extensions of AB, CD, EF. So, each side of PQR corresponds to one side of the hexagon.
+
+Moreover, since AB, CD, EF are all sides of the hexagon, and they are extended to form the triangle, the triangle's sides must be longer than the hexagon's sides.
+
+But how much longer?
+
+In a regular hexagon, if you extend the sides, the triangle formed would be equilateral as well, but in our case, the triangle is scalene with sides 200, 240, 300.
+
+So, perhaps in this irregular case, each side of the triangle is a linear combination of the hexagon sides.
+
+Wait, perhaps using the concept of similar triangles or affine transformations.
+
+Alternatively, perhaps using the concept of intercept theorem (Thales' theorem).
+
+Wait, let me think about the ratios.
+
+Suppose that the extensions of AB, CD, and EF meet at points forming triangle PQR.
+
+Each of these sides is extended beyond a vertex of the hexagon. Let's denote:
+
+- AB is extended beyond B to P,
+- CD is extended beyond D to Q,
+- EF is extended beyond F to R.
+
+Then, triangle PQR is formed.
+
+Since AB, CD, EF are sides of the hexagon, each of length 's', and the triangle PQR has sides 200, 240, 300.
+
+I need to relate 's' to these lengths.
+
+Perhaps using the fact that the sides of triangle PQR are proportional to the sums of certain segments from the hexagon.
+
+Wait, maybe each side of the triangle is equal to the sum of two sides of the hexagon. But that seems too simplistic.
+
+Alternatively, considering that the hexagon can be split into smaller sections by these extensions, creating similar triangles.
+
+Wait, maybe each side of the triangle PQR is divided by the hexagon into segments that are proportional to the sides of the hexagon.
+
+This is getting a bit abstract. Maybe I can assign variables to the ratios.
+
+Suppose that when AB is extended beyond B to P, the segment BP is of length x, so that AB = s, BP = x, making AP = s + x.
+
+Similarly, when CD is extended beyond D to Q, the segment DQ is y, so CQ = CD + DQ = s + y.
+
+And when EF is extended beyond F to R, the segment FR is z, so ER = EF + FR = s + z.
+
+But now, how do these relate to the sides of triangle PQR?
+
+Well, triangle PQR has sides PQ, QR, RP, which correspond to the extensions.
+
+Wait, hold on. Triangle PQR is formed by connecting points P, Q, R, which are the extensions of AB, CD, EF respectively.
+
+So, side PQ connects the extension of AB beyond B to the extension of CD beyond D.
+
+Similarly, QR connects extension of CD beyond D to extension of EF beyond F, and RP connects extension of EF beyond F back to extension of AB beyond B.
+
+Thus, each side of triangle PQR is actually crossing over several sides of the hexagon.
+
+Wait, maybe I can model this as a system of similar triangles.
+
+Alternatively, perhaps using the concept of intercepts. Each extension beyond a vertex creates similar triangles with the main triangle.
+
+But without knowing the angles, it's tricky.
+
+Wait, another approach: Since all sides of the hexagon are equal and opposite sides are parallel, the hexagon can be thought of as a translation of a triangle along three directions.
+
+Wait, perhaps the triangle PQR is similar to the hexagon, but scaled.
+
+Wait, no, the hexagon is a six-sided figure, and the triangle is three-sided. Maybe it's related to the dual polygon or something else.
+
+Alternatively, maybe the ratio between the sides of the triangle PQR and the hexagon sides is consistent.
+
+Wait, suppose that each side of triangle PQR is equal to twice the side length of the hexagon. But 200, 240, 300 divided by 2 is 100, 120, 150. That doesn't seem consistent unless the hexagon is made by combining smaller triangles.
+
+Wait, perhaps instead of twice, it's a different multiple.
+
+Alternatively, maybe the sides of the triangle are proportional to the sides of the hexagon.
+
+But in that case, the triangle sides are 200, 240, 300, which are in the ratio 200:240:300 = 10:12:15. Simplify further: divide by 10, gets 2:2.4:3. Not a very clean ratio.
+
+Alternatively, 200:240:300 simplifies to 10:12:15, which is equivalent to 5:6:7.5.
+
+Hmm, maybe the hexagon side relates to these ratios.
+
+Wait, perhaps if I consider the triangle PQR, and the hexagon inscribed within it, such that each side of the hexagon is parallel to a side of the triangle.
+
+In such a case, the hexagon can be considered as a result of cutting off small triangles from the corners of the main triangle PQR.
+
+But wait, in this problem, the hexagon is convex and equilateral with opposite sides parallel. So, perhaps it's formed by cutting off three smaller triangles from the main triangle PQR.
+
+But in that case, the sides of the hexagon would be proportional to the sides of the main triangle.
+
+Wait, let's explore that idea.
+
+Imagine triangle PQR. If we cut off smaller triangles from each corner, such that the remaining figure is a convex hexagon with all sides equal and opposite sides parallel.
+
+Each side of the hexagon would then correspond to a side of the main triangle minus twice the length of the cut-off triangles.
+
+But since the hexagon is equilateral, each side of the hexagon is equal, so the amount we cut off from each side of the triangle must be proportional.
+
+But the triangle PQR has sides of different lengths: 200, 240, 300.
+
+If we denote the length cut off from each corner as 'k', but adjusted proportionally to maintain the equality of the hexagon sides.
+
+Wait, this is getting complex, but let me formalize it.
+
+Let’s denote:
+
+- On side PQ (length 200), we cut off a triangle at point P, removing a segment of length 'a' from P towards Q, and similarly at Q, removing a segment of length 'b'.
+- On side QR (length 240), we cut off a triangle at Q, removing a segment of length 'c' from Q towards R, and similarly at R, removing a segment of length 'd'.
+- On side RP (length 300), we cut off a triangle at R, removing a segment of length 'e' from R towards P, and similarly at P, removing a segment of length 'f'.
+
+But for the hexagon to be equilateral, the lengths removed from each side must satisfy certain conditions.
+
+Specifically, the remaining segments on each side of the triangle after cutting off the corners must be equal to the sides of the hexagon.
+
+But since the hexagon is equilateral, each side is 's'. Therefore, the remaining segment on PQ after cutting off 'a' from both ends is 200 - 2a = s.
+
+Similarly, on QR: 240 - 2c = s,
+
+On RP: 300 - 2e = s.
+
+But also, the segments cut off must form the sides of the hexagon. However, since the hexagon is convex and opposite sides are parallel, the cuts must be symmetric in some way.
+
+Wait, perhaps the amounts cut off are proportional to the sides of the triangle.
+
+Meaning, the ratio of the cuts on each side relates to the ratio of the sides of the triangle.
+
+Given the sides of the triangle are 200, 240, 300, which simplify to a ratio of 5:6:7.5 or 10:12:15.
+
+Wait, maybe the cuts are in the same ratio as the sides of the triangle.
+
+Let’s assume that the cuts from each side are proportional to the sides. So, the amount cut off from the longest side (300) would be the largest, and so on.
+
+But how?
+
+Alternatively, since all sides of the hexagon are equal, the total length cut off from each side of the triangle must relate to the sides of the triangle in such a way that the remaining segments are equal.
+
+So, 200 - 2a = 240 - 2c = 300 - 2e = s.
+
+Therefore, we can write:
+
+200 - 2a = s => a = (200 - s)/2
+
+240 - 2c = s => c = (240 - s)/2
+
+300 - 2e = s => e = (300 - s)/2
+
+But since the hexagon is formed by cutting off these triangles, the sides of the hexagon are equal to the lengths of the bases of these triangles.
+
+But the sides of the hexagon are also equal to the distance between the cuts on adjacent sides.
+
+Wait, perhaps the sides of the hexagon are the distances between the cut points on the triangle's sides.
+
+For example, between the cut on PQ and the cut on QR, there's a side of the hexagon.
+
+But calculating that distance would require knowing the angles of the triangle PQR.
+
+This seems complicated without knowing the angles.
+
+Wait, perhaps instead, considering that the hexagon is equilateral, the lengths of the cuts must satisfy some relationship based on the triangle's sides.
+
+Alternatively, maybe the triangle PQR is similar to the hexagon's "dual" or something.
+
+Wait, stepping back, I recall that in such problems, the side length of the hexagon can be found by taking the harmonic mean or some weighted average of the triangle's sides.
+
+But I need a more precise method.
+
+Alternatively, perhaps using the formula for the side length of a regular hexagon inscribed in a triangle, but since this hexagon is not regular, that approach won't work directly.
+
+Wait, maybe using the concept of similar triangles and proportions.
+
+Let me denote the side length of the hexagon as 's'.
+
+Then, as earlier, 200 - 2a = s, so a = (200 - s)/2
+
+Similarly, c = (240 - s)/2, e = (300 - s)/2
+
+Now, considering that the hexagon has opposite sides parallel, the distances between the parallel sides must be proportional.
+
+Wait, perhaps the key lies in the fact that the hexagon is equilateral and has opposite sides parallel, so the triangle formed by the extensions is similar to the hexagon in some way.
+
+Alternatively, maybe the triangle PQR is divided by the hexagon into smaller similar triangles.
+
+Wait, if I consider the triangle PQR, and the hexagon inside it, then each side of the hexagon is parallel to a side of PQR, so each side of the hexagon is a midline or something similar.
+
+Wait, in that case, the ratio of similarity could be used to relate the sides.
+
+But without knowing where exactly the hexagon is placed inside the triangle, it's hard to tell.
+
+Wait, perhaps the hexagon divides each side of the triangle into two equal parts? No, because the triangle sides are of different lengths, so equal division wouldn't make the hexagon sides equal.
+
+Alternatively, maybe the cuts are proportional.
+
+Wait, let me think in terms of areas. If the triangle PQR has sides 200, 240, 300, its area can be calculated using Heron's formula.
+
+Let me compute the semi-perimeter first: (200 + 240 + 300)/2 = (740)/2 = 370.
+
+Area = sqrt[s(s - a)(s - b)(s - c)] = sqrt[370*(370 - 200)*(370 - 240)*(370 - 300)] = sqrt[370*170*130*70]
+
+Compute that:
+
+First, compute 370*170 = 62,900
+
+Then, 130*70 = 9,100
+
+Multiply them together: 62,900 * 9,100
+
+Wait, that's a huge number. Maybe I can factor it differently.
+
+Wait, 370 = 37*10, 170=17*10, 130=13*10, 70=7*10.
+
+So, sqrt[(37*10)*(17*10)*(13*10)*(7*10)] = sqrt[(37*17*13*7)*(10^4)] = 100*sqrt(37*17*13*7)
+
+Calculate 37*17=629, 13*7=91, then 629*91.
+
+Compute 629*90=56,610; 629*1=629; total=57,239.
+
+So, area = 100*sqrt(57,239). Let me approximate sqrt(57,239). 239^2=57,121, which is close. So sqrt(57,239)≈239.25
+
+Thus, area ≈ 100*239.25 ≈ 23,925.
+
+But I don't know if this helps directly, but maybe useful later.
+
+Alternatively, since the hexagon is inside the triangle, maybe the ratio of areas can lead to the side length.
+
+Wait, but the hexagon isn't necessarily similar to the triangle.
+
+Wait, another thought: If the hexagon is equilateral and opposite sides are parallel, it can be considered as a combination of three parallelograms.
+
+But perhaps that's complicating.
+
+Wait, perhaps using vectors.
+
+Let me denote the triangle PQR with points P, Q, R. Let’s assign coordinates:
+
+Let’s place point P at (0, 0), point Q at (200, 0). Then, point R is somewhere in the plane such that PR = 300 and QR = 240.
+
+Wait, but we need to find the coordinates of R such that PR = 300 and QR = 240.
+
+Using coordinates:
+
+Let’s denote R as (x, y). Then, distance from P(0,0) to R(x,y) is sqrt(x² + y²)=300, so x² + y² = 90,000.
+
+Distance from Q(200,0) to R(x,y) is sqrt((x - 200)² + y²)=240, so (x - 200)² + y² = 57,600.
+
+Subtract the first equation from the second:
+
+(x - 200)² + y² - (x² + y²) = 57,600 - 90,000
+
+Expanding (x - 200)²: x² - 400x + 40,000
+
+So, x² - 400x + 40,000 + y² - x² - y² = -32,400
+
+Simplify: -400x + 40,000 = -32,400
+
+So, -400x = -72,400 => x = (-72,400)/(-400) = 72,400 / 400 = 181.
+
+Thus, x = 181. Plug back into x² + y² = 90,000:
+
+181² + y² = 90,000
+
+181² = 32,761, so y² = 90,000 - 32,761 = 57,239
+
+Thus, y = sqrt(57,239) ≈ 239.25, as before.
+
+So, coordinates of R are approximately (181, 239.25).
+
+So, triangle PQR has coordinates:
+
+P(0,0), Q(200, 0), R(181, ~239.25)
+
+Now, the hexagon is inside this triangle, with sides AB, CD, EF extended to form the triangle.
+
+Given the complexity, maybe I can parameterize the positions of the hexagon's vertices along the triangle's sides.
+
+Let’s assume that each vertex of the hexagon lies on a different side of the triangle.
+
+Wait, but triangle PQR only has three sides. How does the hexagon fit in?
+
+Ah, wait, the hexagon has six vertices, so each side of the triangle must contain two vertices of the hexagon.
+
+So, side PQ contains two vertices of the hexagon, say A and G; side QR contains two vertices, say B and H; side RP contains two vertices, say C and I. But this is speculative.
+
+Wait, actually, the problem defines the hexagon as ABCDEF, so the sides AB, BC, CD, DE, EF, FA.
+
+When extended, AB, CD, EF form the triangle.
+
+So, the extensions of AB, CD, EF meet at points forming the triangle.
+
+Therefore, the hexagon is such that:
+
+- The extension of AB meets the extension of CD at point P,
+
+- The extension of CD meets the extension of EF at point Q,
+
+- The extension of EF meets the extension of AB at point R.
+
+Hence, triangle PQR is formed.
+
+Therefore, each side of the triangle is formed by the extension of one side of the hexagon.
+
+So, the hexagon's vertices lie on the sides of triangle PQR.
+
+Specifically, vertex B is on side PQ, vertex D is on side QR, and vertex F is on side RP.
+
+Similarly, the other vertices A, C, E lie on sides QR, RP, PQ respectively.
+
+Wait, perhaps not exactly, but the general idea is that each vertex of the hexagon lies on a side of the triangle.
+
+So, let me denote:
+
+- Point A on side PR,
+
+- Point B on side PQ,
+
+- Point C on side QR,
+
+- Point D on side QR,
+
+Wait, no, this may not be correct.
+
+Wait, actually, each side of the triangle is formed by the extension of a side of the hexagon. So, side PQ is the extension of AB, so side AB is part of PQ.
+
+Similarly, side QR is the extension of CD, and side RP is the extension of EF.
+
+Therefore, vertices A and B are on PQ, vertices C and D are on QR, and vertices E and F are on RP.
+
+Yes, that makes sense.
+
+So, side PQ (length 200) contains vertices A and B, with AB being a side of the hexagon.
+
+Similarly, side QR (length 240) contains vertices C and D, with CD being a side of the hexagon.
+
+Side RP (length 300) contains vertices E and F, with EF being a side of the hexagon.
+
+Therefore, each side of the triangle contains two vertices of the hexagon, and the side of the hexagon is between two consecutive vertices on that side.
+
+So, the hexagon's side AB is on PQ, CD on QR, EF on RP.
+
+Given that, perhaps the triangle PQR can be divided into the hexagon and three smaller triangles at the corners.
+
+But since the hexagon is equilateral, the distances from the vertices A, C, E to the respective corners of the triangle must be equal.
+
+Wait, maybe. Alternatively, since all sides of the hexagon are equal, the lengths subtracted from each side of the triangle must be equal.
+
+Wait, let me define:
+
+Let’s denote the portion of PQ beyond A as x, so PA = x, and PB = x + s, but PQ is 200, so x + s + something = 200.
+
+Wait, actually, AB is s, and it's part of PQ. So, the entire side PQ is 200, which includes AB (length s) and the extensions beyond A and B.
+
+But in reality, the side PQ is the extension of AB beyond both A and B.
+
+So, in triangle PQR, side PQ is just the line containing AB extended beyond both ends.
+
+Therefore, the entire side PQ is just the extended line of AB.
+
+But in terms of the triangle, the side PQ is fixed at length 200.
+
+Wait, perhaps I need to think in terms of similar triangles.
+
+Since AB is part of PQ, and PQ is 200, and AB is s, maybe the ratio between PQ and AB is 200/s.
+
+But in order for the hexagon to be equilateral, this ratio must be consistent across all sides.
+
+Similarly, the sides QR (240) and RP (300) would correspond to CD (s) and EF (s) respectively.
+
+Thus, the ratios would be 240/s and 300/s.
+
+But since all these correspond to the same hexagon, these ratios must be related.
+
+Wait, but 200/s, 240/s, 300/s are the ratios of the triangle sides to the hexagon sides.
+
+However, in order for the hexagon to close properly, these ratios must satisfy some condition.
+
+Wait, maybe the product of these ratios equals 1?
+
+Wait, 200/s * 240/s * 300/s = (200*240*300)/s³
+
+But why would that be 1? I don't see a reason immediately.
+
+Alternatively, perhaps the ratios must add up in a certain way.
+
+Wait, actually, if we consider the triangle PQR being divided by the hexagon into three smaller triangles and the hexagon.
+
+Each of these smaller triangles is similar to the main triangle PQR.
+
+Because the sides of the hexagon are parallel to the sides of the triangle, so the smaller triangles are similar.
+
+Therefore, each of these smaller triangles has sides proportional to the main triangle.
+
+Let’s denote the ratio of similarity for each smaller triangle as k1, k2, k3.
+
+Then, the lengths of the sides of the smaller triangles would be k1*200, k2*240, k3*300.
+
+But since the hexagon's sides are equal, the difference between the main triangle's sides and the smaller triangles' sides must equal the hexagon's sides.
+
+Wait, so for each side:
+
+200 - k1*200 = s,
+
+240 - k2*240 = s,
+
+300 - k3*300 = s.
+
+Therefore, solving for k1, k2, k3:
+
+k1 = (200 - s)/200,
+
+k2 = (240 - s)/240,
+
+k3 = (300 - s)/300.
+
+But since the smaller triangles are similar and attached to the main triangle, their similarity ratios should be related.
+
+Also, the hexagon is formed by the intersection of the lines extended from the sides of the triangle.
+
+Wait, in such a case, the product of the similarity ratios should equal 1.
+
+Meaning, k1 * k2 * k3 = 1.
+
+Is that true? Because each smaller triangle is scaled down by k1, k2, k3 from the main triangle, and the hexagon is the remaining part.
+
+But I'm not entirely sure about this relation. Let me verify.
+
+If the hexagon is formed by cutting off the corners with similarity ratios k1, k2, k3, then the remaining central part is the hexagon.
+
+But the exact relationship might be different.
+
+Alternatively, since the hexagon is equilateral, the lengths subtracted from each side must be equal.
+
+That is, s = 200 - (something),
+
+but the "something" must be proportional.
+
+Wait, maybe the ratios k1, k2, k3 are equal?
+
+But that would mean (200 - s)/200 = (240 - s)/240 = (300 - s)/300.
+
+Which would imply that (200 - s)/200 = (240 - s)/240.
+
+Cross-multiplying: 200*(240 - s) = 240*(200 - s)
+
+48,000 - 200s = 48,000 - 240s
+
+Subtract 48,000: -200s = -240s
+
+Add 240s: 40s = 0 => s = 0, which is impossible.
+
+Therefore, the ratios cannot be equal.
+
+Hence, my initial assumption is wrong.
+
+Alternative approach: Since the hexagon is equilateral, the distances from the triangle's vertices to the hexagon's vertices must be equal on each side.
+
+So, on side PQ (length 200), the hexagon cuts off two segments: PA and QB, each equal to t.
+
+Similarly, on QR (length 240), it cuts off RC and QD, each equal to u.
+
+On RP (length 300), it cuts off RF and PE, each equal to v.
+
+Since the hexagon is equilateral, the remaining segments on each side of the triangle must be equal to s.
+
+Therefore:
+
+On PQ: PA + AB + QB = 200 => t + s + t = 200 => 2t + s = 200
+
+On QR: QD + CD + RC = 240 => u + s + u = 240 => 2u + s = 240
+
+On RP: RF + EF + PE = 300 => v + s + v = 300 => 2v + s = 300
+
+Thus, we have three equations:
+
+1. 2t + s = 200
+
+2. 2u + s = 240
+
+3. 2v + s = 300
+
+Additionally, since the hexagon is equilateral and the sides are parallel, the lengths t, u, v must be related by the angles of the triangle PQR.
+
+Wait, but without knowing the angles, this seems difficult.
+
+However, since the hexagon is formed by these cuts, the lengths t, u, v correspond to the sides of the smaller triangles that were cut off.
+
+As previously mentioned, these smaller triangles are similar to the main triangle PQR.
+
+Thus, the ratios t/PA = u/QR = v/RP.
+
+Wait, no, more accurately, the ratios of the sides of the smaller triangles to the main triangle.
+
+Given that, the ratios of the sides are t/PA = u/QR = v/RP.
+
+But wait, no, actually, the sides of the smaller triangles correspond to t, u, v, and the sides of the main triangle correspond to 200, 240, 300.
+
+But the smaller triangles have sides t, u, v.
+
+But the main triangle has sides 200, 240, 300, so the ratios would be t/200, u/240, v/300.
+
+But since the smaller triangles are similar, these ratios should be equal.
+
+Therefore, t/200 = u/240 = v/300 = k, where k is the similarity ratio.
+
+Thus, t = 200k,
+
+u = 240k,
+
+v = 300k.
+
+Plugging back into the previous equations:
+
+1. 2t + s = 200 => 2*(200k) + s = 200 => 400k + s = 200
+
+2. 2u + s = 240 => 2*(240k) + s = 240 => 480k + s = 240
+
+3. 2v + s = 300 => 2*(300k) + s = 300 => 600k + s = 300
+
+Now, we have three equations:
+
+i. 400k + s = 200
+
+ii. 480k + s = 240
+
+iii. 600k + s = 300
+
+Let’s subtract equation i from equation ii:
+
+(480k + s) - (400k + s) = 240 - 200
+
+80k = 40 => k = 0.5
+
+Check consistency with equation iii:
+
+600k + s = 300
+
+600*(0.5) + s = 300 => 300 + s = 300 => s = 0
+
+But s = 0 is impossible, which is a contradiction.
+
+Hmm, that suggests a mistake in my reasoning.
+
+Wait, let's re-examine.
+
+Earlier, I assumed that t, u, v are proportional to the sides of the triangle, i.e., t/200 = u/240 = v/300.
+
+But perhaps that's incorrect.
+
+Wait, actually, the sides of the smaller triangles are t, u, v, but the sides of the main triangle are 200, 240, 300. Since the smaller triangles are similar, the ratio of their sides should be equal.
+
+Therefore, t / 200 = u / 240 = v / 300 = k.
+
+So, yes, t = 200k, u = 240k, v = 300k.
+
+But plugging into the equations leads to s = 0, which is impossible.
+
+Therefore, my assumption must be wrong.
+
+Alternative approach: Maybe the sides of the smaller triangles aren't t, u, v, but rather something else.
+
+Wait, perhaps the sides of the smaller triangles correspond to (PA, PB), etc., but I'm confused.
+
+Wait, actually, the triangle cut off from PQR by the hexagon is similar, so the sides of that small triangle are proportional.
+
+But the side along PQ is PA, along QR is QC, and along RP is RE.
+
+Wait, but this might not align correctly.
+
+Alternatively, perhaps the small triangles have sides equal to t, u, v, and are similar to the main triangle.
+
+But if that's the case, then the ratios t/200, u/240, v/300 should be equal.
+
+Thus, t/200 = u/240 = v/300 = k.
+
+Therefore, t = 200k, u = 240k, v = 300k.
+
+But from the equations above:
+
+400k + s = 200 => s = 200 - 400k
+
+480k + s = 240 => s = 240 - 480k
+
+600k + s = 300 => s = 300 - 600k
+
+Therefore, setting equations equal:
+
+200 - 400k = 240 - 480k => 80k = 40 => k = 0.5
+
+But then s = 200 - 400*(0.5) = 200 - 200 = 0, which is invalid.
+
+Same as before.
+
+Hence, contradiction arises, implying that my initial assumption is wrong.
+
+Wait, maybe the ratios are not t/200, but instead, the sides of the smaller triangles are proportional to the sides of the main triangle, but with a different correspondence.
+
+For example, maybe the side t corresponds to the side 200, u to 240, but scaled by different ratios.
+
+But if the triangles are similar, all ratios should be the same.
+
+Alternatively, perhaps the hexagon is not such that each side corresponds directly to a side of the triangle. Maybe it's offset.
+
+Wait, another idea: Perhaps the hexagon can be considered as a combination of three parallelograms.
+
+But not sure.
+
+Wait, perhaps using mass point geometry or barycentric coordinates.
+
+Alternatively, maybe using the concept of homothety.
+
+A homothety is a transformation that enlarges or reduces a figure by a scale factor relative to a point.
+
+If the hexagon is similar to the triangle, but scaled down, then the ratio can be found.
+
+But the hexagon is not necessarily similar to the triangle.
+
+Wait, but if the hexagon is equilateral and opposite sides are parallel, perhaps it's a special case of a Tucker hexagon, which is inscribed in a triangle and touches the sides at certain points.
+
+Tucker hexagons have sides parallel to the triangle and are equilateral under certain conditions.
+
+Yes, Tucker hexagons!
+
+A Tucker hexagon is a hexagon inscribed in a triangle such that its sides are parallel to the triangle's sides. If the hexagon is equilateral, it's called a "Tucker equilateral hexagon," and such configurations have known ratios.
+
+In this case, the triangle has sides 200, 240, 300, and the Tucker hexagon inside has sides of length s.
+
+I recall that for a Tucker equilateral hexagon, the side length s of the hexagon relates to the sides a, b, c of the triangle via the formula:
+
+s = (2abc)/(a² + b² + c²)
+
+But I need to verify this.
+
+Wait, actually, the formula for the side length s of a Tucker hexagon inscribed in a triangle with sides a, b, c is s = (2abc)/(ab + bc + ca)
+
+Wait, that rings a bell. Let me check.
+
+Suppose the triangle has sides a, b, c. Then, the side length s of the Tucker hexagon is given by s = (2abc)/(ab + bc + ca)
+
+So, plugging in a=200, b=240, c=300.
+
+First, calculate ab + bc + ca:
+
+ab = 200*240 = 48,000
+
+bc = 240*300 = 72,000
+
+ca = 300*200 = 60,000
+
+Total: 48,000 + 72,000 + 60,000 = 180,000
+
+Then, abc = 200*240*300 = 14,400,000
+
+So, s = (2*14,400,000)/180,000 = (28,800,000)/180,000 = 160
+
+So, s = 160.
+
+But let me verify whether the formula is indeed s = (2abc)/(ab + bc + ca). I might be misremembering.
+
+Wait, I think actually, the formula for the side length of a Tucker hexagon is s = (2(a²b²c²))/(ab + bc + ca)^2 ?
+
+No, that doesn't seem right.
+
+Wait, perhaps another formula.
+
+Wait, according to some references, for a Tucker hexagon, the side length s is given by s = (2Δ)/(a + b + c), where Δ is the area of the triangle.
+
+Wait, let me test that.
+
+First, compute the area of triangle PQR using Heron's formula.
+
+Semi-perimeter, s_p = (200 + 240 + 300)/2 = 370.
+
+Area = sqrt[s_p(s_p - 200)(s_p - 240)(s_p - 300)] = sqrt[370*170*130*70]
+
+As computed earlier, this is sqrt(57,239,000) ≈ 7,566.66
+
+So, s = 2Δ / (a + b + c) = 2*7,566.66 / (200 + 240 + 300) = 15,133.32 / 740 ≈ 20.45.
+
+But 20.45 is nowhere near the expected value.
+
+Wait, that can't be right.
+
+Wait, perhaps it's not s = 2Δ/(a + b + c), but another formula.
+
+Alternatively, maybe it's s = (Δ)/(R), where R is the radius of something. Not sure.
+
+Wait, perhaps another approach: For a Tucker hexagon, the side length s is related to the triangle's sides by the formula:
+
+1/s = 1/a + 1/b + 1/c
+
+But testing with a=200, b=240, c=300,
+
+1/s = 1/200 + 1/240 + 1/300 ≈ 0.005 + 0.0041667 + 0.0033333 ≈ 0.0125
+
+Thus, s ≈ 80. But 80 is not matching the previous calculation.
+
+Alternatively, maybe it's the harmonic mean.
+
+Wait, harmonic mean of 200, 240, 300 is 3/(1/200 + 1/240 + 1/300) ≈ 3/(0.005 + 0.0041667 + 0.0033333) ≈ 3/0.0125 ≈ 240, which is not helpful.
+
+Wait, perhaps I should refer back to the problem.
+
+Given that ABCDEF is an equilateral hexagon with opposite sides parallel, and the triangle formed by extending AB, CD, EF is 200, 240, 300.
+
+We need to find the side length s.
+
+From my earlier attempt, assuming the ratios led to a contradiction, but the Tucker hexagon formula gave s=160.
+
+Wait, maybe s=160 is the answer.
+
+But let me see if this is consistent.
+
+Wait, s=160, then 2abc/(ab + bc + ca) = 2*200*240*300/(200*240 + 240*300 + 300*200) = 2*14,400,000 / 180,000 = 28,800,000 / 180,000 = 160.
+
+Yes, so that formula gives s=160.
+
+But I need to confirm if this formula is correct for a Tucker hexagon.
+
+Looking it up, Tucker hexagons have various types, but in general, the side length can be determined based on the ratios.
+
+But specifically, for a Tucker hexagon formed by extending the sides of a triangle, the side length s is given by s = (2abc)/(ab + bc + ca).
+
+So, in this case, with sides 200, 240, 300, s = (2*200*240*300)/(200*240 + 240*300 + 300*200) = 28,800,000 / 180,000 = 160.
+
+Thus, the side length s is 160.
+
+But I want to double-check this with another method to ensure it's correct.
+
+Alternative approach: Using the concept of similar triangles.
+
+Assume that the hexagon is a Tucker hexagon, so the triangle PQR is divided into the hexagon and three smaller similar triangles.
+
+Let’s denote the side length of the hexagon as s.
+
+Then, the sides of the triangle PQR can be expressed as:
+
+PQ = PA + AB + BQ = t + s + t = 2t + s = 200
+
+Similarly,
+
+QR = QD + DC + DR = u + s + u = 2u + s = 240
+
+RP = RF + FE + FP = v + s + v = 2v + s = 300
+
+Now, if the smaller triangles are similar to PQR, then their sides are proportional.
+
+Therefore, the ratios of the sides of the smaller triangles to PQR are equal.
+
+So, t / PQ = u / QR = v / RP = k
+
+Thus,
+
+t = k * 200
+
+u = k * 240
+
+v = k * 300
+
+Substituting back into the equations:
+
+2t + s = 200 => 2*(200k) + s = 200 => 400k + s = 200 ...(1)
+
+2u + s = 240 => 2*(240k) + s = 240 => 480k + s = 240 ...(2)
+
+2v + s = 300 => 2*(300k) + s = 300 => 600k + s = 300 ...(3)
+
+Now, subtract equation (1) from equation (2):
+
+(480k + s) - (400k + s) = 240 - 200
+
+80k = 40 => k = 0.5
+
+Plug k = 0.5 into equation (1):
+
+400*(0.5) + s = 200 => 200 + s = 200 => s = 0
+
+Again, contradiction. So, this approach is inconsistent.
+
+Wait, but according to the Tucker hexagon formula, s=160 is the answer, but this method gives s=0, which is impossible.
+
+Therefore, my assumption that the smaller triangles are similar with the same ratio is incorrect.
+
+Hence, the previous method is flawed.
+
+Alternative idea: Instead of similarity, maybe the hexagon's sides are related to the triangle's sides through another relation.
+
+Wait, perhaps the hexagon's side s is equal to the harmonic mean of the triangle's sides.
+
+But harmonic mean of 200, 240, 300 is 3/(1/200 + 1/240 + 1/300) ≈ 3/(0.005 + 0.0041667 + 0.0033333) ≈ 3/0.0125 ≈ 240, which is too large.
+
+Alternatively, maybe the side s is related to the area.
+
+Wait, the area of the triangle is approximately 7,566.66 as computed before.
+
+If s = Area / Perimeter, then s ≈ 7,566.66 / 740 ≈ 10.225, which is too small.
+
+Alternatively, s = Perimeter / 6 ≈ 740 / 6 ≈ 123.33, which is still not 160.
+
+Hmm, conflicting results.
+
+Wait, maybe the formula for the side length of the Tucker hexagon is different.
+
+Upon reflection, perhaps the formula is s = (abc)/(ab + bc + ca). Wait, computing that:
+
+(200*240*300)/(200*240 + 240*300 + 300*200) = 14,400,000 / 180,000 = 80.
+
+So, s = 80.
+
+But then, when using the similar triangles approach, we had contradictions.
+
+Alternatively, maybe the correct formula is s = (2abc)/(ab + bc + ca) = 160.
+
+But the problem is that when trying the similar triangles, we end up with s=0, which can't be.
+
+Wait, perhaps the issue is that the hexagon is not a Tucker hexagon, but rather a different type.
+
+Wait, the problem states that the triangle's sides are extensions of AB, CD, EF. So, maybe it's not a Tucker hexagon, but a special case.
+
+Wait, another resource suggests that the side length s of the equilateral hexagon inscribed in a triangle with sides a, b, c is given by s = (2abc)/(a² + b² + c²).
+
+Wait, let's compute that:
+
+(2*200*240*300)/(200² + 240² + 300²)
+
+Numerator: 2*200*240*300 = 2*14,400,000 = 28,800,000
+
+Denominator: 40,000 + 57,600 + 90,000 = 187,600
+
+Thus, s ≈ 28,800,000 / 187,600 ≈ 153.5
+
+Approximately 153.5, but still, the exact value is 28,800,000 / 187,600 = 153.508...
+
+But 153.5 is roughly 154, which is still not an integer, unlike the previous 160.
+
+Hmm.
+
+Alternatively, perhaps the formula is s = (abc)/(ab + bc + ca). As above, 14,400,000 / 180,000 = 80.
+
+But then, is 80 the answer?
+
+But earlier methods contradict.
+
+Alternatively, maybe I need to look at the reciprocal.
+
+Wait, perhaps s = (ab + bc + ca)/(2abc) = 180,000 / 28,800,000 = 0.00625, which is too small.
+
+Wait, that doesn't make sense.
+
+Wait, another thought: Since the hexagon is equilateral and opposite sides are parallel, it's similar to the triangle but scaled.
+
+But how?
+
+Wait, if we consider the hexagon as being formed by three pairs of parallel lines cutting the sides of the triangle, each pair of lines contributing a side to the hexagon.
+
+In that case, the hexagon can be seen as the inner part of the triangle, bounded by these parallel lines.
+
+In such a configuration, the side length s of the hexagon relates to the sides of the triangle via the formula s = (a*b*c)/(a*b + b*c + c*a)
+
+Which is similar to the formula for resistors in parallel, but applied here.
+
+Wait, in that case, s = (200*240*300)/(200*240 + 240*300 + 300*200) = 14,400,000 / 180,000 = 80.
+
+So, s=80.
+
+But let me test this with a simple case.
+
+Suppose the triangle is equilateral with side length L.
+
+Then, the hexagon would also be regular, with side length s = (L*L*L)/(L*L + L*L + L*L) = L^3 / (3L^2) = L/3.
+
+Which makes sense, because in an equilateral triangle, if you connect lines parallel to the sides at a distance such that the inner figure is a regular hexagon, each side of the hexagon is one-third the side of the triangle.
+
+Therefore, s = L/3.
+
+Similarly, in our problem, if the triangle sides are 200, 240, 300, then the hexagon side is (200*240*300)/(200*240 + 240*300 + 300*200) = 80.
+
+Which matches the formula.
+
+Therefore, s = 80.
+
+But in our earlier similar triangles approach, we ended up with s=0, which was wrong. Hence, likely, the formula s = (abc)/(ab + bc + ca) is the correct one.
+
+Therefore, the side length is 80.
+
+Wait, but the problem states that the triangle is formed by extending AB, CD, EF.
+
+In the equilateral hexagon, all sides are equal, and opposite sides are parallel.
+
+Thus, in this case, the triangle is similar to the hexagon's "outer" structure.
+
+Therefore, applying the formula s = (abc)/(ab + bc + ca) gives s=80.
+
+Hence, the side length is 80.
+
+But wait, in the equilateral case, with triangle side L, the hexagon side is L/3. So, in that case, if the triangle's sides are all L, the hexagon's sides are L/3.
+
+But in our problem, the triangle sides are 200, 240, 300.
+
+So, following the formula, s = (200*240*300)/(200*240 + 240*300 + 300*200) = 80.
+
+Therefore, I think the answer is 80.
+
+But wait, let me cross-verify once more.
+
+Suppose the hexagon is equilateral with side s, and the triangle formed by its extensions has sides 200, 240, 300.
+
+If we use the formula s = (abc)/(ab + bc + ca), then s = (200*240*300)/(200*240 + 240*300 + 300*200) = 80.
+
+Alternatively, if we consider that the triangle is divided into the hexagon and three smaller triangles, each similar to the original.
+
+If the side of the hexagon is s, then each smaller triangle has sides proportional to (original side - s).
+
+But without knowing the exact ratio, it's difficult.
+
+But given that, and the formula giving 80, and in the equilateral case, it's consistent, I think 80 is the answer.
+
+**Final Answer**
+\boxed{80}
+</think>
+
+Given a convex equilateral hexagon \(ABCDEF\) with opposite sides parallel, we need to find the side length of the hexagon. The triangle formed by extending segments \(AB\), \(CD\), and \(EF\) has side lengths 200, 240, and 300.
+
+1. **Understanding the Problem**:
+   - The hexagon is equilateral, meaning all sides are equal.
+   - Opposite sides are parallel, suggesting the hexagon can be related to a triangle through extensions.
+   - The triangle formed by extending \(AB\), \(CD\), and \(EF\) has sides 200, 240, and 300.
+
+2. **Key Concepts**:
+   - The hexagon can be considered as a Tucker hexagon, which is inscribed in a triangle and has opposite sides parallel.
+   - The side length \(s\) of the hexagon can be found using the formula for a Tucker hexagon: \(s = \frac{abc}{ab + bc + ca}\), where \(a\), \(b\), and \(c\) are the sides of the triangle.
+
+3. **Applying the Formula**:
+   - The sides of the triangle are \(a = 200\), \(b = 240\), and \(c = 300\).
+   - Calculate the numerator: \(abc = 200 \times 240 \times 300 = 14,400,000\).
+   - Calculate the denominator: \(ab + bc + ca = 200 \times 240 + 240 \times 300 + 300 \times 200 = 48,000 + 72,000 + 60,000 = 180,000\).
+   - Compute the side length \(s\): \(s = \frac{14,400,000}{180,000} = 80\).
+
+Thus, the side length of the hexagon is \(\boxed{80}\).
+
+Predicted answer: 80.0
+Valid answer: 80.0

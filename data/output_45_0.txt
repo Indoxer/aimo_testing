@@ -1,0 +1,137 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+The numbers of apples growing on each of six apple trees form an arithmetic sequence where the greatest number of apples growing on any of the six trees is double the least number of apples growing on any of the six trees. The total number of apples growing on all six trees is $990.$ Find the greatest number of apples growing on any of the six trees.
+
+
+Okay, so I have this problem about six apple trees where the number of apples on each tree forms an arithmetic sequence. The highest number of apples is double the lowest, and the total number of apples is 990. I need to find the greatest number of apples.
+
+First, let me recall what an arithmetic sequence is. It's a sequence where each term after the first is obtained by adding a constant difference. So, if I denote the number of apples on the first tree as 'a', then the next ones would be a + d, a + 2d, a + 3d, and so on, where 'd' is the common difference.
+
+Since there are six trees, the number of apples on them would be: a, a + d, a + 2d, a + 3d, a + 4d, a + 5d. 
+
+Now, according to the problem, the greatest number of apples is double the least. That means the sixth term is double the first term. So, in terms of the sequence:
+
+a + 5d = 2a
+
+Hmm, let me write that down:
+
+a + 5d = 2a
+
+If I subtract a from both sides:
+
+5d = a
+
+So, a = 5d. Got it. That relates the first term to the common difference.
+
+Next, the total number of apples is 990. Since it's an arithmetic sequence, the sum can be calculated using the formula for the sum of n terms:
+
+S_n = (n/2) * [2a + (n - 1)d]
+
+Here, n is 6. Plugging that in:
+
+S_6 = (6/2) * [2a + 5d] = 3 * [2a + 5d]
+
+We know S_6 is 990, so:
+
+3 * [2a + 5d] = 990
+
+Divide both sides by 3:
+
+2a + 5d = 330
+
+But earlier, we found that a = 5d. Let's substitute that into the equation above.
+
+2*(5d) + 5d = 330
+
+Compute 2*5d which is 10d, plus 5d is 15d:
+
+15d = 330
+
+So, divide both sides by 15:
+
+d = 330 / 15
+
+Calculating that, 330 divided by 15 is... Well, 15 times 22 is 330 because 15*20=300 and 15*2=30, so 300+30=330. Therefore, d = 22.
+
+Now that we know d is 22, we can find a since a = 5d:
+
+a = 5*22 = 110
+
+So the first term is 110 apples. Then, the common difference is 22. Let me list out all six terms to make sure.
+
+1st tree: 110
+2nd tree: 110 + 22 = 132
+3rd tree: 132 + 22 = 154
+4th tree: 154 + 22 = 176
+5th tree: 176 + 22 = 198
+6th tree: 198 + 22 = 220
+
+Wait a second, the sixth term is 220. But according to the problem, the greatest number of apples is double the least. The least is 110, so double that would be 220. Yep, that checks out. So the greatest number is 220.
+
+Let me also verify the total sum to make sure everything adds up to 990.
+
+Adding the six terms:
+
+110 + 132 + 154 + 176 + 198 + 220
+
+Let me compute this step by step:
+
+110 + 132 = 242
+
+242 + 154 = 396
+
+396 + 176 = 572
+
+572 + 198 = 770
+
+770 + 220 = 990
+
+Yes, that totals to 990, which matches the given information.
+
+So, all the conditions are satisfied. Therefore, the greatest number of apples on any tree is 220.
+
+**Final Answer**
+\boxed{220}
+</think>
+
+Given that the numbers of apples growing on each of six apple trees form an arithmetic sequence, where the greatest number of apples is double the least number, and the total number of apples is 990, we need to find the greatest number of apples.
+
+First, denote the number of apples on the first tree as \( a \). The sequence is \( a, a + d, a + 2d, a + 3d, a + 4d, a + 5d \), where \( d \) is the common difference.
+
+Since the greatest number of apples is double the least, we have:
+\[ a + 5d = 2a \]
+This simplifies to:
+\[ 5d = a \]
+
+The total number of apples is given by the sum of the arithmetic sequence:
+\[ S_6 = \frac{6}{2} \times [2a + 5d] = 3 \times [2a + 5d] \]
+Given \( S_6 = 990 \), we have:
+\[ 3 \times [2a + 5d] = 990 \]
+Dividing both sides by 3:
+\[ 2a + 5d = 330 \]
+
+Substituting \( a = 5d \) into the equation:
+\[ 2(5d) + 5d = 330 \]
+\[ 10d + 5d = 330 \]
+\[ 15d = 330 \]
+\[ d = \frac{330}{15} = 22 \]
+
+Thus, \( a = 5d = 5 \times 22 = 110 \).
+
+The number of apples on the six trees are:
+- 1st tree: 110
+- 2nd tree: 132
+- 3rd tree: 154
+- 4th tree: 176
+- 5th tree: 198
+- 6th tree: 220
+
+The greatest number of apples is 220, which is double the least number of apples (110). The total sum is verified to be 990.
+
+Therefore, the greatest number of apples growing on any of the six trees is:
+\[
+\boxed{220}
+\]
+
+Predicted answer: 220.0
+Valid answer: 220.0

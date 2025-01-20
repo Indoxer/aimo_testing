@@ -1,0 +1,559 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Let $P$ be a point on the circle circumscribing square $ABCD$ that satisfies $PA \cdot PC = 56$ and $PB \cdot PD = 90.$ Find the area of $ABCD.$
+
+
+Okay, so I have this geometry problem here about a square ABCD circumscribed by a circle. There's a point P on this circle, and we're given that PA multiplied by PC equals 56, and PB multiplied by PD equals 90. We need to find the area of square ABCD.
+
+Hmm, let me start by visualizing the square inscribed in a circle. Since it's a square, all its vertices lie on the circumference of the circle, which means the diagonals of the square are diameters of the circle. That also tells me that the center of the circle is the intersection point of the diagonals AC and BD of the square.
+
+Given that P is another point on the circle, so it's somewhere on the circumference as well. So points A, B, C, D, and P all lie on the same circle. 
+
+I remember there's something called the Power of a Point theorem, but since P is on the circle, maybe some other properties can help. Alternatively, maybe using coordinates would make sense here because dealing with circles and squares might get messy otherwise.
+
+Let me set up a coordinate system. Let’s place the square ABCD such that its center is at the origin (0,0) for simplicity. Since it's a square, the sides are equal, and the diagonals are equal too. If the square has side length 's', then the diagonal would be s√2. Therefore, the radius of the circumscribed circle would be half the diagonal, which is (s√2)/2 or s/√2.
+
+So, the radius R of the circle is s/√2, which means the side length s is R√2. But wait, if I assign coordinates to the square, I can express each vertex in terms of R.
+
+Since the square is centered at the origin, the coordinates of the vertices can be written as:
+
+A: (R, R)
+B: (-R, R)
+C: (-R, -R)
+D: (R, -R)
+
+Wait, no, hold on. Actually, if the center is at (0,0), each vertex should be equally distant from the center. For a square, the coordinates can be (a, a), (-a, a), etc., but scaled appropriately.
+
+But actually, if the radius is R, then each vertex is at a distance R from the origin. So their coordinates would be (R, 0), (0, R), (-R, 0), (0, -R). Wait, no, that would make a diamond shape, not a square aligned with the axes.
+
+Hmm, perhaps I made an error in the initial setup. Let me think again.
+
+If the square is inscribed in a circle of radius R, its vertices will lie on the circle. The standard coordinates for such a square would be (R, R), (-R, R), (-R, -R), (R, -R), but scaled down because those points would lie on a circle of radius sqrt(R^2 + R^2) = R√2. So, actually, to have the radius R, the coordinates should be divided by √2. So the correct coordinates would be:
+
+A: (R/√2, R/√2)
+B: (-R/√2, R/√2)
+C: (-R/√2, -R/√2)
+D: (R/√2, -R/√2)
+
+Yes, that makes more sense because the distance from the origin to each vertex would then be sqrt[(R/√2)^2 + (R/√2)^2] = sqrt[ R^2/2 + R^2/2 ] = sqrt[R^2] = R.
+
+Great, so now we have the coordinates for A, B, C, D. Now, point P is another point on the circle, so its coordinates can be represented as (R cos θ, R sin θ) where θ is the angle made with the positive x-axis.
+
+Now, let's compute PA, PB, PC, PD in terms of θ.
+
+First, let's recall that the distance between two points (x1,y1) and (x2,y2) is sqrt[(x2-x1)^2 + (y2-y1)^2]. However, since we’re dealing with products like PA * PC and PB * PD, squaring them might simplify things because the square roots could complicate things.
+
+Alternatively, maybe using the property of cyclic quadrilaterals or something related to power of a point, but since P is on the circumcircle, the power of P with respect to the circle is zero, so that might not directly help.
+
+Wait, but if we consider the points A, B, C, D, P on the circle, we can use trigonometric identities based on angles.
+
+Let me write down the coordinates again:
+
+A: (R/√2, R/√2)
+B: (-R/√2, R/√2)
+C: (-R/√2, -R/√2)
+D: (R/√2, -R/√2)
+P: (R cos θ, R sin θ)
+
+Now, let's compute PA^2, PC^2, PB^2, PD^2.
+
+Compute PA^2:
+
+PA^2 = [ (R cos θ - R/√2)^2 + (R sin θ - R/√2)^2 ]
+
+Similarly, PC^2 = [ (R cos θ + R/√2)^2 + (R sin θ + R/√2)^2 ]
+
+Similarly, PB^2 = [ (R cos θ + R/√2)^2 + (R sin θ - R/√2)^2 ]
+
+PD^2 = [ (R cos θ - R/√2)^2 + (R sin θ + R/√2)^2 ]
+
+Hmm, okay, these expressions look similar. Maybe I can expand them.
+
+Let's compute PA^2 first:
+
+PA^2 = (R cos θ - R/√2)^2 + (R sin θ - R/√2)^2
+
+Factor out R^2:
+
+= R^2 [ (cos θ - 1/√2)^2 + (sin θ - 1/√2)^2 ]
+
+Expanding inside:
+
+= R^2 [ cos²θ - 2*(cos θ)*(1/√2) + (1/√2)^2 + sin²θ - 2*(sin θ)*(1/√2) + (1/√2)^2 ]
+
+Combine like terms:
+
+= R^2 [ (cos²θ + sin²θ) - 2*(cos θ + sin θ)/√2 + 2*(1/√2)^2 ]
+
+We know that cos²θ + sin²θ = 1, and (1/√2)^2 = 1/2, so:
+
+= R^2 [ 1 - 2*(cos θ + sin θ)/√2 + 2*(1/2) ]
+
+Simplify further:
+
+= R^2 [ 1 - (√2)(cos θ + sin θ) + 1 ]
+
+Because 2*(1/√2) is √2, right? Because 2/√2 = √2.
+
+Wait, let me check:
+
+2*(1/√2) is indeed √2.
+
+So continuing:
+
+= R^2 [ 2 - √2*(cos θ + sin θ) ]
+
+Similarly, let's compute PC^2:
+
+PC^2 = (R cos θ + R/√2)^2 + (R sin θ + R/√2)^2
+
+Again factor out R^2:
+
+= R^2 [ (cos θ + 1/√2)^2 + (sin θ + 1/√2)^2 ]
+
+Expand inside:
+
+= R^2 [ cos²θ + 2*(cos θ)*(1/√2) + (1/√2)^2 + sin²θ + 2*(sin θ)*(1/√2) + (1/√2)^2 ]
+
+Combine terms:
+
+= R^2 [ (cos²θ + sin²θ) + 2*(cos θ + sin θ)/√2 + 2*(1/√2)^2 ]
+
+Again, cos²θ + sin²θ = 1, and (1/√2)^2 = 1/2:
+
+= R^2 [ 1 + 2*(cos θ + sin θ)/√2 + 1 ]
+
+Simplify:
+
+= R^2 [ 2 + √2*(cos θ + sin θ) ]
+
+Alright, so we have PA^2 and PC^2. Similarly, we can compute PB^2 and PD^2.
+
+Let me do PB^2 next:
+
+PB^2 = (R cos θ + R/√2)^2 + (R sin θ - R/√2)^2
+
+Factor out R^2:
+
+= R^2 [ (cos θ + 1/√2)^2 + (sin θ - 1/√2)^2 ]
+
+Expanding inside:
+
+= R^2 [ cos²θ + 2*(cos θ)*(1/√2) + (1/√2)^2 + sin²θ - 2*(sin θ)*(1/√2) + (1/√2)^2 ]
+
+Combine terms:
+
+= R^2 [ (cos²θ + sin²θ) + 2*(cos θ)/√2 - 2*(sin θ)/√2 + 2*(1/√2)^2 ]
+
+Again, cos²θ + sin²θ = 1, (1/√2)^2 = 1/2:
+
+= R^2 [ 1 + 2*(cos θ - sin θ)/√2 + 1 ]
+
+Simplify:
+
+= R^2 [ 2 + √2*(cos θ - sin θ) ]
+
+Similarly, PD^2:
+
+PD^2 = (R cos θ - R/√2)^2 + (R sin θ + R/√2)^2
+
+Factor out R^2:
+
+= R^2 [ (cos θ - 1/√2)^2 + (sin θ + 1/√2)^2 ]
+
+Expanding inside:
+
+= R^2 [ cos²θ - 2*(cos θ)*(1/√2) + (1/√2)^2 + sin²θ + 2*(sin θ)*(1/√2) + (1/√2)^2 ]
+
+Combine terms:
+
+= R^2 [ (cos²θ + sin²θ) - 2*(cos θ)/√2 + 2*(sin θ)/√2 + 2*(1/√2)^2 ]
+
+Again, simplifying:
+
+= R^2 [ 1 - 2*(cos θ - sin θ)/√2 + 1 ]
+
+= R^2 [ 2 - √2*(cos θ - sin θ) ]
+
+So, summarizing:
+
+PA^2 = R^2 [ 2 - √2*(cos θ + sin θ) ]
+
+PC^2 = R^2 [ 2 + √2*(cos θ + sin θ) ]
+
+PB^2 = R^2 [ 2 + √2*(cos θ - sin θ) ]
+
+PD^2 = R^2 [ 2 - √2*(cos θ - sin θ) ]
+
+Therefore, PA * PC would be sqrt(PA^2 * PC^2). Similarly for PB * PD.
+
+Let me compute PA^2 * PC^2 first:
+
+PA^2 * PC^2 = [2 - √2*(cos θ + sin θ)] [2 + √2*(cos θ + sin θ)]
+
+This is of the form (a - b)(a + b) = a² - b², where a=2 and b=√2*(cos θ + sin θ).
+
+So,
+
+PA^2 * PC^2 = 4 - [ (√2)^2*(cos θ + sin θ)^2 ] = 4 - 2*(cos θ + sin θ)^2
+
+Similarly, PD^2 * PB^2 = [2 - √2*(cos θ - sin θ)][2 + √2*(cos θ - sin θ)] = 4 - 2*(cos θ - sin θ)^2
+
+Therefore, PA * PC = sqrt(4 - 2*(cos θ + sin θ)^2 )
+
+Similarly, PB * PD = sqrt(4 - 2*(cos θ - sin θ)^2 )
+
+But according to the problem, PA * PC = 56 and PB * PD = 90.
+
+Wait, hold on, this seems off because if PA*PC is 56 and PB*PD is 90, but both expressions are under a square root, implying that they must be non-negative numbers, which they are. However, 56 and 90 are quite large compared to typical values.
+
+Wait, but hold on. Did I miscalculate earlier?
+
+Wait, let's double-check my expansions.
+
+PA^2 was computed as R^2 [2 - √2*(cos θ + sin θ)]
+
+Similarly, PC^2 is R^2 [2 + √2*(cos θ + sin θ)]
+
+Multiplying these together gives:
+
+[2 - √2*(cos θ + sin θ)][2 + √2*(cos θ + sin θ)] = 4 - (√2)^2*(cos θ + sin θ)^2 = 4 - 2*(cos θ + sin θ)^2
+
+Same for PD^2 * PB^2 = 4 - 2*(cos θ - sin θ)^2
+
+So PA * PC = sqrt(4 - 2*(cos θ + sin θ)^2 ) = 56
+
+And similarly, PB * PD = sqrt(4 - 2*(cos θ - sin θ)^2 ) = 90
+
+Wait, but hold on, if R is the radius, and the square is inscribed in the circle, then R is related to the side length.
+
+Earlier, I established that the side length s is R√2. Wait, no, correction: If the square has side length s, then the diagonal is s√2, which is equal to the diameter of the circle, which is 2R. So, s√2 = 2R => R = s / √2.
+
+Therefore, s = R√2. So the area of the square is s^2 = (R√2)^2 = 2R^2.
+
+Thus, if I can find R, I can find the area.
+
+But in our equations above, we have PA * PC = 56 and PB * PD = 90. But if R is the radius, and these products are 56 and 90, which are quite big, so R must be larger than sqrt(56 / sqrt(4 - ... )) Hmm, perhaps I need to think differently.
+
+Wait, maybe instead of trying to calculate PA * PC directly, I can note that for a cyclic quadrilateral, the product of the distances from a point on the circumcircle to two opposite vertices can be expressed in terms of the sides or something else.
+
+Alternatively, maybe using complex numbers or vectors.
+
+Wait, another approach: Since P lies on the circumcircle of square ABCD, and ABCD is a square, perhaps the angles from P to the vertices have specific relationships.
+
+In a square, the central angles between consecutive vertices are 90 degrees. So, for example, the angle AOB is 90 degrees, where O is the center.
+
+Given that, if we represent the points A, B, C, D on the circle with angles separated by 90 degrees, and P is another point on the circle making some angle φ with OA.
+
+Perhaps parametrize point P by an angle φ relative to OA.
+
+Let me define angle φ as the angle between OP and OA, where O is the center.
+
+Then, the angles corresponding to points A, B, C, D would be φ, φ + 90°, φ + 180°, φ + 270°, respectively.
+
+Wait, actually, since the square is fixed, maybe we can fix the position of P relative to A without loss of generality.
+
+But maybe this is complicating things.
+
+Alternatively, since the square is symmetric, perhaps we can choose coordinates such that point P is at (R,0), but then A,B,C,D would be at different positions.
+
+Wait, maybe not. Let me see.
+
+Alternatively, perhaps using dot products or vector approaches.
+
+Given that, maybe I can model points A, B, C, D, P as vectors from the origin.
+
+Given that, the vectors for A, B, C, D, P are:
+
+A: (R/√2, R/√2)
+
+B: (-R/√2, R/√2)
+
+C: (-R/√2, -R/√2)
+
+D: (R/√2, -R/√2)
+
+P: (R cos θ, R sin θ)
+
+Then, the distance PA is |P - A|, which is sqrt[(R cos θ - R/√2)^2 + (R sin θ - R/√2)^2], which is what I had before.
+
+Similarly for others.
+
+But going back to my earlier computations, I found that PA * PC = sqrt(4 - 2*(cos θ + sin θ)^2 ), and PB * PD = sqrt(4 - 2*(cos θ - sin θ)^2 )
+
+But wait, that doesn't seem dimensionally consistent because PA * PC is supposed to be 56, which is a very large number unless R is extremely large.
+
+Wait, perhaps I made a mistake in the scaling.
+
+Wait, when I assigned the coordinates, I considered that the radius is R, but in reality, the side length is s, so the radius is s/√2.
+
+So, if I let R = s/√2, then the coordinates become:
+
+A: (R, R) scaled by 1/√2, so (R/√2, R/√2), yes, as I did earlier.
+
+But then, PA * PC = sqrt(4 - 2*(cos θ + sin θ)^2 ). But if R is in terms of s, then 4 is (2R)^2, but 4 is just a constant here. So unless R is variable, but we have PA * PC = 56, which suggests that sqrt(4 - 2*(cos θ + sin θ)^2 ) = 56/R^2.
+
+Wait, hold on, in my earlier steps, PA^2 * PC^2 = 4 - 2*(cos θ + sin θ)^2, but actually, no, PA^2 * PC^2 is equal to [2 - √2*(cos θ + sin θ)] [2 + √2*(cos θ + sin θ)] times R^4.
+
+Wait, hold on, let's retrace.
+
+PA^2 = R^2 [2 - √2*(cos θ + sin θ)]
+
+Similarly, PC^2 = R^2 [2 + √2*(cos θ + sin θ)]
+
+Therefore, PA^2 * PC^2 = R^4 * [2 - √2*(cos θ + sin θ)][2 + √2*(cos θ + sin θ)] = R^4*(4 - 2*(cos θ + sin θ)^2 )
+
+Therefore, PA * PC = sqrt(PA^2 * PC^2 ) = R^2 * sqrt(4 - 2*(cos θ + sin θ)^2 )
+
+Similarly, PB * PD = R^2 * sqrt(4 - 2*(cos θ - sin θ)^2 )
+
+So, given that PA * PC = 56 and PB * PD = 90, we have:
+
+R^2 * sqrt(4 - 2*(cos θ + sin θ)^2 ) = 56
+
+and
+
+R^2 * sqrt(4 - 2*(cos θ - sin θ)^2 ) = 90
+
+So, now we have two equations:
+
+1) R^2 * sqrt(4 - 2*(cos θ + sin θ)^2 ) = 56
+
+2) R^2 * sqrt(4 - 2*(cos θ - sin θ)^2 ) = 90
+
+Let me denote equation 1 as Eq1 and equation 2 as Eq2.
+
+Let me square both equations to eliminate the square roots:
+
+From Eq1:
+
+(R^2)^2 * (4 - 2*(cos θ + sin θ)^2 ) = 56^2
+
+Similarly, from Eq2:
+
+(R^2)^2 * (4 - 2*(cos θ - sin θ)^2 ) = 90^2
+
+Let’s denote k = R^4, so:
+
+k*(4 - 2*(cos θ + sin θ)^2 ) = 3136   ...(1)
+
+k*(4 - 2*(cos θ - sin θ)^2 ) = 8100    ...(2)
+
+Now, divide equation (2) by equation (1):
+
+[4 - 2*(cos θ - sin θ)^2 ] / [4 - 2*(cos θ + sin θ)^2 ] = 8100 / 3136
+
+Simplify the RHS: 8100 / 3136 ≈ 2.58 approximately, but let me compute exactly.
+
+Divide numerator and denominator by 4:
+
+[1 - (1/2)*(cos θ - sin θ)^2 ] / [1 - (1/2)*(cos θ + sin θ)^2 ] = 8100 / 3136
+
+Simplify fractions:
+
+8100 ÷ 4 = 2025; 3136 ÷4 = 784
+
+Wait, no, actually, 8100 / 3136 = (8100 ÷ 4) / (3136 ÷4 ) = 2025 / 784.
+
+So,
+
+[1 - (1/2)*(cos θ - sin θ)^2 ] / [1 - (1/2)*(cos θ + sin θ)^2 ] = 2025 / 784
+
+Let me denote x = (cos θ + sin θ)^2 and y = (cos θ - sin θ)^2.
+
+Note that x + y = (cos θ + sin θ)^2 + (cos θ - sin θ)^2 = 2(cos²θ + sin²θ) = 2.
+
+So, y = 2 - x.
+
+Therefore, the ratio becomes:
+
+[1 - (1/2)*y ] / [1 - (1/2)*x ] = 2025 / 784
+
+Substitute y = 2 - x:
+
+[1 - (1/2)*(2 - x) ] / [1 - (1/2)x ] = 2025 / 784
+
+Simplify numerator:
+
+1 - 1 + (1/2)x = (1/2)x
+
+Denominator:
+
+1 - (1/2)x
+
+Therefore, the ratio becomes:
+
+( (1/2)x ) / (1 - (1/2)x ) = 2025 / 784
+
+Cross-multiplying:
+
+(1/2)x * 784 = (1 - (1/2)x ) * 2025
+
+Simplify:
+
+392x = 2025 - (2025/2)x
+
+Multiply both sides by 2 to eliminate denominators:
+
+784x = 4050 - 2025x
+
+Bring all x terms to left:
+
+784x + 2025x = 4050
+
+2809x = 4050
+
+Therefore, x = 4050 / 2809
+
+So, x = (4050)/(2809). Let me compute 4050 ÷ 2809. Both numbers are divisible by... let me see, 4050 = 2*3^4*5^2, 2809 is 53^2, since 53*53=2809. So, no common factors. So, x = 4050/2809.
+
+Recall that x = (cos θ + sin θ)^2 = 4050 / 2809
+
+Also, we had earlier from equation (1):
+
+k*(4 - 2x ) = 3136
+
+But k = R^4, so:
+
+R^4*(4 - 2x ) = 3136
+
+Plug in x = 4050/2809:
+
+R^4*(4 - 2*(4050/2809)) = 3136
+
+Compute 4 - 2*(4050/2809):
+
+Convert 4 to 2809 denominator:
+
+4 = 11236 / 2809
+
+So,
+
+11236 / 2809 - 2*(4050)/2809 = (11236 - 8100)/2809 = 3136 / 2809
+
+Therefore, R^4*(3136 / 2809) = 3136
+
+Divide both sides by 3136:
+
+R^4 / 2809 = 1
+
+Thus, R^4 = 2809
+
+Therefore, R = √(√2809). Since R is positive.
+
+Compute √2809: 53, because 53^2 = 2809.
+
+So, R^4 = 53^2, so R^2 = 53, thus R = sqrt(53)
+
+Wait, no:
+
+Wait, R^4 = 2809, so R = (2809)^(1/4). But 2809 = 53^2, so R = (53^2)^(1/4) = 53^(1/2) = sqrt(53)
+
+So, R = sqrt(53)
+
+Hence, the radius R is sqrt(53). Then, since the side length s = R√2, so s = sqrt(53)*sqrt(2) = sqrt(106)
+
+Therefore, the area of the square is s^2 = (sqrt(106))^2 = 106
+
+Wait, that seems clean. Let me verify.
+
+Wait, so if R^4 = 2809, then R^2 = sqrt(2809) = 53, so R = sqrt(53). Then, since s = R√2, s^2 = (R√2)^2 = 2R^2 = 2*53 = 106. Yes, that's correct.
+
+So, the area of square ABCD is 106.
+
+But wait, let me cross-verify this result with the given conditions.
+
+Given that PA * PC = 56 and PB * PD = 90.
+
+From above, we had:
+
+PA * PC = R^2 * sqrt(4 - 2x )
+
+Where x = (cos θ + sin θ)^2 = 4050 / 2809.
+
+Therefore, 4 - 2x = 4 - 2*(4050 / 2809) = (11236 - 8100)/2809 = 3136 / 2809
+
+So, sqrt(4 - 2x ) = sqrt(3136 / 2809) = 56 / 53
+
+Therefore, PA * PC = R^2 * (56 / 53) = (53) * (56 / 53) = 56, which matches.
+
+Similarly, for PB * PD:
+
+We had:
+
+PB * PD = R^2 * sqrt(4 - 2y )
+
+Where y = (cos θ - sin θ)^2 = 2 - x = 2 - 4050/2809 = (5618 - 4050)/2809 = 1568 / 2809
+
+Therefore, 4 - 2y = 4 - 2*(1568 / 2809) = (11236 - 3136)/2809 = 8100 / 2809
+
+So, sqrt(4 - 2y ) = sqrt(8100 / 2809) = 90 / 53
+
+Therefore, PB * PD = R^2 * (90 / 53) = 53 * (90 / 53) = 90, which also matches.
+
+Therefore, all the computations check out. So, the area of square ABCD is 106.
+
+**Final Answer**
+\boxed{106}
+</think>
+
+Given a square \(ABCD\) inscribed in a circle, with a point \(P\) on the circle such that \(PA \cdot PC = 56\) and \(PB \cdot PD = 90\), we need to find the area of the square \(ABCD\).
+
+1. **Setting up the coordinates:**
+   - The square \(ABCD\) is inscribed in a circle with radius \(R\).
+   - The vertices of the square are \(A\left(\frac{R}{\sqrt{2}}, \frac{R}{\sqrt{2}}\right)\), \(B\left(-\frac{R}{\sqrt{2}}, \frac{R}{\sqrt{2}}\right)\), \(C\left(-\frac{R}{\sqrt{2}}, -\frac{R}{\sqrt{2}}\right)\), and \(D\left(\frac{R}{\sqrt{2}}, -\frac{R}{\sqrt{2}}\right)\).
+   - Point \(P\) on the circle has coordinates \((R \cos \theta, R \sin \theta)\).
+
+2. **Calculating distances:**
+   - Using the distance formula, we compute \(PA\), \(PC\), \(PB\), and \(PD\).
+   - Expressing these distances squared, we find:
+     \[
+     PA^2 = R^2 \left[2 - \sqrt{2} (\cos \theta + \sin \theta)\right]
+     \]
+     \[
+     PC^2 = R^2 \left[2 + \sqrt{2} (\cos \theta + \sin \theta)\right]
+     \]
+     \[
+     PB^2 = R^2 \left[2 + \sqrt{2} (\cos \theta - \sin \theta)\right]
+     \]
+     \[
+     PD^2 = R^2 \left[2 - \sqrt{2} (\cos \theta - \sin \theta)\right]
+     \]
+
+3. **Using the given products:**
+   - Compute \(PA \cdot PC\) and \(PB \cdot PD\):
+     \[
+     PA \cdot PC = R^2 \sqrt{4 - 2 (\cos \theta + \sin \theta)^2}
+     \]
+     \[
+     PB \cdot PD = R^2 \sqrt{4 - 2 (\cos \theta - \sin \theta)^2}
+     \]
+   - Given \(PA \cdot PC = 56\) and \(PB \cdot PD = 90\), we set up the equations:
+     \[
+     R^2 \sqrt{4 - 2 (\cos \theta + \sin \theta)^2} = 56
+     \]
+     \[
+     R^2 \sqrt{4 - 2 (\cos \theta - \sin \theta)^2} = 90
+     \]
+
+4. **Solving for \(R\):**
+   - Squaring both equations and simplifying, we find:
+     \[
+     R^4 \left(4 - 2 \left(\frac{4050}{2809}\right)\right) = 3136
+     \]
+     \[
+     R^4 \left(\frac{3136}{2809}\right) = 3136
+     \]
+     \[
+     R^4 = 2809 \implies R = \sqrt{53}
+     \]
+
+5. **Finding the area of the square:**
+   - The side length \(s\) of the square is \(s = R \sqrt{2}\).
+   - The area of the square is \(s^2 = (R \sqrt{2})^2 = 2R^2\).
+   - Substituting \(R^2 = 53\), the area is \(2 \times 53 = 106\).
+
+Thus, the area of the square \(ABCD\) is \(\boxed{106}\).
+
+Predicted answer: 106.0
+Valid answer: 106.0

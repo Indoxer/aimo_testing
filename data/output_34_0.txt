@@ -1,0 +1,666 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Each face of two noncongruent parallelepipeds is a rhombus whose diagonals have lengths $\sqrt{21}$ and $\sqrt{31}$.
+The ratio of the volume of the larger of the two polyhedra to the volume of the smaller is $\frac{m}{n}$, where $m$ and $n$
+are relatively prime positive integers. Find $m + n$. A parallelepiped is a solid with six parallelogram faces
+such as the one shown below.
+[asy] unitsize(2cm); pair o = (0, 0), u = (1, 0), v = 0.8*dir(40), w = dir(70);  draw(o--u--(u+v)); draw(o--v--(u+v), dotted); draw(shift(w)*(o--u--(u+v)--v--cycle)); draw(o--w); draw(u--(u+w)); draw(v--(v+w), dotted); draw((u+v)--(u+v+w)); [/asy]
+
+
+<think>
+Okay, so I have this problem about two noncongruent parallelepipeds where each face is a rhombus with diagonals of lengths √21 and √31. I need to find the ratio of the volumes of the larger one to the smaller one, express it as m/n where m and n are coprime, and then find m + n.
+
+First, let me recall what a parallelepiped is. It's a three-dimensional figure formed by six parallelograms. In this case, all the faces are rhombuses, which are special types of parallelograms with all sides equal. So, each face is a rhombus with diagonals √21 and √31.
+
+I know that in a rhombus, the diagonals are perpendicular bisectors of each other. So, if I can find the side length of the rhombus, maybe I can use that information to figure out the edges of the parallelepiped.
+
+Let me calculate the side length of the rhombus first. The formula for the area of a rhombus is (d1 * d2)/2, but since all faces are rhombuses, each face has the same area? Wait, no, actually, in a general parallelepiped, even though all faces are rhombuses, they might not all have the same area because the angles between the edges can vary.
+
+Wait, hold on. Each face is a rhombus with diagonals √21 and √31, so regardless of the angle, the diagonals determine the rhombus. Therefore, all faces must be congruent rhombuses since their diagonals are fixed.
+
+So, each face is a rhombus with diagonals √21 and √31. Let me compute the side length of such a rhombus.
+
+In a rhombus, the diagonals split it into four right triangles. Each triangle has legs of length (√21)/2 and (√31)/2. So, the side length 'a' of the rhombus is sqrt[(√21/2)^2 + (√31/2)^2].
+
+Calculating that:
+
+a = sqrt[( (√21)^2 ) / 4 + ( (√31)^2 ) / 4 ]
+= sqrt[ (21 + 31) / 4 ]
+= sqrt[52 / 4]
+= sqrt[13]
+
+So, each edge of the parallelepiped is of length sqrt(13). Interesting.
+
+Now, moving on to the volume of the parallelepiped. The volume is given by the scalar triple product of its edge vectors. Since all edges are equal, it's a rhombohedron. But since it's a parallelepiped, not necessarily a rhombohedron, so the angles between the edges can differ.
+
+But wait, all faces are rhombuses, which means that the angles between each pair of adjacent edges are determined by the diagonals.
+
+Wait, perhaps I should think in terms of vectors. Let me denote the three vectors defining the parallelepiped as a, b, and c. Each pair a & b, b & c, c & a forms a rhombus with diagonals of length √21 and √31.
+
+Given that all faces are rhombuses with diagonals √21 and √31, we can say something about the dot products between the vectors a, b, and c.
+
+Specifically, for the rhombus formed by vectors a and b, the diagonals are |a + b| and |a - b|. Their lengths are given as √21 and √31. So,
+
+|a + b|^2 = 21
+|a - b|^2 = 31
+
+Similarly, since all faces are rhombuses with the same diagonals, similar equations will hold for the other pairs.
+
+So, let me write these down.
+
+For vectors a and b:
+
+|a + b|^2 = |a|^2 + |b|^2 + 2a·b = 21
+|a - b|^2 = |a|^2 + |b|^2 - 2a·b = 31
+
+Subtracting the second equation from the first gives:
+
+4a·b = 21 - 31 = -10 => a·b = -10/4 = -5/2
+
+Adding the two equations:
+
+2|a|^2 + 2|b|^2 = 21 + 31 = 52 => |a|^2 + |b|^2 = 26
+
+Similarly, since all faces are rhombuses with diagonals √21 and √31, the same will hold for vectors a and c, and vectors b and c.
+
+Therefore,
+
+For vectors a and c:
+|a + c|^2 = 21
+|a - c|^2 = 31
+
+Which leads to a·c = -5/2 and |a|^2 + |c|^2 = 26.
+
+Similarly, for vectors b and c:
+|b + c|^2 = 21
+|b - c|^2 = 31
+
+So, b·c = -5/2 and |b|^2 + |c|^2 = 26.
+
+So, now, we have:
+
+a·b = a·c = b·c = -5/2
+
+And |a|^2 = |b|^2 = |c|^2 = 13 (since earlier we found a = sqrt(13))
+
+So, each vector has magnitude sqrt(13), and the dot product between any two different vectors is -5/2.
+
+Now, the volume of the parallelepiped is |(a × b) · c|.
+
+To compute this, I can use the formula:
+
+Volume^2 = |(a · (b × c))|^2 = |det([a b c])|^2
+
+Alternatively, another formula involving the Gram determinant:
+
+Volume^2 = |a|^2 |b|^2 |c|^2 + 2(a·b)(b·c)(c·a) - |a|^2(b·c)^2 - |b|^2(a·c)^2 - |c|^2(a·b)^2
+
+But perhaps it's easier to compute it using the scalar triple product squared.
+
+Wait, let me recall that Volume^2 = (a · (b × c))^2
+
+We can expand this using the identity:
+
+(a · (b × c))^2 = det(G) where G is the Gram matrix:
+
+G = [ [a·a, a·b, a·c],
+       [b·a, b·b, b·c],
+       [c·a, c·b, c·c] ]
+
+Since we know all the dot products:
+
+a·a = b·b = c·c = 13
+
+a·b = a·c = b·c = -5/2
+
+So, the Gram determinant is:
+
+| 13     -5/2    -5/2 |
+| -5/2   13     -5/2 |
+| -5/2   -5/2    13  |
+
+So, compute the determinant of this 3x3 matrix.
+
+Let me denote the Gram determinant as D.
+
+D = 13*(13*13 - (-5/2)*(-5/2)) - (-5/2)*( (-5/2)*13 - (-5/2)*(-5/2) ) + (-5/2)*( (-5/2)*(-5/2) - 13*(-5/2) )
+
+Wait, this seems complicated, maybe there's a better way.
+
+Alternatively, since the matrix is symmetric and has a specific structure, maybe we can compute it step by step.
+
+Compute the determinant:
+
+|A B C|
+|B A B|
+|C B A|
+
+Where A = 13, B = -5/2, C = -5/2
+
+Wait, no, actually, the diagonal elements are 13, and the off-diagonal elements are -5/2.
+
+So, it's a 3x3 matrix with 13 on the diagonal and -5/2 elsewhere.
+
+There is a formula for the determinant of such a matrix.
+
+If all diagonal entries are 'a' and all off-diagonal entries are 'b', the determinant is:
+
+(a - b)^2(a + 2b)
+
+Is that correct?
+
+Wait, let me check for a 3x3 matrix:
+
+|a b b|
+|b a b|
+|b b a|
+
+Yes, for this specific structure, the determinant is (a - b)^2(a + 2b). Let me verify that.
+
+Compute the determinant:
+
+Expand along the first row:
+
+a*(a*a - b*b) - b*(b*a - b*b) + b*(b*b - a*b)
+
+= a*(a² - b²) - b*(ab - b²) + b*(b² - ab)
+
+= a³ - a b² - a b² + b³ + b³ - a b²
+
+Wait, that doesn't seem right. Maybe my initial thought was wrong.
+
+Alternatively, let me compute it step by step.
+
+Compute the determinant:
+
+D = 13*(13*13 - (-5/2)*(-5/2)) - (-5/2)*( (-5/2)*13 - (-5/2)*(-5/2) ) + (-5/2)*( (-5/2)*(-5/2) - 13*(-5/2) )
+
+Compute term by term:
+
+First term: 13*(13*13 - (25/4)) = 13*(169 - 25/4) = 13*( (676 - 25)/4 ) = 13*(651/4) = (13*651)/4
+
+Second term: -(-5/2)*( (-65/2) - (25/4) ) = (5/2)*( (-65/2 - 25/4) ) = (5/2)*( (-130/4 - 25/4) ) = (5/2)*(-155/4) = -775/8
+
+Third term: (-5/2)*(25/4 - (-65/2)) = (-5/2)*(25/4 + 65/2) = (-5/2)*(25/4 + 130/4) = (-5/2)*(155/4) = (-775)/8
+
+So, putting it all together:
+
+D = (13*651)/4 - 775/8 - 775/8
+
+Compute each part:
+
+13*651: Let's compute 13*600=7800, 13*51=663, so total 7800+663=8463
+
+Thus, first term: 8463/4
+
+Second and third terms: both -775/8, so combined: -775/8 -775/8 = -1550/8 = -775/4
+
+So, D = 8463/4 - 775/4 = (8463 - 775)/4 = 7688/4 = 1922
+
+Wait, 8463 - 775: 8463 - 700 = 7763, then subtract 75 more: 7763 - 75 = 7688
+
+Then, 7688 divided by 4 is 1922.
+
+So, D = 1922
+
+Therefore, Volume^2 = D = 1922
+
+Wait, is that right? Because Volume^2 is equal to the determinant of the Gram matrix.
+
+But wait, Volume = |(a × b) · c|, so Volume^2 = |(a × b) · c|^2 = determinant of the Gram matrix, yes.
+
+So, Volume^2 = 1922, so Volume = sqrt(1922)
+
+Simplify sqrt(1922):
+
+1922 divided by 2 is 961, which is 31^2. So, 1922 = 2 * 31^2
+
+Hence, sqrt(1922) = 31*sqrt(2)
+
+So, Volume = 31√2
+
+Wait, but that's strange. How come the volume is unique? But the problem says there are two noncongruent parallelepipeds with this property.
+
+Hmm, so perhaps there are two different configurations based on the angles between the vectors, leading to different volumes.
+
+Wait, how?
+
+Because when you have vectors a, b, c with fixed magnitudes and fixed dot products, the volume is uniquely determined by the determinant, but in this case, maybe the cross product or something else varies?
+
+Wait, no, actually, the determinant is fixed once you fix the dot products, so why are there two noncongruent parallelepipeds?
+
+Wait, maybe it's because of chirality? Like, one is left-handed and the other is right-handed, but they are still congruent? Hmm, but the problem says noncongruent.
+
+Alternatively, maybe depending on the angles, the volume could be positive or negative, but absolute value is taken.
+
+Wait, no, the volume is always positive.
+
+Wait, perhaps my assumption that all the dot products are equal is incorrect? Or maybe the orientation affects the volume sign, but since we take absolute value, it doesn't matter.
+
+Wait, but then why are there two different volumes? Maybe I made an error in computation.
+
+Wait, let me re-examine the Gram determinant.
+
+Wait, so in the Gram matrix, all the diagonal elements are 13, and all the off-diagonal elements are -5/2.
+
+So, the determinant of such a matrix is indeed computed as follows.
+
+For a 3x3 matrix with diagonal entries a and off-diagonal entries b, the determinant is (a - b)^2(a + 2b).
+
+So, plugging in a = 13 and b = -5/2,
+
+Determinant = (13 - (-5/2))^2*(13 + 2*(-5/2)) = (13 + 5/2)^2*(13 - 5)
+
+Compute 13 + 5/2 = 31/2, and 13 - 5 = 8
+
+Thus, determinant = (31/2)^2 * 8 = (961/4) * 8 = 961 * 2 = 1922
+
+So, same result as before, 1922. So, Volume^2 = 1922, Volume = sqrt(1922) = 31√2
+
+Hmm, so why does the problem mention two noncongruent parallelepipeds?
+
+Wait, unless the configuration allows for different angles beyond just the ones determined by the dot products.
+
+But wait, the dot products are fixed because each face is a rhombus with diagonals √21 and √31, so the angle between any two edges is determined by those diagonals.
+
+Wait, perhaps the angle can be acute or obtuse, but the dot product is fixed because cos(theta) = (a·b)/(|a||b|) = (-5/2)/(13) = -5/(2*13) = -5/26
+
+So, theta is either arccos(-5/26) or pi - arccos(-5/26), but since cosine is even, arccos(-5/26) is in the second quadrant, so pi - arccos(5/26). But in reality, in a parallelepiped, the dihedral angles are fixed by the dot product, so the angle is uniquely determined.
+
+Wait, unless it's possible to have different configurations where the handedness is different, but that would result in congruent figures, just mirrored.
+
+So, perhaps the noncongruent refers to something else.
+
+Wait, maybe not all the face diagonals are in the same plane? No, in a parallelepiped, all faces are planar.
+
+Wait, another idea: the rhombic faces can be arranged such that the "twist" between the edges leads to different volumes.
+
+Wait, but in our calculation, we have fixed the dot products, so the volume is fixed.
+
+Wait, perhaps I'm missing something here.
+
+Wait, in the problem statement, it's mentioned that each face is a rhombus with diagonals √21 and √31. So, all six faces have the same diagonals. That implies that all edges are equal in length, which we found as sqrt(13), and all the face angles are determined by the dot products.
+
+Therefore, the parallelepiped is actually a rhombohedron, where all edges are equal, and all angles between edges are equal. Such a shape is uniquely determined up to congruence by the edge length and the angles.
+
+But in that case, wouldn't there be only one possible volume?
+
+But the problem says there are two noncongruent ones. So, maybe my assumption that all angles are determined is incorrect.
+
+Wait, perhaps in the Asymptote code, the figure is drawn in a way that suggests a non-rhombic hexahedron? Or maybe it's not a rhombohedron but something else.
+
+Wait, no, the problem says each face is a rhombus, so it must be a rhombohedron.
+
+Wait, hold on. Maybe the issue is that in a rhombohedron, depending on whether the angles are acute or obtuse, you can have different volumes.
+
+Wait, but the dot product is fixed because the diagonals are fixed. So, the angle between edges is determined, so the volume is fixed.
+
+Wait, maybe it's about the order of the edges? Like, choosing different permutations of a, b, c can lead to different orientations, but congruent figures.
+
+Alternatively, maybe the cross product can have different orientations, but since we're taking the absolute value, it doesn't affect the volume.
+
+Wait, perhaps the issue is that the angles between the vectors can be arranged differently, leading to different volumes.
+
+Wait, but if all the face angles are fixed, then the volume should be fixed as well.
+
+Wait, unless... Hmm, maybe I misapplied the determinant formula.
+
+Wait, let me double-check the determinant computation.
+
+The Gram determinant is:
+
+| 13     -5/2    -5/2 |
+| -5/2   13     -5/2 |
+| -5/2   -5/2    13  |
+
+Let me compute it again.
+
+Using the rule for 3x3 determinants:
+
+D = 13*(13*13 - (-5/2)*(-5/2)) - (-5/2)*( (-5/2)*13 - (-5/2)*(-5/2) ) + (-5/2)*( (-5/2)*(-5/2) - 13*(-5/2) )
+
+First term: 13*(169 - 25/4) = 13*( (676 - 25)/4 ) = 13*(651/4) = 8463/4
+
+Second term: -(-5/2)*( (-65/2 - 25/4 ) ) = (5/2)*( (-130/4 -25/4 )) = (5/2)*(-155/4) = -775/8
+
+Third term: (-5/2)*(25/4 - (-65/2)) = (-5/2)*(25/4 + 130/4) = (-5/2)*(155/4) = (-775)/8
+
+So, adding them together:
+
+8463/4 - 775/8 - 775/8
+
+Convert 8463/4 to eighths: 8463*2/8 = 16926/8
+
+Then, subtract 775/8 twice: 16926/8 - 775/8 - 775/8 = (16926 - 775 - 775)/8 = (16926 - 1550)/8 = 15376/8 = 1922
+
+Same result as before.
+
+So, Volume^2 = 1922, so Volume = sqrt(1922) = sqrt(2*31^2) = 31*sqrt(2)
+
+So, Volume is uniquely determined as 31√2, which suggests that there is only one such parallelepiped, but the problem says two noncongruent ones. There must be something wrong here.
+
+Wait, maybe the definition of a parallelepiped allows for different arrangements where the faces can be adjacent differently, leading to different volumes?
+
+Wait, but all faces are rhombuses with the same diagonals, so the edges are all equal, and the angles between edges are fixed, meaning that the parallelepiped is uniquely defined up to rotation, hence congruent.
+
+So, why does the problem state there are two noncongruent ones?
+
+Wait, perhaps the issue is that the cross product can be oriented differently, but as I said, the volume is the absolute value.
+
+Alternatively, maybe the problem is considering left and right-handed versions, but those are congruent via reflection, so they would be congruent, not noncongruent.
+
+Wait, unless reflections aren't considered congruent? But in geometry, usually, mirror images are considered congruent.
+
+Alternatively, perhaps the problem is referring to different scalene parallelepipeds, but with rhombic faces.
+
+Wait, but if all faces are rhombuses, it's called a rhombic hexahedron, and if all edges are equal, it's a rhombohedron. So, in that case, the rhombohedron is uniquely determined by its edge lengths and angles, which are fixed by the diagonals.
+
+So, maybe the problem is that there are two different ways to assign the diagonals? Wait, each face has two diagonals, but since all faces have diagonals √21 and √31, there's no choice.
+
+Wait, maybe the longer diagonal is assigned differently per face, but if all faces have the same diagonals, then each face's longer diagonal is the same. So, that shouldn't change anything.
+
+Wait, perhaps the issue is that in 3D space, the arrangement of the rhombuses can differ, leading to different shapes with the same face properties.
+
+Wait, but if all the edges are equal and the angles are fixed, then the shape is uniquely determined.
+
+Alternatively, maybe the ratios of the face areas differ, leading to different volumes?
+
+Wait, each face is a rhombus with diagonals √21 and √31, so each face has the same area: (sqrt(21)*sqrt(31))/2 = sqrt(651)/2
+
+Wait, but no, actually, the area of a rhombus is (d1*d2)/2, so (sqrt(21)*sqrt(31))/2 = sqrt(651)/2 ≈ 12.96
+
+But the volume depends on the angles between the edges, which is already fixed by the dot products.
+
+Wait, maybe I need to consider that the parallelepiped can be oblique in different ways, but in a rhombohedron, all the obliqueness is the same, so the volume remains the same.
+
+Wait, maybe the confusion comes from the fact that in the Asymptote code, the drawing shows a general parallelepiped, but in our case, all faces are rhombuses, so it's a rhombohedron.
+
+But according to the calculations, the volume is fixed. So, perhaps the problem is referring to two different rhombohedrons based on the handedness or something else.
+
+Alternatively, maybe it's a typo and it should be "non-congruent" as in "not similar", but I don't think so.
+
+Wait, perhaps the problem is considering two different rhombic tilings or something else, but I don't see it.
+
+Wait, another approach: maybe the vectors a, b, c can form two different tetrahedrons, leading to different volumes when doubled?
+
+Wait, no, the parallelepiped is defined by three vectors, so I don't think that applies.
+
+Wait, maybe the issue is that the angle between edges can be either acute or obtuse, but as we saw, the dot product determines the cosine of the angle, which is fixed as -5/26, so the angle is fixed.
+
+Therefore, the volume is fixed.
+
+Wait, perhaps the problem is considering two different rhombic hexahedrons where the edges are not all equal? But the problem states that each face is a rhombus, so all edges must be equal.
+
+Wait, unless the rhombuses have sides of different lengths, but no, the problem says each face is a rhombus with diagonals √21 and √31, so all edges are equal to sqrt(13).
+
+Therefore, the parallelepiped is uniquely determined, so why does the problem say there are two noncongruent ones?
+
+Hmm, perhaps I've made a mistake in computing the volume.
+
+Wait, let me recast the problem.
+
+Each face is a rhombus with diagonals √21 and √31, so each face has sides of length sqrt( (sqrt(21)/2)^2 + (sqrt(31)/2)^2 ) = sqrt( (21 + 31)/4 ) = sqrt(52/4) = sqrt(13), as before.
+
+So, all edges are sqrt(13). Then, the dot product between any two edges is (a·b) = (|a||b|cos(theta)) = 13*cos(theta). But from the rhombus, the diagonals are related to the angle theta by:
+
+d1 = 2*|a|*sin(theta/2)
+d2 = 2*|a|*cos(theta/2)
+
+Wait, is that right? Let me recall.
+
+In a rhombus, the diagonals satisfy:
+
+d1 = 2*a*sin(theta)
+d2 = 2*a*cos(theta)
+
+Wait, no, actually, in a rhombus, the diagonals are related to the angles by:
+
+d1 = 2*a*sin(theta/2)
+d2 = 2*a*cos(theta/2)
+
+Yes, that's correct.
+
+So, given that d1 = sqrt(21), d2 = sqrt(31), then:
+
+sqrt(21) = 2*sqrt(13)*sin(theta/2)
+sqrt(31) = 2*sqrt(13)*cos(theta/2)
+
+Dividing these equations:
+
+sqrt(21)/sqrt(31) = tan(theta/2)
+
+Therefore, theta/2 = arctan(sqrt(21/31))
+
+So, theta = 2*arctan(sqrt(21/31))
+
+Alternatively, sin(theta/2) = sqrt(21)/(2*sqrt(13))
+and cos(theta/2) = sqrt(31)/(2*sqrt(13))
+
+Then, sin(theta) = 2*sin(theta/2)*cos(theta/2) = 2*(sqrt(21)/(2*sqrt(13)))*(sqrt(31)/(2*sqrt(13))) = (sqrt(21)*sqrt(31))/(2*13) = sqrt(651)/26
+
+Similarly, cos(theta) = cos^2(theta/2) - sin^2(theta/2) = (31 - 21)/(4*13) = 10/(52) = 5/26
+
+Wait, which matches our previous result: a·b = |a||b|cos(theta) = 13*(5/26) = 5/2.
+
+Wait, so that's consistent.
+
+Therefore, the angle theta between the vectors is arccos(5/26). But wait, in our previous calculation, the dot product was -5/2, but that was because I had a·b = -5/2.
+
+Wait, hold on, perhaps I mixed up the direction.
+
+Wait, in the problem, the diagonals are sqrt(21) and sqrt(31). Depending on how the rhombus is constructed, the angle could be theta or pi - theta, which would make the dot product either positive or negative.
+
+Ah! That's probably it.
+
+In the rhombus, the two diagonals correspond to the sum and difference of the vectors. So, if the angle between vectors is theta, then the longer diagonal corresponds to the angle theta, and the shorter diagonal corresponds to the supplementary angle pi - theta.
+
+Wait, but in our case, sqrt(21) and sqrt(31): which one is longer?
+
+sqrt(31) ≈ 5.567, sqrt(21) ≈ 4.583, so sqrt(31) is longer.
+
+Therefore, if the longer diagonal is sqrt(31), then the angle between vectors is theta, where cos(theta) = (d2^2 - d1^2)/(2*d1*d2)? Wait, no, let me get back.
+
+Wait, in a rhombus, the relationship between the diagonals and the angle theta is:
+
+d1 = 2*a*sin(theta/2)
+d2 = 2*a*cos(theta/2)
+
+Assuming d1 < d2, so theta/2 < pi/4, so theta < pi/2.
+
+Wait, but in our case, sqrt(31) > sqrt(21), so d2 > d1, so theta/2 < pi/4, so theta < pi/2.
+
+But in our earlier calculation, we had cos(theta) = 5/26, which is positive, so theta is acute.
+
+But wait, if we swap the roles of d1 and d2, assuming that d1 corresponds to the longer diagonal, but that would give cos(theta) negative, which contradicts.
+
+Wait, perhaps the issue is that in the rhombus, the angle theta can be either acute or obtuse, leading to different configurations.
+
+But in our problem, since the diagonals are fixed as sqrt(21) and sqrt(31), which are specific lengths, then the angle is uniquely determined.
+
+Wait, if we fix d1 and d2, then theta is uniquely determined.
+
+Wait, maybe not, because depending on whether you take the angle between a and b as theta or pi - theta, the dot product changes sign.
+
+Wait, so in the rhombus, the angle between the vectors can be theta or pi - theta, leading to dot products of a·b = |a||b|cos(theta) or |a||b|cos(pi - theta) = -|a||b|cos(theta)
+
+Therefore, if the rhombus can have the angle either theta or pi - theta, then the dot product can be positive or negative.
+
+Thus, in our case, the dot product a·b can be either 5/2 or -5/2.
+
+But wait, in the problem statement, the diagonals have lengths sqrt(21) and sqrt(31). If we have a rhombus with diagonals sqrt(21) and sqrt(31), is the angle determined uniquely?
+
+Wait, in a rhombus, the diagonals are determined by the angle theta as follows:
+
+d1 = 2*a*sin(theta/2)
+d2 = 2*a*cos(theta/2)
+
+So, if both diagonals are given, the angle theta is uniquely determined.
+
+Wait, but in our problem, the diagonals are sqrt(21) and sqrt(31), so the angle is fixed.
+
+Wait, but if you fix d1 and d2, then theta is uniquely determined, so the dot product is uniquely determined.
+
+Wait, so how come the problem mentions two noncongruent parallelepipeds?
+
+This is confusing.
+
+Wait, perhaps the issue is that when constructing the parallelepiped, the three vectors a, b, c can form a left-handed or right-handed system, leading to different chiralities, but as I thought before, the volume is absolute.
+
+Alternatively, maybe the problem is considering that the angle between the vectors can be either theta or pi - theta, but in that case, the dot product would flip sign, which affects the volume.
+
+Wait, the scalar triple product is invariant under cyclic permutations, but changing the order can affect the sign.
+
+Wait, let me suppose that two different configurations have a·b = 5/2 and a·b = -5/2.
+
+But in reality, a·b is fixed by the angle between a and b, which is determined by the rhombus.
+
+Wait, unless the problem allows for different assignments of the diagonals on the faces, leading to different dot products.
+
+Wait, maybe some faces have the longer diagonal as the sum of vectors, and others have it as the difference.
+
+Wait, but each face is a rhombus, so each pair of vectors must satisfy d1 = |a + b| and d2 = |a - b|, or vice versa.
+
+Wait, but for each face, whether d1 is the longer or shorter diagonal would depend on the angle theta between vectors a and b.
+
+But in our case, both diagonals are given as sqrt(21) and sqrt(31). So, which one is which?
+
+Wait, suppose in one configuration, d1 = sqrt(21) is the sum, and d2 = sqrt(31) is the difference. In another configuration, d1 = sqrt(31) is the sum, and d2 = sqrt(21) is the difference.
+
+But the sum and difference would yield different results.
+
+Wait, but in reality, the sum and difference are functions of the angle theta.
+
+Wait, let me clarify.
+
+Given two vectors a and b, the lengths of the diagonals (a + b) and (a - b) are:
+
+|a + b| = sqrt(|a|^2 + |b|^2 + 2a·b)
+|a - b| = sqrt(|a|^2 + |b|^2 - 2a·b)
+
+Given that |a| = |b| = sqrt(13), and a·b = ?
+
+So, if we set |a + b| = sqrt(21) and |a - b| = sqrt(31), then:
+
+sqrt(21) = sqrt(13 + 13 + 2a·b) => sqrt(21) = sqrt(26 + 2a·b) => 21 = 26 + 2a·b => 2a·b = -5 => a·b = -5/2
+
+Similarly, |a - b| = sqrt(31):
+
+sqrt(31) = sqrt(26 - 2a·b) => 31 = 26 - 2a·b => -5 = -2a·b => a·b = 5/2
+
+Wait, that's conflicting.
+
+Wait, that suggests that if |a + b| is sqrt(21), then |a - b| is sqrt(31), and vice versa.
+
+So, that is, depending on which diagonal is assigned to which, the dot product flips sign.
+
+Therefore, the dot product can be either -5/2 or 5/2, which would lead to different volumes.
+
+Therefore, the two noncongruent parallelepipeds correspond to the cases where a·b = 5/2 and a·b = -5/2.
+
+Thus, we have two different Gram determinants, leading to two different volumes.
+
+So, in this case, we need to compute both possibilities.
+
+Wait, so in the previous calculation, I assumed a·b = -5/2, leading to Volume = 31√2.
+
+But if a·b = 5/2, then the determinant would be different.
+
+Wait, let me recalculate the determinant with a·b = 5/2 instead of -5/2.
+
+So, the Gram matrix becomes:
+
+G = [ [13, 5/2, 5/2],
+       [5/2, 13, 5/2],
+       [5/2, 5/2, 13] ]
+
+Compute determinant:
+
+Again, D = 13*(13*13 - (5/2)^2) - (5/2)*( (5/2)*13 - (5/2)*(5/2) ) + (5/2)*( (5/2)*(5/2) - 13*(5/2) )
+
+Compute term by term:
+
+First term: 13*(169 - 25/4) = 13*(676/4 - 25/4) = 13*(651/4) = 8463/4
+
+Second term: -(5/2)*( (65/2 - 25/4 ) ) = -(5/2)*( (130/4 - 25/4 ) ) = -(5/2)*(105/4 ) = -(525)/8
+
+Third term: (5/2)*(25/4 - 65/2 ) = (5/2)*(25/4 - 130/4 ) = (5/2)*(-105/4 ) = -525/8
+
+So, total determinant D = 8463/4 - 525/8 - 525/8
+
+Convert 8463/4 to eighths: 8463*2/8 = 16926/8
+
+Subtract 525/8 twice: 16926/8 - 525/8 -525/8 = (16926 - 525 - 525)/8 = (16926 - 1050)/8 = 15876/8
+
+15876 divided by 8 is 15876 / 8 = 1984.5
+
+Wait, 8*1984 = 15872, so 15876 - 15872 = 4, so 1984 + 4/8 = 1984.5
+
+But 1984.5 is equal to 3969/2.
+
+Wait, 1984.5 * 2 = 3969, so 1984.5 = 3969/2
+
+Wait, but 15876 divided by 8 is 1984.5, which is 3969/2.
+
+Wait, but 15876/8 = 1984.5
+
+So, Volume^2 = 1984.5, so Volume = sqrt(1984.5)
+
+Convert 1984.5 to fractional form: 1984.5 = 1984 + 0.5 = 1984 + 1/2 = (3968 + 1)/2 = 3969/2
+
+Thus, Volume = sqrt(3969/2) = sqrt(3969)/sqrt(2) = 63/sqrt(2) = 63√2 / 2
+
+Wait, so in this case, Volume = 63√2 / 2
+
+Earlier, with a·b = -5/2, Volume was 31√2
+
+So, the two volumes are 31√2 and (63√2)/2
+
+Therefore, the ratio of the larger volume to the smaller is (63√2 / 2) : (31√2) = (63/2) : 31 = (63/2) / 31 = 63/(2*31) = 63/62
+
+Thus, m/n = 63/62, which are coprime, so m + n = 63 + 62 = 125
+
+**Final Answer**
+\boxed{125}
+</think>
+
+Given two noncongruent parallelepipeds where each face is a rhombus with diagonals of lengths \(\sqrt{21}\) and \(\sqrt{31}\), we need to find the ratio of the volume of the larger parallelepiped to the smaller one and express it as \(\frac{m}{n}\) where \(m\) and \(n\) are relatively prime positive integers, and then find \(m + n\).
+
+First, we calculate the side length of the rhombus. The side length \(a\) of a rhombus with diagonals \(d_1\) and \(d_2\) is given by:
+\[
+a = \sqrt{\left(\frac{d_1}{2}\right)^2 + \left(\frac{d_2}{2}\right)^2} = \sqrt{\left(\frac{\sqrt{21}}{2}\right)^2 + \left(\frac{\sqrt{31}}{2}\right)^2} = \sqrt{\frac{21}{4} + \frac{31}{4}} = \sqrt{\frac{52}{4}} = \sqrt{13}
+\]
+
+Next, we consider the dot product between the vectors defining the parallelepiped. For a rhombus with diagonals \(\sqrt{21}\) and \(\sqrt{31}\), the dot product between the vectors is calculated using the law of cosines:
+\[
+|a + b|^2 = 21 \quad \text{and} \quad |a - b|^2 = 31
+\]
+Expanding these, we get:
+\[
+21 = 26 + 2a \cdot b \quad \Rightarrow \quad a \cdot b = -\frac{5}{2}
+\]
+\[
+31 = 26 - 2a \cdot b \quad \Rightarrow \quad a \cdot b = \frac{5}{2}
+\]
+
+We then compute the volume of the parallelepiped using the scalar triple product. The volume squared is given by the determinant of the Gram matrix:
+\[
+\text{Gram determinant} = \begin{vmatrix} 13 & \pm\frac{5}{2} & \pm\frac{5}{2} \\ \pm\frac{5}{2} & 13 & \pm\frac{5}{2} \\ \pm\frac{5}{2} & \pm\frac{5}{2} & 13 \end{vmatrix}
+\]
+
+For the cases where the dot product is \(-\frac{5}{2}\) and \(\frac{5}{2}\), we calculate the determinants:
+- When \(a \cdot b = -\frac{5}{2}\), the determinant is 1922, leading to a volume of \(31\sqrt{2}\).
+- When \(a \cdot b = \frac{5}{2}\), the determinant is 15876/8, leading to a volume of \(\frac{63\sqrt{2}}{2}\).
+
+The ratio of the larger volume to the smaller volume is:
+\[
+\frac{\frac{63\sqrt{2}}{2}}{31\sqrt{2}} = \frac{63}{62}
+\]
+
+Thus, \(m = 63\) and \(n = 62\), giving \(m + n = 63 + 62 = 125\).
+
+\[
+\boxed{125}
+\]
+
+Predicted answer: 125.0
+Valid answer: 125.0

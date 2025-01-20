@@ -1,0 +1,696 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+There exists a unique positive integer $a$ for which the sum \[U=\sum_{n=1}^{2023}\left\lfloor\dfrac{n^{2}-na}{5}\right\rfloor\] is an integer strictly between $-1000$ and $1000$. For that unique $a$, find $a+U$.
+(Note that $\lfloor x\rfloor$ denotes the greatest integer that is less than or equal to $x$.)
+
+
+Okay, so I have this problem where I need to find a unique positive integer \( a \) such that the sum 
+
+\[
+U = \sum_{n=1}^{2023} \left\lfloor \frac{n^2 - na}{5} \right\rfloor
+\]
+
+is an integer strictly between -1000 and 1000. Then, I need to find \( a + U \).
+
+Hmm, let's break this down. First, I know that the floor function \( \lfloor x \rfloor \) gives the greatest integer less than or equal to \( x \). So, each term in the sum is essentially taking \( (n^2 - na)/5 \) and rounding it down to the nearest integer.
+
+Since \( U \) is the sum of these floored terms, it must be an integer because each term is an integer. The key here is to figure out for what value of \( a \) this sum falls strictly between -1000 and 1000.
+
+Given that \( a \) is a positive integer, we can start by analyzing the expression inside the floor function:
+
+\[
+\frac{n^2 - na}{5}
+\]
+
+Let me rewrite this as:
+
+\[
+\frac{n(n - a)}{5}
+\]
+
+So, for each \( n \), we're looking at \( n(n - a)/5 \) and taking its floor. Now, since \( n \) ranges from 1 to 2023, and \( a \) is some fixed positive integer, \( n - a \) will vary depending on \( n \) relative to \( a \).
+
+I think it would help to consider when \( n^2 - na \) is positive or negative. If \( n > a \), then \( n^2 - na \) is positive, so \( \frac{n^2 - na}{5} \) is positive, meaning the floor function will just give us the integer part without changing the sign. However, if \( n < a \), \( n^2 - na \) becomes negative, so \( \frac{n^2 - na}{5} \) is negative, and the floor function will subtract 1 from the integer part.
+
+Therefore, the terms in the sum \( U \) will contribute positively when \( n > a \) and negatively when \( n < a \). The middle term, when \( n = a \), will be zero since \( n^2 - na = 0 \), so that term contributes nothing.
+
+This suggests that the sum \( U \) has two parts: one for \( n < a \) and another for \( n > a \). Maybe I can split the sum into these two regions.
+
+Let me denote:
+
+\[
+U = \sum_{n=1}^{a - 1} \left\lfloor \frac{n^2 - na}{5} \right\rfloor + \sum_{n=a + 1}^{2023} \left\lfloor \frac{n^2 - na}{5} \right\rfloor
+\]
+
+Because \( n = a \) gives zero, it doesn't contribute.
+
+Now, let's try to understand each part.
+
+First, for \( n < a \):
+
+Each term is \( \lfloor (n^2 - na)/5 \rfloor \). Since \( n^2 - na = n(n - a) \), and \( n < a \), this is negative. So, each term is negative, contributing to making \( U \) negative.
+
+For \( n > a \):
+
+Here, \( n(n - a)/5 \) is positive, so each term is non-negative, contributing positively to \( U \).
+
+Therefore, \( U \) is the sum of some negative terms (for \( n < a \)) and some positive terms (for \( n > a \)). We need the total sum \( U \) to be between -1000 and 1000.
+
+So, perhaps the positive contributions and negative contributions balance each other out, but not too much. So, maybe the magnitude of the positive and negative terms should be roughly similar, but their combination brings \( U \) within the given range.
+
+Given that, maybe \( a \) is somewhere around half of 2023? Wait, 2023 is the upper limit of the sum. Hmm, not necessarily, because the behavior depends on how \( n \) relates to \( a \).
+
+Alternatively, maybe we can approximate the sum \( U \) by considering the continuous version of \( n \), treating it as a real variable, and integrating. That might give us an idea of what \( a \) could be.
+
+But before jumping into approximations, let's see if we can manipulate the expression more algebraically.
+
+Note that \( \frac{n^2 - na}{5} = \frac{n(n - a)}{5} \). Let's write this as \( \frac{n^2}{5} - \frac{na}{5} \). Therefore, the floor function can be written as:
+
+\[
+\left\lfloor \frac{n^2}{5} - \frac{na}{5} \right\rfloor
+\]
+
+Which is equivalent to:
+
+\[
+\left\lfloor \frac{n^2}{5} \right\rfloor - \left\lfloor \frac{na}{5} \right\rfloor
+\]
+
+Wait, is that true? Because in general, \( \lfloor x - y \rfloor \) is not necessarily equal to \( \lfloor x \rfloor - \lfloor y \rfloor \). It can differ by 1 depending on the fractional parts of \( x \) and \( y \). So, maybe that approach isn't directly helpful.
+
+Alternatively, perhaps we can express the floor function as:
+
+\[
+\left\lfloor \frac{n^2 - na}{5} \right\rfloor = \frac{n^2 - na - r_n}{5}
+\]
+
+Where \( r_n \) is the remainder when \( n^2 - na \) is divided by 5, i.e., \( 0 \leq r_n < 5 \).
+
+Therefore, the sum \( U \) can be written as:
+
+\[
+U = \sum_{n=1}^{2023} \frac{n^2 - na - r_n}{5} = \frac{1}{5} \sum_{n=1}^{2023} (n^2 - na) - \frac{1}{5} \sum_{n=1}^{2023} r_n
+\]
+
+Simplify this:
+
+\[
+U = \frac{1}{5} \left( \sum_{n=1}^{2023} n^2 - a \sum_{n=1}^{2023} n \right) - \frac{1}{5} \sum_{n=1}^{2023} r_n
+\]
+
+We can compute \( \sum n^2 \) and \( \sum n \) using known formulas.
+
+Recall that:
+
+\[
+\sum_{n=1}^m n = \frac{m(m + 1)}{2}
+\]
+\[
+\sum_{n=1}^m n^2 = \frac{m(m + 1)(2m + 1)}{6}
+\]
+
+So, substituting \( m = 2023 \):
+
+Compute \( S_1 = \sum_{n=1}^{2023} n = \frac{2023 \times 2024}{2} \)
+
+Compute \( S_2 = \sum_{n=1}^{2023} n^2 = \frac{2023 \times 2024 \times 4047}{6} \)
+
+Then,
+
+\[
+U = \frac{1}{5} \left( S_2 - a S_1 \right) - \frac{1}{5} \sum_{n=1}^{2023} r_n
+\]
+
+So, \( U = \frac{S_2 - a S_1}{5} - \frac{R}{5} \), where \( R = \sum r_n \).
+
+But \( R \) is the sum of remainders when \( n^2 - na \) is divided by 5. Since \( r_n \) is between 0 and 4, inclusive, \( R \) is between 0 and \( 4 \times 2023 = 8092 \).
+
+Thus, \( R \) is a number between 0 and 8092, so \( \frac{R}{5} \) is between 0 and 1618.4.
+
+Therefore, \( U \) is approximately \( \frac{S_2 - a S_1}{5} \) minus something between 0 and 1618.4.
+
+But since \( U \) needs to be between -1000 and 1000, \( \frac{S_2 - a S_1}{5} \) must be approximately equal to something close to \( U \), but slightly adjusted by up to 1618.4.
+
+Wait, perhaps if \( \frac{S_2 - a S_1}{5} \) is roughly equal to \( U + \frac{R}{5} \), so \( \frac{S_2 - a S_1}{5} \) is approximately \( U \) plus something up to 1618.4. But since \( U \) itself is bounded by 1000 in magnitude, this suggests that \( \frac{S_2 - a S_1}{5} \) must be near \( U \), but not too far off.
+
+Alternatively, perhaps we can model \( U \) as being approximately equal to \( \frac{S_2 - a S_1}{5} \), ignoring the remainder term for a moment, and then adjust accordingly.
+
+So, first, let's compute \( S_1 \) and \( S_2 \):
+
+Compute \( S_1 = \frac{2023 \times 2024}{2} \).
+
+Calculate that:
+
+\( 2023 \times 2024 \). Let me compute that step by step.
+
+2023 * 2000 = 4,046,000
+
+2023 * 24 = 2023*20 + 2023*4 = 40,460 + 8,092 = 48,552
+
+So, 4,046,000 + 48,552 = 4,094,552
+
+Divide by 2: 4,094,552 / 2 = 2,047,276
+
+So, \( S_1 = 2,047,276 \)
+
+Now, compute \( S_2 = \frac{2023 \times 2024 \times 4047}{6} \)
+
+First, note that 2023 × 2024 was already computed as 4,094,552.
+
+Then, multiply that by 4047:
+
+So, 4,094,552 × 4047. Hmm, that's a big number. Maybe we can factor this differently.
+
+Alternatively, notice that 2023 × 2024 × 4047 / 6 can be simplified.
+
+Note that 4047 = 2 × 2023 + 1? Wait, 2023 × 2 = 4046, so 4047 = 4046 + 1 = 2×2023 + 1.
+
+Therefore, \( S_2 = \frac{2023 \times 2024 \times (2 \times 2023 + 1)}{6} \)
+
+Maybe that helps?
+
+Alternatively, perhaps factor out some terms:
+
+Let me write \( S_2 = \frac{2023 \times 2024 \times 4047}{6} \)
+
+We can note that 2024 / 6 = 337.333... Hmm, not sure if that helps.
+
+Alternatively, perhaps perform prime factorization.
+
+Wait, 6 = 2 × 3.
+
+So, let's see:
+
+Denominator: 6 = 2 × 3
+
+Numerator:
+
+2023: Let's check if it's prime. 2023 ÷ 7 = 289, which is 17², so 2023 = 7 × 17².
+
+Yes, 7 × 17 × 17 = 7 × 289 = 2023.
+
+Similarly, 2024: 2024 ÷ 2 = 1012; ÷2 again = 506; ÷2 again = 253. 253 ÷ 11 = 23. So, 2024 = 2³ × 11 × 23.
+
+4047: Let's check divisibility. 4047 ÷ 3: 4+0+4+7=15, which is divisible by 3. 4047 ÷3= 1349. Is 1349 prime? Let's check: 1349 ÷13=103.769..., not integer. 1349 ÷7=192.714..., nope. 1349 ÷11=122.636..., nope. Maybe it's prime.
+
+So, putting it all together:
+
+Numerator factors:
+
+2023 = 7 × 17²
+
+2024 = 2³ × 11 × 23
+
+4047 = 3 × 1349 (assuming 1349 is prime)
+
+Denominator: 6 = 2 × 3
+
+So, S_2 numerator:
+
+7 × 17² × 2³ × 11 × 23 × 3 × 1349
+
+Denominator: 2 × 3
+
+So, simplifying:
+
+Cancel a 2 and a 3:
+
+Remaining numerator: 7 × 17² × 2² × 11 × 23 × 1349
+
+Denominator: 1
+
+So, compute that:
+
+Compute 7 × 17² × 2² × 11 × 23 × 1349
+
+First, compute 17² = 289
+
+2² = 4
+
+So, 7 × 289 × 4 × 11 × 23 × 1349
+
+Compute step by step:
+
+7 × 289 = 2023
+
+2023 × 4 = 8092
+
+8092 × 11: Let's compute 8092 ×10=80,920 and add 8092: 80,920 + 8,092 = 89,012
+
+89,012 × 23: Compute 89,012 ×20=1,780,240 and 89,012 ×3=267,036. Total: 1,780,240 + 267,036 = 2,047,276
+
+2,047,276 × 1349: Hmm, this is getting really big. Maybe I made a mistake earlier because calculating S_2 seems unwieldy.
+
+Wait, perhaps instead of computing it directly, we can use modular arithmetic or look for patterns.
+
+Alternatively, perhaps recognizing that \( S_2 - a S_1 \) can be expressed as:
+
+\( S_2 - a S_1 = \sum_{n=1}^{2023} n^2 - a \sum_{n=1}^{2023} n = \sum_{n=1}^{2023} (n^2 - a n) \)
+
+So, \( S_2 - a S_1 = \sum_{n=1}^{2023} n(n - a) \)
+
+Which is exactly the sum inside the floor functions multiplied by 5, except without the floor and the remainders.
+
+But wait, actually, earlier I wrote that:
+
+\[
+U = \frac{S_2 - a S_1}{5} - \frac{R}{5}
+\]
+
+So, \( U = \frac{S_2 - a S_1}{5} - \frac{R}{5} \)
+
+Which implies that \( S_2 - a S_1 = 5U + R \)
+
+Given that \( R \) is between 0 and 8092, \( S_2 - a S_1 \) is approximately equal to \( 5U \), which is between \( -5000 \) and \( 5000 \) (since \( U \) is between -1000 and 1000, multiplying by 5 gives ±5000).
+
+Wait, hold on. If \( U \) is between -1000 and 1000, then \( 5U \) is between -5000 and 5000. So, \( S_2 - a S_1 = 5U + R \) must lie between \( -5000 + 0 = -5000 \) and \( 5000 + 8092 = 13,092 \).
+
+But \( S_2 - a S_1 \) is a quadratic expression in \( a \). Let's analyze it.
+
+Express \( S_2 - a S_1 \) as a function of \( a \):
+
+Let \( f(a) = S_2 - a S_1 \)
+
+We can treat \( f(a) \) as a linear function in \( a \):
+
+\( f(a) = -S_1 a + S_2 \)
+
+Since \( S_1 \) is positive, \( f(a) \) is a decreasing function in \( a \). So, as \( a \) increases, \( f(a) \) decreases.
+
+Our goal is to choose \( a \) such that \( f(a) \) is as close as possible to a multiple of 5, specifically \( 5U \), with the constraint that \( |5U + R| \) is minimized.
+
+But \( R \) is between 0 and 8092, so \( f(a) \) is approximately \( 5U \), but it can deviate by up to 8092.
+
+However, since \( f(a) \) is linear, and \( U \) is constrained between -1000 and 1000, we can perhaps set up an equation where \( f(a) \) is approximately 5U, and solve for \( a \).
+
+Let me write \( f(a) = 5U + R \), so rearranged:
+
+\( a = \frac{S_2 - (5U + R)}{S_1} \)
+
+But since both \( U \) and \( R \) are variables, this seems tricky. Maybe instead, we can approximate \( f(a) \approx 5U \), ignoring \( R \), and then adjust \( a \) accordingly.
+
+Compute \( f(a) = S_2 - a S_1 \approx 5U \)
+
+So,
+
+\( a \approx \frac{S_2 - 5U}{S_1} \)
+
+But we don't know \( U \) yet, so this seems circular.
+
+Alternatively, perhaps we can find \( a \) such that \( f(a) \) is approximately 5U, given that \( U \) is small compared to \( f(a) \).
+
+Wait, but \( f(a) = S_2 - a S_1 \). Let's compute \( f(a) \):
+
+We have \( S_1 = 2,047,276 \) and \( S_2 \) is a huge number, but perhaps I can compute \( S_2 - a S_1 \) in terms of \( a \).
+
+Wait, let me calculate \( S_2 \):
+
+Earlier, I tried to compute \( S_2 \) but got bogged down because it's a huge number. Maybe it's better to represent it symbolically.
+
+But perhaps I can compute \( S_2 \) numerically.
+
+Wait, \( S_2 = \sum_{n=1}^{2023} n^2 = \frac{2023 \times 2024 \times 4047}{6} \)
+
+Let me compute this step by step.
+
+First, compute 2023 × 2024:
+
+We did this earlier: 2023 × 2024 = 4,094,552
+
+Then, multiply by 4047:
+
+4,094,552 × 4047. Let's compute this:
+
+Breakdown:
+
+4,094,552 × 4000 = 16,378,208,000
+
+4,094,552 × 47 = ?
+
+Compute 4,094,552 × 40 = 163,782,080
+
+Compute 4,094,552 ×7 = 28,661,864
+
+Add them: 163,782,080 + 28,661,864 = 192,443,944
+
+So, total S_2 = 16,378,208,000 + 192,443,944 = 16,570,651,944
+
+Now divide by 6:
+
+16,570,651,944 ÷ 6 = ?
+
+Divide step by step:
+
+16,570,651,944 ÷ 6:
+
+6 goes into 16 two times (12), remainder 4.
+
+Bring down 5: 45 ÷6=7, rem 3.
+
+Bring down 7: 37 ÷6=6, rem1.
+
+Bring down 0:10 ÷6=1, rem4.
+
+Bring down6:46 ÷6=7, rem4.
+
+Bring down5:45 ÷6=7, rem3.
+
+Bring down1:31 ÷6=5, rem1.
+
+Bring down9:19 ÷6=3, rem1.
+
+Bring down4:14 ÷6=2, rem2.
+
+Bring down4:24 ÷6=4, rem0.
+
+Bring down nothing else.
+
+So, the result is 2,761,775,324.
+
+Wait, let me verify:
+
+6 × 2,761,775,324 = ?
+
+6 × 2,000,000,000 = 12,000,000,000
+
+6 × 761,775,324 = ?
+
+Compute 6 × 700,000,000 = 4,200,000,000
+
+6 × 61,775,324 = 370,651,944
+
+Total: 4,200,000,000 + 370,651,944 = 4,570,651,944
+
+So, total 6 × 2,761,775,324 = 16,570,651,944, which matches our numerator. So, yes, \( S_2 = 2,761,775,324 \).
+
+So, now we have \( S_1 = 2,047,276 \) and \( S_2 = 2,761,775,324 \).
+
+So, \( f(a) = S_2 - a S_1 = 2,761,775,324 - a × 2,047,276 \)
+
+We need \( f(a) \) to be approximately equal to \( 5U \). Since \( U \) is between -1000 and 1000, \( 5U \) is between -5000 and 5000.
+
+Therefore, \( f(a) \) is approximately between -5000 and 5000. So, we can write:
+
+\( 2,761,775,324 - a × 2,047,276 ≈ 5U \)
+
+But \( 5U \) is between -5000 and 5000. So, solving for \( a \):
+
+\( a ≈ \frac{2,761,775,324 - 5U}{2,047,276} \)
+
+Since \( 5U \) is negligible compared to \( S_2 \), we can approximate:
+
+\( a ≈ \frac{2,761,775,324}{2,047,276} \)
+
+Compute this division:
+
+Divide 2,761,775,324 by 2,047,276.
+
+Well, let me see:
+
+2,047,276 × 1,350 = ?
+
+Compute 2,047,276 × 1,000 = 2,047,276,000
+
+2,047,276 × 300 = 614,182,800
+
+2,047,276 × 50 = 102,363,800
+
+Adding those up: 2,047,276,000 + 614,182,800 = 2,661,458,800
+
+2,661,458,800 + 102,363,800 = 2,763,822,600
+
+But our numerator is 2,761,775,324, which is less than 2,763,822,600.
+
+Compute the difference: 2,763,822,600 - 2,761,775,324 = 2,047,276
+
+Ah! So, 2,047,276 × 1,350 = 2,763,822,600
+
+Subtracting that by 2,047,276 gives us 2,761,775,324.
+
+Therefore, 2,047,276 × (1,350 - 1) = 2,047,276 × 1,349 = 2,761,775,324
+
+Hence, \( a = 1,349 \)
+
+Wait, that's interesting. So, \( a ≈ 1,349 \) is where \( f(a) = 0 \). Because 2,047,276 × 1,349 = 2,761,775,324, so \( f(a) = S_2 - a S_1 = 2,761,775,324 - 1,349 × 2,047,276 = 0 \)
+
+Therefore, when \( a = 1,349 \), \( f(a) = 0 \), so \( U = \frac{f(a) - R}{5} = \frac{-R}{5} \)
+
+Since \( R \) is between 0 and 8092, \( U \) would be between 0 and -1618.4. But our target \( U \) is between -1000 and 1000. So, \( a = 1,349 \) gives \( U = -R/5 \). Since \( R \) is up to ~8092, \( U \) can be as low as -1618, which is below -1000. So, perhaps we need to adjust \( a \) slightly higher or lower to bring \( U \) within the desired range.
+
+But wait, earlier, we saw that \( f(a) = S_2 - a S_1 \) is a linear function decreasing with \( a \). So, if \( a \) is less than 1,349, \( f(a) \) is positive, leading to a positive \( U \); if \( a \) is more than 1,349, \( f(a) \) is negative, leading to a negative \( U \).
+
+Since we want \( U \) to be between -1000 and 1000, perhaps \( a = 1,349 \) is too high, resulting in \( U \) negative, but not too large in magnitude. Alternatively, maybe adjusting \( a \) slightly upwards or downwards can get \( U \) into the desired range.
+
+Wait, actually, when \( a = 1,349 \), \( U = -R/5 \). Since \( R \) is up to ~8092, \( U \) can be as low as about -1618, but we need \( U \) to be greater than -1000. So, if we make \( a \) larger than 1,349, \( f(a) \) becomes even more negative, so \( U \) becomes more negative, which is worse. Conversely, if we make \( a \) smaller, \( f(a) \) becomes positive, so \( U \) becomes positive.
+
+But if we take \( a = 1,349 \), \( U = -R/5 \). So, if \( R \) is around 8092, \( U \) is about -1618, which is outside the desired range. So, perhaps we need to move \( a \) away from 1,349.
+
+But moving \( a \) from 1,349 either up or down affects \( f(a) \) significantly, as \( S_1 = 2,047,276 \) is quite large.
+
+Wait, perhaps we need to find \( a \) such that \( f(a) \) is approximately a multiple of 5, say \( 5U \), with \( U \) between -1000 and 1000. Since \( f(a) = 2,761,775,324 - a × 2,047,276 \), and \( f(a) \) must be approximately equal to \( 5U + R \), but \( R \) is unknown.
+
+Alternatively, perhaps the main contribution comes from the sum \( \sum_{n=1}^{2023} \frac{n^2 - na}{5} \), ignoring the remainders, and then adjusting for the remainder.
+
+But this is getting complicated.
+
+Alternatively, perhaps we can consider that \( U = \sum_{n=1}^{2023} \left\lfloor \frac{n^2 - na}{5} \right\rfloor \)
+
+If we define \( k_n = \frac{n^2 - na}{5} \), then \( U = \sum \lfloor k_n \rfloor \)
+
+But without knowing \( a \), it's difficult to compute each \( k_n \).
+
+Wait, but perhaps there's a way to relate \( U \) to \( a \).
+
+Alternatively, maybe thinking about the average value.
+
+Since each term is roughly \( \frac{n^2 - na}{5} \), the sum over \( n \) would be roughly \( \frac{1}{5} \times (\frac{S_2 - a S_1}{}) \).
+
+But as we saw, \( S_2 - a S_1 = 5U + R \), so the sum is \( U + R/5 \). So, ignoring \( R/5 \), we have \( U \approx \frac{S_2 - a S_1}{5} \), hence \( a \approx \frac{S_2 - 5U}{S_1} \). Since \( U \) is between -1000 and 1000, \( 5U \) is between -5000 and 5000.
+
+So, \( a \approx \frac{2,761,775,324 - 5U}{2,047,276} \)
+
+Let me compute \( \frac{2,761,775,324}{2,047,276} = 1,349 \) as before.
+
+Therefore, \( a \approx 1,349 - \frac{5U}{2,047,276} \). Since \( \frac{5U}{2,047,276} \) is very small (as \( 5U \) is at most 5000), the dominant term is still 1,349.
+
+Therefore, \( a \) is very close to 1,349. So, likely, \( a = 1,349 \) or nearby integers.
+
+Given that, let's test \( a = 1,349 \).
+
+Compute \( f(a) = 2,761,775,324 - 1,349 × 2,047,276 \)
+
+As before, 1,349 × 2,047,276 = 2,761,775,324, so \( f(a) = 0 \), which leads to \( U = -R/5 \).
+
+But \( R \) is between 0 and 8092, so \( U \) is between -1618 and 0.
+
+But we need \( U \) strictly between -1000 and 1000. So, if \( a = 1,349 \), \( U \) is between -1618 and 0. Thus, some of these values will fall within (-1000, 1000), but others won't.
+
+But the problem states that there exists a unique positive integer \( a \) for which \( U \) is strictly between -1000 and 1000. So, perhaps \( a = 1,349 \) is the only one, but \( U \) can vary based on \( R \).
+
+Wait, but \( R \) is determined by \( a \). Since \( R = \sum_{n=1}^{2023} r_n \), and each \( r_n = (n^2 - na) \mod 5 \), which is dependent on \( a \).
+
+So, actually, \( R \) is a function of \( a \). Therefore, \( U \) is also a function of \( a \), and for \( a = 1,349 \), \( U \) can range between -1618 and 0. So, only when \( R \) is such that \( U \) is between -1000 and 1000 does it satisfy the condition.
+
+But the problem says "there exists a unique positive integer \( a \)", so perhaps for this specific \( a \), \( U \) is uniquely within (-1000, 1000). Or maybe \( a = 1,349 \) is the only \( a \) for which \( U \) can be within that range.
+
+Alternatively, maybe \( a \) is slightly different. Let's test \( a = 1,350 \).
+
+Compute \( f(a) = 2,761,775,324 - 1,350 × 2,047,276 \)
+
+1,350 × 2,047,276 = ?
+
+Compute 1,350 × 2,047,276:
+
+First, 1,000 × 2,047,276 = 2,047,276,000
+
+350 × 2,047,276 = ?
+
+Compute 300 × 2,047,276 = 614,182,800
+
+50 × 2,047,276 = 102,363,800
+
+Total: 614,182,800 + 102,363,800 = 716,546,600
+
+So, 1,350 × 2,047,276 = 2,047,276,000 + 716,546,600 = 2,763,822,600
+
+Thus, \( f(a) = 2,761,775,324 - 2,763,822,600 = -2,047,276 \)
+
+Therefore, \( f(a) = -2,047,276 \)
+
+Then, \( U = \frac{f(a) - R}{5} = \frac{-2,047,276 - R}{5} \)
+
+Given \( R \) is between 0 and 8092, \( U \) is between \( \frac{-2,047,276}{5} \) and \( \frac{-2,047,276 - 8092}{5} \)
+
+Compute:
+
+\( -2,047,276 / 5 = -409,455.2 \)
+
+Which is way below -1000. So, \( U \) is between -409,455 and -409,455.2 - something. Wait, that can't be right because \( R \) is additive.
+
+Wait, no, the formula is \( U = \frac{f(a) - R}{5} \). So, \( f(a) = -2,047,276 \), so \( U = (-2,047,276 - R)/5 \). Since \( R \) is between 0 and 8092, \( U \) is between (-2,047,276 - 8092)/5 and (-2,047,276)/5, which is between (-2,047,276 - 8,092)/5 ≈ (-2,055,368)/5 ≈ -411,073.6 and -409,455.2. Both are way below -1000.
+
+Therefore, \( a = 1,350 \) results in \( U \) way below -1000.
+
+Similarly, try \( a = 1,348 \).
+
+Compute \( f(a) = 2,761,775,324 - 1,348 × 2,047,276 \)
+
+Compute 1,348 × 2,047,276:
+
+It's 2,047,276 × (1,349 - 1) = 2,761,775,324 - 2,047,276 = 2,759,728,048
+
+Therefore, \( f(a) = 2,761,775,324 - 2,759,728,048 = 1,947,276 \)
+
+So, \( U = \frac{1,947,276 - R}{5} \)
+
+\( R \) is between 0 and 8092, so \( U \) is between \( 1,947,276 / 5 = 389,455.2 \) and \( (1,947,276 - 8,092)/5 ≈ 389,455.2 - 1,618.4 = 387,836.8 \). Again, way above 1000.
+
+Thus, \( a = 1,348 \) gives \( U \) in the hundreds of thousands, which is way above 1000.
+
+So, stepping back, \( a = 1,349 \) gives \( U \) between 0 and -1618, which partially overlaps with the desired range. Specifically, when \( R \) is between 0 and 5000, \( U \) is between 0 and -1000. But for \( R \) between 5000 and 8092, \( U \) is between -1000 and -1618. However, the problem requires \( U \) to be strictly between -1000 and 1000, so both positive and negative.
+
+But since \( a = 1,349 \) can lead to \( U \) in (-1618, 0), which is partially overlapping with (-1000, 1000). However, \( a \) must be unique. So, perhaps \( a = 1,349 \) is the only \( a \) that allows \( U \) to be within (-1000, 1000). But wait, when \( a = 1,349 \), \( U \) can be up to 0 and as low as -1618. So, only certain \( R \) values make \( U \) within (-1000, 1000). But the problem says "there exists a unique positive integer \( a \)" for which \( U \) is in that range.
+
+So, perhaps despite \( a = 1,349 \) potentially allowing \( U \) to be in both sides, only one specific \( a \) makes \( U \) land precisely within (-1000, 1000). But how can that be?
+
+Wait, actually, \( a = 1,349 \) is the unique \( a \) where \( f(a) \) is closest to 0, thus making \( U \) closest to 0 as well, but due to the flooring operation, \( U \) may not cross into the desired range unless \( R \) is small enough.
+
+Alternatively, maybe \( a = 1,349 \) is unique because any other \( a \) would cause \( f(a) \) to be either too positive or too negative, pushing \( U \) beyond the bounds.
+
+Wait, but we saw that \( a = 1,349 \) can produce \( U \) as high as 0 and as low as -1618, so only when \( R \) is less than or equal to 5000 would \( U \) be within (-1000, 1000). But \( R \) is a function of \( a \). So, for \( a = 1,349 \), \( R \) can vary depending on the distribution of \( n^2 - na \) modulo 5.
+
+Therefore, it's possible that for \( a = 1,349 \), \( R \) could be arranged such that \( U \) is within (-1000, 1000). But is \( a = 1,349 \) the only such \( a \)?
+
+Given that when \( a = 1,349 \pm 1 \), \( f(a) \) shifts by \( \pm 2,047,276 \), which is way beyond the 1000 threshold, making \( U \) either way too high or too low.
+
+Therefore, likely, \( a = 1,349 \) is the only \( a \) where \( U \) can be within (-1000, 1000), because any other \( a \) would cause \( f(a) \) to be too large in absolute value, making \( U \) exceed the bound.
+
+Therefore, \( a = 1,349 \) is the unique positive integer we’re looking for.
+
+Now, we need to compute \( U \) for \( a = 1,349 \).
+
+Recall that \( U = \frac{S_2 - a S_1}{5} - \frac{R}{5} \)
+
+From earlier, \( S_2 - a S_1 = 0 \) when \( a = 1,349 \), so \( U = - R / 5 \)
+
+Therefore, \( U = - R / 5 \)
+
+Since \( R = \sum_{n=1}^{2023} (n^2 - 1349 n) \mod 5 \)
+
+So, we need to compute \( R = \sum_{n=1}^{2023} (n^2 - 1349 n) \mod 5 \)
+
+Simplify \( (n^2 - 1349 n) \mod 5 \). Since 1349 mod 5 is equal to 1349 / 5 = 269.8, so 269 × 5 = 1345, 1349 - 1345 = 4, so 1349 ≡ 4 mod 5.
+
+Therefore, \( (n^2 - 1349 n) \mod 5 = (n^2 - 4n) \mod 5 \)
+
+Thus, \( r_n = (n^2 - 4n) \mod 5 \)
+
+So, \( r_n = (n(n - 4)) \mod 5 \)
+
+We can compute \( r_n \) for each \( n \) from 1 to 2023 modulo 5, then sum them up to get \( R \).
+
+To do this efficiently, note that the sequence \( r_n \) will repeat every 5 terms because modulo 5. So, we can compute \( r_n \) for \( n = 1 \) to \( 5 \), then note that the pattern repeats every 5 terms.
+
+Let me compute \( r_n \) for \( n = 1, 2, 3, 4, 5 \):
+
+- \( n = 1: (1 - 4) mod 5 = (-3) mod 5 = 2 \)
+- \( n = 2: (4 - 8) mod 5 = (-4) mod 5 = 1 \)
+- \( n = 3: (9 - 12) mod 5 = (-3) mod 5 = 2 \)
+- \( n = 4: (16 - 16) mod 5 = 0 mod 5 = 0 \)
+- \( n = 5: (25 - 20) mod 5 = 5 mod 5 = 0 \)
+
+Wait, let me double-check:
+
+Wait, no, actually, \( r_n = (n^2 - 4n) mod 5 \). So, let's compute each term correctly:
+
+- \( n = 1: (1 - 4) = -3 mod 5 = 2
+- \( n = 2: (4 - 8) = -4 mod 5 = 1
+- \( n = 3: (9 - 12) = -3 mod 5 = 2
+- \( n = 4: (16 - 16) = 0 mod 5 = 0
+- \( n = 5: (25 - 20) = 5 mod 5 = 0
+
+So, indeed, the remainders cycle every 5 terms as [2, 1, 2, 0, 0].
+
+Therefore, every block of 5 consecutive integers contributes 2 + 1 + 2 + 0 + 0 = 5 to the sum \( R \).
+
+So, in each block of 5, the sum of remainders is 5.
+
+Therefore, the total number of complete blocks in 2023 terms is 2023 ÷ 5 = 404 full blocks with a remainder of 3 terms.
+
+Compute 404 × 5 = 2020, so there are 404 complete blocks, contributing 404 × 5 = 2020 to \( R \).
+
+Then, the remaining 3 terms (n = 2021, 2022, 2023) correspond to n mod 5 = 1, 2, 3 respectively.
+
+Looking back at our cycle [2,1,2,0,0], the first three terms are 2,1,2.
+
+So, summing these: 2 + 1 + 2 = 5.
+
+Therefore, the total \( R = 2020 + 5 = 2025 \).
+
+Therefore, \( R = 2025 \).
+
+Therefore, \( U = - R / 5 = -2025 / 5 = -405 \)
+
+So, \( U = -405 \)
+
+Therefore, \( a = 1,349 \) and \( U = -405 \), so \( a + U = 1,349 + (-405) = 1,349 - 405 = 944 \)
+
+Wait, let me compute 1,349 - 405:
+
+1,349 - 400 = 949
+
+949 - 5 = 944
+
+Yes, correct.
+
+So, the final answer is 944.
+
+**Final Answer**
+\boxed{944}
+</think>
+
+To find the unique positive integer \( a \) such that the sum 
+
+\[
+U = \sum_{n=1}^{2023} \left\lfloor \frac{n^2 - na}{5} \right\rfloor
+\]
+
+is an integer strictly between -1000 and 1000, we start by analyzing the expression inside the floor function. We rewrite it as:
+
+\[
+\left\lfloor \frac{n^2 - na}{5} \right\rfloor = \left\lfloor \frac{n(n - a)}{5} \right\rfloor
+\]
+
+We recognize that this expression changes sign depending on whether \( n \) is less than or greater than \( a \). We approximate the sum by considering the linear function inside the floor function and the remainder terms. 
+
+Using the formulas for the sum of squares and the sum of integers, we compute:
+
+\[
+S_1 = \sum_{n=1}^{2023} n = \frac{2023 \times 2024}{2} = 2,047,276
+\]
+\[
+S_2 = \sum_{n=1}^{2023} n^2 = \frac{2023 \times 2024 \times 4047}{6} = 2,761,775,324
+\]
+
+We then consider the function \( f(a) = S_2 - a S_1 \) and find that the dominant term is \( a \approx 1349 \) because \( f(a) = 0 \) when \( a = 1349 \). This makes \( U \) approximately zero, but considering the remainders, we find that \( U \) can be within the desired range.
+
+We compute the remainders \( r_n = (n^2 - 4n) \mod 5 \) for \( a = 1349 \) and find the sum \( R \) of these remainders. Each block of 5 terms contributes 5 to \( R \), and with 404 complete blocks and 3 additional terms, we find:
+
+\[
+R = 2025
+\]
+
+Thus, \( U = -R / 5 = -405 \). Therefore, the unique \( a \) is 1349, and the sum \( a + U \) is:
+
+\[
+a + U = 1349 + (-405) = 944
+\]
+
+The final answer is:
+
+\[
+\boxed{944}
+\]
+
+Predicted answer: 944.0
+Valid answer: 944.0

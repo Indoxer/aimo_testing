@@ -1,0 +1,517 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Let $p$ be the least prime number for which there exists a positive integer $n$ such that $n^{4}+1$ is divisible by $p^{2}$. Find the least positive integer $m$ such that $m^{4}+1$ is divisible by $p^{2}$.
+
+
+<think>
+Okay, so I have this problem here where I need to find the least prime number \( p \) such that there's a positive integer \( n \) where \( n^4 + 1 \) is divisible by \( p^2 \). Then, once I find that \( p \), I need to determine the smallest positive integer \( m \) for which \( m^4 + 1 \) is divisible by \( p^2 \).
+
+Hmm, let me break this down. First, I need to find the smallest prime \( p \) where \( p^2 \) divides \( n^4 + 1 \) for some \( n \). Once I have that \( p \), I'll look for the minimal \( m \) such that \( m^4 + 1 \) is a multiple of \( p^2 \).
+
+I remember that primes dividing numbers of the form \( n^4 + 1 \) must satisfy certain congruence conditions. Specifically, primes \( p \) such that \( p \equiv 1 \mod 8 \) can divide \( n^4 + 1 \) because \( -1 \) is a quartic residue modulo \( p \). But wait, actually, for \( n^4 \equiv -1 \mod p \), we require that \( x^8 \equiv 1 \mod p \) has solutions, which relates to the multiplicative order of \( x \) modulo \( p \) being 8. Therefore, the order of \( x \) modulo \( p \) must divide 8, but since it's 8, 4, 2, or 1.
+
+But if \( x^4 \equiv -1 \mod p \), then squaring both sides gives \( x^8 \equiv 1 \mod p \), so the order is exactly 8, meaning that 8 divides \( p - 1 \) (by Fermat's little theorem). So \( p \equiv 1 \mod 8 \). That means the primes we're looking at are of the form \( 8k + 1 \).
+
+But wait, the question isn't just about divisibility by \( p \), but by \( p^2 \). So perhaps not all primes \( p \equiv 1 \mod 8 \) will satisfy that \( n^4 + 1 \) is divisible by \( p^2 \). It might require more stringent conditions.
+
+I think I should start by checking small primes and see if any of them satisfy that \( p^2 \) divides \( n^4 + 1 \) for some \( n \).
+
+Let me list the primes in order: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, etc.
+
+First, check \( p = 2 \). Is there an \( n \) such that \( n^4 + 1 \) is divisible by \( 4 \)?
+
+Compute \( n^4 + 1 \mod 4 \). For even \( n \), \( n^4 \) is divisible by 16, so \( n^4 \equiv 0 \mod 4 \), hence \( n^4 + 1 \equiv 1 \mod 4 \). For odd \( n \), \( n^4 \equiv 1 \mod 4 \), so \( n^4 + 1 \equiv 2 \mod 4 \). So neither case gives \( n^4 + 1 \equiv 0 \mod 4 \). Hence, \( p = 2 \) doesn't work.
+
+Next, \( p = 3 \). Check if \( n^4 + 1 \equiv 0 \mod 9 \) for some \( n \).
+
+Compute \( n^4 \mod 9 \) for \( n = 1 \) to \( 8 \):
+
+- \( 1^4 = 1 \mod 9 \)
+- \( 2^4 = 16 \equiv 7 \mod 9 \)
+- \( 3^4 = 81 \equiv 0 \mod 9 \), but \( n \) must be positive, so 3 is allowed, but \( n = 3 \) gives \( 81 + 1 = 82 \), which is 82 mod 9 is 1, so no.
+Wait, maybe I should compute \( n^4 + 1 \mod 9 \):
+For each \( n \mod 9 \), compute \( n^4 + 1 \mod 9 \):
+
+- \( n = 1: 1 + 1 = 2 \mod 9 \)
+- \( n = 2: 16 + 1 = 17 ≡ 8 \mod 9 \)
+- \( n = 3: 81 + 1 = 82 ≡ 1 \mod 9 \)
+- \( n = 4: 256 + 1 = 257; 257 ÷ 9: 9×28=252, 257-252=5 ⇒ 5 mod 9
+Wait, 4^4 is 256, which is 256 mod 9: 256 / 9 = 28×9=252, remainder 4. So 4^4 ≡ 4 mod 9, so 4 + 1 = 5 mod 9
+Similarly,
+\( n = 5: 5^4 = 625; 625 mod 9: 625 / 9 = 69×9=621, remainder 4 ⇒ 4 mod 9; 4 + 1 = 5 mod 9
+\( n = 6: 6^4 = 1296; 1296 mod 9 is 0 ⇒ 0 + 1 = 1 mod 9
+\( n = 7: 7^4 = 2401; 2401 mod 9: 2401 / 9 = 266×9=2394, remainder 7 ⇒ 7 mod 9; 7 + 1 = 8 mod 9
+\( n = 8: 8^4 = 4096; 4096 mod 9: Let's sum digits: 4+0+9+6=19, 1+9=10, 1+0=1 ⇒ 1 mod 9. So 1 + 1 = 2 mod 9
+
+So none of these give 0 mod 9. Therefore, \( p = 3 \) doesn't work either.
+
+Moving on to \( p = 5 \). Check if \( n^4 + 1 \equiv 0 \mod 25 \) for some \( n \).
+
+First, check modulo 5. If \( n^4 + 1 \equiv 0 \mod 5 \), then \( n^4 \equiv -1 \mod 5 \). Compute \( n^4 \mod 5 \):
+
+- \( n = 1: 1 \mod 5 \)
+- \( n = 2: 16 ≡ 1 mod 5
+- \( n = 3: 81 ≡ 1 mod 5
+- \( n = 4: 256 ≡ 1 mod 5
+So \( n^4 \equiv 1 \mod 5 \) for \( n \) not divisible by 5. Thus, \( n^4 + 1 \equiv 2 \mod 5 \neq 0 \). So no solution modulo 5, meaning certainly no solution modulo 25. So \( p = 5 \) is out.
+
+Next, \( p = 7 \). Let's see if \( n^4 + 1 \equiv 0 \mod 49 \) for some \( n \).
+
+First, check modulo 7: \( n^4 + 1 \equiv 0 \mod 7 \), so \( n^4 \equiv -1 \mod 7 \).
+
+Compute \( n^4 \mod 7 \):
+
+- \( n = 1: 1 \mod 7
+- \( n = 2: 16 ≡ 2 \mod 7
+- \( n = 3: 81 ≡ 4 \mod 7
+- \( n = 4: 256 ≡ 4 \mod 7
+- \( n = 5: 625 ≡ 2 \mod 7
+- \( n = 6: 1296 ≡ 1 \mod 7
+
+Looking for \( n^4 ≡ -1 ≡ 6 \mod 7 \). From above, none of the \( n \) values give 6 mod 7. So no solution modulo 7, hence no solution modulo 49. So \( p = 7 \) is out.
+
+Next prime is 11, but before that, I notice that primes \( p \equiv 1 \mod 8 \) are needed for \( n^4 + 1 \) to be divisible by \( p \), as earlier reasoning. So next primes after 2, 3, 5, 7 would be 11, 17, 19, 23, 29, etc. Wait, but 17 is 1 mod 16? No, 17 is 1 mod 16, but in terms of mod 8, it's 1.
+
+Wait, actually, primes \( p \equiv 1 \mod 8 \) include 17, 97, etc. But 11 is 3 mod 8, so it's not in the form. Hmm, so maybe I should first check whether the primes \( p \equiv 1 \mod 8 \) could satisfy \( p^2 \) divides \( n^4 + 1 \).
+
+The next prime \( p \equiv 1 \mod 8 \) is 17. Let me check if there's an \( n \) such that \( n^4 + 1 \equiv 0 \mod 17^2 = 289 \).
+
+To do this, perhaps I can use Hensel's lemma to lift solutions from modulo 17 to modulo 289.
+
+First, find \( n \) such that \( n^4 \equiv -1 \mod 17 \).
+
+Compute \( n^4 \mod 17 \). Since 17 is small, let's compute \( n^4 \) for \( n = 1 \) to \( 16 \):
+
+- \( 1^4 = 1 \)
+- \( 2^4 = 16 \)
+- \( 3^4 = 81 ≡ 13 \mod 17 \)
+- \( 4^4 = 256 ≡ 1 \mod 17 \)
+- \( 5^4 = 625 ≡ 625 - 36×17=625-612=13 ⇒ 13 mod 17
+- \( 6^4 = 1296; 1296 ÷ 17: 17×76=1292, so 1296 - 1292=4 ⇒ 4 mod 17
+- \( 7^4 = 2401; 2401 ÷17: 17×141=2397, so 2401 - 2397=4 ⇒ 4 mod17
+- \( 8^4 = 4096; 4096 - 241×17=4096 - 4097= -1 ⇒ 16 mod17
+- Similarly, 9^4: same as 8^4 because 9 ≡ -8 mod17, so (-8)^4 = 8^4 ≡16 mod17
+- 10^4: 10≡-7 mod17, so (-7)^4=7^4≡4 mod17
+- 11^4: 11≡-6 mod17, so (-6)^4=6^4≡4 mod17
+- 12^4: 12≡-5 mod17, so (-5)^4=5^4≡13 mod17
+- 13^4: 13≡-4 mod17, so (-4)^4=4^4≡1 mod17
+- 14^4: 14≡-3 mod17, so (-3)^4=3^4≡13 mod17
+- 15^4: 15≡-2 mod17, so (-2)^4=2^4≡16 mod17
+- 16^4: 16≡-1 mod17, so (-1)^4=1 mod17
+
+Looking for \( n^4 ≡ -1 mod17 \). Since -1 mod17 is 16. So when does \( n^4 ≡16 mod17 \)? From above:
+
+\( n = 2 \): 16
+\( n = 8 \): 16
+\( n = 9 \): 16
+\( n = 15 \): 16
+
+So possible solutions modulo 17 are \( n ≡ 2, 8, 9, 15 \mod17 \).
+
+Now, using Hensel's lemma, we can try to lift these solutions to modulo 17^2=289.
+
+Hensel's lemma says that if f(n) ≡0 mod p^k and f'(n) not≡0 mod p, then there's a unique lift to mod p^{k+1}. Here, f(n)=n^4 +1, so f'(n)=4n^3.
+
+So for each root \( r \mod17 \), we can check if f'(r) ≡0 mod17 or not. Since 4n^3 ≡0 mod17 only if n≡0 mod17, which none of our roots are (they are 2,8,9,15). Therefore, f'(r) ≠0 mod17, so each root can be uniquely lifted to mod289.
+
+Therefore, each solution modulo17 can be lifted to a solution modulo289. So we can find n such that n^4 +1 ≡0 mod289.
+
+But now, we need to find the minimal prime p for which such an n exists. Since 17 is a candidate, but before jumping to conclusions, let's check smaller primes.
+
+Wait, earlier I saw that primes like 2,3,5,7 didn't work because they either didn't have solutions modulo p or couldn't be squared. But 17 is the first prime ≡1 mod8 beyond 2,3,5,7.
+
+But hold on, perhaps another prime less than 17 also satisfies the condition? Maybe I missed something. Let's check p=11.
+
+Wait, p=11 is 3 mod8, so n^4 ≡-1 mod11?
+
+Compute n^4 mod11:
+
+Since φ(11)=10, and 4 divides 10? Wait, 4 doesn't divide 10. Hmm, Euler's theorem tells us that n^10 ≡1 mod11 for n coprime to11. But n^4 ≡-1 mod11 implies that n^8≡1 mod11. So the order of n modulo11 divides 8, but since 8 doesn't divide 10, which is φ(11), unless n is 0, which is not invertible. Therefore, n^4 ≡-1 mod11 is impossible because the multiplicative group mod11 has order10, and 8 doesn't divide 10, so no element can have order 8.
+
+Thus, p=11 cannot have solutions for n^4 +1≡0 mod p, let alone p^2. So p=11 is out.
+
+What about p=13? p=13 is 5 mod8. So similar reasoning: n^4 ≡-1 mod13?
+
+Compute n^4 mod13:
+
+φ(13)=12. So exponents cycle every 12.
+
+Looking for n with n^4 ≡12 mod13.
+
+Compute n^4 for n=1 to12:
+
+1^4=1
+2^4=16≡3
+3^4=81≡3
+4^4=256≡9
+5^4=625≡625-48×13=625-624=1⇒1
+6^4=(6^2)^2=36^2≡10^2=100≡9
+7^4=(7^2)^2=49^2≡10^2=100≡9
+8^4=(8^2)^2=64^2≡12^2=144≡1
+9^4=(9^2)^2=81^2≡3^2=9
+10^4=(10^2)^2=100^2≡9^2=81≡3
+11^4=(11^2)^2=121^2≡4^2=16≡3
+12^4=(12^2)^2=144^2≡1^2=1
+
+Looking for n^4≡12 mod13, but none of the n yield 12 mod13. So no solution modulo13, hence no solution modulo13^2. So p=13 is out.
+
+Next, p=17. As above, n^4 ≡-1 mod17 is solvable, so 17 is a candidate. Now, since we've already established that 17 is a prime where n^4 +1 is divisible by 17^2 for some n, and we haven't found any smaller prime with this property, p=17 is likely the minimal such prime.
+
+Therefore, p=17 is the least prime for which there exists a positive integer n with n^4 +1 divisible by p^2.
+
+Now, moving on to the second part: find the least positive integer m such that m^4 +1 is divisible by p^2, which is 17^2=289.
+
+From earlier steps, we know that n exists modulo17, and using Hensel's lemma, we can lift the solution to modulo289.
+
+We had four solutions modulo17: 2,8,9,15.
+
+Let me pick one of them and lift it to modulo289. Let's choose n=2 mod17 first.
+
+So suppose n ≡2 mod17. We can write n=2 +17k for some integer k. Plug into n^4 +1 ≡0 mod289.
+
+Compute n^4 +1 = (2 +17k)^4 +1.
+
+Expand using binomial theorem:
+
+(2 +17k)^4 = 2^4 + 4*2^3*(17k) + 6*2^2*(17k)^2 + 4*2*(17k)^3 + (17k)^4
+
+Simplify term by term:
+
+=16 + 4*8*17k + 6*4*(17k)^2 + 4*2*(17k)^3 + (17k)^4
+
+=16 + 4352k + 408*(17k)^2 + 136*(17k)^3 + (17k)^4
+
+Wait, but modulo289, higher powers of17 will vanish because 17^2=289≡0 mod289. So terms with 17^2 or higher will be 0 mod289.
+
+Therefore, modulo289, (2 +17k)^4 ≡16 + 4352k mod289.
+
+But 4352 divided by289: Let's compute 289*15=4335, 4352-4335=17. So 4352≡17 mod289.
+
+Therefore, (2 +17k)^4 ≡16 +17k mod289.
+
+Set this equal to -1 mod289:
+
+16 +17k ≡ -1 mod289 ⇒17k ≡ -17 mod289 ⇒17k ≡272 mod289
+
+Divide both sides by17: Since 17 and289 are co-prime (as289=17²), 17 has an inverse modulo289. The inverse of17 mod289: find x s.t.17x ≡1 mod289.
+
+Using extended Euclidean algorithm:
+
+Find gcd(17,289):
+
+289 =17×17, so gcd is17, but wait, 289=17², so gcd(17,289)=17≠1. Wait, but 17 divides289, so17 doesn't have an inverse modulo289. That complicates things.
+
+Wait, but in the equation17k ≡272 mod289, since17 divides289, we can write 289=17×17, so the equation becomes17k ≡272 mod17×17.
+
+Divide both sides by17: k ≡272/17 mod17.
+
+272 ÷17=16. So k≡16 mod17.
+
+Thus, k=16 +17m for some integer m.
+
+Therefore, n=2 +17k=2 +17*(16 +17m)=2 +272 +289m=274 +289m.
+
+Thus, the minimal positive solution is n=274 mod289. So the minimal positive integer n is274.
+
+Wait, but let me verify this because 274 seems quite large. Maybe I made a mistake.
+
+Alternatively, perhaps choosing a different starting point would result in a smaller n. Let's check another solution modulo17.
+
+Take n=8 mod17. Then, set n=8 +17k.
+
+Compute n^4 +1=(8 +17k)^4 +1.
+
+Again, expanding modulo289, higher powers of17 beyond 17^2 vanish.
+
+Compute (8 +17k)^4:
+
+=8^4 +4*8^3*17k +6*8^2*(17k)^2 +4*8*(17k)^3 + (17k)^4
+
+=4096 + 4*512*17k +6*64*289k² + ... 
+
+Modulo289, only the first two terms matter because 6*64*289k²≡0 mod289, etc.
+
+Compute 4096 mod289:
+
+289×14=4046, 4096-4046=50. So 4096≡50 mod289.
+
+Next term: 4*512*17k=4*512*17k=4*8704k. 8704 mod289: 289×29=8381, 8704-8381=323. 323-289=34. So 8704≡34 mod289. Therefore, 4*8704k≡4*34k=136k mod289.
+
+Thus, total modulo289: 50 +136k ≡-1 mod289 ⇒136k ≡-51 mod289.
+
+Wait, -1 -50= -51. So 136k≡238 mod289 (since -51 mod289 is238).
+
+Now, solve136k≡238 mod289.
+
+First, find gcd(136,289). 289=17², 136=17×8. So gcd=17.
+
+Check if17 divides238: 238 ÷17=14. So yes, 17 divides238.
+
+Therefore, divide the equation by17: 8k≡14 mod17.
+
+Solve8k≡14 mod17. Multiply both sides by inverse of8 mod17.
+
+8×2=16≡-1 mod17, so inverse of8 is-2≡15 mod17.
+
+Thus, k≡14×15=210≡210-12×17=210-204=6 mod17.
+
+Therefore, k=6 +17m.
+
+Thus, n=8 +17k=8 +17×6=8 +102=110.
+
+Thus, n=110 mod289 is a solution. So 110 is smaller than274.
+
+Let me verify n=110: compute110^4 +1.
+
+Compute110^2=12100; 12100^2=146410000.
+
+146410000 +1=146410001.
+
+Now, check if146410001 is divisible by289.
+
+Divide146410001 ÷289.
+
+Compute289×505000=289×500000=144500000; 289×5000=1,445,000. So 144500000 +1,445,000=145,945,000.
+
+Subtract from146,410,001: 146,410,001 -145,945,000=465,001.
+
+Wait, that can't be right. Maybe my computation is off.
+
+Alternatively, perhaps better to compute110^4 mod289.
+
+Compute110 mod289=110.
+
+Compute110^2=12100. 12100 ÷289: 289×41=11849. 12100 -11849=251. So 110^2≡251 mod289.
+
+Then, 110^4=(110^2)^2=251^2 mod289.
+
+Compute251^2: 251×251. Let's compute:
+
+250×250=62500
+
+250×1=250
+
+1×250=250
+
+1×1=1
+
+Total:62500 +250 +250 +1=62500 +500 +1=63001.
+
+Compute63001 mod289:
+
+Divide63001 ÷289:
+
+289×217=289×200=57800, 289×17=4913, so total57800+4913=62713.
+
+63001 -62713=288. So 63001≡288 mod289.
+
+Thus, 110^4≡288 mod289. Then, 110^4 +1≡288 +1=289≡0 mod289. Yes, correct. So n=110 works.
+
+Similarly, let's check n=274: 274 mod289=274.
+
+Compute274^2=75076. 75076 ÷289=289×259=75051, 75076 -75051=25. So274^2≡25 mod289.
+
+Then274^4=(274^2)^2=25^2=625 mod289.
+
+625 ÷289=2×289=578, 625 -578=47. So274^4≡47 mod289.
+
+47 +1=48≡48≠0 mod289. So n=274 doesn't work? Wait, that contradicts my earlier conclusion.
+
+Wait, no, perhaps I made a miscalculation.
+
+Wait, n=274: 274≡-15 mod289.
+
+Compute(-15)^4=15^4=50625. 50625 ÷289: 289×175=50575, 50625 -50575=50. So (-15)^4≡50 mod289.
+
+50 +1=51≡51≠0 mod289. Wait, that's strange because earlier calculations suggested that n=274 would be a solution, but now it's giving 51 instead of0.
+
+Wait, perhaps I messed up the lifting process.
+
+Earlier, when I took n=2 mod17 and lifted it to n=274 mod289, I thought it was a solution, but apparently, it's not. That suggests a mistake in the lifting process.
+
+Wait, going back, when I did the expansion for n=2 +17k, I ended up with16 +17k ≡-1 mod289 ⇒17k≡-17 mod289 ⇒k≡-1 mod17. So k= -1 +17m, which would make n=2 +17*(-1 +17m)=2 -17 +289m= -15 +289m. So n≡-15 mod289, which is274 mod289.
+
+But when I computed n=274^4 +1, I got51 mod289 instead of0. So that's inconsistent.
+
+Wait, perhaps I made a mistake in the expansion.
+
+Wait, when I expanded (2 +17k)^4, I assumed higher powers beyond 17^2 vanish. Let me re-examine that.
+
+(2 +17k)^4 =2^4 +4*2^3*(17k)+6*2^2*(17k)^2 +4*2*(17k)^3 + (17k)^4
+
+Which is16 + 4*8*17k +6*4*(17k)^2 +4*2*(17k)^3 + (17k)^4
+
+Compute each term:
+
+16 + 4352k + 408*(17k)^2 + 136*(17k)^3 + (17k)^4
+
+Now, modulo289, 17k is 0 mod17, but (17k)^2=289k²≡0 mod289. Similarly, higher powers are0. So indeed, modulo289, only the first two terms matter:16 +4352k.
+
+But 4352 mod289: 289*15=4335, 4352 -4335=17. So4352≡17 mod289.
+
+Thus, n^4 +1≡16 +17k +1 mod289. Wait, no, original expression is n^4 +1=16 +4352k + ... +1. So16 +4352k +1=17 +4352k≡17 +17k mod289.
+
+Set equal to0:17 +17k≡0 mod289 ⇒17(k +1)≡0 mod289.
+
+Which impliesk +1≡0 mod17, since17 and289 share a factor17. So17 divides289, which it does (289=17²). So we have17(k +1)≡0 mod17² ⇒k +1≡0 mod17.
+
+Thus,k≡-1 mod17. So k=-1 +17m.
+
+Thus,n=2 +17k=2 +17*(-1 +17m)=2 -17 +289m= -15 +289m. So n≡-15 mod289=274 mod289.
+
+But when I checked n=274, I got274^4 +1=...≡51 mod289, not0.
+
+Wait, maybe my manual calculation was wrong. Let me compute274^4 mod289 again.
+
+274 mod289=274.
+
+Compute274^2:274*274.
+
+Let me compute274*274:
+
+274*200=54,800
+
+274*70=19,180
+
+274*4=1,096
+
+Add them together:54,800 +19,180=73,980; 73,980 +1,096=75,076.
+
+75,076 ÷289:289*259=75,051; 75,076 -75,051=25. So274^2≡25 mod289.
+
+Then,274^4=(274^2)^2=25^2=625.
+
+625 ÷289=2*289=578; 625 -578=47. So274^4≡47 mod289. Therefore,47 +1=48≡48≠0 mod289.
+
+That's not zero. So why did I get a solution when lifting n=2 mod17?
+
+Wait, maybe I made a mistake in the lifting process. When lifting, sometimes solutions can lift to multiple solutions or none depending on the function's behavior.
+
+Wait, perhaps n=274 is not a solution. Alternatively, perhaps I need to lift a different root.
+
+Wait, perhaps I should try lifting n=8 mod17, which gave n=110 mod289, which worked.
+
+Alternatively, maybe lifting n=9 mod17.
+
+Let me try n=9 mod17.
+
+Set n=9 +17k.
+
+Compute n^4 +1=(9 +17k)^4 +1.
+
+Expanding modulo289, only the first two terms matter:
+
+9^4 +4*9^3*17k +6*9^2*(17k)^2 +...≡9^4 +4*9^3*17k mod289.
+
+Compute9^4=6561. 6561 ÷289=22*289=6358, 6561 -6358=203. So9^4≡203 mod289.
+
+Compute4*9^3*17k=4*729*17k. 729 mod289:289*2=578, 729 -578=151. So729≡151 mod289.
+
+Thus,4*151*17k=4*2567k. 2567 ÷289:289*8=2312, 2567 -2312=255. 255 <289, so2567≡255 mod289. Thus,4*255=1020. 1020 ÷289=3*289=867, 1020 -867=153. So4*255≡153 mod289.
+
+Thus,4*9^3*17k≡153k mod289.
+
+Therefore, total n^4 +1≡203 +153k +1 mod289≡204 +153k mod289.
+
+Set equal to0 mod289:204 +153k≡0 mod289 ⇒153k≡-204 mod289 ⇒153k≡85 mod289 (since -204 +289=85).
+
+Now, solve153k≡85 mod289.
+
+First, compute gcd(153,289). 289=17²,153=9×17. So gcd=17.
+
+Check if17 divides85:85 ÷17=5. Yes, so divide equation by17:9k≡5 mod17.
+
+Solve9k≡5 mod17. Multiply both sides by inverse of9 mod17. 9×2=18≡1 mod17 ⇒inverse is2.
+
+Thus,k≡5×2=10 mod17.
+
+Thus,k=10 +17m.
+
+Therefore,n=9 +17k=9 +17×10=9 +170=179.
+
+Compute179^4 +1 mod289.
+
+First, compute179 mod289=179.
+
+Compute179^2:179×179.
+
+Calculate180×180=32,400, subtract1×179 +1×180: Wait, alternatively, 179×179.
+
+Compute170×170=28,900
+
+170×9=1,530
+
+9×170=1,530
+
+9×9=81
+
+So (170 +9)^2=170² +2×170×9 +9²=28,900 +3,060 +81=31,  28,900 +3,060=31,960; 31,960 +81=32,041.
+
+32,041 mod289:
+
+Compute how many times289 goes into32,041.
+
+289×100=28,900
+
+32,041 -28,900=3,141
+
+289×10=2,890
+
+3,141 -2,890=251
+
+So32,041≡251 mod289.
+
+Thus,179^2≡251 mod289.
+
+Then,179^4=(179^2)^2=251^2 mod289.
+
+As before,251^2=63,001. 63,001 ÷289:289×217=62,713, 63,001 -62,713=288.
+
+Thus,179^4≡288 mod289.
+
+288 +1=289≡0 mod289. Correct. So n=179 is a solution.
+
+Similarly, let's check n=110, which we saw earlier, and n=179.
+
+So, n=110 and n=179 are both solutions mod289. Which one is smaller? 110 vs179:110 is smaller.
+
+Wait, what about n=274? It wasn't a solution. So why did lifting n=2 give a non-solution, while lifting n=8 and n=9 gave solutions?
+
+Perhaps because the function f(n)=n^4 +1 has multiple roots modulo289, and depending on the initial root mod17, you may end up with different lifts. So in the case of n=2 mod17, the lift resulted in n=274, which didn't work, whereas n=8 mod17 and n=9 mod17 led to valid solutions n=110 and n=179.
+
+This suggests that not all lifts of roots mod17 will necessarily lead to a solution mod289, but some will. So, in our case, n=110 is a valid solution, and it's smaller than274, so 110 is the minimal solution.
+
+Therefore, the minimal positive integer m such that m^4 +1 is divisible by17²=289 is110.
+
+Wait, but just to make sure, let me confirm if there exists any m between1 and110 that satisfies m^4 +1≡0 mod289.
+
+Given that17 is prime, and we used Hensel's lemma correctly, and we found that n=110 is a solution, and since110 is less than289, it's the minimal solution.
+
+Therefore, the answer is110.
+
+**Final Answer**
+The least positive integer \( m \) is \boxed{110}.
+</think>
+
+To find the least prime number \( p \) such that there exists a positive integer \( n \) where \( n^4 + 1 \) is divisible by \( p^2 \), we start by checking small primes. We need \( n^4 \equiv -1 \mod p \) to have solutions, which requires \( p \equiv 1 \mod 8 \). The smallest such prime is 17.
+
+Next, we need to determine the smallest positive integer \( m \) such that \( m^4 + 1 \) is divisible by \( 17^2 = 289 \). Using Hensel's lemma, we lift the solutions from modulo 17 to modulo 289.
+
+We find that \( n \equiv 8 \mod 17 \) and \( n \equiv 9 \mod 17 \) are solutions. Lifting \( n = 8 \mod 17 \) to modulo 289, we find \( n = 110 \) is a solution. Checking \( n = 110 \):
+
+\[
+110^2 = 12100 \equiv 251 \mod 289
+\]
+\[
+110^4 = (110^2)^2 = 251^2 \equiv 288 \mod 289
+\]
+\[
+110^4 + 1 \equiv 288 + 1 = 289 \equiv 0 \mod 289
+\]
+
+Thus, the least positive integer \( m \) such that \( m^4 + 1 \) is divisible by \( 289 \) is \( 110 \).
+
+The final answer is \(\boxed{110}\).
+
+Predicted answer: 110.0
+Valid answer: 110.0

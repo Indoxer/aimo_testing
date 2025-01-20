@@ -1,0 +1,1124 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Rhombus $ABCD$ has $\angle BAD < 90^\circ.$ There is a point $P$ on the incircle of the rhombus such that the distances from $P$ to the lines $DA,AB,$ and $BC$ are $9,$ $5,$ and $16,$ respectively. Find the perimeter of $ABCD.$
+
+
+Alright, so I have this geometry problem about a rhombus \(ABCD\) with an angle at \(A\) less than \(90^\circ\). There's a point \(P\) on the incircle of the rhombus, and the distances from \(P\) to the sides \(DA\), \(AB\), and \(BC\) are given as 9, 5, and 16 respectively. I need to find the perimeter of \(ABCD\).
+
+First off, let me recall some properties of a rhombus. A rhombus has all sides equal, opposite sides parallel, and the diagonals bisect each other at right angles. Also, the area of a rhombus can be calculated in a couple of ways: base times height, or product of the diagonals divided by two. Since we have a point on the incircle, maybe something related to the inradius will come into play.
+
+Given that \(ABCD\) is a rhombus, all sides are equal. Let's denote the length of each side as \(s\). Then, the perimeter would be \(4s\), which is what we need to find.
+
+The incircle of a rhombus touches all four sides. In a rhombus, the inradius \(r\) can be found using the formula \(r = \frac{a}{2} \sin \theta\), where \(a\) is the side length and \(\theta\) is any interior angle (since all angles are congruent in pairs). But wait, actually, for a rhombus, since it's a tangential quadrilateral (it has an incircle), the inradius can also be expressed as \(r = \frac{\text{Area}}{2s}\), where \(s\) is the semiperimeter. Hmm, but in a rhombus, the semiperimeter is just \(2s\), because each side is \(s\). So, actually, \(r = \frac{\text{Area}}{2s}\). 
+
+But the area of the rhombus is also given by \(s^2 \sin \theta\), where \(\theta\) is one of the interior angles. Therefore, combining these, \(r = \frac{s^2 \sin \theta}{2s} = \frac{s \sin \theta}{2}\). So, \(r = \frac{s}{2} \sin \theta\).
+
+Wait, but in our case, point \(P\) is on the incircle, not necessarily the center. The distances from \(P\) to three sides are given. Hmm, so maybe we can use coordinate geometry here? Or perhaps think in terms of areas?
+
+Let me try setting up a coordinate system. Let's place the rhombus in the plane such that point \(A\) is at the origin, side \(AB\) lies along the x-axis, and the rhombus is positioned so that angle \(BAD\) is acute. So, if \(ABCD\) is a rhombus with side length \(s\), then coordinates could be assigned as follows:
+
+- Point \(A\): \((0, 0)\)
+- Point \(B\): \((s, 0)\)
+- Point \(D\): \((d_x, d_y)\)
+- Point \(C\): \(B + D - A = (s + d_x, d_y)\)
+
+Since it's a rhombus, all sides are length \(s\), so the distance from \(A\) to \(B\) is \(s\), from \(B\) to \(C\) is \(s\), etc. The vectors \(AB\) and \(AD\) should both have length \(s\), so vector \(AB\) is \((s, 0)\), and vector \(AD\) is \((d_x, d_y)\), so its length squared is \(d_x^2 + d_y^2 = s^2\).
+
+Now, the equations of the sides:
+
+- Side \(AB\): from \((0, 0)\) to \((s, 0)\). The equation is simply \(y = 0\).
+- Side \(BC\): connects \(B(s, 0)\) to \(C(s + d_x, d_y)\). The slope of \(BC\) would be \(\frac{d_y - 0}{(s + d_x) - s} = \frac{d_y}{d_x}\). So, equation is \(y = \frac{d_y}{d_x}(x - s)\).
+- Side \(CD\): connects \(C(s + d_x, d_y)\) to \(D(d_x, d_y)\). This is a horizontal line? Wait, no. From \(C\) to \(D\), moving back towards \(A\). Actually, since \(ABCD\) is a rhombus, side \(CD\) should be parallel to side \(AB\). So, if \(AB\) is horizontal, then \(CD\) is also horizontal. Therefore, the y-coordinate for \(C\) and \(D\) must be the same, which they are (\(d_y\)). Hence, the equation of \(CD\) is \(y = d_y\).
+- Similarly, side \(DA\) connects \(D(d_x, d_y)\) back to \(A(0, 0)\). The slope of \(DA\) is \(\frac{d_y - 0}{d_x - 0} = \frac{d_y}{d_x}\). So, the equation is \(y = \frac{d_y}{d_x}x\).
+
+So, summarizing the equations:
+- \(AB\): \(y = 0\)
+- \(BC\): \(y = \frac{d_y}{d_x}(x - s)\)
+- \(CD\): \(y = d_y\)
+- \(DA\): \(y = \frac{d_y}{d_x}x\)
+
+Now, the incircle of the rhombus. Since a rhombus is a tangential quadrilateral, all sides are tangent to the incircle, which is centered at the intersection of the diagonals. So, in a rhombus, the diagonals bisect each other at 90 degrees. Therefore, the center of the incircle is at the intersection of the diagonals, which is the midpoint of both diagonals. Let's compute the coordinates of the center.
+
+Diagonal \(AC\) goes from \(A(0, 0)\) to \(C(s + d_x, d_y)\), so the midpoint is \(\left(\frac{s + d_x}{2}, \frac{d_y}{2}\right)\). Similarly, diagonal \(BD\) goes from \(B(s, 0)\) to \(D(d_x, d_y)\), so midpoint is \(\left(\frac{s + d_x}{2}, \frac{d_y}{2}\right)\). So, yes, the center is at \(\left(\frac{s + d_x}{2}, \frac{d_y}{2}\right)\).
+
+The radius of the incircle in a rhombus can be found as the distance from the center to any side. Since all sides are equidistant from the center due to symmetry. Let's compute the distance from the center to side \(AB\). The equation of \(AB\) is \(y = 0\). The distance from center \(\left(\frac{s + d_x}{2}, \frac{d_y}{2}\right)\) to \(AB\) is just the y-coordinate, which is \(\frac{d_y}{2}\). So, the inradius \(r = \frac{d_y}{2}\).
+
+Alternatively, we had earlier that \(r = \frac{s}{2} \sin \theta\), where \(\theta\) is angle \(BAD\). Maybe we can relate \(d_y\) to \(s\) and \(\theta\). Since \(AD\) makes an angle \(\theta\) with the x-axis, the coordinates of \(D\) can be written as \( (s \cos \theta, s \sin \theta)\). Wait, hold on. If we consider \(AD\) as a vector making angle \(\theta\) with the x-axis, then point \(D\) would be at \( (s \cos \theta, s \sin \theta)\). Is that correct?
+
+Wait, no. Because in a rhombus, all sides are equal, but depending on the angle, the coordinates change. So, if \(AD\) is of length \(s\), making angle \(\theta\) with the x-axis, then point \(D\) is indeed at \( (s \cos \theta, s \sin \theta)\). Therefore, substituting \(d_x = s \cos \theta\) and \(d_y = s \sin \theta\). That simplifies things.
+
+Therefore, the center of the incircle is at \( \left( \frac{s + s \cos \theta}{2}, \frac{s \sin \theta}{2} \right ) = \left( \frac{s(1 + \cos \theta)}{2}, \frac{s \sin \theta}{2} \right ) \). And the inradius \( r = \frac{d_y}{2} = \frac{s \sin \theta}{2} \).
+
+Good, now moving on. Point \(P\) is on the incircle. So, \(P\) satisfies the equation of the circle centered at \(\left( \frac{s(1 + \cos \theta)}{2}, \frac{s \sin \theta}{2} \right )\) with radius \( \frac{s \sin \theta}{2} \).
+
+Parametrizing point \(P\). Since it's on the incircle, I can write \(P\) in terms of an angle parameter. Let me set up parametric equations for the circle.
+
+Let’s denote the center as \(O\left( h, k \right ) = \left( \frac{s(1 + \cos \theta)}{2}, \frac{s \sin \theta}{2} \right )\). Then, any point \(P\) on the circle can be expressed as:
+\[
+P = O + r (\cos \phi, \sin \phi)
+\]
+where \(\phi\) is the angle parameter. Substituting \(r = \frac{s \sin \theta}{2}\), we get:
+\[
+P = \left( \frac{s(1 + \cos \theta)}{2} + \frac{s \sin \theta}{2} \cos \phi, \frac{s \sin \theta}{2} + \frac{s \sin \theta}{2} \sin \phi \right )
+\]
+Simplify:
+\[
+P = \left( \frac{s}{2} [1 + \cos \theta + \sin \theta \cos \phi], \frac{s \sin \theta}{2} [1 + \sin \phi] \right )
+\]
+
+Now, we know the distances from \(P\) to three sides: \(DA\), \(AB\), and \(BC\) are 9, 5, and 16 respectively. Let me recall how to compute the distance from a point to a line.
+
+Given a line \(ax + by + c = 0\) and a point \((x_0, y_0)\), the distance is \(|ax_0 + by_0 + c| / \sqrt{a^2 + b^2}\).
+
+So, let's write the equations of the sides again with their standard forms:
+
+1. Side \(AB\): \(y = 0\) → \(0x + 1y + 0 = 0\). So, coefficients \(a=0\), \(b=1\), \(c=0\).
+
+2. Side \(DA\): \(y = \frac{d_y}{d_x}x\) → Rewriting, \(-\frac{d_y}{d_x}x + y = 0\). So, coefficients \(a = -\frac{d_y}{d_x}\), \(b = 1\), \(c = 0\).
+
+3. Side \(BC\): \(y = \frac{d_y}{d_x}(x - s)\) → Bringing all terms to left: \(-\frac{d_y}{d_x}x + y + \frac{d_y}{d_x}s = 0\). So, coefficients \(a = -\frac{d_y}{d_x}\), \(b = 1\), \(c = \frac{d_y}{d_x} s\).
+
+But since we already expressed \(d_x = s \cos \theta\), \(d_y = s \sin \theta\), we can substitute those into the coefficients:
+
+1. For \(DA\): \(a = -\frac{s \sin \theta}{s \cos \theta} = -\tan \theta\), \(b = 1\), \(c = 0\).
+
+2. For \(BC\): \(a = -\tan \theta\), \(b = 1\), \(c = \frac{s \sin \theta}{s \cos \theta} s = \frac{s^2 \sin \theta}{s \cos \theta} = \frac{s \sin \theta}{\cos \theta} = s \tan \theta\).
+
+Thus, the equations become:
+
+1. \(AB\): \(0x + 1y + 0 = 0\)
+2. \(DA\): \(-\tan \theta x + 1 y + 0 = 0\)
+3. \(BC\): \(-\tan \theta x + 1 y + s \tan \theta = 0\)
+
+Great, now let's compute the distances from point \(P = (x, y)\) to each of these lines.
+
+Given \(P = \left( \frac{s}{2}[1 + \cos \theta + \sin \theta \cos \phi], \frac{s \sin \theta}{2}[1 + \sin \phi] \right )\), let's denote:
+
+\(x = \frac{s}{2}[1 + \cos \theta + \sin \theta \cos \phi]\)
+
+\(y = \frac{s \sin \theta}{2}[1 + \sin \phi]\)
+
+Distance to \(AB\):
+
+\(d_{AB} = \frac{|0 \cdot x + 1 \cdot y + 0|}{\sqrt{0^2 + 1^2}} = |y|\)
+
+Given that \(d_{AB} = 5\), so \(|y| = 5\). Since \(P\) is inside the rhombus, \(y\) should be positive, so \(y = 5\).
+
+Similarly, distance to \(DA\):
+
+\(d_{DA} = \frac{| -\tan \theta \cdot x + 1 \cdot y + 0 |}{\sqrt{ (\tan \theta)^2 + 1^2 }} = \frac{| -\tan \theta \cdot x + y |}{\sqrt{ \tan^2 \theta + 1 }}\)
+
+We know \(d_{DA} = 9\). Also, \(\sqrt{ \tan^2 \theta + 1 } = \sec \theta = 1 / \cos \theta\). So,
+
+\( \frac{| -\tan \theta \cdot x + y |}{1/\cos \theta} = | -\tan \theta \cdot x + y | \cdot \cos \theta = | -\sin \theta \cdot x / \cos \theta + y | \cdot \cos \theta \). Wait, let me compute differently.
+
+Wait, perhaps better to express \( -\tan \theta x + y \) as:
+
+\( -\tan \theta x + y = -\frac{\sin \theta}{\cos \theta} x + y \)
+
+Multiply numerator and denominator by \(\cos \theta\):
+
+\( \frac{ -\sin \theta x + y \cos \theta }{ \cos \theta } \)
+
+Hence, absolute value is \( | -\sin \theta x + y \cos \theta | / |\cos \theta| \). Since \(\theta\) is acute, \(\cos \theta > 0\), so denominator is positive.
+
+Thus, distance is:
+
+\( | -\sin \theta x + y \cos \theta | / \cos \theta \times \cos \theta = | -\sin \theta x + y \cos \theta | \)
+
+Wait, no. Wait, original distance formula gives:
+
+\( d_{DA} = \frac{| -\tan \theta x + y |}{\sqrt{ \tan^2 \theta + 1 }} = \frac{| -\tan \theta x + y |}{\sec \theta} = | -\tan \theta x + y | \cos \theta \)
+
+But \( | -\tan \theta x + y | \cos \theta = | -\sin \theta x / \cos \theta + y | \cos \theta = | -\sin \theta x + y \cos \theta | \)
+
+So, distance \(d_{DA}\) is \( | -\sin \theta x + y \cos \theta | \). Given that \(d_{DA} = 9\).
+
+Similarly, distance to \(BC\):
+
+Equation of \(BC\) is \(-\tan \theta x + y + s \tan \theta = 0\).
+
+Distance \(d_{BC}\):
+
+\( \frac{| -\tan \theta x + y + s \tan \theta |}{\sqrt{ \tan^2 \theta + 1 }} = \frac{| -\tan \theta x + y + s \tan \theta |}{\sec \theta} = | -\tan \theta x + y + s \tan \theta | \cos \theta \)
+
+Simplify numerator:
+
+\( | -\tan \theta x + y + s \tan \theta | = | -\sin \theta x / \cos \theta + y + s \sin \theta / \cos \theta | \)
+
+Multiply by \(\cos \theta\):
+
+\( | -\sin \theta x + y \cos \theta + s \sin \theta | \)
+
+So, \(d_{BC} = | -\sin \theta x + y \cos \theta + s \sin \theta | = 16\)
+
+So, to recap, we have:
+
+1. \(d_{AB} = |y| = 5\) ⇒ \(y = 5\)
+2. \(d_{DA} = | -\sin \theta x + y \cos \theta | = 9\)
+3. \(d_{BC} = | -\sin \theta x + y \cos \theta + s \sin \theta | = 16\)
+
+Also, from point \(P\) being on the incircle, it satisfies the circle equation. Let's write that down.
+
+Coordinates of \(P\) are \( (x, y) = \left( \frac{s}{2}[1 + \cos \theta + \sin \theta \cos \phi], \frac{s \sin \theta}{2}[1 + \sin \phi] \right ) \)
+
+But we already found that \(y = 5\). So:
+
+\( \frac{s \sin \theta}{2}[1 + \sin \phi] = 5 \)
+
+Let me denote this as Equation (1):
+
+\( \frac{s \sin \theta}{2}(1 + \sin \phi) = 5 \) ⇒ \( s \sin \theta (1 + \sin \phi) = 10 \)
+
+Also, let's note that \(x\) can be expressed from the coordinates:
+
+\( x = \frac{s}{2}[1 + \cos \theta + \sin \theta \cos \phi] \)
+
+Let me denote this as Equation (2):
+
+\( x = \frac{s}{2}[1 + \cos \theta + \sin \theta \cos \phi] \)
+
+Now, going back to the distance equations:
+
+From \(d_{DA}\):
+
+\( | -\sin \theta x + y \cos \theta | = 9 \)
+
+Substitute \(y = 5\):
+
+\( | -\sin \theta x + 5 \cos \theta | = 9 \)
+
+Let me denote this as Equation (3):
+
+\( | -\sin \theta x + 5 \cos \theta | = 9 \)
+
+Similarly, from \(d_{BC}\):
+
+\( | -\sin \theta x + 5 \cos \theta + s \sin \theta | = 16 \)
+
+Denote this as Equation (4):
+
+\( | -\sin \theta x + 5 \cos \theta + s \sin \theta | = 16 \)
+
+Notice that Equations (3) and (4) involve similar terms. Let me define:
+
+Let \( A = -\sin \theta x + 5 \cos \theta \). Then Equation (3) becomes \( |A| = 9 \), and Equation (4) becomes \( |A + s \sin \theta| = 16 \).
+
+So, we have:
+
+1. \( |A| = 9 \)
+2. \( |A + s \sin \theta| = 16 \)
+
+Let me consider the possible cases for \(A\):
+
+Case 1: \(A = 9\)
+
+Then, from Equation (4): \( |9 + s \sin \theta| = 16 \)
+
+Which implies:
+
+Either \(9 + s \sin \theta = 16\) ⇒ \(s \sin \theta = 7\)
+
+Or \(9 + s \sin \theta = -16\) ⇒ \(s \sin \theta = -25\). But since \(s > 0\) and \(\sin \theta > 0\) (as \(\theta < 90^\circ\)), this is impossible. So, only \(s \sin \theta = 7\)
+
+Case 2: \(A = -9\)
+
+Then, from Equation (4): \( |-9 + s \sin \theta| = 16 \)
+
+Which implies:
+
+Either \(-9 + s \sin \theta = 16\) ⇒ \(s \sin \theta = 25\)
+
+Or \(-9 + s \sin \theta = -16\) ⇒ \(s \sin \theta = -7\). Again, impossible as above.
+
+So, in total, two possibilities:
+
+Either \(s \sin \theta = 7\) or \(s \sin \theta = 25\)
+
+But from Equation (1):
+
+\( s \sin \theta (1 + \sin \phi) = 10 \)
+
+If \(s \sin \theta = 7\), then:
+
+\( 7(1 + \sin \phi) = 10 \) ⇒ \(1 + \sin \phi = 10/7\) ⇒ \( \sin \phi = 10/7 - 1 = 3/7 \). Which is valid because \(3/7 ≈ 0.428 < 1\).
+
+If \(s \sin \theta = 25\), then:
+
+\(25(1 + \sin \phi) = 10\) ⇒ \(1 + \sin \phi = 10/25 = 2/5\) ⇒ \( \sin \phi = 2/5 - 1 = -3/5 \). Which is also valid since sine can be negative, meaning angle \(\phi\) is in a different quadrant.
+
+So both cases are possible. We need to check both.
+
+Let me proceed with both cases separately.
+
+**Case 1: \(s \sin \theta = 7\)**
+
+From Equation (1):
+
+\(7(1 + \sin \phi) = 10\) ⇒ \(1 + \sin \phi = 10/7\) ⇒ \(\sin \phi = 3/7\)
+
+From Equation (3): \( | -\sin \theta x + 5 \cos \theta | = 9 \). Since \(s \sin \theta = 7\), and \(s = 7 / \sin \theta\). Wait, let me see:
+
+Wait, \(s \sin \theta = 7\) ⇒ \(s = 7 / \sin \theta\)
+
+Also, we can express \(x\) from Equation (2):
+
+\(x = \frac{s}{2}[1 + \cos \theta + \sin \theta \cos \phi]\)
+
+Substitute \(s = 7 / \sin \theta\):
+
+\(x = \frac{7}{2 \sin \theta}[1 + \cos \theta + \sin \theta \cos \phi]\)
+
+But \(\sin \theta \cos \phi = \sin \theta \times \sqrt{1 - \sin^2 \phi}\) because \(\sin^2 \phi + \cos^2 \phi = 1\). However, \(\phi\) is an angle parameter, so \(\cos \phi = \pm \sqrt{1 - \sin^2 \phi}\). But without knowing the sign, we might need to consider both possibilities. Alternatively, since \(P\) is on the incircle, which is symmetric, perhaps the sign doesn't matter, but let's see.
+
+Wait, actually, \(P\) is located on the incircle, which is a specific circle. Depending on where \(P\) is, \(\phi\) can vary. So, perhaps \(\cos \phi\) can be positive or negative. Hmm, this complicates things.
+
+Alternatively, maybe it's better to work with variables symbolically.
+
+But let me see.
+
+We have:
+
+\(x = \frac{7}{2 \sin \theta}[1 + \cos \theta + \sin \theta \cos \phi]\)
+
+And we have Equation (3):
+
+\( | -\sin \theta x + 5 \cos \theta | = 9 \)
+
+Let me plug in \(x\):
+
+Compute \( -\sin \theta x + 5 \cos \theta \):
+
+= \( -\sin \theta \times \frac{7}{2 \sin \theta}[1 + \cos \theta + \sin \theta \cos \phi] + 5 \cos \theta \)
+
+Simplify:
+
+= \( -\frac{7}{2}[1 + \cos \theta + \sin \theta \cos \phi] + 5 \cos \theta \)
+
+= \( -\frac{7}{2} - \frac{7}{2} \cos \theta - \frac{7}{2} \sin \theta \cos \phi + 5 \cos \theta \)
+
+Combine like terms:
+
+= \( -\frac{7}{2} + \left(-\frac{7}{2} + 5\right) \cos \theta - \frac{7}{2} \sin \theta \cos \phi \)
+
+Simplify coefficients:
+
+\( -\frac{7}{2} + (-\frac{7}{2} + \frac{10}{2}) \cos \theta - \frac{7}{2} \sin \theta \cos \phi \)
+
+= \( -\frac{7}{2} + \frac{3}{2} \cos \theta - \frac{7}{2} \sin \theta \cos \phi \)
+
+So, \( | -\frac{7}{2} + \frac{3}{2} \cos \theta - \frac{7}{2} \sin \theta \cos \phi | = 9 \)
+
+This seems complicated. Maybe instead of plugging into this form, let me try to express \(\cos \phi\) in terms of known quantities.
+
+Recall that from Equation (1):
+
+\( s \sin \theta (1 + \sin \phi) = 10 \) ⇒ \( 7(1 + \sin \phi) = 10 \) ⇒ \( \sin \phi = 3/7 \)
+
+So, \( \sin \phi = 3/7 \), thus \( \cos \phi = \pm \sqrt{1 - (9/49)} = \pm \sqrt{40/49} = \pm (2 \sqrt{10}) / 7 \)
+
+Hmm, so two possibilities for \(\cos \phi\): \(2\sqrt{10}/7\) and \(-2\sqrt{10}/7\)
+
+Therefore, going back to expression for \(x\):
+
+\( x = \frac{7}{2 \sin \theta}[1 + \cos \theta + \sin \theta \cos \phi] \)
+
+But \( \sin \theta = 7 / s \), since \( s \sin \theta = 7 \), so \( \sin \theta = 7 / s \). Thus:
+
+\( x = \frac{7}{2 \times (7/s)} [1 + \cos \theta + (7/s) \cos \phi ] \)
+
+Simplify:
+
+= \( \frac{7}{14/s} [1 + \cos \theta + (7/s) \cos \phi ] \)
+
+= \( \frac{7s}{14} [1 + \cos \theta + (7/s) \cos \phi ] \)
+
+= \( \frac{s}{2} [1 + \cos \theta + (7/s) \cos \phi ] \)
+
+= \( \frac{s}{2} + \frac{s}{2} \cos \theta + \frac{7}{2} \cos \phi \)
+
+So, \(x\) is expressed in terms of \(s\) and \(\cos \phi\). But we still don't know \(\cos \theta\).
+
+Wait, but from \(s \sin \theta = 7\), we have \(s = 7 / \sin \theta\). So, \(s\) is dependent on \(\theta\). Maybe another relation can help us connect these.
+
+Wait, let me recall that in a rhombus, the diagonals satisfy \(d_1^2 + d_2^2 = 4s^2\), where \(d_1\) and \(d_2\) are the lengths of the diagonals.
+
+In our case, diagonal \(AC\) has length \(2 s \cos (\theta/2)\)? Wait, no, that's not correct. Wait, actually, in a rhombus, the lengths of the diagonals can be found using the angles.
+
+Each diagonal splits the rhombus into two congruent triangles. The diagonals satisfy:
+
+\( d_1 = 2 s \sin (\theta / 2) \)
+
+\( d_2 = 2 s \cos (\theta / 2) \)
+
+Wait, is that correct? Let me confirm.
+
+Actually, in a rhombus with side length \(s\) and angles \(\theta\) and \(180^\circ - \theta\), the lengths of the diagonals are:
+
+\( d_1 = 2 s \sin (\theta / 2) \)
+
+\( d_2 = 2 s \cos (\theta / 2) \)
+
+Yes, that seems right.
+
+Because when you draw a diagonal, it splits the angle \(\theta\) into two angles of \(\theta/2\), and using trigonometry in one of the resulting triangles, the half-diagonal is \(s \sin (\theta / 2)\), so the full diagonal is \(2 s \sin (\theta / 2)\). Similarly, the other diagonal is \(2 s \cos (\theta / 2)\).
+
+Therefore, the lengths of the diagonals are \(d_1 = 2 s \sin (\theta / 2)\) and \(d_2 = 2 s \cos (\theta / 2)\).
+
+But in our coordinate system, the center is at \(\left( \frac{s(1 + \cos \theta)}{2}, \frac{s \sin \theta}{2} \right )\), and the diagonals are from \(A(0, 0)\) to \(C(s + d_x, d_y)\) and from \(B(s, 0)\) to \(D(d_x, d_y)\).
+
+Wait, alternatively, perhaps more useful is the relationship between the inradius and the diagonals. But maybe it's getting too convoluted.
+
+Alternatively, perhaps we can exploit the fact that in a rhombus, the distance from the center to a side is \(r = \frac{d_y}{2}\), which we've established before. Also, the inradius \(r\) is equal to the area divided by the semiperimeter. The area of the rhombus is \(s^2 \sin \theta\), and the semiperimeter is \(2s\). Therefore, \(r = \frac{s^2 \sin \theta}{2s} = \frac{s \sin \theta}{2}\), which matches our previous result.
+
+So, perhaps we can find another relation involving \(r\), \(s\), and \(\theta\).
+
+Wait, but I'm stuck here. Maybe it's better to go back to the expressions we have.
+
+We have:
+
+\( s \sin \theta = 7 \) in Case 1.
+
+Also, from Equation (1):
+
+\( s \sin \theta (1 + \sin \phi) = 10 \) ⇒ \(7(1 + \sin \phi) = 10\) ⇒ \(1 + \sin \phi = 10/7\) ⇒ \( \sin \phi = 3/7 \), so \( \phi = \arcsin (3/7) \) or \( \pi - \arcsin (3/7) \). But since the incircle is symmetric, both positions would give the same distances, I suppose.
+
+Therefore, \( \cos \phi = \pm 2 \sqrt{10}/7 \). So, plugging back into \(x\):
+
+\( x = \frac{s}{2} + \frac{s}{2} \cos \theta + \frac{7}{2} \cos \phi \)
+
+But we don't know \(\cos \theta\). However, we do know that \( \sin \theta = 7 / s \), so \( \cos \theta = \sqrt{1 - (49 / s^2)} = \sqrt{(s^2 - 49)/s^2} = \sqrt{s^2 - 49}/s \).
+
+So, let me write:
+
+\( x = \frac{s}{2} + \frac{s}{2} \times \frac{\sqrt{s^2 - 49}}{s} + \frac{7}{2} \times \left( \pm \frac{2 \sqrt{10}}{7} \right ) \)
+
+Simplify term by term:
+
+First term: \( \frac{s}{2} \)
+
+Second term: \( \frac{s}{2} \times \frac{\sqrt{s^2 - 49}}{s} = \frac{\sqrt{s^2 - 49}}{2} \)
+
+Third term: \( \frac{7}{2} \times \left( \pm \frac{2 \sqrt{10}}{7} \right ) = \pm \sqrt{10} \)
+
+So, altogether:
+
+\( x = \frac{s}{2} + \frac{\sqrt{s^2 - 49}}{2} \pm \sqrt{10} \)
+
+Factor out \(1/2\):
+
+\( x = \frac{1}{2} \left( s + \sqrt{s^2 - 49} \pm 2 \sqrt{10} \right ) \)
+
+Now, remember from Equation (3):
+
+\( | -\sin \theta x + 5 \cos \theta | = 9 \)
+
+Again, \( \sin \theta = 7 / s \), \( \cos \theta = \sqrt{s^2 - 49}/s \). So:
+
+\( | - (7 / s) x + 5 ( \sqrt{s^2 - 49}/s ) | = 9 \)
+
+Multiply through by \(s\):
+
+\( | -7 x + 5 \sqrt{s^2 - 49} | = 9 s \)
+
+So, either:
+
+1. \( -7 x + 5 \sqrt{s^2 - 49} = 9 s \)
+
+or
+
+2. \( -7 x + 5 \sqrt{s^2 - 49} = -9 s \)
+
+Let me handle both cases.
+
+**Case 1.1:** \( -7 x + 5 \sqrt{s^2 - 49} = 9 s \)
+
+From above, \(x = \frac{1}{2} \left( s + \sqrt{s^2 - 49} \pm 2 \sqrt{10} \right ) \)
+
+Plugging into the equation:
+
+\( -7 \times \frac{1}{2} \left( s + \sqrt{s^2 - 49} \pm 2 \sqrt{10} \right ) + 5 \sqrt{s^2 - 49} = 9 s \)
+
+Multiply through:
+
+\( -\frac{7}{2} \left( s + \sqrt{s^2 - 49} \pm 2 \sqrt{10} \right ) + 5 \sqrt{s^2 - 49} = 9 s \)
+
+Expand:
+
+\( -\frac{7}{2} s - \frac{7}{2} \sqrt{s^2 - 49} \mp 7 \sqrt{10} + 5 \sqrt{s^2 - 49} = 9 s \)
+
+Combine like terms:
+
+For the sqrt(s² - 49) terms:
+
+\( \left( -\frac{7}{2} + 5 \right ) \sqrt{s^2 - 49} = \frac{3}{2} \sqrt{s^2 - 49} \)
+
+So:
+
+\( -\frac{7}{2} s + \frac{3}{2} \sqrt{s^2 - 49} \mp 7 \sqrt{10} = 9 s \)
+
+Bring all terms to left-hand side:
+
+\( -\frac{7}{2} s + \frac{3}{2} \sqrt{s^2 - 49} \mp 7 \sqrt{10} - 9 s = 0 \)
+
+Combine \(s\) terms:
+
+\( -\frac{7}{2} s - 9 s = -\frac{7}{2} s - \frac{18}{2} s = -\frac{25}{2} s \)
+
+So:
+
+\( -\frac{25}{2} s + \frac{3}{2} \sqrt{s^2 - 49} \mp 7 \sqrt{10} = 0 \)
+
+Multiply both sides by 2:
+
+\( -25 s + 3 \sqrt{s^2 - 49} \mp 14 \sqrt{10} = 0 \)
+
+Rearrange:
+
+\( 3 \sqrt{s^2 - 49} = 25 s \pm 14 \sqrt{10} \)
+
+Square both sides:
+
+\( 9 (s^2 - 49) = (25 s \pm 14 \sqrt{10})^2 \)
+
+Compute RHS:
+
+\( (25 s)^2 + (14 \sqrt{10})^2 \pm 2 \times 25 s \times 14 \sqrt{10} \)
+
+= \( 625 s² + 196 \times 10 \pm 700 \sqrt{10} s \)
+
+= \( 625 s² + 1960 \pm 700 \sqrt{10} s \)
+
+LHS:
+
+\( 9 s² - 441 \)
+
+Set equal:
+
+\( 9 s² - 441 = 625 s² + 1960 \pm 700 \sqrt{10} s \)
+
+Bring all terms to left:
+
+\( 9 s² - 441 - 625 s² - 1960 \mp 700 \sqrt{10} s = 0 \)
+
+Simplify:
+
+\( -616 s² - 2401 \mp 700 \sqrt{10} s = 0 \)
+
+Multiply both sides by -1:
+
+\( 616 s² + 2401 \pm 700 \sqrt{10} s = 0 \)
+
+This is a quadratic in \(s\):
+
+\( 616 s² \pm 700 \sqrt{10} s + 2401 = 0 \)
+
+But discriminant \( D = ( \pm 700 \sqrt{10} )² - 4 \times 616 \times 2401 \)
+
+Compute:
+
+\( D = 490000 \times 10 - 4 \times 616 \times 2401 \)
+
+= \( 4,900,000 - 4 \times 616 \times 2401 \)
+
+Calculate second term:
+
+4 × 616 = 2464
+
+2464 × 2401: Let's compute 2464 × 2400 + 2464 × 1
+
+2464 × 2400 = 2464 × 24 × 100 = (2464 × 24) × 100
+
+2464 × 24:
+
+2464 × 20 = 49,280
+
+2464 × 4 = 9,856
+
+Total: 49,280 + 9,856 = 59,136
+
+Thus, 2464 × 2400 = 59,136 × 100 = 5,913,600
+
+Plus 2464 × 1 = 2464
+
+Total: 5,913,600 + 2,464 = 5,916,064
+
+Thus, D = 4,900,000 - 5,916,064 = -1,016,064
+
+Negative discriminant, so no real solutions. So, this case is invalid.
+
+**Case 1.2:** \( -7 x + 5 \sqrt{s^2 - 49} = -9 s \)
+
+Again, \( x = \frac{1}{2} \left( s + \sqrt{s^2 - 49} \pm 2 \sqrt{10} \right ) \)
+
+Plug into equation:
+
+\( -7 \times \frac{1}{2} \left( s + \sqrt{s^2 - 49} \pm 2 \sqrt{10} \right ) + 5 \sqrt{s^2 - 49} = -9 s \)
+
+Multiply through:
+
+\( -\frac{7}{2} \left( s + \sqrt{s^2 - 49} \pm 2 \sqrt{10} \right ) + 5 \sqrt{s^2 - 49} = -9 s \)
+
+Expand:
+
+\( -\frac{7}{2} s - \frac{7}{2} \sqrt{s^2 - 49} \mp 7 \sqrt{10} + 5 \sqrt{s^2 - 49} = -9 s \)
+
+Combine like terms:
+
+For sqrt(s² -49):
+
+\( (-\frac{7}{2} + 5) \sqrt{s^2 - 49} = \frac{3}{2} \sqrt{s^2 - 49} \)
+
+So:
+
+\( -\frac{7}{2} s + \frac{3}{2} \sqrt{s^2 - 49} \mp 7 \sqrt{10} = -9 s \)
+
+Bring all terms to left-hand side:
+
+\( -\frac{7}{2} s + \frac{3}{2} \sqrt{s^2 - 49} \mp 7 \sqrt{10} + 9 s = 0 \)
+
+Combine \(s\) terms:
+
+\( (-\frac{7}{2} + 9) s = \frac{11}{2} s \)
+
+So:
+
+\( \frac{11}{2} s + \frac{3}{2} \sqrt{s^2 - 49} \mp 7 \sqrt{10} = 0 \)
+
+Multiply both sides by 2:
+
+\( 11 s + 3 \sqrt{s^2 - 49} \mp 14 \sqrt{10} = 0 \)
+
+Rearrange:
+
+\( 3 \sqrt{s^2 - 49} = -11 s \pm 14 \sqrt{10} \)
+
+But sqrt is non-negative, while RHS has a term -11 s. Since \(s > 0\), RHS is negative unless \( -11 s + 14 \sqrt{10} \geq 0 \). Let's check:
+
+- If we take the '+' sign: \( -11 s + 14 \sqrt{10} \). To make this non-negative: \(14 \sqrt{10} \geq 11 s\). But s is positive. Not sure yet.
+
+But sqrt(s² - 49) is real only if s² ≥ 49 ⇒ s ≥ 7.
+
+So, LHS is non-negative, RHS must also be non-negative. So, let's analyze.
+
+Case 1.2.1: Take the '+' sign:
+
+\( 3 \sqrt{s^2 - 49} = -11 s + 14 \sqrt{10} \)
+
+But RHS must be ≥ 0:
+
+\( -11 s + 14 \sqrt{10} ≥ 0 \Rightarrow s ≤ (14 \sqrt{10}) / 11 ≈ (14 * 3.162)/11 ≈ 44.268 / 11 ≈ 4.024 \)
+
+But s ≥ 7 from sqrt(s² -49). So, 4.024 < 7, which is impossible. Thus, this case is invalid.
+
+Case 1.2.2: Take the '-' sign:
+
+\( 3 \sqrt{s^2 - 49} = -11 s - 14 \sqrt{10} \)
+
+But RHS is negative, while LHS is non-negative. Contradiction. So, invalid.
+
+Therefore, Case 1 leads to no solution. Let's move to **Case 2**.
+
+**Case 2: \(s \sin \theta = 25\)**
+
+From Equation (1):
+
+\(25(1 + \sin \phi) = 10\) ⇒ \(1 + \sin \phi = 10/25 = 2/5\) ⇒ \(\sin \phi = -3/5\)
+
+Thus, \(\sin \phi = -3/5\), so \(\cos \phi = \pm 4/5\). Again, considering the incircle, \(\phi\) can be in any quadrant, but the distances are absolute.
+
+Expressing \(x\) from Equation (2):
+
+\(x = \frac{s}{2}[1 + \cos \theta + \sin \theta \cos \phi]\)
+
+As before, \(s \sin \theta =25\), so \( \sin \theta = 25 / s \), \( \cos \theta = \sqrt{1 - (625 / s²)} = \sqrt{(s² - 625)/s²} = \sqrt{s² - 625}/s \)
+
+So, \(x\) becomes:
+
+\(x = \frac{s}{2}[1 + \sqrt{s² - 625}/s + (25 / s)(\cos \phi)] \)
+
+Simplify:
+
+= \( \frac{s}{2} + \frac{\sqrt{s² - 625}}{2} + \frac{25 \cos \phi}{2} \)
+
+Factor out 1/2:
+
+= \( \frac{1}{2}(s + \sqrt{s² - 625} + 25 \cos \phi) \)
+
+Now, from Equation (3):
+
+\( | -\sin \theta x + 5 \cos \theta | = 9 \)
+
+Plug in \( \sin \theta = 25 / s \), \( \cos \theta = \sqrt{s² - 625}/s \). So:
+
+\( | - (25 / s) x + 5 ( \sqrt{s² - 625}/s ) | = 9 \)
+
+Multiply both sides by \(s\):
+
+\( | -25 x + 5 \sqrt{s² - 625} | = 9 s \)
+
+So, either:
+
+1. \( -25 x + 5 \sqrt{s² - 625} = 9 s \)
+
+or
+
+2. \( -25 x + 5 \sqrt{s² - 625} = -9 s \)
+
+Let me handle both.
+
+**Case 2.1:** \( -25 x + 5 \sqrt{s² - 625} = 9 s \)
+
+From above, \(x = \frac{1}{2}(s + \sqrt{s² - 625} + 25 \cos \phi)\)
+
+Plug in:
+
+\( -25 \times \frac{1}{2}(s + \sqrt{s² - 625} + 25 \cos \phi) + 5 \sqrt{s² - 625} = 9 s \)
+
+Multiply through:
+
+\( -\frac{25}{2}(s + \sqrt{s² - 625} + 25 \cos \phi) + 5 \sqrt{s² - 625} = 9 s \)
+
+Expand:
+
+\( -\frac{25}{2} s - \frac{25}{2} \sqrt{s² - 625} - \frac{625}{2} \cos \phi + 5 \sqrt{s² - 625} = 9 s \)
+
+Combine like terms:
+
+For sqrt(s² - 625):
+
+\( (-\frac{25}{2} + 5) \sqrt{s² - 625} = -\frac{15}{2} \sqrt{s² - 625} \)
+
+So:
+
+\( -\frac{25}{2} s - \frac{15}{2} \sqrt{s² - 625} - \frac{625}{2} \cos \phi = 9 s \)
+
+Bring all terms to left:
+
+\( -\frac{25}{2} s - \frac{15}{2} \sqrt{s² - 625} - \frac{625}{2} \cos \phi - 9 s = 0 \)
+
+Combine \(s\) terms:
+
+\( (-\frac{25}{2} - 9) s = -\frac{43}{2} s \)
+
+So:
+
+\( -\frac{43}{2} s - \frac{15}{2} \sqrt{s² - 625} - \frac{625}{2} \cos \phi = 0 \)
+
+Multiply both sides by -2:
+
+\( 43 s + 15 \sqrt{s² - 625} + 625 \cos \phi = 0 \)
+
+But all terms except possibly cos phi are positive, but s > 0, sqrt(...) >0, so this would require cos phi to be negative enough to offset them. Let's see.
+
+But 43s + 15 sqrt(...) is positive, adding 625 cos phi must bring it to zero. So, cos phi must be negative.
+
+Given that, and from earlier, cos phi = ±4/5. Since in this case, cos phi is multiplied by 625, which is large, it might be significant.
+
+But let's proceed.
+
+We have:
+
+\( 43 s + 15 \sqrt{s² - 625} + 625 \cos \phi = 0 \)
+
+But cos phi = ±4/5.
+
+So, two possibilities:
+
+**Case 2.1.1:** cos phi = 4/5:
+
+Then,
+
+\( 43 s + 15 \sqrt{s² - 625} + 625 \times \frac{4}{5} = 0 \)
+
+Simplify:
+
+625*(4/5) = 500
+
+So,
+
+\( 43 s + 15 \sqrt{s² - 625} + 500 = 0 \)
+
+But 43s + 500 + 15 sqrt(...) is positive, cannot be zero. Invalid.
+
+**Case 2.1.2:** cos phi = -4/5:
+
+Then,
+
+\( 43 s + 15 \sqrt{s² - 625} + 625 \times (-4/5) = 0 \)
+
+Simplify:
+
+625*(-4/5)= -500
+
+Thus,
+
+\( 43 s + 15 \sqrt{s² - 625} - 500 = 0 \)
+
+Rearrange:
+
+\( 43 s + 15 \sqrt{s² - 625} = 500 \)
+
+Let me denote \( u = \sqrt{s² - 625} \). Then, \( u² = s² - 625 \), so \( s² = u² + 625 \)
+
+Our equation becomes:
+
+\(43 s + 15 u = 500\)
+
+But we need another equation relating s and u. It's \( s² = u² + 625 \). So, we have:
+
+1. \(43 s + 15 u = 500\)
+2. \( s² = u² + 625 \)
+
+Let me solve equation 1 for u:
+
+\(15 u = 500 - 43 s\)
+
+⇒ \(u = \frac{500 - 43 s}{15}\)
+
+Plug into equation 2:
+
+\( s² = \left( \frac{500 - 43 s}{15} \right )² + 625 \)
+
+Compute RHS:
+
+\( \frac{(500 - 43 s)^2}{225} + 625 \)
+
+Multiply both sides by 225 to eliminate denominators:
+
+\( 225 s² = (500 - 43 s)^2 + 225 \times 625 \)
+
+Compute \(225 \times 625\):
+
+225*625: 225*600=135000, 225*25=5625, total 135000+5625=140625
+
+Thus:
+
+\(225 s² = (500 - 43 s)^2 + 140625\)
+
+Compute \( (500 - 43 s)^2 = 500² - 2*500*43 s + (43 s)^2 = 250000 - 43000 s + 1849 s² \)
+
+So,
+
+\(225 s² = 250000 - 43000 s + 1849 s² + 140625\)
+
+Combine constants:
+
+250000 + 140625 = 390625
+
+Thus,
+
+\(225 s² = 390625 - 43000 s + 1849 s²\)
+
+Bring all terms to left:
+
+\(225 s² - 1849 s² + 43000 s - 390625 = 0\)
+
+Combine \(s²\) terms:
+
+\( -1624 s² + 43000 s - 390625 = 0 \)
+
+Multiply both sides by -1:
+
+\(1624 s² - 43000 s + 390625 = 0\)
+
+Divide all terms by GCD(1624, 43000, 390625). Let's see, 1624 ÷ 8 = 203, 43000 ÷ 8 = 5375, 390625 ÷8 is not integer. So, GCD is 1. So, proceed as is.
+
+Quadratic equation: \(1624 s² - 43000 s + 390625 = 0\)
+
+Use quadratic formula:
+
+\(s = \frac{43000 \pm \sqrt{(43000)^2 - 4 \times 1624 \times 390625}}{2 \times 1624}\)
+
+Compute discriminant:
+
+\(D = 43000² - 4 × 1624 × 390625\)
+
+First, calculate 43000²:
+
+43000² = (43)^2 × (1000)^2 = 1849 × 1000000 = 1,849,000,000
+
+Next, 4 × 1624 × 390625:
+
+Compute 4 × 1624 = 6496
+
+Then, 6496 × 390625:
+
+Compute 6496 × 390625:
+
+Note that 390625 = 5^8 / 16 = 390625. Alternatively, note that 390625 = 25^4, but perhaps factorization helps.
+
+Alternatively, observe that 6496 × 390625 = 6496 × (390625)
+
+Compute 6496 × 390625:
+
+First, 6496 × 400,000 = 2,598,400,000
+
+But 390,625 is 400,000 - 9,375.
+
+Thus,
+
+6496 × 390,625 = 6496 × (400,000 - 9,375) = 6496×400,000 - 6496×9,375
+
+Compute:
+
+6496×400,000 = 2,598,400,000
+
+6496×9,375:
+
+Compute 6496×9,375:
+
+Note that 9,375 = 15,000 - 5,625
+
+Wait, perhaps better to break it down:
+
+9,375 = 10,000 - 625
+
+So,
+
+6496×9,375 = 6496×10,000 - 6496×625
+
+= 64,960,000 - 4,060,000
+
+= 60,900,000
+
+Therefore,
+
+6496×390,625 = 2,598,400,000 - 60,900,000 = 2,537,500,000
+
+Thus, D = 1,849,000,000 - 2,537,500,000 = -688,500,000
+
+Negative discriminant, so no real solutions. So, this case is invalid.
+
+**Case 2.2:** \( -25 x + 5 \sqrt{s² - 625} = -9 s \)
+
+Again, \(x = \frac{1}{2}(s + \sqrt{s² - 625} + 25 \cos \phi)\)
+
+Plug into equation:
+
+\( -25 \times \frac{1}{2}(s + \sqrt{s² - 625} + 25 \cos \phi) + 5 \sqrt{s² - 625} = -9 s \)
+
+Multiply through:
+
+\( -\frac{25}{2}(s + \sqrt{s² - 625} + 25 \cos \phi) + 5 \sqrt{s² - 625} = -9 s \)
+
+Expand:
+
+\( -\frac{25}{2} s - \frac{25}{2} \sqrt{s² - 625} - \frac{625}{2} \cos \phi + 5 \sqrt{s² - 625} = -9 s \)
+
+Combine like terms:
+
+For sqrt(s² - 625):
+
+\( (-\frac{25}{2} + 5) \sqrt{s² - 625} = -\frac{15}{2} \sqrt{s² - 625} \)
+
+So:
+
+\( -\frac{25}{2} s - \frac{15}{2} \sqrt{s² - 625} - \frac{625}{2} \cos \phi = -9 s \)
+
+Bring all terms to left:
+
+\( -\frac{25}{2} s - \frac{15}{2} \sqrt{s² - 625} - \frac{625}{2} \cos \phi + 9 s = 0 \)
+
+Combine \(s\) terms:
+
+\( (-\frac{25}{2} + 9) s = -\frac{7}{2} s \)
+
+Thus:
+
+\( -\frac{7}{2} s - \frac{15}{2} \sqrt{s² - 625} - \frac{625}{2} \cos \phi = 0 \)
+
+Multiply both sides by -2:
+
+\(7 s + 15 \sqrt{s² - 625} + 625 \cos \phi = 0 \)
+
+Again, cos phi can be ±4/5.
+
+So, two possibilities:
+
+**Case 2.2.1:** cos phi = 4/5:
+
+\(7 s + 15 \sqrt{s² - 625} + 625 \times \frac{4}{5} = 0\)
+
+Simplify:
+
+625*(4/5) = 500
+
+Thus,
+
+\(7 s + 15 \sqrt{s² - 625} + 500 = 0\)
+
+But all terms are positive, sum can't be zero. Invalid.
+
+**Case 2.2.2:** cos phi = -4/5:
+
+\(7 s + 15 \sqrt{s² - 625} + 625 \times (-4/5) = 0\)
+
+Simplify:
+
+625*(-4/5) = -500
+
+Thus,
+
+\(7 s + 15 \sqrt{s² - 625} - 500 = 0\)
+
+Rearrange:
+
+\(7 s + 15 \sqrt{s² - 625} = 500\)
+
+Let me denote \( u = \sqrt{s² - 625} \). Then, \( u² = s² - 625 \), so \( s² = u² + 625 \)
+
+Our equation becomes:
+
+\(7 s + 15 u = 500\)
+
+And the other equation is \( s² = u² + 625 \)
+
+So, solving:
+
+1. \(7 s + 15 u = 500\)
+2. \( s² = u² + 625 \)
+
+From equation 1, express u:
+
+\(15 u = 500 - 7 s\)
+
+⇒ \(u = \frac{500 - 7 s}{15}\)
+
+Plug into equation 2:
+
+\( s² = \left( \frac{500 - 7 s}{15} \right )² + 625 \)
+
+Compute RHS:
+
+\( \frac{(500 - 7 s)^2}{225} + 625 \)
+
+Multiply both sides by 225:
+
+\( 225 s² = (500 - 7 s)^2 + 225 \times 625 \)
+
+Compute \(225 \times 625 = 140,625\)
+
+Expand \( (500 - 7 s)^2 = 500² - 2*500*7 s + (7 s)^2 = 250,000 - 7,000 s + 49 s² \)
+
+Thus,
+
+\(225 s² = 250,000 - 7,000 s + 49 s² + 140,625\)
+
+Combine constants:
+
+250,000 + 140,625 = 390,625
+
+Thus,
+
+\(225 s² = 390,625 - 7,000 s + 49 s²\)
+
+Bring all terms to left:
+
+\(225 s² - 49 s² + 7,000 s - 390,625 = 0\)
+
+Simplify:
+
+\(176 s² + 7,000 s - 390,625 = 0\)
+
+Divide all terms by common factor if possible. Let's see, 176, 7000, 390625.
+
+176 ÷ 16 = 11; 7000 ÷ 16 = 437.5; 390625 ÷16=24414.0625. Not helpful. Maybe divide by something else.
+
+Alternatively, apply quadratic formula:
+
+\(s = \frac{ -7000 \pm \sqrt{7000² - 4 \times 176 \times (-390625)}}{2 \times 176}\)
+
+Compute discriminant:
+
+\(D = 49,000,000 + 4 × 176 × 390,625\)
+
+First, compute 4 × 176 × 390,625:
+
+4 × 176 = 704
+
+704 × 390,625:
+
+Compute 700 × 390,625 = 273,437,500
+
+4 × 390,625 = 1,562,500
+
+Thus, 704 × 390,625 = 273,437,500 + 1,562,500 = 275,000,000
+
+Thus, D = 49,000,000 + 275,000,000 = 324,000,000
+
+√D = 18,000
+
+Thus,
+
+\(s = \frac{ -7000 \pm 18,000 }{ 352 }\)
+
+Compute both roots:
+
+1. \(s = \frac{ -7000 + 18,000 }{ 352 } = \frac{11,000}{352} ≈ 31.25\)
+
+2. \(s = \frac{ -7000 - 18,000 }{ 352 } = \frac{ -25,000 }{ 352 } ≈ -71.02\) (Discard, since side length positive)
+
+Thus, s ≈ 31.25. Let me compute exactly:
+
+11,000 ÷ 352: Divide numerator and denominator by 8: 1375 / 44.
+
+44 × 31 = 1364, 1375 - 1364 = 11. So, 31 + 11/44 = 31 + 1/4 = 31.25
+
+Thus, s = 31.25. So, 31.25 cm.
+
+Therefore, the side length is 31.25 cm. Since the perimeter is 4s, it's 4 × 31.25 = 125 cm.
+
+Let me verify whether this works.
+
+So, s = 31.25 cm.
+
+From Case 2.2.2: s = 31.25, cos phi = -4/5.
+
+Compute u = sqrt(s² - 625) = sqrt(31.25² - 25²) = sqrt(976.5625 - 625) = sqrt(351.5625) = 18.75
+
+Then, from equation 1: 7s + 15 u = 500
+
+Compute 7*31.25 = 218.75
+
+15*18.75 = 281.25
+
+Sum: 218.75 + 281.25 = 500. Correct.
+
+So, consistent.
+
+Thus, s = 31.25 cm. Hence, perimeter is 4*31.25 = 125 cm.
+
+Therefore, the answer is 125 cm.
+
+**Final Answer**
+\boxed{125}
+</think>
+
+Given a rhombus \(ABCD\) with \(\angle BAD < 90^\circ\), we need to find the perimeter of the rhombus given that a point \(P\) on its incircle has distances 9, 5, and 16 from the lines \(DA\), \(AB\), and \(BC\) respectively.
+
+1. **Properties of the Rhombus**:
+   - All sides are equal.
+   - The incircle touches each side at one point.
+   - The inradius \(r\) is the distance from the center to any side.
+
+2. **Equations for Distances**:
+   - The distances from \(P\) to the sides \(DA\), \(AB\), and \(BC\) are 9, 5, and 16 respectively.
+   - Using coordinate geometry and parametric equations, we express the distances from \(P\) to these sides.
+
+3. **Using Trigonometric Identities**:
+   - Express the coordinates of \(P\) in terms of trigonometric functions.
+   - Use the given distances to form equations involving \(s\) (side length) and \(\theta\) (angle).
+
+4. **Solving for Side Length \(s\)**:
+   - From the distances, we derive two possible values for \(s\): 7 or 25.
+   - After checking both cases, we find that \(s = 31.25\) cm is consistent with all given conditions.
+
+5. **Perimeter Calculation**:
+   - The side length \(s = 31.25\) cm.
+   - The perimeter of the rhombus is \(4s = 4 \times 31.25 = 125\) cm.
+
+Thus, the perimeter of rhombus \(ABCD\) is \(\boxed{125}\).
+
+Predicted answer: 125.0
+Valid answer: 125.0

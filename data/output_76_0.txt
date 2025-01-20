@@ -1,0 +1,580 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Let $\triangle ABC$ have circumcenter $O$ and incenter $I$ with $\overline{IA}\perp\overline{OI}$, circumradius $13$, and inradius $6$. Find $AB\cdot AC$.
+
+
+Okay, so I need to find AB multiplied by AC in triangle ABC. Let me see what information I have here.
+
+First, the triangle has a circumradius (R) of 13 and an inradius (r) of 6. Also, it's given that the line IA is perpendicular to OI, where O is the circumcenter and I is the incenter.
+
+Hmm, okay. Let me recall some properties related to triangle centers. The circumradius R relates to the sides of the triangle through the formula R = (a*b*c)/(4*Δ), where Δ is the area. But maybe that's not directly useful here.
+
+The inradius r is related to the area Δ and the semiperimeter s by the formula r = Δ/s. So, if I can find s or relate it somehow, that might help.
+
+Wait, also, there's a relationship between the distance between the incenter and circumcenter (OI). I remember the formula for OI squared is R(R - 2r). Let me confirm that... Yes, I think it's OI² = R² - 2Rr. So, plugging in R=13 and r=6, that would be OI² = 13² - 2*13*6 = 169 - 156 = 13. Therefore, OI is sqrt(13).
+
+So, OI = sqrt(13).
+
+Now, the key condition is that IA is perpendicular to OI. That seems important. Maybe I can use coordinate geometry? Let me try setting up a coordinate system.
+
+Let me place point I at the origin (0,0) to simplify calculations because IA is perpendicular to OI. If I is at (0,0), then OI is just the vector from I to O. Since OI is sqrt(13), let me assign coordinates to O such that it lies along the x-axis for simplicity. So, O would be at (sqrt(13), 0).
+
+But wait, hold on. If IA is perpendicular to OI, which is along the x-axis from (0,0) to (sqrt(13),0), then IA must be vertical, right? Because if OI is horizontal, IA being perpendicular would be vertical. So, point A must lie somewhere along the y-axis?
+
+Wait, no. IA is the segment from I to A, which is from (0,0) to A. If IA is perpendicular to OI, which is along the x-axis, then IA must be vertical. So, yes, point A would have coordinates (0, k) for some k.
+
+But triangle ABC has inradius 6. Wait, actually, the inradius is the radius of the incircle, which is centered at I (0,0). So, the distance from I to each side is 6.
+
+If point A is at (0, k), then the distance from A to the incenter I is |k|, since it's along the y-axis. But wait, IA is supposed to be the length from I to A, which is |k|. But the inradius is 6, which is the distance from I to any side. Hmm, not sure how that connects yet.
+
+Alternatively, maybe I should consider vectors or coordinate positions more carefully.
+
+Let me try this again. Let me set I at (0,0). Then, O is at (d, 0) where d = OI = sqrt(13). Point A is somewhere else; since IA is perpendicular to OI, which is along the x-axis, IA must be vertical, as we thought before. So, point A is at (0, h) for some h.
+
+Then, the distance from I to O is sqrt(13), so O is at (sqrt(13), 0). Now, point A is at (0, h). So, the line IA goes from (0,0) to (0,h), which is indeed vertical, and OI is along the x-axis. So, they are perpendicular. Okay, that checks out.
+
+Now, since I is the incenter, it's located at the intersection of angle bisectors. In our coordinate system, it's at (0,0). The circumradius R is 13, meaning that the circumcircle has radius 13. So, points A, B, C all lie on a circle with radius 13 centered at O (sqrt(13), 0).
+
+Point A is at (0, h), so its distance from O should be 13. Let me compute OA:
+
+OA² = (sqrt(13) - 0)^2 + (0 - h)^2 = 13 + h²
+
+But OA is equal to R, which is 13, so OA² = 13² = 169.
+
+Therefore,
+
+13 + h² = 169
+
+h² = 169 - 13 = 156
+
+h = sqrt(156) = 2*sqrt(39)
+
+So, point A is at (0, 2√39). Okay, so IA is the distance from I (0,0) to A (0, 2√39), which is 2√39. So, IA = 2√39.
+
+Given that IA is perpendicular to OI, which we've already incorporated into our coordinate system.
+
+Now, I need to find AB * AC. Let me figure out how to get that.
+
+Since I know point A is at (0, 2√39), and points B and C lie on the circumcircle centered at O (sqrt(13), 0) with radius 13. Also, I is the incenter at (0,0), so the distances from I to the sides are 6.
+
+Hmm, perhaps I can find coordinates for points B and C.
+
+Alternatively, maybe using trigonometric relationships.
+
+Wait, another thought: in a triangle, the product AB * AC can be expressed in terms of other elements. For example, in terms of the circumradius, using the Law of Sines.
+
+Law of Sines says that AB / sin C = AC / sin B = BC / sin A = 2R.
+
+But I'm not sure if that directly helps with AB * AC.
+
+Alternatively, maybe express AB and AC in terms of coordinates.
+
+Given that points B and C are on the circumcircle, their coordinates satisfy the equation:
+
+(x - sqrt(13))² + y² = 13²
+
+Which simplifies to x² - 2x*sqrt(13) + 13 + y² = 169
+
+Or, x² + y² - 2x*sqrt(13) = 156.
+
+Also, since I is the incenter at (0,0), the distances from I to sides BC, AC, and AB are all equal to the inradius, which is 6.
+
+Wait, the distance from I to side BC is 6. Since I is at (0,0), the equation of side BC can be written in the form ax + by + c = 0, and the distance from (0,0) to this line is |c| / sqrt(a² + b²) = 6.
+
+Similarly, the same applies for sides AB and AC.
+
+But maybe it's too vague without knowing specific coordinates.
+
+Perhaps I can use barycentric coordinates or something else.
+
+Alternatively, maybe I can recall that in any triangle, the distance between the incenter and circumcenter is OI² = R(R - 2r). Which we already used earlier to find OI = sqrt(13).
+
+Moreover, there's a relation involving the distance from the incenter to a vertex.
+
+Wait, there's a formula for the distance from the incenter to a vertex. Let me recall.
+
+Yes, the distance from the incenter I to vertex A is given by:
+
+IA² = R² - 2Rr
+
+Wait, no, that doesn't seem right because OI² = R² - 2Rr.
+
+Wait, let me check.
+
+Wait, actually, in general, the distance from the incenter to vertex A can be found using the formula:
+
+IA² = r² + (s - a)²
+
+Where s is the semiperimeter, and a is the side opposite vertex A.
+
+But I don't know s or a yet.
+
+Alternatively, another formula: IA² = R^2 - (bc(s - a)/s)^2 or something like that.
+
+Wait, maybe it's better to look for another approach.
+
+Wait, in our coordinate system, we have I at (0,0), O at (sqrt(13),0), and A at (0, 2√39). So, point A is fixed.
+
+We need to find points B and C on the circumcircle such that I is the incenter.
+
+Hmm, incenter coordinates can be expressed in terms of the triangle vertices and sides.
+
+Recall that the incenter (I) has coordinates:
+
+I_x = (a*A_x + b*B_x + c*C_x)/(a + b + c)
+
+I_y = (a*A_y + b*B_y + c*C_y)/(a + b + c)
+
+But in our case, I is at (0,0), so:
+
+0 = (a*A_x + b*B_x + c*C_x)/(a + b + c)
+
+0 = (a*A_y + b*B_y + c*C_y)/(a + b + c)
+
+Which implies:
+
+a*A_x + b*B_x + c*C_x = 0
+
+a*A_y + b*B_y + c*C_y = 0
+
+But this seems complicated because we don't know the sides or the coordinates of B and C.
+
+Wait, but we do know that A is at (0, 2√39), so A_x = 0, A_y = 2√39.
+
+So, substituting:
+
+a*0 + b*B_x + c*C_x = 0 => b*B_x + c*C_x = 0
+
+a*(2√39) + b*B_y + c*C_y = 0 => 2√39*a + b*B_y + c*C_y = 0
+
+But I don't know a, b, c, B, or C.
+
+This seems like a dead end. Maybe I need another approach.
+
+Wait, perhaps using trigonometric identities.
+
+In triangle ABC, the inradius r = 6, circumradius R = 13.
+
+We also have the condition IA perpendicular to OI.
+
+Maybe we can relate angles or sides through trigonometric functions.
+
+Wait, let's recall that IA is perpendicular to OI. So, the vector IA is perpendicular to the vector OI.
+
+Expressed in vectors, that means (A - I) · (O - I) = 0.
+
+In coordinates, since I is at (0,0), vector IA is (A_x, A_y), and vector OI is (O_x, O_y). Their dot product is zero.
+
+Given that O is at (sqrt(13), 0) and I is at (0,0), vector OI is (sqrt(13), 0). Vector IA is (A_x, A_y). Their dot product is A_x*sqrt(13) + A_y*0 = A_x*sqrt(13) = 0.
+
+Thus, A_x = 0.
+
+Which matches our previous conclusion that point A is at (0, h). So, yeah, consistent.
+
+Therefore, point A is at (0, 2√39), as we found earlier.
+
+Now, points B and C lie on the circumcircle centered at (sqrt(13), 0) with radius 13, so their coordinates satisfy:
+
+(x - sqrt(13))² + y² = 169.
+
+Additionally, since I is the incenter, the distances from I to sides BC, AC, and AB are all equal to 6.
+
+Given that I is at (0,0), the distance from I to side BC is 6. Similarly, the distance from I to side AB is 6, and to side AC is 6.
+
+But computing these distances requires knowing the equations of the sides, which depends on points B and C.
+
+Alternatively, maybe we can exploit some properties of triangle centers.
+
+Wait, another idea: In triangle ABC, the distance from the incenter to vertex A is given by:
+
+IA = √[r² + (s - a)²]
+
+Where r is the inradius, s is the semiperimeter, and a is the side opposite vertex A.
+
+In our case, IA is 2√39, r is 6, so:
+
+(2√39)² = 6² + (s - a)²
+
+So, 4*39 = 36 + (s - a)²
+
+156 = 36 + (s - a)²
+
+120 = (s - a)²
+
+So, s - a = √120 = 2√30
+
+Therefore, s = a + 2√30
+
+But s is the semiperimeter, so s = (a + b + c)/2.
+
+So, (a + b + c)/2 = a + 2√30
+
+Multiply both sides by 2:
+
+a + b + c = 2a + 4√30
+
+Thus, b + c = a + 4√30
+
+So, that gives a relationship between sides b, c, and a.
+
+Additionally, we know that the circumradius R is 13, so using the formula:
+
+a = 2R sin A
+
+Similarly, b = 2R sin B, c = 2R sin C.
+
+Therefore, a = 26 sin A, b = 26 sin B, c = 26 sin C.
+
+So, plugging into b + c = a + 4√30:
+
+26 sin B + 26 sin C = 26 sin A + 4√30
+
+Divide both sides by 26:
+
+sin B + sin C = sin A + (4√30)/26 = sin A + (2√30)/13
+
+Hmm, okay. Also, in triangle ABC, we know that A + B + C = π.
+
+Furthermore, since we have a coordinate system, perhaps we can relate angles to coordinates.
+
+Wait, considering point A is at (0, 2√39), which is above the x-axis, and points B and C are somewhere on the circumcircle.
+
+Given that, perhaps triangle ABC is isoceles? Not necessarily, but maybe.
+
+Wait, if point A is at (0, 2√39), then OA is along the y-axis. The circumcircle is centered at (sqrt(13), 0). So, points B and C must be symmetric with respect to the x-axis? Maybe.
+
+Because if A is at (0, h), and O is on the x-axis, perhaps B and C are reflections over the x-axis. That could make sense.
+
+So, let me assume that points B and C are symmetric across the x-axis. So, if point B is at (x, y), then point C is at (x, -y).
+
+That would mean that side BC is horizontal, lying on the line y = 0, but wait, no, because the circumcircle is centered at (sqrt(13), 0), so points B and C cannot both be on the x-axis unless the triangle is degenerate.
+
+Wait, no, that can't be. Wait, if points B and C are symmetric across the x-axis, then BC is perpendicular to the x-axis, right?
+
+Wait, actually, if B is (x, y) and C is (x, -y), then the midpoint of BC is (x, 0), so the line BC is vertical, passing through (x, 0). But the circumcircle is centered at (sqrt(13), 0), so unless x = sqrt(13), the center won't lie on the perpendicular bisector of BC.
+
+Wait, the perpendicular bisector of BC would be the x-axis if BC is vertical? No, wait, if BC is vertical, its perpendicular bisector is horizontal, passing through the midpoint.
+
+Wait, let's clarify. If BC is vertical, going through (x, y) and (x, -y), then its midpoint is (x, 0). The perpendicular bisector is the horizontal line y = 0, which is the x-axis. Since the circumcenter O is on the x-axis, that makes sense. So, yes, BC is vertical, and O lies on the x-axis, which is the perpendicular bisector of BC.
+
+Therefore, points B and C are symmetric across the x-axis, so their coordinates are (x, y) and (x, -y).
+
+So, with that in mind, let's denote:
+
+B = (x, y)
+
+C = (x, -y)
+
+So, now, all three points A, B, C lie on the circumcircle centered at (sqrt(13), 0) with radius 13.
+
+So, let's plug point A into the circumcircle equation:
+
+(0 - sqrt(13))² + (2√39 - 0)^2 = (sqrt(13))² + (2√39)^2 = 13 + 4*39 = 13 + 156 = 169, which equals 13². So, correct.
+
+Similarly, for point B (x, y):
+
+(x - sqrt(13))² + y² = 169
+
+Same for point C (x, -y):
+
+(x - sqrt(13))² + (-y)^2 = 169, which is the same equation.
+
+So, both points satisfy the same equation.
+
+Therefore, we have:
+
+(x - sqrt(13))² + y² = 169
+
+Expanding this:
+
+x² - 2x*sqrt(13) + 13 + y² = 169
+
+So,
+
+x² + y² - 2x*sqrt(13) = 156
+
+But point A is at (0, 2√39), so OA² = 13 + (2√39)^2 = 13 + 156 = 169, which is consistent.
+
+Now, we need to find coordinates of B and C.
+
+Additionally, since I is the incenter, it must lie at the intersection of the angle bisectors.
+
+But since points B and C are symmetric across the x-axis, the triangle is symmetric about the x-axis. Therefore, the incenter I, which is at (0,0), lies on the x-axis, which is consistent with our setup.
+
+Given the symmetry, the inradius is 6, which is the distance from I to any side. Since the triangle is symmetric about the x-axis, the distance from I to BC, AB, and AC will all be equal to 6.
+
+Wait, but BC is a vertical line at x = x. Wait, no, BC is the line connecting (x, y) and (x, -y), so it's the vertical line x = x.
+
+So, the distance from I (0,0) to BC is |x - 0| = |x|. Therefore, |x| = 6, since the inradius is 6. So, x = 6 or x = -6.
+
+But in our coordinate system, point A is at (0, 2√39), which is above the x-axis. Points B and C are on either side of the y-axis? Or on the same side?
+
+Wait, no. Since BC is vertical, and the triangle is symmetric about the x-axis, but point A is on the y-axis. So, points B and C are on either side of the y-axis? Wait, no, if they are symmetric across the x-axis, their x-coordinates are the same, but y-coordinates are negatives.
+
+Wait, but if BC is vertical, then regardless of the x-coordinate, the line is x = constant.
+
+Wait, but the distance from I (0,0) to BC is |x| = 6, so x = 6 or x = -6.
+
+But in our case, point A is at (0, 2√39), which is above the x-axis, and the circumcircle is centered at (sqrt(13), 0). So, point B is at (6, y) and C is at (6, -y) or (-6, y) and (-6, -y).
+
+Wait, let's test x = 6 first.
+
+Case 1: x = 6
+
+So, points B and C are at (6, y) and (6, -y). Let's plug into the circumcircle equation:
+
+(6 - sqrt(13))² + y² = 169
+
+Compute (6 - sqrt(13))²:
+
+= 36 - 12*sqrt(13) + 13
+
+= 49 - 12*sqrt(13)
+
+So,
+
+49 - 12*sqrt(13) + y² = 169
+
+Therefore,
+
+y² = 169 - 49 + 12*sqrt(13)
+
+= 120 + 12*sqrt(13)
+
+So, y = sqrt(120 + 12*sqrt(13))
+
+Hmm, that's a bit messy. Alternatively, maybe x = -6.
+
+Case 2: x = -6
+
+Points B and C are at (-6, y) and (-6, -y). Plug into circumcircle equation:
+
+(-6 - sqrt(13))² + y² = 169
+
+Compute (-6 - sqrt(13))²:
+
+= 36 + 12*sqrt(13) + 13
+
+= 49 + 12*sqrt(13)
+
+Thus,
+
+49 + 12*sqrt(13) + y² = 169
+
+So,
+
+y² = 169 - 49 - 12*sqrt(13)
+
+= 120 - 12*sqrt(13)
+
+So, y = sqrt(120 - 12*sqrt(13))
+
+Which is also messy, but perhaps manageable.
+
+So, now, depending on whether x is 6 or -6, we get two different y values.
+
+Now, let's analyze.
+
+If x = 6, then points B and C are at (6, y) and (6, -y), where y = sqrt(120 + 12√13). Similarly, if x = -6, then y = sqrt(120 - 12√13).
+
+But in either case, we can calculate the lengths AB and AC.
+
+Point A is at (0, 2√39), and point B is at (6, y). So, distance AB is sqrt[(6 - 0)^2 + (y - 2√39)^2].
+
+Similarly, distance AC is sqrt[(6 - 0)^2 + (-y - 2√39)^2] = sqrt[36 + ( - y - 2√39)^2]. But since square is same for y and -y, AB = AC.
+
+Wait, really? Let's compute AB²:
+
+AB² = (6)^2 + (y - 2√39)^2 = 36 + y² - 4y√39 + (2√39)^2
+
+= 36 + y² - 4y√39 + 4*39
+
+= 36 + y² - 4y√39 + 156
+
+= y² - 4y√39 + 192
+
+Similarly, AC² would be same as AB² because replacing y with -y:
+
+AC² = 36 + (-y - 2√39)^2 = 36 + y² + 4y√39 + 156 = same as AB², but wait, the cross term becomes positive.
+
+Wait, hold on, let's recalculate:
+
+AC² = (6)^2 + (-y - 2√39)^2
+
+= 36 + (y + 2√39)^2
+
+= 36 + y² + 4y√39 + 156
+
+= y² + 4y√39 + 192
+
+So, AB² and AC² are not the same. So, AB ≠ AC unless y = 0, which is not the case.
+
+So, in fact, AB and AC are different unless y = 0.
+
+So, in Case 1: x = 6, y = sqrt(120 + 12√13). So, AB² = y² - 4y√39 + 192
+
+Plug in y² = 120 + 12√13:
+
+AB² = (120 + 12√13) - 4y√39 + 192
+
+= 312 + 12√13 - 4y√39
+
+Similarly, AC² = y² + 4y√39 + 192
+
+= 120 + 12√13 + 4y√39 + 192
+
+= 312 + 12√13 + 4y√39
+
+So, AB² and AC² are different.
+
+But we need AB * AC.
+
+Wait, maybe I can compute AB² * AC² and take square root.
+
+Because (AB * AC)^2 = AB² * AC².
+
+So, let's compute AB² * AC²:
+
+= [312 + 12√13 - 4y√39] * [312 + 12√13 + 4y√39]
+
+Notice that this is of the form (M - N)(M + N) = M² - N².
+
+Where M = 312 + 12√13, N = 4y√39.
+
+Therefore,
+
+AB² * AC² = (312 + 12√13)^2 - (4y√39)^2
+
+Compute each part:
+
+First, (312 + 12√13)^2:
+
+= 312² + 2*312*12√13 + (12√13)^2
+
+Compute each term:
+
+312²: 312*312. Let me compute 300² + 2*300*12 + 12² = 90000 + 7200 + 144 = 97344
+
+Wait, actually, 312*312: 300² = 90000, 12² = 144, and cross term 2*300*12 = 7200. So, total is 90000 + 7200 + 144 = 97344.
+
+2*312*12√13: 2*312*12 = 7488, so 7488√13.
+
+(12√13)^2: 144*13 = 1872.
+
+Therefore, adding together:
+
+97344 + 7488√13 + 1872 = 97344 + 1872 = 99216; so, 99216 + 7488√13.
+
+Next, (4y√39)^2 = 16y²*39 = 624y².
+
+From earlier, y² = 120 + 12√13.
+
+So, 624y² = 624*(120 + 12√13) = 624*120 + 624*12√13.
+
+Calculate:
+
+624*120: 624*100=62400, 624*20=12480; total=62400+12480=74880
+
+624*12√13: 624*12=7488, so 7488√13.
+
+Thus, (4y√39)^2 = 74880 + 7488√13.
+
+Therefore, AB² * AC² = (99216 + 7488√13) - (74880 + 7488√13) =
+
+99216 - 74880 + 7488√13 - 7488√13 =
+
+24336 + 0 = 24336.
+
+Therefore, AB² * AC² = 24336.
+
+Taking square root: AB * AC = sqrt(24336).
+
+What is sqrt(24336)?
+
+Well, 150² = 22500, 160²=25600, so it's between 150 and 160.
+
+Compute 156²: 156*156.
+
+150²=22500, 6²=36, 2*150*6=1800, so (150+6)²=22500 + 1800 + 36=24336.
+
+So, sqrt(24336)=156.
+
+Therefore, AB * AC = 156.
+
+Wow, that was a lot!
+
+**Final Answer**
+\boxed{156}
+</think>
+
+Given triangle \( \triangle ABC \) with circumcenter \( O \) and incenter \( I \), where \( \overline{IA} \perp \overline{OI} \), circumradius \( R = 13 \), and inradius \( r = 6 \). We need to find \( AB \cdot AC \).
+
+1. **Distance between Incenter and Circumcenter**:
+   Using the formula \( OI^2 = R(R - 2r) \):
+   \[
+   OI^2 = 13^2 - 2 \cdot 13 \cdot 6 = 169 - 156 = 13
+   \]
+   Thus, \( OI = \sqrt{13} \).
+
+2. **Coordinate System Setup**:
+   Place \( I \) at the origin \((0,0)\) and \( O \) at \((\sqrt{13}, 0)\). Point \( A \) is at \((0, h)\) since \( IA \) is perpendicular to \( OI \).
+
+3. **Distance from \( I \) to \( A \)**:
+   Given \( OI = \sqrt{13} \) and \( OA = 13 \):
+   \[
+   OA^2 = 13 + h^2 = 169 \implies h^2 = 156 \implies h = 2\sqrt{39}
+   \]
+   Thus, point \( A \) is at \((0, 2\sqrt{39})\).
+
+4. **Coordinates of Points \( B \) and \( C \)**:
+   Points \( B \) and \( C \) lie on the circumcircle centered at \((\sqrt{13}, 0)\) with radius 13. Assume symmetry and denote \( B \) as \((x, y)\) and \( C \) as \((x, -y)\).
+
+5. **Equation of Circumcircle**:
+   Substituting \( B \) into the circumcircle equation:
+   \[
+   (x - \sqrt{13})^2 + y^2 = 169
+   \]
+   Simplifying:
+   \[
+   x^2 + y^2 - 2x\sqrt{13} = 156
+   \]
+
+6. **Distance from Incenter to Sides**:
+   The distance from \( I \) to side \( BC \) is 6, giving \( |x| = 6 \). Thus, \( x = 6 \) or \( x = -6 \).
+
+7. **Calculating \( y \)**:
+   For \( x = 6 \):
+   \[
+   (6 - \sqrt{13})^2 + y^2 = 169 \implies y^2 = 120 + 12\sqrt{13}
+   \]
+   For \( x = -6 \):
+   \[
+   (-6 - \sqrt{13})^2 + y^2 = 169 \implies y^2 = 120 - 12\sqrt{13}
+   \]
+
+8. **Distances \( AB \) and \( AC \)**:
+   Calculate \( AB \) and \( AC \) using coordinates:
+   \[
+   AB^2 = 36 + (y - 2\sqrt{39})^2
+   \]
+   \[
+   AC^2 = 36 + (-y - 2\sqrt{39})^2
+   \]
+
+9. **Product \( AB \cdot AC \)**:
+   Using the product of distances:
+   \[
+   (AB \cdot AC)^2 = (312 + 12\sqrt{13} - 4y\sqrt{39})(312 + 12\sqrt{13} + 4y\sqrt{39})
+   \]
+   Simplifying:
+   \[
+   (AB \cdot AC)^2 = 24336 \implies AB \cdot AC = \sqrt{24336} = 156
+   \]
+
+Thus, the final answer is:
+\[
+\boxed{156}
+\]
+
+Predicted answer: 156.0
+Valid answer: 468.0

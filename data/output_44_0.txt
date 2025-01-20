@@ -1,0 +1,696 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Find the number of cubic polynomials $p(x) = x^3 + ax^2 + bx + c,$ where $a, b,$ and $c$ are integers in $\{-20,-19,-18,\ldots,18,19,20\},$ such that there is a unique integer $m \not= 2$ with $p(m) = p(2).$
+
+
+Okay, so I have this problem here about finding the number of cubic polynomials \( p(x) = x^3 + ax^2 + bx + c \), where \( a, b, c \) are integers between -20 and 20 inclusive. The condition is that there exists a unique integer \( m \neq 2 \) such that \( p(m) = p(2) \).
+
+Hmm, let me try to unpack this step by step.
+
+First, the polynomial is cubic, so it's going to have some nice properties, like being differentiable everywhere, having at most two turning points, etc. But since we're dealing with integer coefficients and looking for integer roots or values, maybe I can approach this using algebraic methods.
+
+The main goal is to find how many such polynomials satisfy the condition that there's exactly one integer \( m \) (other than 2) where \( p(m) = p(2) \). So, essentially, if I define \( p(2) \) as some constant value \( k \), then \( p(m) = k \) should have exactly one integer solution \( m \neq 2 \).
+
+Let me write that down:
+
+Given \( p(x) = x^3 + ax^2 + bx + c \),
+
+\( p(2) = 8 + 4a + 2b + c = k \).
+
+Then, \( p(m) = m^3 + am^2 + bm + c = k \).
+
+So, subtracting these two equations:
+
+\( p(m) - p(2) = (m^3 - 8) + a(m^2 - 4) + b(m - 2) = 0 \).
+
+Factorizing each term:
+
+\( m^3 - 8 = (m - 2)(m^2 + 2m + 4) \),
+\( m^2 - 4 = (m - 2)(m + 2) \),
+\( m - 2 = (m - 2) \).
+
+So, factoring out \( (m - 2) \):
+
+\( (m - 2)[(m^2 + 2m + 4) + a(m + 2) + b] = 0 \).
+
+Since we're considering \( m \neq 2 \), the other factor must be zero:
+
+\( (m^2 + 2m + 4) + a(m + 2) + b = 0 \).
+
+Let me rewrite this equation:
+
+\( m^2 + (2 + a)m + (4 + 2a + b) = 0 \).
+
+So, this is a quadratic equation in terms of \( m \). We need this quadratic to have exactly one integer root (since \( m \) must be an integer). But wait, actually, the problem says "there is a unique integer \( m \neq 2 \)", which suggests that the quadratic equation above has exactly one integer solution besides possibly other non-integer solutions.
+
+However, quadratics can have 0, 1, or 2 real roots, but since we are dealing with integer roots, perhaps it's better to think in terms of factors or discriminant conditions.
+
+But first, let me note that if the quadratic equation \( m^2 + (2 + a)m + (4 + 2a + b) = 0 \) has integer roots, then its discriminant must be a perfect square.
+
+The discriminant \( D \) is:
+
+\( D = (2 + a)^2 - 4 \times 1 \times (4 + 2a + b) \).
+
+Simplify:
+
+\( D = (4 + 4a + a^2) - (16 + 8a + 4b) \)
+\( D = 4 + 4a + a^2 - 16 - 8a - 4b \)
+\( D = a^2 - 4a - 4b - 12 \).
+
+For the quadratic to have integer roots, \( D \) must be a perfect square, say \( k^2 \), where \( k \) is an integer.
+
+Also, since we need exactly one integer \( m \neq 2 \), the quadratic equation can either have one integer root and the other non-integer, or it can have both roots equal to 2 (but since \( m \neq 2 \), that would not count). Wait, no—if both roots are 2, then \( m = 2 \) would be a double root, but we exclude \( m = 2 \), so in that case, there would be no other integer roots. Hmm, perhaps I need to clarify.
+
+Wait, the quadratic equation is derived from \( p(m) = p(2) \), so \( m = 2 \) is already a root of the equation \( p(m) - p(2) = 0 \). So, when we factor out \( (m - 2) \), the remaining quadratic has roots which are the other solutions \( m \). So, if the quadratic has exactly one integer root \( m \neq 2 \), that means the quadratic equation has exactly one integer solution. That could happen in two cases:
+
+1. The quadratic has two distinct integer roots, one of which is 2, and the other is some integer \( m \neq 2 \). But wait, if the quadratic factor has 2 as a root, then \( m = 2 \) would be a root of both the linear factor and the quadratic, meaning \( m = 2 \) would be a double root. But the problem states that \( m \neq 2 \), so even if the quadratic had another root at 2, that wouldn't count because we're excluding \( m = 2 \). Therefore, in this case, even if the quadratic had 2 as a root, the other root would still be our desired \( m \), but we need uniqueness, so perhaps that's a separate consideration.
+
+Wait, maybe I'm overcomplicating.
+
+Alternatively, perhaps the quadratic equation can have only one integer root, regardless of whether it includes 2 or not. So, if the quadratic has exactly one integer root, which is different from 2, then that counts. Or if the quadratic has two roots, one of which is 2 and the other is something else, but then \( m = 2 \) is excluded, so only the other root would count. But then, if the quadratic has two integer roots, one being 2 and the other being \( m \neq 2 \), does that mean that \( p(m) = p(2) \) would have two solutions? But the problem states that there is a unique integer \( m \neq 2 \) such that \( p(m) = p(2) \). So, in this case, if the quadratic has two integer roots, one at 2 and another at \( m \neq 2 \), then \( p(m) = p(2) \) would have two solutions: \( m = 2 \) and \( m \neq 2 \). But since we are excluding \( m = 2 \), then only one \( m \neq 2 \) would satisfy \( p(m) = p(2) \). So, in that case, it's acceptable because there is exactly one \( m \neq 2 \).
+
+Wait, so if the quadratic equation has two integer roots, one is 2 and the other is \( m \neq 2 \), then \( p(m) = p(2) \) has two solutions, but we only count \( m \neq 2 \), so it's acceptable. On the other hand, if the quadratic has only one integer root, which is \( m \neq 2 \), then that also satisfies the condition.
+
+Therefore, the quadratic equation must have at least one integer root (either one or two), but in such a way that the total number of integer solutions \( m \neq 2 \) is exactly one.
+
+Wait, hold on. Let me rephrase the problem statement: "there is a unique integer \( m \neq 2 \) with \( p(m) = p(2) \)." So, in other words, the equation \( p(m) = p(2) \) has exactly one integer solution \( m \neq 2 \). Since \( m = 2 \) is always a solution (because \( p(2) = p(2) \)), we need that the equation \( p(m) = p(2) \) has exactly two integer solutions: \( m = 2 \) and exactly one other integer \( m \neq 2 \). Therefore, the quadratic factor \( q(m) = m^2 + (2 + a)m + (4 + 2a + b) \) must have exactly one integer root (which is \( m \neq 2 \)) and the other root may be non-integer or another integer.
+
+But, if the quadratic has two integer roots, then one of them is 2 and the other is \( m \neq 2 \). Then, the equation \( p(m) = p(2) \) would have two integer solutions: 2 and \( m \). But according to the problem statement, there should be exactly one integer \( m \neq 2 \). So, in that case, if the quadratic has two integer roots, one of which is 2, then the equation \( p(m) = p(2) \) would have two integer solutions: 2 and \( m \). However, the problem specifies that there is a unique integer \( m \neq 2 \), which implies that only one such \( m \) exists. So, in this scenario, having two roots (including 2) would result in more than one integer solution \( m \neq 2 \), which violates the problem's condition.
+
+Hence, it seems that the quadratic must have exactly one integer root, which is \( m \neq 2 \), and the other root must not be an integer. Therefore, the quadratic equation must have exactly one integer root (excluding 2) and one non-integer root. Alternatively, if the quadratic has two integer roots, one of which is 2, then \( m \neq 2 \) would have another integer root, leading to multiple \( m \neq 2 \) satisfying \( p(m) = p(2) \), which isn't allowed.
+
+Thus, for the problem's condition to hold, the quadratic \( q(m) = m^2 + (2 + a)m + (4 + 2a + b) \) must have exactly one integer root \( m \neq 2 \), and the other root must be non-integer.
+
+Alternatively, maybe the quadratic can have two integer roots, but only one of them is \( m \neq 2 \), but that might complicate things. Maybe it's safer to consider that the quadratic must have exactly one integer root (excluding 2) and the other root non-integer.
+
+So, moving forward, we can model this by requiring that the quadratic equation \( q(m) = 0 \) has exactly one integer solution \( m \neq 2 \). To achieve this, the quadratic must factor into a product of a linear term with integer coefficients and an irreducible quadratic over integers, or perhaps have discriminant that is a perfect square but only one root is integer.
+
+Wait, actually, for a quadratic equation, if the discriminant is a perfect square, it will have two rational roots. If those roots are integers, then both roots are integers; if they are not integers, they can still be rational but not integers. So, to have exactly one integer root, the quadratic must have two rational roots, one integer and one non-integer. Because if both roots are integers, then both \( m = 2 \) and another \( m \) would satisfy \( p(m) = p(2) \), which would give two integer solutions \( m \neq 2 \), violating the uniqueness.
+
+Therefore, to have exactly one integer \( m \neq 2 \), the quadratic must have exactly one integer root (other than 2), and the other root must be non-integer but rational (or irrational). Wait, but if discriminant is a perfect square, the roots are rational. So, if discriminant is a perfect square, then both roots are rational. Therefore, if discriminant is a perfect square, and only one of the roots is integer, then that's acceptable because the other root is non-integer.
+
+If discriminant is not a perfect square, then the roots are irrational, so there are no integer roots except possibly 2. Therefore, in that case, the quadratic equation would have no integer roots, meaning that the only integer solution is \( m = 2 \), which doesn't satisfy the problem's condition of having a unique \( m \neq 2 \). Hence, to have exactly one integer \( m \neq 2 \), the quadratic must have discriminant as a perfect square, resulting in two rational roots, one integer (different from 2) and one non-integer.
+
+Therefore, the key conditions are:
+
+1. The discriminant \( D = a^2 - 4a - 4b - 12 \) must be a perfect square, say \( k^2 \).
+2. The quadratic equation \( q(m) = m^2 + (2 + a)m + (4 + 2a + b) = 0 \) must have exactly one integer root \( m \neq 2 \).
+
+Furthermore, we have to ensure that among the roots of \( q(m) = 0 \), only one is an integer different from 2, and the other is a non-integer.
+
+Alternatively, perhaps it's better to analyze the quadratic equation for integer roots. For a quadratic equation \( m^2 + pm + q = 0 \), the integer roots can be found by checking divisors of the constant term \( q \). In our case, the quadratic is \( m^2 + (2 + a)m + (4 + 2a + b) = 0 \). So, any integer root \( m \) must divide the constant term \( 4 + 2a + b \).
+
+Therefore, if \( m \) is an integer root, then \( m \) divides \( 4 + 2a + b \). Also, from Vieta's formula, the sum of the roots is \( -(2 + a) \), and the product is \( 4 + 2a + b \).
+
+Suppose \( m \) is an integer root different from 2. Then, let me denote the roots as \( m \) and \( n \). Then, \( m + n = -(2 + a) \) and \( mn = 4 + 2a + b \). Since \( m \neq 2 \), we can express \( a \) and \( b \) in terms of \( m \) and \( n \):
+
+From \( m + n = -(2 + a) \Rightarrow a = -(2 + m + n) \).
+
+From \( mn = 4 + 2a + b \Rightarrow b = mn - 4 - 2a \).
+
+Substituting \( a \) into the expression for \( b \):
+
+\( b = mn - 4 - 2(-(2 + m + n)) \)
+\( b = mn - 4 + 4 + 2m + 2n \)
+\( b = mn + 2m + 2n \).
+
+So, now, given that \( m \) and \( n \) are integers, with \( m \neq 2 \), and \( n \) can be anything except making both roots equal to 2.
+
+Wait, actually, if \( n = 2 \), then \( m + 2 = -(2 + a) \Rightarrow a = -(2 + m + 2) = -(4 + m) \), and \( mn = 2m = 4 + 2a + b \).
+
+Plugging \( a = -(4 + m) \) into \( 2m = 4 + 2(-(4 + m)) + b \):
+\( 2m = 4 - 8 - 2m + b \)
+\( 2m = -4 - 2m + b \)
+\( 4m + 4 = b \).
+
+So, if \( n = 2 \), then \( b = 4m + 4 \). So, in this case, if \( n = 2 \), the other root is \( m \neq 2 \), which gives us the quadratic equation with roots 2 and \( m \). But as discussed earlier, if the quadratic has two integer roots, including 2, then \( p(m) = p(2) \) would have two integer solutions: 2 and \( m \). But the problem requires only a unique \( m \neq 2 \). Therefore, in order to avoid having two integer solutions, we must ensure that when \( n \) is integer, it cannot be 2. Therefore, \( n \neq 2 \).
+
+Therefore, in summary, the quadratic equation \( q(m) = 0 \) must have exactly one integer root \( m \neq 2 \), and the other root must not be integer. Thus, in terms of Vieta's formulas, if \( m \) is the integer root, then the other root \( n \) must be non-integer, hence \( n \) is irrational or non-integer rational.
+
+But since the quadratic has integer coefficients, if \( n \) is rational, it must be integer (by Rational Root Theorem). Therefore, if the quadratic has exactly one integer root \( m \neq 2 \), the other root must be irrational, meaning the discriminant is not a perfect square.
+
+Wait, this contradicts my earlier thought process. Let me clarify.
+
+If the quadratic has integer coefficients and one integer root, then the other root is either integer or irrational. Since the discriminant is \( D = (2 + a)^2 - 4(4 + 2a + b) \). If \( D \) is a perfect square, then both roots are rational, hence both are integers or both are non-integers.
+
+Therefore, if \( D \) is a perfect square, and one root is integer, the other must also be integer. Therefore, if we want exactly one integer root, the discriminant must not be a perfect square. Because if \( D \) is a perfect square, then the quadratic has two rational roots, both integers or both non-integers.
+
+Wait, so if \( D \) is not a perfect square, the quadratic has two irrational roots, hence no integer roots except possibly 2. So, in that case, the equation \( p(m) = p(2) \) would only have \( m = 2 \) as an integer solution, which doesn't satisfy our problem's condition. So, that's bad.
+
+On the other hand, if \( D \) is a perfect square, then the quadratic has two rational roots. If both are integers, then we have two integer solutions \( m \neq 2 \), which is bad because the problem requires a unique \( m \neq 2 \). If one is integer and the other is non-integer, that would satisfy the problem's condition because there is exactly one integer \( m \neq 2 \). However, for that to happen, one root is integer, the other is non-integer, which would require that the discriminant is a perfect square, but only one root is integer. But wait, if the discriminant is a perfect square, both roots are rational. So, unless one of them is integer, both are non-integer rationals.
+
+Wait, no. For example, take a quadratic equation with integer coefficients where discriminant is a perfect square, but one root is integer and the other is non-integer. Is that possible?
+
+Wait, suppose the quadratic is \( (m - 1)(m - \sqrt{2}) = 0 \). Then, discriminant is \( 1 + 4\sqrt{2} \), which is not a perfect square. So, that doesn't help. Alternatively, \( (m - 1)(m - 1/2) = m^2 - (3/2)m + 1/2 = 0 \). Multiply by 2: \( 2m^2 - 3m + 1 = 0 \). Discriminant is \( 9 - 8 = 1 \), which is a perfect square, and roots are \( 1 \) and \( 1/2 \). So, in this case, discriminant is a perfect square, one root is integer, the other is non-integer. Therefore, yes, it is possible for a quadratic with integer coefficients to have discriminant a perfect square, one root integer, the other non-integer.
+
+Therefore, coming back, the discriminant \( D = a^2 - 4a - 4b - 12 \) must be a perfect square, say \( k^2 \), and in addition, the quadratic must have exactly one integer root \( m \neq 2 \). Which would imply that when discriminant is a perfect square, exactly one of the roots is integer (and not equal to 2), and the other is non-integer.
+
+Therefore, our conditions are:
+
+1. \( D = k^2 \), for some integer \( k \).
+2. Among the two roots \( m_1 \) and \( m_2 \), exactly one is integer (i.e., \( m \neq 2 \)), and the other is non-integer.
+
+But how do we ensure that exactly one root is integer?
+
+Looking at the earlier example, \( 2m^2 - 3m + 1 = 0 \) had discriminant 1, a perfect square, and one root integer (1) and one non-integer (1/2). So, in this case, if we set \( a = -3 \) and \( b = 1 \), then \( D = (-3)^2 - 4*(-3) - 4*1 - 12 = 9 + 12 - 4 - 12 = 5 \), which is not a perfect square. Wait, that contradicts.
+
+Wait, hold on. In the previous example, the quadratic was \( 2m^2 - 3m + 1 = 0 \). So, in terms of our variables, comparing to \( m^2 + (2 + a)m + (4 + 2a + b) = 0 \), we have:
+
+Coefficient of \( m^2 \): 1 vs 2. So, in order to match, let's scale appropriately.
+
+Wait, maybe my earlier substitution complicates things. Perhaps instead, I should directly use the quadratic equation in terms of \( a \) and \( b \).
+
+Wait, stepping back, the quadratic equation after factoring out \( (m - 2) \) is:
+
+\( m^2 + (2 + a)m + (4 + 2a + b) = 0 \).
+
+We need this quadratic to have exactly one integer solution \( m \neq 2 \), which implies that it has one integer root and one non-integer root. As per the earlier example, that is possible when discriminant is a perfect square.
+
+Therefore, our key equations are:
+
+1. \( D = (2 + a)^2 - 4*(4 + 2a + b) = k^2 \).
+2. For the quadratic to have exactly one integer root (other than 2), which happens when discriminant is a perfect square and the quadratic factors into a product of a linear term with integer coefficients and an irreducible quadratic over integers, i.e., one root is integer and the other is non-integer.
+
+But how can we translate this into constraints on \( a \) and \( b \)?
+
+Perhaps, it's necessary that the quadratic has exactly one integer root, which occurs when discriminant is a perfect square, and the roots are \( m \) and \( n \), where \( m \) is integer and \( n \) is non-integer. Therefore, for each such pair \( (m, n) \), we can find corresponding \( a \) and \( b \).
+
+But this seems too abstract. Maybe I can parameterize \( m \) and express \( a \) and \( b \) in terms of \( m \).
+
+From earlier, we have:
+
+\( a = -(2 + m + n) \),
+\( b = mn + 2m + 2n \).
+
+But since \( n \) is non-integer, how can \( b \) be integer? Because \( a \) and \( b \) must be integers.
+
+Wait, \( a \) is expressed as \( -(2 + m + n) \). If \( m \) is integer and \( n \) is non-integer, \( a \) would be non-integer unless \( n \) is chosen such that \( 2 + m + n \) is integer. But \( n \) is a root of the quadratic, so unless \( n \) is rational, but we already saw that if discriminant is a perfect square, roots are rational.
+
+Wait, confusion arises because if discriminant is a perfect square, both roots are rational. So, if \( m \) is integer, and \( n \) is rational, but not integer, then \( a \) and \( b \) must still be integers.
+
+So, \( a = -(2 + m + n) \) must be integer. Since \( m \) is integer, \( 2 + m \) is integer. Therefore, \( n \) must be rational, specifically \( n = p/q \) where \( q \) divides the denominator, but since \( a \) is integer, \( n \) must be integer or half-integer? Wait, no, \( n \) can be fractions with denominators dividing some power.
+
+Wait, this is getting too complicated. Perhaps, instead of trying to handle both \( a \) and \( b \), I can fix \( m \) and see what constraints it imposes on \( a \) and \( b \).
+
+Given that \( m \) is an integer root, from Vieta's formula:
+
+Sum of roots: \( m + n = -(2 + a) \),
+Product of roots: \( m * n = 4 + 2a + b \).
+
+Expressed in terms of \( m \):
+
+Let me solve for \( a \) and \( b \):
+
+From sum:
+\( a = -(2 + m + n) \).
+
+From product:
+\( b = mn - 4 - 2a \).
+
+Substitute \( a \) into \( b \):
+
+\( b = mn - 4 - 2(-(2 + m + n)) \)
+\( b = mn - 4 + 4 + 2m + 2n \)
+\( b = mn + 2m + 2n \).
+
+So, given \( m \), \( a \) and \( b \) are determined once \( n \) is known. But \( n \) is related via the quadratic equation.
+
+Wait, but since \( m \) is fixed, and \( n \) is another root, which must satisfy \( m + n = -(2 + a) \) and \( mn = 4 + 2a + b \). But without knowing \( n \), it's difficult.
+
+Alternatively, perhaps for each integer \( m \neq 2 \), we can compute \( a \) and \( b \) such that \( m \) is a root of the quadratic \( q(m) = 0 \). Then, check whether the other root \( n \) is such that \( a \) and \( b \) remain integers, and also check whether the discriminant is a perfect square.
+
+But this seems like a lot of work.
+
+Wait, perhaps I can rephrase the problem differently.
+
+We have \( p(m) = p(2) \), so \( m \) is another root of \( p(x) - p(2) = 0 \). Since \( x = 2 \) is already a root, \( m \) is another root.
+
+But \( p(x) - p(2) \) is a cubic, so it can have up to three roots. But we only care about two roots: 2 and \( m \). The third root can be arbitrary, but we don't care about it.
+
+Wait, but actually, \( p(x) - p(2) \) is a cubic, which factors as \( (x - 2)(quadratic) \). So, the quadratic can have one or two roots. If the quadratic has exactly one integer root \( m \neq 2 \), then the cubic has exactly two integer roots: 2 and \( m \). But the problem states that there is a unique integer \( m \neq 2 \), meaning that the quadratic must have exactly one integer root, and the other root is either non-integer or equal to 2. But if the quadratic has two roots, one of which is 2, then the cubic will have roots at 2 (double root) and \( m \neq 2 \). But the problem requires a unique integer \( m \neq 2 \), so having a double root at 2 doesn't affect the count because we only count \( m \neq 2 \). Therefore, whether the quadratic has a root at 2 or not, as long as there is exactly one other integer root \( m \neq 2 \), the condition is satisfied.
+
+Wait, but if the quadratic has a root at 2, then the cubic will have a double root at 2 and another root at \( m \neq 2 \). So, the equation \( p(x) = p(2) \) will have two integer solutions: 2 and \( m \). But the problem says "there is a unique integer \( m \neq 2 \)". So, in this case, \( m \) is unique, but 2 is also a solution. So, does that count as two solutions? Hmm.
+
+Wait, actually, the problem says "there is a unique integer \( m \not= 2 \)" with \( p(m) = p(2) \). So, it refers to the uniqueness of \( m \neq 2 \), not counting 2 itself. Therefore, in this case, if the quadratic has 2 as a root, and another root \( m \neq 2 \), then \( m \) is unique, so that's acceptable. So, having a double root at 2 is okay because we only need one unique \( m \neq 2 \). On the other hand, if the quadratic has two roots \( m \neq 2 \) and some other non-integer, then we would have two integer solutions \( m \neq 2 \), which is not allowed.
+
+Therefore, summarizing:
+
+- The quadratic \( q(m) = 0 \) must have exactly one integer root \( m \neq 2 \). The other root can be either non-integer or equal to 2.
+
+But if the quadratic has a root at 2, then the other root must be non-integer to avoid having two integer roots \( m \neq 2 \). Therefore, in this case, the quadratic can have 2 as a root and another non-integer root, giving exactly one integer \( m \neq 2 \).
+
+Alternatively, the quadratic can have two roots, one integer \( m \neq 2 \) and one non-integer, which is the same as before.
+
+So, overall, the quadratic must have exactly one integer root \( m \neq 2 \) and the other root either non-integer or equal to 2.
+
+Therefore, in terms of discriminant, \( D \) must be a perfect square because the roots are rational, and exactly one of them is integer.
+
+Therefore, our key steps are:
+
+1. For each integer \( m \neq 2 \), determine \( a \) and \( b \) such that \( m \) is a root of the quadratic equation \( q(m) = 0 \).
+2. Ensure that the discriminant \( D \) is a perfect square.
+3. Check that the other root \( n \) is either non-integer or equal to 2.
+4. Count all valid triples \( (a, b, c) \).
+
+But this approach is quite involved because \( m \) can range over a large number of integers. Instead, maybe we can find a relationship between \( a \) and \( b \) based on \( m \) and then count the number of valid pairs \( (a, b) \).
+
+From earlier, we have:
+
+\( a = -(2 + m + n) \),
+\( b = mn + 2m + 2n \).
+
+But since \( n \) is the other root, which can be written as \( n = \frac{4 + 2a + b}{m} \) from Vieta’s formula.
+
+Substituting \( a \) into this:
+
+\( n = \frac{4 + 2*(-(2 + m + n)) + b}{m} \)
+
+Simplify numerator:
+
+\( 4 - 4 - 2m - 2n + b = -2m - 2n + b \)
+
+Thus,
+
+\( n = \frac{-2m - 2n + b}{m} \)
+
+Multiply both sides by \( m \):
+
+\( mn = -2m - 2n + b \)
+
+Bring all terms to left-hand side:
+
+\( mn + 2m + 2n - b = 0 \)
+
+Which brings us back to \( b = mn + 2m + 2n \), as before.
+
+This seems circular. Maybe another approach is needed.
+
+Alternatively, let's note that for each integer \( m \neq 2 \), there exists a corresponding \( a \) and \( b \) such that \( m \) is a root of the quadratic. Then, the discriminant must be a perfect square, and the other root must satisfy certain conditions.
+
+Wait, perhaps I can consider that for each integer \( m \neq 2 \), the quadratic equation \( q(m) = 0 \) will have a root \( m \), and the other root \( n \) is determined by Vieta's formula. Then, for each such \( m \), we can express \( a \) and \( b \) in terms of \( m \) and \( n \), and then impose that the discriminant is a perfect square.
+
+But this is going to involve a lot of variables. Maybe instead, let's fix \( m \) and express \( a \) and \( b \) in terms of \( m \).
+
+Given \( m \) is an integer \( \neq 2 \), from Vieta's formula, we have:
+
+\( m + n = -(2 + a) \) => \( a = -(2 + m + n) \)
+\( m * n = 4 + 2a + b \) => \( b = mn - 4 - 2a \)
+
+Substituting \( a \):
+
+\( b = mn - 4 - 2*(-(2 + m + n)) \)
+\( b = mn - 4 + 4 + 2m + 2n \)
+\( b = mn + 2m + 2n \)
+
+So, if I fix \( m \), then \( a \) and \( b \) are determined by \( n \). However, \( n \) is another root, which can be written as \( n = \frac{4 + 2a + b}{m} \). But since \( a \) and \( b \) depend on \( n \), this is again circular.
+
+Wait, perhaps if I treat \( n \) as a variable, and express \( a \) and \( b \) in terms of \( m \) and \( n \), then for each \( m \), \( n \) can vary over integers such that the discriminant is a perfect square.
+
+But the discriminant \( D = (2 + a)^2 - 4*(4 + 2a + b) \) must be a perfect square. Substituting \( a = -(2 + m + n) \) and \( b = mn + 2m + 2n \), we get:
+
+\( D = (2 - (2 + m + n))^2 - 4*(4 + 2*(-(2 + m + n)) + (mn + 2m + 2n)) \)
+
+Simplify step by step:
+
+First, compute \( 2 + a \):
+\( 2 + a = 2 - (2 + m + n) = -m - n \)
+
+Then, \( (2 + a)^2 = ( - m - n )^2 = (m + n)^2 \)
+
+Next, compute \( 4 + 2a + b \):
+\( 4 + 2*(-(2 + m + n)) + (mn + 2m + 2n) \)
+\( = 4 - 4 - 2m - 2n + mn + 2m + 2n \)
+\( = (4 - 4) + (-2m + 2m) + (-2n + 2n) + mn \)
+\( = 0 + 0 + 0 + mn \)
+\( = mn \)
+
+Therefore, the discriminant becomes:
+
+\( D = (m + n)^2 - 4*(mn) \)
+\( D = m^2 + 2mn + n^2 - 4mn \)
+\( D = m^2 - 2mn + n^2 \)
+\( D = (m - n)^2 \)
+
+Ah! So the discriminant simplifies to \( (m - n)^2 \), which is always a perfect square, since it's the square of \( m - n \). Therefore, regardless of \( m \) and \( n \), the discriminant is automatically a perfect square. That's interesting.
+
+Therefore, for any integer \( m \neq 2 \) and integer \( n \), the discriminant is a perfect square. Therefore, the quadratic equation will always have rational roots, as expected.
+
+But we need exactly one integer root \( m \neq 2 \). So, in order to have exactly one integer root, the other root \( n \) must be such that it's not an integer, unless it equals 2.
+
+Wait, but if \( n \) is integer, then both \( m \) and \( n \) are integers, which would mean that the quadratic has two integer roots, leading to two solutions \( m \) and \( n \) for the equation \( p(m) = p(2) \), which is not allowed. Therefore, to prevent this, \( n \) must not be integer unless it equals 2.
+
+Wait, but \( n \) is determined by \( a \) and \( b \), which are integers. So, if \( n \) is non-integer, that's fine, but if \( n \) is integer and \( n \neq 2 \), that would lead to two integer roots, which is bad.
+
+Therefore, to have exactly one integer root \( m \neq 2 \), the other root \( n \) must be non-integer or equal to 2.
+
+But \( n \) is equal to \( 2 \) only if \( m = 2 \), but since \( m \neq 2 \), \( n \) cannot be 2. Therefore, \( n \) must be non-integer.
+
+Therefore, in order for the quadratic to have exactly one integer root \( m \neq 2 \), the other root \( n \) must be non-integer.
+
+But wait, from the discriminant, \( D = (m - n)^2 \), so \( n = m \pm \sqrt{D} \). Wait, no, that's incorrect because discriminant is \( (m - n)^2 \), but \( D = (m - n)^2 \), so \( \sqrt{D} = |m - n| \). Therefore, the roots are \( m \) and \( n \), where \( n = m \pm \sqrt{D} \). Wait, no, that's not correct.
+
+Actually, the roots are \( m \) and \( n \), and the difference between them is \( |m - n| = \sqrt{D} \). So, \( n = m \pm \sqrt{D} \). But since \( D = (m - n)^2 \), which is positive, \( \sqrt{D} = |m - n| \), so \( n = m \pm |m - n| \). This seems recursive.
+
+Wait, perhaps it's better to recall that for a quadratic equation, the roots are \( \frac{-(2 + a) \pm \sqrt{D}}{2} \). But since we've expressed \( D = (m - n)^2 \), so \( \sqrt{D} = |m - n| \). Therefore, the roots are \( m \) and \( n \), which are separated by \( |m - n| \).
+
+But since \( n \) is non-integer, it must be a fraction. Therefore, for each \( m \neq 2 \), if we choose \( n \) such that it's non-integer, then the quadratic will have exactly one integer root \( m \) and one non-integer root \( n \).
+
+But \( n \) is determined by \( a \) and \( b \), which are integers. So, how can \( n \) be non-integer? Since \( a \) and \( b \) are integers, the sum \( m + n = -(2 + a) \) must be integer, as \( a \) is integer. Similarly, \( mn = 4 + 2a + b \) must be integer, since \( a \) and \( b \) are integers.
+
+Therefore, if \( m \) is integer, and \( n \) is non-integer, their sum \( m + n \) is integer. Therefore, \( n \) must be of the form \( k - m \), where \( k \) is integer, but since \( n \) is non-integer, that's impossible because \( k - m \) is integer.
+
+Wait, contradiction. Therefore, if \( m \) is integer and \( n \) is non-integer, their sum \( m + n \) must be non-integer, but \( m + n = -(2 + a) \) is integer. Therefore, \( n \) must be integer. Hence, our previous conclusion is flawed.
+
+Therefore, if \( m \) is integer, \( n \) must also be integer because \( m + n \) is integer. Therefore, \( n \) cannot be non-integer. Therefore, if \( m \) is integer, then \( n \) must also be integer.
+
+But then, if both \( m \) and \( n \) are integers, the quadratic will have two integer roots, which leads to two solutions \( m \) and \( n \) for \( p(m) = p(2) \). But the problem requires exactly one integer solution \( m \neq 2 \). Therefore, this is only possible if one of the roots is 2.
+
+Wait, yes! If one of the roots is 2, then \( m \) is another root, which could be non-integer or integer.
+
+But if one of the roots is 2, then \( m \) would be another root, which can be non-integer or integer.
+
+But in that case, if the quadratic has roots 2 and \( m \neq 2 \), then the cubic equation \( p(x) - p(2) = 0 \) will have roots 2 (twice, since quadratic has roots 2 and \( m \)) and \( m \neq 2 \). Therefore, the equation \( p(x) = p(2) \) will have two integer solutions: 2 and \( m \neq 2 \). But the problem requires a unique integer \( m \neq 2 \), meaning only one such \( m \) exists.
+
+Therefore, to satisfy the problem's condition, the quadratic must have exactly one integer root \( m \neq 2 \), but this is only possible if the quadratic has a double root at 2, but then \( m = 2 \), which is not allowed.
+
+Wait, I'm getting confused here.
+
+Let me recap:
+
+1. The equation \( p(m) = p(2) \) reduces to quadratic equation \( q(m) = 0 \).
+2. The quadratic equation \( q(m) = 0 \) can have either two integer roots or two non-integer roots, but since the discriminant is a perfect square, it can also have one integer and one non-integer root.
+3. However, if the quadratic has one integer root \( m \neq 2 \) and another non-integer root, then \( p(x) - p(2) \) will have two integer roots: 2 and \( m \neq 2 \), which is disallowed because we need only one such \( m \neq 2 \).
+4. Therefore, the only way to satisfy the condition is if the quadratic has exactly one integer root \( m \neq 2 \), and the other root is 2, which would make \( p(x) - p(2) \) have roots at 2 (double root) and \( m \neq 2 \). But in this case, \( m \) is unique, so the problem condition is satisfied.
+
+Wait, but if the quadratic has roots 2 and \( m \neq 2 \), then \( p(x) - p(2) \) will have roots at 2 (twice) and \( m \neq 2 \). Therefore, the equation \( p(x) = p(2) \) will have two integer solutions: 2 and \( m \neq 2 \). But the problem says there is a unique integer \( m \neq 2 \). Therefore, this is contradictory because we end up with two integer solutions.
+
+Therefore, perhaps the only way to have exactly one integer solution \( m \neq 2 \) is if the quadratic equation \( q(m) = 0 \) has 2 as a root with multiplicity one, and another non-integer root. But in that case, the cubic \( p(x) - p(2) \) will have roots at 2 and \( m \neq 2 \), which is still two integer solutions. Therefore, this is not acceptable.
+
+Alternatively, perhaps the quadratic equation has 2 as a root and the other root is non-integer, but this still results in two integer solutions because 2 is counted once.
+
+Wait, perhaps the problem allows 2 to be considered as one of the integer solutions, but only requires that there exists another integer solution \( m \neq 2 \). So, if the quadratic has 2 as a root and another non-integer root, then the cubic equation \( p(x) - p(2) = 0 \) will have roots at 2 and whatever \( m \) is. If \( m \) is integer, then we have two integer solutions: 2 and \( m \neq 2 \). If \( m \) is non-integer, then only 2 is integer, which is acceptable because the problem requires a unique integer \( m \neq 2 \). Wait, no—the problem says "there is a unique integer \( m \not= 2 \)", meaning that in addition to 2, there is exactly one other integer \( m \neq 2 \). So, if the quadratic has 2 as a root and another non-integer root, then the cubic equation will have only 2 as integer root, which is acceptable because \( m \neq 2 \) doesn't exist—it's unique. Wait, no, the problem says "there is a unique integer \( m \neq 2 \)", which suggests that in addition to 2, there is exactly one other integer \( m \neq 2 \). Therefore, if the quadratic has 2 as a root and another non-integer root, then the cubic equation has only 2 as integer solution, which is acceptable.
+
+Wait, but if the quadratic has 2 as a root and another non-integer root, then the cubic equation will have 2 as a root (from the quadratic) and another non-integer root. Additionally, since the original cubic \( p(x) - p(2) \) is factored as \( (x - 2) \times \) quadratic, and the quadratic has 2 as a root, then \( p(x) - p(2) \) will have a double root at 2, but 2 is still only one integer solution. Wait, no—multiplicity doesn't change the count of integer solutions; it just affects their multiplicity.
+
+Therefore, in that case, the equation \( p(x) = p(2) \) will have 2 as a double root and another non-integer root, so 2 is the only integer solution, which satisfies the condition because there is a unique integer \( m \neq 2 \)—wait, no, 2 is the only integer solution, so the condition is vacuously satisfied? Or does the problem require that apart from 2, there is exactly one other integer solution?
+
+Wait, the problem says: "there is a unique integer \( m \not= 2 \) with \( p(m) = p(2) \)". So, apart from 2, there is exactly one integer \( m \neq 2 \) such that \( p(m) = p(2) \). So, in the case where the quadratic has 2 as a root and another non-integer root, the equation \( p(x) = p(2) \) will have only 2 as integer solution. Therefore, it doesn't satisfy the problem's condition because we need exactly one integer \( m \neq 2 \). Therefore, in that case, it's invalid.
+
+Conversely, if the quadratic has two integer roots, 2 and \( m \neq 2 \), then \( p(x) = p(2) \) will have two integer solutions, which is invalid because we need only one.
+
+Therefore, this leaves us with no valid quadratics, which can't be right because the problem is asking for the number of such polynomials, implying that there are some.
+
+I must have made a wrong assumption somewhere.
+
+Wait, perhaps I misapplied Vieta's formula. Let me double-check.
+
+Given the quadratic \( m^2 + (2 + a)m + (4 + 2a + b) = 0 \).
+
+Sum of roots: \( m_1 + m_2 = -(2 + a) \).
+
+Product of roots: \( m_1 m_2 = 4 + 2a + b \).
+
+So, if \( m_1 = 2 \), then \( m_2 = -(2 + a) - 2 = -4 - a \).
+
+Then, the product is \( 2*(-4 - a) = -8 - 2a \).
+
+But the product is also \( 4 + 2a + b \).
+
+Therefore, equate:
+
+\( -8 - 2a = 4 + 2a + b \)
+
+Solve for \( b \):
+
+\( -8 - 2a - 4 - 2a = b \)
+\( -12 - 4a = b \)
+
+Therefore, if 2 is a root of the quadratic, then \( b = -12 - 4a \).
+
+In this case, the other root is \( m = -4 - a \).
+
+Now, since \( a \) is integer, \( m \) is integer as well.
+
+Therefore, if 2 is a root, then the other root is \( m = -4 - a \). Then, the cubic equation \( p(x) - p(2) = 0 \) will have roots at 2 (from the factorization) and at \( m = -4 - a \) (from the quadratic). So, the integer solutions are 2 and \( m = -4 - a \). Therefore, to satisfy the problem's condition, we need that \( m = -4 - a \) is not an integer, but this is impossible because \( a \) is integer, so \( m \) must be integer.
+
+Therefore, the only way to have exactly one integer solution \( m \neq 2 \) is to have the quadratic have 2 as a root and the other root being non-integer, but as shown, this is impossible because \( a \) is integer, so the other root must be integer as well.
+
+Therefore, this seems to suggest that there are no such polynomials, which contradicts the problem's implication that there is a solution.
+
+Wait, but that can't be. Maybe I messed up the initial equation.
+
+Wait, let's recast the problem. The equation \( p(m) = p(2) \) is equivalent to \( p(m) - p(2) = 0 \). Which factors as \( (m - 2)(m^2 + (2 + a)m + (4 + 2a + b)) = 0 \). So, roots are 2 and roots of the quadratic.
+
+To have exactly one integer root \( m \neq 2 \), the quadratic must have exactly one integer root, which is not 2, and the other root is non-integer.
+
+But as we saw earlier, if the quadratic has an integer root \( m \neq 2 \), the other root is also integer, which leads to two integer solutions. Therefore, the only way to have exactly one integer solution \( m \neq 2 \) is if the quadratic has 2 as a root and another non-integer root, but as we saw, this forces the other root to be integer, which conflicts.
+
+Therefore, the only way out is that the quadratic has 2 as a root with multiplicity two, but that would lead to 2 being a double root, which still counts as one integer solution (with multiplicity two), but in reality, it's still just 2 as an integer solution.
+
+Wait, so if the quadratic has 2 as a double root, then the cubic equation \( p(x) - p(2) = 0 \) will have 2 as a triple root, meaning 2 is the only integer solution, but with multiplicity three. Therefore, does this count as having a unique integer \( m \neq 2 \)? No, because \( m \neq 2 \) doesn't exist—it's only 2.
+
+Therefore, in this case, the condition is not satisfied because we need a unique integer \( m \neq 2 \), but in this case, there is no such \( m \neq 2 \).
+
+Therefore, after all this analysis, it seems that it's impossible to have exactly one integer \( m \neq 2 \) such that \( p(m) = p(2) \), because either you have two integer solutions (including 2) or none. But the problem states that there is a unique integer \( m \neq 2 \), so I must have missed something.
+
+Wait, perhaps I made a mistake in assuming that the quadratic must have integer coefficients. But in the problem statement, \( a, b, c \) are integers, so the quadratic \( q(m) = m^2 + (2 + a)m + (4 + 2a + b) \) has integer coefficients. Therefore, the roots are either both integers or both non-integers (if discriminant is not a perfect square). But if discriminant is a perfect square, then roots are rational, which must be integers because coefficients are integers.
+
+Therefore, if discriminant is a perfect square, then both roots are integers. If discriminant is not a perfect square, both roots are non-integers.
+
+Therefore, in order to have exactly one integer solution \( m \neq 2 \), we need the quadratic to have exactly one integer root \( m \neq 2 \), but as shown, this is impossible because if quadratic has one integer root, it must have another one. Therefore, the only possibility is that quadratic has both roots non-integer, which would mean that \( p(x) = p(2) \) has no integer solutions apart from 2, which is acceptable because the problem requires exactly one integer \( m \neq 2 \).
+
+Wait, but earlier reasoning suggested that if both roots are non-integer, then the cubic equation will have 2 as the only integer solution, which is acceptable because the problem wants exactly one integer \( m \neq 2 \). Wait, no—problem says there is a unique integer \( m \neq 2 \). So, if quadratic has two non-integer roots, then the cubic equation will have only 2 as integer solution, which is exactly what we need—the unique integer \( m \neq 2 \) doesn't exist, but the equation has only 2 as integer solution.
+
+Wait, now I'm really confused. Let me parse the problem statement again: "there is a unique integer \( m \not= 2 \) with \( p(m) = p(2) \)." So, that means in addition to 2, there is exactly one other integer \( m \neq 2 \) such that \( p(m) = p(2) \). Therefore, the equation \( p(x) = p(2) \) has two integer solutions: 2 and \( m \neq 2 \). Therefore, the quadratic must have two integer roots: 2 and \( m \neq 2 \). But then, the cubic equation will have three integer solutions: 2 (with multiplicity two) and \( m \neq 2 \). But the problem says "there is a unique integer \( m \not= 2 \)", which would allow for multiple 2s, but in terms of unique \( m \neq 2 \), which is one. However, the problem didn't specify multiplicity, so perhaps it's acceptable.
+
+Wait, the exact wording is: "there is a unique integer \( m \not= 2 \) with \( p(m) = p(2) \)". So, it's saying that apart from 2, there is exactly one other integer \( m \neq 2 \) such that \( p(m) = p(2) \). Therefore, the equation \( p(x) = p(2) \) will have exactly two integer solutions: 2 and \( m \neq 2 \). Therefore, the quadratic must have two integer roots: 2 and \( m \neq 2 \). Therefore, the quadratic equation must factor as \( (x - 2)(x - m) \), which is a quadratic with integer coefficients.
+
+But if the quadratic has two integer roots, 2 and \( m \neq 2 \), then the cubic equation \( p(x) - p(2) \) will have three integer solutions: 2 (from the quadratic) and 2 again (from the original factor). Therefore, 2 is a double root, but in terms of distinct integer solutions, there are two: 2 and \( m \neq 2 \).
+
+But the problem says "there is a unique integer \( m \not= 2 \)", which may refer to only one such \( m \neq 2 \), regardless of multiplicity. So, perhaps this is acceptable.
+
+Therefore, the quadratic must have exactly two integer roots: 2 and \( m \neq 2 \). Therefore, the quadratic can be written as \( (x - 2)(x - m) \), which expands to \( x^2 - (2 + m)x + 2m \).
+
+Comparing this with our quadratic \( m^2 + (2 + a)m + (4 + 2a + b) \), which is \( x^2 + (2 + a)x + (4 + 2a + b) \). Therefore, equate coefficients:
+
+1. Coefficient of \( x \): \( -(2 + m) = 2 + a \)
+2. Constant term: \( 2m = 4 + 2a + b \)
+
+From the first equation:
+
+\( -(2 + m) = 2 + a \)
+\( -2 - m = 2 + a \)
+\( a = -2 - m - 2 \)
+\( a = -4 - m \)
+
+From the second equation:
+
+\( 2m = 4 + 2a + b \)
+Substitute \( a = -4 - m \):
+\( 2m = 4 + 2*(-4 - m) + b \)
+\( 2m = 4 - 8 - 2m + b \)
+\( 2m = -4 - 2m + b \)
+Bring \( 2m \) to left:
+\( 4m = -4 + b \)
+\( b = 4m + 4 \)
+
+Therefore, \( a = -4 - m \) and \( b = 4m + 4 \).
+
+Now, since \( a \) and \( b \) must be integers between -20 and 20 inclusive, we need to find all integer values of \( m \) such that \( a \) and \( b \) fall within this range.
+
+So, let's express \( a \) and \( b \) in terms of \( m \):
+
+\( a = -4 - m \)
+\( b = 4m + 4 \)
+
+Therefore, \( a \) must satisfy:
+\( -20 \leq -4 - m \leq 20 \)
+Similarly, \( b \) must satisfy:
+\( -20 \leq 4m + 4 \leq 20 \)
+
+Let's solve these inequalities.
+
+Starting with \( a \):
+Lower bound:
+\( -20 \leq -4 - m \)
+Add \( m \) to both sides:
+\( m - 20 \leq -4 \)
+\( m \leq 16 \)
+
+Upper bound:
+\( -4 - m \leq 20 \)
+Add \( 4 \) to both sides:
+\( -m \leq 24 \)
+Multiply both sides by -1 (reverse inequality):
+\( m \geq -24 \)
+
+So, \( m \geq -24 \) and \( m \leq 16 \).
+
+Now for \( b \):
+Lower bound:
+\( -20 \leq 4m + 4 \)
+Subtract 4:
+\( -24 \leq 4m \)
+Divide by 4:
+\( -6 \leq m \)
+
+Upper bound:
+\( 4m + 4 \leq 20 \)
+Subtract 4:
+\( 4m \leq 16 \)
+Divide by 4:
+\( m \leq 4 \)
+
+Therefore, combining the bounds from \( a \) and \( b \):
+
+From \( a \): \( -24 \leq m \leq 16 \)
+From \( b \): \( -6 \leq m \leq 4 \)
+
+Intersection of these intervals is \( -6 \leq m \leq 4 \).
+
+Additionally, \( m \neq 2 \) because we need a unique integer \( m \neq 2 \). Wait, no: actually, \( m \) is the integer such that the quadratic has roots 2 and \( m \neq 2 \). So, \( m \) must be different from 2.
+
+Therefore, \( m \in \{ -6, -5, -4, -3, -2, 0, 1, 3, 4 \} \). Note that \( m = 2 \) is excluded.
+
+Now, let's list all integer values of \( m \) in \( [-6, 4] \) excluding \( m = 2 \):
+
+\( m = -6, -5, -4, -3, -2, 0, 1, 3, 4 \)
+
+Total of 9 values.
+
+For each such \( m \), we can compute \( a \) and \( b \):
+
+Compute \( a = -4 - m \) and \( b = 4m + 4 \) for each \( m \):
+
+1. \( m = -6 \):
+   \( a = -4 - (-6) = 2 \)
+   \( b = 4*(-6) + 4 = -24 + 4 = -20 \)
+   Check if \( a \) and \( b \) are within range: Yes, \( a = 2 \), \( b = -20 \)
+
+2. \( m = -5 \):
+   \( a = -4 - (-5) = 1 \)
+   \( b = 4*(-5) + 4 = -20 + 4 = -16 \)
+   Valid
+
+3. \( m = -4 \):
+   \( a = -4 - (-4) = 0 \)
+   \( b = 4*(-4) + 4 = -16 + 4 = -12 \)
+   Valid
+
+4. \( m = -3 \):
+   \( a = -4 - (-3) = -1 \)
+   \( b = 4*(-3) + 4 = -12 + 4 = -8 \)
+   Valid
+
+5. \( m = -2 \):
+   \( a = -4 - (-2) = -2 \)
+   \( b = 4*(-2) + 4 = -8 + 4 = -4 \)
+   Valid
+
+6. \( m = 0 \):
+   \( a = -4 - 0 = -4 \)
+   \( b = 4*0 + 4 = 0 + 4 = 4 \)
+   Valid
+
+7. \( m = 1 \):
+   \( a = -4 - 1 = -5 \)
+   \( b = 4*1 + 4 = 4 + 4 = 8 \)
+   Valid
+
+8. \( m = 3 \):
+   \( a = -4 - 3 = -7 \)
+   \( b = 4*3 + 4 = 12 + 4 = 16 \)
+   Valid
+
+9. \( m = 4 \):
+   \( a = -4 - 4 = -8 \)
+   \( b = 4*4 + 4 = 16 + 4 = 20 \)
+   Valid
+
+So, all 9 values of \( m \) produce valid \( a \) and \( b \) within the required range.
+
+Therefore, for each of these 9 values of \( m \), we have a unique cubic polynomial \( p(x) = x^3 + a x^2 + b x + c \). But wait, in our setup, we haven't considered \( c \). From the earlier equations, we know that \( c \) is independent of \( m \). So, for each such \( m \), \( a \) and \( b \) are uniquely determined, but \( c \) can be any integer between -20 and 20 inclusive.
+
+Therefore, for each of the 9 combinations of \( a \) and \( b \), \( c \) can take 41 values (from -20 to 20 inclusive). Therefore, the total number of such polynomials is \( 9 \times 41 = 369 \).
+
+Wait, hold on. Let me confirm: for each \( m \) in the set \( \{-6, -5, -4, -3, -2, 0, 1, 3, 4\} \), we have specific \( a \) and \( b \). Then, \( c \) is free to vary independently. Since \( c \) ranges from -20 to 20, that's 41 possibilities. Therefore, for each \( m \), 41 polynomials. So, 9 * 41 = 369.
+
+But hold on—is there any restriction on \( c \)? The problem states that \( a, b, c \) are integers in \{-20, ..., 20\}. So, \( c \) is independent, so indeed, for each combination of \( a, b \), \( c \) can be any of 41 values. Therefore, 9 * 41 = 369.
+
+But wait, hold on. Let me check if the quadratic equation \( q(m) = 0 \) actually has roots 2 and \( m \neq 2 \). So, with \( a = -4 - m \) and \( b = 4m + 4 \), the quadratic is \( x^2 + (2 + a)x + (4 + 2a + b) \). Plugging in \( a = -4 - m \):
+
+Quadratic becomes:
+\( x^2 + (2 + (-4 - m))x + (4 + 2*(-4 - m) + (4m + 4)) \)
+Simplify:
+First coefficient: \( 2 - 4 - m = -2 - m \)
+Second coefficient: \( 4 - 8 - 2m + 4m + 4 = (-8 + 4) + (-2m + 4m) + 4 = (-4) + (2m) + 4 = 2m \)
+So, quadratic is \( x^2 + (-2 - m)x + 2m \), which factors as \( (x - 2)(x - m) \), as expected.
+
+Therefore, each of these 9 quadratics corresponds to exactly one integer \( m \neq 2 \) and 2 itself, so the cubic equation \( p(x) = p(2) \) has exactly two integer solutions: 2 and \( m \neq 2 \). Therefore, the problem's condition is satisfied.
+
+Moreover, since \( c \) is independent, varying \( c \) does not affect the roots of the polynomial \( p(x) - p(2) \), as \( c \) cancels out when we subtract \( p(2) \). Therefore, for each combination of \( a \) and \( b \), we can have 41 different \( c \) values without affecting the roots.
+
+Hence, the total number of such polynomials is \( 9 \times 41 = 369 \).
+
+But hold on, let me verify for one case.
+
+Take \( m = -6 \):
+
+Then, \( a = 2 \), \( b = -20 \). So, \( p(x) = x^3 + 2x^2 - 20x + c \). Then, \( p(2) = 8 + 8 - 40 + c = -24 + c \).
+
+Compute \( p(-6) = (-6)^3 + 2*(-6)^2 - 20*(-6) + c = -216 + 72 + 120 + c = (-216 + 192) + c = -24 + c \). Therefore, \( p(-6) = p(2) \), which is correct.
+
+Similarly, take \( m = 4 \):
+
+\( a = -8 \), \( b = 20 \). So, \( p(x) = x^3 - 8x^2 + 20x + c \).
+
+Compute \( p(2) = 8 - 32 + 40 + c = 16 + c \).
+
+Compute \( p(4) = 64 - 128 + 80 + c = (64 - 128) + 80 + c = (-64) + 80 + c = 16 + c \). So, \( p(4) = p(2) \), which is correct.
+
+Therefore, all these cases are working. So, each \( m \) gives a quadratic that splits into 2 and \( m \), leading to exactly two integer solutions for \( p(x) = p(2) \).
+
+Therefore, the total number of such polynomials is 369.
+
+**Final Answer**
+\boxed{369}
+</think>
+
+Given the cubic polynomial \( p(x) = x^3 + ax^2 + bx + c \) where \( a, b, \) and \( c \) are integers in \(\{-20, -19, -\cdots, 19, 20\}\), we need to find the number of such polynomials such that there is a unique integer \( m \neq 2 \) with \( p(m) = p(2) \).
+
+First, we start with the equation \( p(m) = p(2) \):
+\[
+m^3 + am^2 + bm + c = 8 + 4a + 2b + c
+\]
+Subtracting \( p(2) \) from both sides, we get:
+\[
+m^3 - 8 + am^2 - 4a + bm - 2b = 0
+\]
+Factoring out \( (m - 2) \), we have:
+\[
+(m - 2)(m^2 + (2 + a)m + (4 + 2a + b)) = 0
+\]
+This shows that \( m = 2 \) is a root, and the quadratic factor is \( m^2 + (2 + a)m + (4 + 2a + b) \). We need this quadratic to have exactly one integer root \( m \neq 2 \).
+
+For the quadratic to have exactly one integer root, it must factor into linear terms with one root being 2 and the other being an integer \( m \neq 2 \). This gives us the quadratic:
+\[
+(x - 2)(x - m) = x^2 - (2 + m)x + 2m
+\]
+Comparing coefficients, we find:
+\[
+a = -4 - m \quad \text{and} \quad b = 4m + 4
+\]
+We need \( a \) and \( b \) to be within the range \(-20\) to \(20\). Solving the inequalities for \( m \), we find \( m \) must be in the range \(-6\) to \(4\) excluding \(2\), giving us 9 possible values for \( m \).
+
+For each value of \( m \), \( c \) can independently take any integer value from \(-20\) to \(20\), giving 41 choices. Therefore, the total number of such polynomials is:
+\[
+9 \times 41 = 369
+\]
+
+Thus, the final answer is:
+\[
+\boxed{369}
+\]
+
+Predicted answer: 369.0
+Valid answer: 738.0
