@@ -29,7 +29,7 @@ def load_problems() -> Tuple[List[str], List[float]]:
     """Load problems and solutions from dataset."""
     df = pd.read_parquet(DATASET_PATH)
     # get first 10 problems
-    df = df.head(10)
+    # df = df.head(10)
     problems = [PROBLEM_PROMPT.format(p) for p in df["problem"]]
     solutions = df["answer"].tolist()  # Changed from "solutions" to "answer"
     return problems, solutions
