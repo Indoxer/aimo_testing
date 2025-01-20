@@ -16,11 +16,11 @@ MODEL_CONFIG = {
 
 # Sampling parameters
 SAMPLING_CONFIG = {
-    "temperature": 0.7,
+    "temperature": 0.6,
     "repetition_penalty": 1.05,
-    "top_p": 0.8,
+    "top_p": 0.95,
     "min_tokens": 32,
-    "max_tokens": 2048,
+    "max_tokens": 32768,
     "skip_special_tokens": True,
     "n": 16,
 }
