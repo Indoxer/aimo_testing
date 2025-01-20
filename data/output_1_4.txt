@@ -1,0 +1,41 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Three spheres with radii $11$, $13$, and $19$ are mutually externally tangent. A plane intersects the spheres in three congruent circles centered at $A$, $B$, and $C$, respectively, and the centers of the spheres all lie on the same side of this plane. Suppose that $AB^2 = 560$. Find $AC^2$.
+
+
+To solve the problem, we need to understand the geometric configuration of the spheres and the plane that intersects them. Let's denote the centers of the spheres as \(O_1\), \(O_2\), and \(O_3\) with radii 11, 13, and 19, respectively. The plane intersects the spheres in three congruent circles centered at points \(A\), \(B\), and \(C\) on the respective spheres.
+
+Since the plane is tangent to the spheres at points \(A\), \(B\), and \(C\), the distance from the center of each sphere to the plane is equal to the radius of the sphere minus the radius of the circle formed by the intersection. This means that the distance from \(O_1\) to the plane is \(11 - r\), the distance from \(O_2\) to the plane is \(13 - r\), and the distance from \(O_3\) to the plane is \(19 - r\), where \(r\) is the radius of the congruent circles.
+
+The distance between the centers of any two spheres is the sum of their radii because they are mutually externally tangent. Therefore, we have:
+\[ O_1O_2 = 11 + 13 = 24, \]
+\[ O_2O_3 = 13 + 19 = 32, \]
+\[ O_3O_1 = 19 + 11 = 30. \]
+
+Now, let's consider the triangle formed by the projections of the centers \(O_1\), \(O_2\), and \(O_3\) onto the plane. The sides of this triangle are the distances between the centers of the spheres projected onto the plane, which are the distances between the points \(A\), \(B\), and \(C\) projected onto the plane. Since the circles are congruent, the distances \(AB\), \(BC\), and \(CA\) are all equal to the distance between the centers of the spheres projected onto the plane.
+
+Given that \(AB^2 = 560\), we need to find \(AC^2\). By the symmetry and the fact that the projection of the distances between the centers of the spheres onto the plane form a triangle similar to the triangle formed by the centers of the spheres, we can use the cosine rule in the triangle formed by the centers of the spheres to find the relationship between the distances.
+
+The cosine rule in the triangle \(O_1O_2O_3\) gives us:
+\[ O_1O_3^2 = O_1O_2^2 + O_2O_3^2 - 2 \cdot O_1O_2 \cdot O_2O_3 \cdot \cos(\theta), \]
+where \(\theta\) is the angle between \(O_1O_2\) and \(O_2O_3\).
+
+However, since the projection of the distances form a similar triangle, we can use the fact that the distances are proportional to the distances between the centers of the spheres. Therefore, we can directly use the given information to find \(AC^2\).
+
+Since the distances are proportional, we have:
+\[ AC^2 = O_1O_3^2 - O_1O_2^2 - O_2O_3^2 + 2 \cdot O_1O_2 \cdot O_2O_3 \cdot \cos(\theta). \]
+
+Given that \(AB^2 = 560\), we can use the fact that the distances are proportional to find \(AC^2\). Since the distances are proportional, we have:
+\[ AC^2 = 30^2 - 24^2 - 32^2 + 2 \cdot 24 \cdot 32 \cdot \cos(\theta). \]
+
+Simplifying, we get:
+\[ AC^2 = 900 - 576 - 1024 + 1536 \cdot \cos(\theta). \]
+
+Since the distances are proportional, we have:
+\[ AC^2 = 1024. \]
+
+Therefore, the value of \(AC^2\) is:
+\[ \boxed{1024}. \]
+
+Predicted answer: N/A
+Valid answer: 756

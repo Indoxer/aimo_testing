@@ -1,0 +1,33 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Let $w = \dfrac{\sqrt{3} + i}{2}$ and $z = \dfrac{-1 + i\sqrt{3}}{2},$ where $i = \sqrt{-1}.$ Find the number of ordered pairs $(r,s)$ of positive integers not exceeding $100$ that satisfy the equation $i \cdot w^r = z^s.$
+
+
+To solve the problem, we first express \(w\) and \(z\) in polar form. Notice that \(w = \frac{\sqrt{3} + i}{2} = \cos\left(\frac{\pi}{6}\right) + i\sin\left(\frac{\pi}{6}\right) = e^{i\pi/6}\) and \(z = \frac{-1 + i\sqrt{3}}{2} = \cos\left(\frac{2\pi}{3}\right) + i\sin\left(\frac{2\pi}{3}\right) = e^{i2\pi/3}\).
+
+Given the equation \(i \cdot w^r = z^s\), we substitute the polar forms:
+\[i \cdot w^r = i \cdot e^{i\pi/6} = e^{i\pi/2} \cdot e^{i\pi/6} = e^{i(\pi/2 + \pi/6)} = e^{i2\pi/3}.\]
+Thus, we need to find \(s\) such that \(e^{i2\pi/3} = e^{is2\pi/3}\). This implies that \(s \equiv 1 \pmod{3}\), or \(s = 3k + 1\) for some integer \(k\).
+
+Next, we equate the exponents:
+\[2\pi r/3 = 2\pi s/3 + 2m\pi \quad \text{for some integer } m.\]
+This simplifies to:
+\[r = s + 3m.\]
+Since \(s = 3k + 1\), we have \(r = 3k + 1 + 3m = 3(k+m) + 1\). Therefore, \(r \equiv 1 \pmod{3}\), or \(r = 3n + 1\) for some integer \(n\).
+
+Now, we need to count the number of pairs \((r, s)\) where both \(r\) and \(s\) are positive integers not exceeding 100 and satisfy \(r \equiv 1 \pmod{3}\) and \(s \equiv 1 \pmod{3}\). The possible values for \(r\) are \(1, 4, 7, \ldots, 97\), which form an arithmetic sequence with the first term 1, common difference 3, and last term 97. The number of terms in this sequence is given by:
+\[1 + (n-1) \cdot 3 = 97 \implies n = 33.\]
+So, there are 33 possible values for \(r\).
+
+Similarly, the possible values for \(s\) are \(1, 4, 7, \ldots, 97\), which also form an arithmetic sequence with 33 terms.
+
+Therefore, the total number of ordered pairs \((r, s)\) is:
+\[33 \times 33 = 1089.\]
+
+The answer is:
+\[
+\boxed{1089}
+\]
+
+Predicted answer: N/A
+Valid answer: 834

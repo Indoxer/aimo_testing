@@ -1,0 +1,29 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+In isosceles trapezoid $ABCD$, parallel bases $\overline{AB}$ and $\overline{CD}$ have lengths $500$ and $650$, respectively, and $AD=BC=333$. The angle bisectors of $\angle{A}$ and $\angle{D}$ meet at $P$, and the angle bisectors of $\angle{B}$ and $\angle{C}$ meet at $Q$. Find $PQ$.
+
+
+To solve for the length \(PQ\) in the isosceles trapezoid \(ABCD\), we start by understanding the geometric properties and relationships within the trapezoid.
+
+Given:
+- \(AB = 500\)
+- \(CD = 650\)
+- \(AD = BC = 333\)
+
+First, we need to find the height of the trapezoid. Let's drop perpendiculars from points \(A\) and \(B\) to line \(CD\), meeting \(CD\) at points \(E\) and \(F\) respectively. This creates two right triangles \(ADE\) and \(BCF\) with \(DE = CF\) and \(EF = AB = 500\). Therefore, \(CD = DE + EF + CF = DE + 500 + DE = 2DE + 500 = 650\). Solving for \(DE\), we get:
+\[2DE = 150 \implies DE = 75.\]
+
+Now, we can find the height \(h\) of the trapezoid using the Pythagorean theorem in triangle \(ADE\):
+\[AD^2 = DE^2 + h^2 \implies 333^2 = 75^2 + h^2 \implies 110889 = 5625 + h^2 \implies h^2 = 105264 \implies h = \sqrt{105264} = 324.\]
+
+Next, we need to find the coordinates of points \(P\) and \(Q\). Since \(P\) and \(Q\) are the intersections of the angle bisectors of the angles at \(A\) and \(D\) and at \(B\) and \(C\) respectively, they are the incenter of the trapezoid. The distance between these incenter points \(P\) and \(Q\) is equal to the height of the trapezoid because the trapezoid is symmetric and the angle bisectors meet at the same height level but on opposite sides of the trapezoid.
+
+Thus, the distance \(PQ\) is equal to the height of the trapezoid, which is \(324\).
+
+The answer is:
+\[
+\boxed{324}
+\]
+
+Predicted answer: N/A
+Valid answer: 242

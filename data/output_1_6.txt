@@ -1,0 +1,50 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Three spheres with radii $11$, $13$, and $19$ are mutually externally tangent. A plane intersects the spheres in three congruent circles centered at $A$, $B$, and $C$, respectively, and the centers of the spheres all lie on the same side of this plane. Suppose that $AB^2 = 560$. Find $AC^2$.
+
+
+To solve for \( AC^2 \), we start by considering the geometry of the problem. We have three spheres with radii \( r_1 = 11 \), \( r_2 = 13 \), and \( r_3 = 19 \) that are mutually externally tangent. A plane intersects these spheres in three congruent circles centered at points \( A \), \( B \), and \( C \) respectively.
+
+First, let's denote the distances from the centers of the spheres to the plane as \( d_1 \), \( d_2 \), and \( d_3 \) respectively. Since the circles are congruent, the distances from the centers of the spheres to the plane must be proportional to the radii of the spheres. Therefore, we can write:
+\[
+d_1 = k \cdot r_1, \quad d_2 = k \cdot r_2, \quad d_3 = k \cdot r_3
+\]
+for some constant \( k \).
+
+Given that \( AB^2 = 560 \), we need to find the relationship between the distances \( d_1 \), \( d_2 \), and \( d_3 \). The distance between the centers of any two spheres is the sum of their radii:
+\[
+d_1 + d_2 = r_1 + r_2, \quad d_2 + d_3 = r_2 + r_3, \quad d_3 + d_1 = r_3 + r_1
+\]
+
+Substituting \( d_1 = k \cdot 11 \), \( d_2 = k \cdot 13 \), and \( d_3 = k \cdot 19 \) into these equations, we get:
+\[
+k \cdot 11 + k \cdot 13 = 11 + 13 \implies k(11 + 13) = 24 \implies k \cdot 24 = 24 \implies k = 1
+\]
+
+Thus, the distances from the centers of the spheres to the plane are:
+\[
+d_1 = 11, \quad d_2 = 13, \quad d_3 = 19
+\]
+
+Next, we need to find \( AC^2 \). The distance between the centers of spheres 1 and 3 is:
+\[
+AC = r_1 + r_3 = 11 + 19 = 30
+\]
+
+The distance from the center of sphere 1 to the plane is \( d_1 = 11 \), and the distance from the center of sphere 3 to the plane is \( d_3 = 19 \). The squared distance between the centers of the circles formed by the intersection of the plane with the spheres is:
+\[
+AC^2 = (r_1 + r_3)^2 - (d_1 - d_3)^2
+\]
+
+Substituting the values, we get:
+\[
+AC^2 = 30^2 - (11 - 19)^2 = 900 - (-8)^2 = 900 - 64 = 836
+\]
+
+Therefore, the value of \( AC^2 \) is:
+\[
+\boxed{836}
+\]
+
+Predicted answer: N/A
+Valid answer: 756

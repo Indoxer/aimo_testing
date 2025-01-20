@@ -1,0 +1,65 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Quadratic polynomials $P(x)$ and $Q(x)$ have leading coefficients $2$ and $-2,$ respectively. The graphs of both polynomials pass through the two points $(16,54)$ and $(20,53).$ Find $P(0) + Q(0).$
+
+
+To find \( P(0) + Q(0) \), we start by expressing the quadratic polynomials \( P(x) \) and \( Q(x) \) in their general forms:
+\[ P(x) = 2x^2 + ax + b \]
+\[ Q(x) = -2x^2 + cx + d \]
+
+We know that both polynomials pass through the points \((16, 54)\) and \((20, 53)\). This gives us the following system of equations for \( P(x) \):
+\[ 2(16)^2 + 16a + b = 54 \]
+\[ 2(20)^2 + 20a + b = 53 \]
+
+Simplifying these equations, we get:
+\[ 512 + 16a + b = 54 \]
+\[ 800 + 20a + b = 53 \]
+
+Subtracting the first equation from the second, we eliminate \( b \):
+\[ (800 + 20a + b) - (512 + 16a + b) = 53 - 54 \]
+\[ 288 + 4a = -1 \]
+\[ 4a = -289 \]
+\[ a = -\frac{289}{4} \]
+
+Now substitute \( a = -\frac{289}{4} \) back into the first equation:
+\[ 512 + 16\left(-\frac{289}{4}\right) + b = 54 \]
+\[ 512 - 1156 + b = 54 \]
+\[ -644 + b = 54 \]
+\[ b = 698 \]
+
+So, the polynomial \( P(x) \) is:
+\[ P(x) = 2x^2 - \frac{289}{4}x + 698 \]
+
+Next, we do the same for \( Q(x) \):
+\[ -2(16)^2 + 16c + d = 54 \]
+\[ -2(20)^2 + 20c + d = 53 \]
+
+Simplifying these equations, we get:
+\[ -512 + 16c + d = 54 \]
+\[ -800 + 20c + d = 53 \]
+
+Subtracting the first equation from the second, we eliminate \( d \):
+\[ (800 + 20c + d) - (-512 + 16c + d) = 53 - 54 \]
+\[ 1312 + 4c = -1 \]
+\[ 4c = -1313 \]
+\[ c = -\frac{1313}{4} \]
+
+Now substitute \( c = -\frac{1313}{4} \) back into the first equation:
+\[ -512 + 16\left(-\frac{1313}{4}\right) + d = 54 \]
+\[ -512 - 5252 + d = 54 \]
+\[ -5764 + d = 54 \]
+\[ d = 5818 \]
+
+So, the polynomial \( Q(x) \) is:
+\[ Q(x) = -2x^2 - \frac{1313}{4}x + 5818 \]
+
+Finally, we need to find \( P(0) + Q(0) \):
+\[ P(0) = 698 \]
+\[ Q(0) = 5818 \]
+\[ P(0) + Q(0) = 698 + 5818 = 6516 \]
+
+Thus, the answer is:
+\[ \boxed{6516} \]
+
+Predicted answer: N/A
+Valid answer: 116

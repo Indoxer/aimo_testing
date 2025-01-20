@@ -1,0 +1,53 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+For any finite set $X$, let $| X |$ denote the number of elements in $X$. Define
+\[S_n = \sum | A \cap B | ,\]
+where the sum is taken over all ordered pairs $(A, B)$ such that $A$ and $B$ are subsets of $\left\{ 1 , 2 , 3,  \cdots , n \right\}$ with $|A| = |B|$.
+For example, $S_2 = 4$ because the sum is taken over the pairs of subsets
+\[(A, B) \in \left\{ (\emptyset, \emptyset) , ( \{1\} , \{1\} ), ( \{1\} , \{2\} ) , ( \{2\} , \{1\} ) , ( \{2\} , \{2\} ) , ( \{1 , 2\} , \{1 , 2\} ) \right\} ,\]
+giving $S_2 = 0 + 1 + 0 + 0 + 1 + 2 = 4$.
+Let $\frac{S_{2022}}{S_{2021}} = \frac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find the remainder when $p + q$ is divided by
+1000.
+
+
+To solve for \( S_n \), we need to understand the sum of the sizes of the intersections of all pairs of subsets of \(\{1, 2, \ldots, n\}\) of the same size. Let's start by considering the contribution of each element to the sum \( S_n \).
+
+For a fixed element \( i \) in \(\{1, 2, \ldots, n\}\), we need to count how many times \( i \) appears in the intersection of two subsets \( A \) and \( B \) of the same size. If \( A \) and \( B \) are subsets of \(\{1, 2, \ldots, n\}\) with \( |A| = |B| = k \), then \( i \) appears in both \( A \) and \( B \) if and only if \( i \) is in both subsets. The number of ways to choose the remaining \( k-1 \) elements from the remaining \( n-1 \) elements is \(\binom{n-1}{k-1}\). Since there are \(\binom{n}{k}\) ways to choose \( A \) and \(\binom{n}{k}\) ways to choose \( B \), the total number of ordered pairs \((A, B)\) such that \( i \) is in both \( A \) and \( B \) is \(\binom{n}{k}^2 \cdot \binom{n-1}{k-1}\).
+
+Summing this over all possible \( k \) from 0 to \( n \), we get:
+\[
+S_n = \sum_{k=0}^n \binom{n}{k}^2 \binom{n-1}{k-1}.
+\]
+
+Using the identity \(\binom{n}{k} = \binom{n}{n-k}\), we can rewrite the sum as:
+\[
+S_n = \sum_{k=0}^n \binom{n}{k}^2 \binom{n-1}{n-k-1}.
+\]
+
+This sum can be simplified using the fact that \(\binom{n}{k} \binom{n-1}{n-k-1} = \binom{2n-1}{n-1}\). Therefore, we have:
+\[
+S_n = \sum_{k=0}^n \binom{n}{k} \binom{n}{k} \binom{n-1}{n-k-1} = \sum_{k=0}^n \binom{n}{k} \binom{n-1}{n-k-1} = \binom{2n-1}{n}.
+\]
+
+Thus, we have \( S_n = \binom{2n-1}{n} \). For \( n = 2022 \) and \( n = 2021 \), we have:
+\[
+S_{2022} = \binom{4043}{2022}, \quad S_{2021} = \binom{4041}{2021}.
+\]
+
+We need to find the ratio \(\frac{S_{2022}}{S_{2021}}\):
+\[
+\frac{S_{2022}}{S_{2021}} = \frac{\binom{4043}{2022}}{\binom{4041}{2021}} = \frac{4043! / (2022! \cdot 2021!)}{4041! / (2021! \cdot 2020!)} = \frac{4043 \cdot 4042 \cdot 4041!}{2022 \cdot 2021! \cdot 2021!} \cdot \frac{2021! \cdot 2020!}{4041!} = \frac{4043 \cdot 4042}{2022 \cdot 2021} = \frac{4043 \cdot 2021}{2022 \cdot 1011} = \frac{4043}{1011}.
+\]
+
+Since 4043 and 1011 are relatively prime, we have \( p = 4043 \) and \( q = 1011 \). The remainder when \( p + q = 4043 + 1011 = 5054 \) is divided by 1000 is:
+\[
+5054 \mod 1000 = 54.
+\]
+
+Thus, the answer is:
+\[
+\boxed{54}.
+\]
+
+Predicted answer: N/A
+Valid answer: 245

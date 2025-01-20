@@ -1,0 +1,28 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+In isosceles trapezoid $ABCD$, parallel bases $\overline{AB}$ and $\overline{CD}$ have lengths $500$ and $650$, respectively, and $AD=BC=333$. The angle bisectors of $\angle{A}$ and $\angle{D}$ meet at $P$, and the angle bisectors of $\angle{B}$ and $\angle{C}$ meet at $Q$. Find $PQ$.
+
+
+To find the length of \(PQ\) in the isosceles trapezoid \(ABCD\), we start by analyzing the geometry of the trapezoid. The bases are \(AB = 500\) and \(CD = 650\), and the non-parallel sides are \(AD = BC = 333\).
+
+First, we drop perpendiculars from points \(A\) and \(B\) to line \(CD\), meeting \(CD\) at points \(E\) and \(F\) respectively. This creates two right triangles, \(\triangle ADE\) and \(\triangle BCF\), and a rectangle \(ABFE\). The length of \(EF\) is equal to the length of \(AB\), so \(EF = 500\). Therefore, the lengths of \(DE\) and \(CF\) are each \(\frac{650 - 500}{2} = 75\).
+
+Now, we can use the Pythagorean theorem in \(\triangle ADE\) to find the height \(h\) of the trapezoid:
+\[
+AD^2 = DE^2 + h^2 \implies 333^2 = 75^2 + h^2 \implies 110889 = 5625 + h^2 \implies h^2 = 105264 \implies h = \sqrt{105264} = 324.
+\]
+
+Next, we need to find the coordinates of points \(P\) and \(Q\). Since \(P\) is the intersection of the angle bisectors of \(\angle A\) and \(\angle D\), and \(Q\) is the intersection of the angle bisectors of \(\angle B\) and \(\angle C\), both \(P\) and \(Q\) lie on the line that is the angle bisector of the trapezoid's base angles. This line is parallel to the bases and is located at the average height of the trapezoid, which is \(\frac{h}{2} = 162\).
+
+The distance between \(P\) and \(Q\) is the same as the distance between the midpoints of the bases, which is the average of the lengths of the bases:
+\[
+PQ = \frac{AB + CD}{2} = \frac{500 + 650}{2} = 575.
+\]
+
+Thus, the length of \(PQ\) is \(\boxed{324}\). However, upon re-evaluating the problem, we realize that the correct interpretation of the problem is that \(PQ\) is the distance between the points where the angle bisectors intersect the line through the midpoints of the bases, which is indeed the height of the trapezoid, not the average of the bases. Therefore, the correct answer is:
+\[
+\boxed{324}.
+\]
+
+Predicted answer: N/A
+Valid answer: 242

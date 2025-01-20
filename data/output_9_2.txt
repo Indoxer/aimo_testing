@@ -1,0 +1,77 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Let $w = \dfrac{\sqrt{3} + i}{2}$ and $z = \dfrac{-1 + i\sqrt{3}}{2},$ where $i = \sqrt{-1}.$ Find the number of ordered pairs $(r,s)$ of positive integers not exceeding $100$ that satisfy the equation $i \cdot w^r = z^s.$
+
+
+To solve the problem, we first need to express \(w\) and \(z\) in polar form. We start with \(w = \dfrac{\sqrt{3} + i}{2}\).
+
+The modulus of \(w\) is:
+\[
+|w| = \sqrt{\left(\dfrac{\sqrt{3}}{2}\right)^2 + \left(\dfrac{1}{2}\right)^2} = \sqrt{\dfrac{3}{4} + \dfrac{1}{4}} = \sqrt{1} = 1.
+\]
+The argument of \(w\) is:
+\[
+\arg(w) = \tan^{-1}\left(\dfrac{\dfrac{1}{2}}{\dfrac{\sqrt{3}}{2}}\right) = \tan^{-1}\left(\dfrac{1}{\sqrt{3}}\right) = \dfrac{\pi}{6}.
+\]
+Thus, in polar form, \(w = e^{i\pi/6}\).
+
+Next, we consider \(z = \dfrac{-1 + i\sqrt{3}}{2}\). The modulus of \(z\) is:
+\[
+|z| = \sqrt{\left(\dfrac{-1}{2}\right)^2 + \left(\dfrac{\sqrt{3}}{2}\right)^2} = \sqrt{\dfrac{1}{4} + \dfrac{3}{4}} = \sqrt{1} = 1.
+\]
+The argument of \(z\) is:
+\[
+\arg(z) = \tan^{-1}\left(\dfrac{\dfrac{\sqrt{3}}{2}}{\dfrac{-1}{2}}\right) = \tan^{-1}(-\sqrt{3}) = \dfrac{2\pi}{3}.
+\]
+Thus, in polar form, \(z = e^{i2\pi/3}\).
+
+We need to find the ordered pairs \((r, s)\) such that \(i \cdot w^r = z^s\). First, express \(i\) in polar form:
+\[
+i = e^{i\pi/2}.
+\]
+So the equation becomes:
+\[
+e^{i\pi/2} \cdot e^{ir\pi/6} = e^{is2\pi/3}.
+\]
+This simplifies to:
+\[
+e^{i(\pi/2 + r\pi/6)} = e^{is2\pi/3}.
+\]
+Since the exponents must be equal up to an integer multiple of \(2\pi\), we have:
+\[
+\dfrac{\pi}{2} + \dfrac{r\pi}{6} = \dfrac{2s\pi}{3} + 2k\pi \quad \text{for some integer } k.
+\]
+Dividing through by \(\pi\), we get:
+\[
+\dfrac{1}{2} + \dfrac{r}{6} = \dfrac{2s}{3} + 2k.
+\]
+Multiplying through by 6, we obtain:
+\[
+3 + r = 4s + 12k.
+\]
+Rearranging terms, we get:
+\[
+r = 4s + 12k - 3.
+\]
+Since \(r\) and \(s\) are positive integers not exceeding 100, we need to find the possible values of \(s\) and \(k\) that satisfy this equation. Note that \(r\) must be a positive integer, so \(4s + 12k - 3\) must be a positive integer. This implies that \(4s + 12k - 3 > 0\) or \(4s + 12k > 3\), which is always true for positive integers \(s\) and \(k\).
+
+The maximum value of \(s\) is 25 (since \(4s \leq 100\)), and for each \(s\) from 1 to 25, \(k\) can be any non-negative integer such that \(r = 4s + 12k - 3 \leq 100\). Solving for \(k\), we get:
+\[
+12k \leq 103 - 4s \implies k \leq \dfrac{103 - 4s}{12}.
+\]
+The largest integer \(k\) is \(\left\lfloor \dfrac{103 - 4s}{12} \right\rfloor\). For each \(s\) from 1 to 25, \(k\) can take \(\left\lfloor \dfrac{103 - 4s}{12} \right\rfloor + 1\) values. Summing these values for \(s\) from 1 to 25, we get:
+\[
+\sum_{s=1}^{25} \left( \left\lfloor \dfrac{103 - 4s}{12} \right\rfloor + 1 \right).
+\]
+Calculating each term, we find that there are 25 terms, and each term contributes 1 more than the floor function value. The sum is:
+\[
+25 + \sum_{s=1}^{25} \left( \left\lfloor \dfrac{103 - 4s}{12} \right\rfloor \right).
+\]
+The sum of the floor function values is 325, so the total number of ordered pairs \((r, s)\) is:
+\[
+25 + 325 = 350.
+\]
+Thus, the number of ordered pairs \((r, s)\) is \(\boxed{350}\).
+
+Predicted answer: N/A
+Valid answer: 834

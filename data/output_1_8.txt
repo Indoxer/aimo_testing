@@ -1,0 +1,100 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Three spheres with radii $11$, $13$, and $19$ are mutually externally tangent. A plane intersects the spheres in three congruent circles centered at $A$, $B$, and $C$, respectively, and the centers of the spheres all lie on the same side of this plane. Suppose that $AB^2 = 560$. Find $AC^2$.
+
+
+To solve the problem, we start by considering the geometry of the situation. Let the centers of the spheres be \( O_1 \), \( O_2 \), and \( O_3 \) with radii 11, 13, and 19, respectively. Since the spheres are mutually externally tangent, the distances between their centers are:
+\[
+O_1O_2 = 11 + 13 = 24, \quad O_1O_3 = 11 + 19 = 30, \quad O_2O_3 = 13 + 19 = 32.
+\]
+
+Next, we consider the plane that intersects the spheres in three congruent circles centered at points \( A \), \( B \), and \( C \). Since the circles are congruent, the distances from the centers of the spheres to the plane are proportional to the radii of the spheres. Let the distances from \( O_1 \), \( O_2 \), and \( O_3 \) to the plane be \( d_1 \), \( d_2 \), and \( d_3 \), respectively. Then, we have:
+\[
+d_1 = r_1 - R, \quad d_2 = r_2 - R, \quad d_3 = r_3 - R,
+\]
+where \( R \) is the radius of the congruent circles.
+
+Given that \( AB^2 = 560 \), we need to find \( AC^2 \). First, we use the fact that the distance between the centers of the spheres is related to the distances from these centers to the plane by the Pythagorean theorem. Specifically, we have:
+\[
+O_1O_2^2 = (r_1 - R)^2 + (r_2 - R)^2 - 2(r_1 - R)(r_2 - R)\cos(\theta),
+\]
+where \(\theta\) is the angle between the lines \( O_1A \) and \( O_2A \). However, since the circles are congruent and the plane is perpendicular to the line joining the centers, \(\theta = 0\) and the equation simplifies to:
+\[
+O_1O_2^2 = (r_1 - R)^2 + (r_2 - R)^2.
+\]
+
+Substituting the known values, we get:
+\[
+24^2 = (11 - R)^2 + (13 - R)^2.
+\]
+
+Expanding and simplifying:
+\[
+576 = (121 - 22R + R^2) + (169 - 26R + R^2),
+\]
+\[
+576 = 2R^2 - 48R + 290,
+\]
+\[
+286 = 2R^2 - 48R,
+\]
+\[
+143 = R^2 - 24R.
+\]
+
+Solving this quadratic equation for \( R \):
+\[
+R^2 - 24R - 143 = 0.
+\]
+
+Using the quadratic formula \( R = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \), where \( a = 1 \), \( b = -24 \), and \( c = -143 \):
+\[
+R = \frac{24 \pm \sqrt{576 + 572}}{2},
+\]
+\[
+R = \frac{24 \pm \sqrt{1148}}{2},
+\]
+\[
+R = \frac{24 \pm 2\sqrt{287}}{2},
+\]
+\[
+R = 12 \pm \sqrt{287}.
+\]
+
+Since \( R \) must be positive, we take:
+\[
+R = 12 + \sqrt{287}.
+\]
+
+Now, we need to find \( AC^2 \). Using the same logic as before:
+\[
+O_1O_3^2 = (11 - R)^2 + (19 - R)^2.
+\]
+
+Substituting \( R = 12 + \sqrt{287} \):
+\[
+O_1O_3^2 = (11 - (12 + \sqrt{287}))^2 + (19 - (12 + \sqrt{287}))^2,
+\]
+\[
+O_1O_3^2 = (-1 - \sqrt{287})^2 + (7 - \sqrt{287})^2,
+\]
+\[
+O_1O_3^2 = (1 + 2\sqrt{287} + 287) + (49 - 14\sqrt{287} + 287),
+\]
+\[
+O_1O_3^2 = 1 + 287 + 49 + 287 + 2\sqrt{287} - 14\sqrt{287},
+\]
+\[
+O_1O_3^2 = 624 - 12\sqrt{287}.
+\]
+
+Thus, the value of \( AC^2 \) is:
+\[
+\boxed{624}.
+\] 
+
+Therefore, the final answer is:
+\boxed{624}. \]```
+
+Predicted answer: N/A
+Valid answer: 756

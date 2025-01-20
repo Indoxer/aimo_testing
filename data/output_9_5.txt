@@ -1,0 +1,121 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Let $w = \dfrac{\sqrt{3} + i}{2}$ and $z = \dfrac{-1 + i\sqrt{3}}{2},$ where $i = \sqrt{-1}.$ Find the number of ordered pairs $(r,s)$ of positive integers not exceeding $100$ that satisfy the equation $i \cdot w^r = z^s.$
+
+
+To solve the given problem, we start by expressing \( w \) and \( z \) in polar form. 
+
+First, consider \( w = \frac{\sqrt{3} + i}{2} \). We recognize this as a complex number on the unit circle. To find its argument, we note:
+\[
+w = \frac{\sqrt{3}}{2} + \frac{i}{2}
+\]
+The magnitude of \( w \) is:
+\[
+|w| = \sqrt{\left(\frac{\sqrt{3}}{2}\right)^2 + \left(\frac{1}{2}\right)^2} = \sqrt{\frac{3}{4} + \frac{1}{4}} = \sqrt{1} = 1
+\]
+Thus, \( w \) lies on the unit circle. The argument \( \theta \) of \( w \) can be found using:
+\[
+\tan \theta = \frac{\frac{1}{2}}{\frac{\sqrt{3}}{2}} = \frac{1}{\sqrt{3}} = \frac{\sqrt{3}}{3}
+\]
+This corresponds to:
+\[
+\theta = \frac{\pi}{6}
+\]
+Therefore, in polar form, \( w \) is:
+\[
+w = e^{i \frac{\pi}{6}}
+\]
+
+Next, consider \( z = \frac{-1 + i\sqrt{3}}{2} \). Similarly, this is a complex number on the unit circle. Its magnitude is:
+\[
+|z| = \sqrt{\left(\frac{-1}{2}\right)^2 + \left(\frac{\sqrt{3}}{2}\right)^2} = \sqrt{\frac{1}{4} + \frac{3}{4}} = \sqrt{1} = 1
+\]
+Thus, \( z \) also lies on the unit circle. The argument \( \phi \) of \( z \) can be found using:
+\[
+\tan \phi = \frac{\frac{\sqrt{3}}{2}}{\frac{-1}{2}} = -\sqrt{3}
+\]
+This corresponds to:
+\[
+\phi = \frac{2\pi}{3}
+\]
+Therefore, in polar form, \( z \) is:
+\[
+z = e^{i \frac{2\pi}{3}}
+\]
+
+We need to solve the equation:
+\[
+i \cdot w^r = z^s
+\]
+Substituting the polar forms of \( w \) and \( z \), we get:
+\[
+i \cdot e^{i \frac{\pi}{6} r} = e^{i \frac{2\pi}{3} s}
+\]
+Recall that \( i = e^{i \frac{\pi}{2}} \), so the equation becomes:
+\[
+e^{i \frac{\pi}{2}} \cdot e^{i \frac{\pi}{6} r} = e^{i \frac{2\pi}{3} s}
+\]
+Using properties of exponents, we combine the terms on the left-hand side:
+\[
+e^{i \left( \frac{\pi}{2} + \frac{\pi}{6} r \right)} = e^{i \frac{2\pi}{3} s}
+\]
+Since the bases are the same, we equate the exponents modulo \( 2\pi \):
+\[
+\frac{\pi}{2} + \frac{\pi}{6} r \equiv \frac{2\pi}{3} s \pmod{2\pi}
+\]
+Dividing through by \( \pi \):
+\[
+\frac{1}{2} + \frac{r}{6} \equiv \frac{2s}{3} \pmod{2}
+\]
+Multiplying through by 6 to clear the denominators:
+\[
+3 + r \equiv 4s \pmod{12}
+\]
+Rearranging terms:
+\[
+r \equiv 4s - 3 \pmod{12}
+\]
+We need to find all pairs \((r, s)\) such that \( 1 \leq r, s \leq 100 \). Solving for \( r \):
+\[
+r = 4s - 3 + 12k \quad \text{for integer } k
+\]
+We need \( 1 \leq 4s - 3 + 12k \leq 100 \). Simplifying:
+\[
+4s - 3 + 12k \geq 1 \implies 4s + 12k \geq 4 \implies s + 3k \geq 1
+\]
+\[
+4s - 3 + 12k \leq 100 \implies 4s + 12k \leq 103 \implies s + 3k \leq 25.75
+\]
+Since \( s \) and \( k \) are integers, we have:
+\[
+s + 3k \leq 25
+\]
+We now find the possible values of \( s \) and corresponding \( k \). For each \( s \) from 1 to 25, we solve for \( k \):
+\[
+k = \left\lfloor \frac{25 - s}{3} \right\rfloor
+\]
+Each valid \( k \) gives a unique \( r \). Therefore, for each \( s \) from 1 to 25, there are \(\left\lfloor \frac{25 - s}{3} \right\rfloor + 1\) valid \( k \) values.
+
+Summing these values:
+\[
+\sum_{s=1}^{25} \left( \left\lfloor \frac{25 - s}{3} \right\rfloor + 1 \right)
+\]
+Calculating this sum:
+\[
+\sum_{s=1}^{25} \left\lfloor \frac{25 - s}{3} \right\rfloor + \sum_{s=1}^{25} 1 = \sum_{s=1}^{25} \left\lfloor \frac{25 - s}{3} \right\rfloor + 25
+\]
+The first sum is:
+\[
+\sum_{s=1}^{25} \left\lfloor \frac{25 - s}{3} \right\rfloor = 8 + 8 + 8 + 7 + 7 + 7 + 6 + 6 + 6 + 5 + 5 + 5 + 4 + 4 + 4 + 3 + 3 + 3 + 2 + 2 + 2 + 1 + 1 + 1 + 0 + 0 + 0 = 105
+\]
+Thus, the total number of pairs is:
+\[
+105 + 25 = 130
+\]
+Therefore, the number of ordered pairs \((r, s)\) is:
+\[
+\boxed{130}
+\]
+
+Predicted answer: N/A
+Valid answer: 834

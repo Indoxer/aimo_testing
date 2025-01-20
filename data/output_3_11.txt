@@ -1,0 +1,50 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+For any finite set $X$, let $| X |$ denote the number of elements in $X$. Define
+\[S_n = \sum | A \cap B | ,\]
+where the sum is taken over all ordered pairs $(A, B)$ such that $A$ and $B$ are subsets of $\left\{ 1 , 2 , 3,  \cdots , n \right\}$ with $|A| = |B|$.
+For example, $S_2 = 4$ because the sum is taken over the pairs of subsets
+\[(A, B) \in \left\{ (\emptyset, \emptyset) , ( \{1\} , \{1\} ), ( \{1\} , \{2\} ) , ( \{2\} , \{1\} ) , ( \{2\} , \{2\} ) , ( \{1 , 2\} , \{1 , 2\} ) \right\} ,\]
+giving $S_2 = 0 + 1 + 0 + 0 + 1 + 2 = 4$.
+Let $\frac{S_{2022}}{S_{2021}} = \frac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find the remainder when $p + q$ is divided by
+1000.
+
+
+To solve for \( S_n \), we start by considering the sum \( S_n = \sum |A \cap B| \) over all ordered pairs \((A, B)\) where \(A\) and \(B\) are subsets of \(\{1, 2, \ldots, n\}\) with \(|A| = |B|\).
+
+First, we note that for a fixed subset \(A\) of size \(k\), there are \(\binom{n}{k}\) ways to choose \(A\). For each such \(A\), there are also \(\binom{n}{k}\) ways to choose \(B\). Therefore, the total number of ordered pairs \((A, B)\) with \(|A| = |B| = k\) is \(\binom{n}{k}^2\).
+
+Next, we need to determine the contribution of each element \(i \in \{1, 2, \ldots, n\}\) to the sum \(S_n\). An element \(i\) will be in the intersection \(A \cap B\) if and only if \(i\) is in both \(A\) and \(B\). The probability that a specific element \(i\) is in a randomly chosen subset of size \(k\) is \(\frac{k}{n}\). Therefore, the expected number of times \(i\) is in both \(A\) and \(B\) over all subsets of size \(k\) is \(\binom{n-1}{k-1}^2 \cdot \frac{k}{n}\).
+
+Summing this over all possible \(k\) from 0 to \(n\), we get:
+\[
+S_n = \sum_{k=0}^n \binom{n}{k}^2 \cdot k \cdot \frac{k}{n} = \frac{1}{n} \sum_{k=0}^n \binom{n}{k}^2 k^2.
+\]
+
+Using the identity \(\sum_{k=0}^n \binom{n}{k}^2 k^2 = n \binom{2n-2}{n-1}\), we have:
+\[
+S_n = \frac{1}{n} \cdot n \binom{2n-2}{n-1} = \binom{2n-2}{n-1}.
+\]
+
+Now, we need to find \(\frac{S_{2022}}{S_{2021}}\):
+\[
+\frac{S_{2022}}{S_{2021}} = \frac{\binom{4042}{2021}}{\binom{4040}{2020}}.
+\]
+
+Using the property of binomial coefficients \(\binom{n}{k} = \frac{n!}{k!(n-k)!}\), we get:
+\[
+\binom{4042}{2021} = \frac{4042!}{2021! \cdot 2021!} \quad \text{and} \quad \binom{4040}{2020} = \frac{4040!}{2020! \cdot 2020!}.
+\]
+
+Thus,
+\[
+\frac{S_{2022}}{S_{2021}} = \frac{\frac{4042!}{2021! \cdot 2021!}}{\frac{4040!}{2020! \cdot 2020!}} = \frac{4042 \cdot 4041}{2021 \cdot 2021} = \frac{4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4041}{2021} = \frac{8082}{2021} = 4.
+\]
+
+Therefore, \(\frac{S_{2022}}{S_{2021}} = 4\), which is already in its simplest form. Here, \(p = 4\) and \(q = 1\), so \(p + q = 5\). The remainder when \(p + q\) is divided by 1000 is:
+\[
+\boxed{5}.
+\]
+
+Predicted answer: N/A
+Valid answer: 245

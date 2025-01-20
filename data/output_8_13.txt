@@ -1,0 +1,55 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+In isosceles trapezoid $ABCD$, parallel bases $\overline{AB}$ and $\overline{CD}$ have lengths $500$ and $650$, respectively, and $AD=BC=333$. The angle bisectors of $\angle{A}$ and $\angle{D}$ meet at $P$, and the angle bisectors of $\angle{B}$ and $\angle{C}$ meet at $Q$. Find $PQ$.
+
+
+To solve for \(PQ\) in the isosceles trapezoid \(ABCD\) with given dimensions, we start by understanding the properties of the trapezoid and the angle bisectors.
+
+First, let's place the trapezoid in a coordinate system for easier calculation. Assume \(A = (0, 0)\), \(B = (500, 0)\), \(D = (x, h)\), and \(C = (x+650, h)\). Since \(AD = BC = 333\), we can use the distance formula to find \(x\) and \(h\).
+
+The distance \(AD\) is given by:
+\[
+AD = \sqrt{x^2 + h^2} = 333
+\]
+The distance \(BC\) is given by:
+\[
+BC = \sqrt{(x+650-500)^2 + h^2} = \sqrt{(x+150)^2 + h^2} = 333
+\]
+
+Since \(AD = BC\), we have:
+\[
+x^2 + h^2 = (x+150)^2 + h^2
+\]
+Simplifying, we get:
+\[
+x^2 = x^2 + 300x + 22500 \implies 300x + 22500 = 0 \implies x = -75
+\]
+
+Now substitute \(x = -75\) back into the equation for \(AD\):
+\[
+(-75)^2 + h^2 = 333^2 \implies 5625 + h^2 = 110889 \implies h^2 = 105264 \implies h = 324
+\]
+
+So, the coordinates are \(D = (-75, 324)\) and \(C = (-75 + 650, 324) = (575, 324)\).
+
+Next, we need to find the intersection points of the angle bisectors. The angle bisectors of \(\angle A\) and \(\angle D\) meet at point \(P\), and the angle bisectors of \(\angle B\) and \(\angle C\) meet at point \(Q\). In an isosceles trapezoid, the angle bisectors of the angles at the non-parallel sides intersect on the line segment joining the midpoints of the parallel sides.
+
+The midpoints of \(AB\) and \(CD\) are \((250, 0)\) and \((312.5, 0)\) respectively. The line segment joining these midpoints is horizontal and has a length of \(312.5 - 250 = 62.5\).
+
+Since \(P\) and \(Q\) are on this line segment, the distance \(PQ\) is the same as the distance between the midpoints of the parallel sides, which is:
+\[
+PQ = 62.5
+\]
+
+Thus, the answer is:
+\[
+\boxed{324}
+\] (Note: The correct interpretation should be that \(PQ\) is the vertical distance between the points where the angle bisectors intersect the line segment joining the midpoints of the parallel sides, which is the height of the trapezoid, 324.) 
+
+So the correct answer is:
+\[
+\boxed{324}
+\] (Corrected from the previous step)
+
+Predicted answer: N/A
+Valid answer: 242

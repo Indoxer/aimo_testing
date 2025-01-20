@@ -1,0 +1,129 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Let $ABCD$ be a parallelogram with $\angle BAD < 90^\circ.$ A circle tangent to sides $\overline{DA},$ $\overline{AB},$ and $\overline{BC}$ intersects diagonal $\overline{AC}$ at points $P$ and $Q$ with $AP < AQ,$ as shown. Suppose that $AP=3,$ $PQ=9,$ and $QC=16.$ Then the area of $ABCD$ can be expressed in the form $m\sqrt{n},$ where $m$ and $n$ are positive integers, and $n$ is not divisible by the square of any prime. Find $m+n.$
+
+
+To solve the problem, we start by noting that the circle is tangent to sides \(DA\), \(AB\), and \(BC\) of the parallelogram \(ABCD\). This implies that the circle is an incircle of the triangle formed by extending the sides of the parallelogram.
+
+Given:
+- \(AP = 3\)
+- \(PQ = 9\)
+- \(QC = 16\)
+
+First, we find the length of \(AC\):
+\[
+AC = AP + PQ + QC = 3 + 9 + 16 = 28
+\]
+
+Next, we use the fact that the circle is tangent to the sides of the parallelogram. Let the points of tangency on \(DA\), \(AB\), and \(BC\) be \(E\), \(F\), and \(G\) respectively. Since the circle is tangent to these sides, the tangents from a point to a circle are equal. Therefore, we have:
+\[
+AE = AF, \quad BF = BG, \quad CG = CE
+\]
+
+Let:
+\[
+AE = AF = x, \quad BF = BG = y, \quad CG = CE = z
+\]
+
+From the tangency properties, we can express the lengths of the sides of the parallelogram:
+\[
+AB = AE + EB = x + y, \quad BC = BG + GC = y + z, \quad CD = CF + FD = z + x, \quad DA = DE + EA = z + x
+\]
+
+Since \(ABCD\) is a parallelogram, opposite sides are equal:
+\[
+AB = CD \quad \text{and} \quad BC = AD
+\]
+
+Thus:
+\[
+x + y = z + x \quad \Rightarrow \quad y = z
+\]
+\[
+y + z = z + x \quad \Rightarrow \quad y = x
+\]
+
+This implies:
+\[
+x = y = z
+\]
+
+Now, we substitute \(x = y = z\) into the expression for \(AC\):
+\[
+AC = 2x + 2x = 4x
+\]
+\[
+4x = 28 \quad \Rightarrow \quad x = 7
+\]
+
+So, the side lengths of the parallelogram are:
+\[
+AB = CD = 2x = 14, \quad BC = AD = 2x = 14
+\]
+
+Next, we need to find the height of the parallelogram. Since the circle is tangent to \(DA\), \(AB\), and \(BC\), the radius \(r\) of the circle can be found using the formula for the area of the parallelogram:
+\[
+\text{Area} = AB \times h
+\]
+where \(h\) is the height from \(B\) to \(AD\).
+
+The area can also be expressed using the semiperimeter \(s\) and the inradius \(r\):
+\[
+\text{Area} = s \times r
+\]
+
+The semiperimeter \(s\) of the parallelogram is:
+\[
+s = \frac{2(AB + BC)}{2} = AB + BC = 14 + 14 = 28
+\]
+
+We also know that the area of the parallelogram can be found using the tangents:
+\[
+\text{Area} = 2 \times (AP \times r + PQ \times r + QC \times r) = 2r(3 + 9 + 16) = 2r \times 28 = 56r
+\]
+
+Equating the two expressions for the area:
+\[
+56r = 14 \times h
+\]
+\[
+h = 4r
+\]
+
+We also know that the area can be expressed in terms of the base and height:
+\[
+\text{Area} = 14 \times h = 14 \times 4r = 56r
+\]
+
+Finally, we solve for \(r\):
+\[
+r = \frac{\text{Area}}{56}
+\]
+
+Using the given values:
+\[
+r = \frac{14 \times 4r}{56} = \frac{56r}{56} = r
+\]
+
+Thus, the area of the parallelogram is:
+\[
+\text{Area} = 14 \times 4r = 56r
+\]
+
+Since \(r = 4\sqrt{3}\):
+\[
+\text{Area} = 14 \times 4\sqrt{3} = 56\sqrt{3}
+\]
+
+Therefore, \(m = 56\) and \(n = 3\), so:
+\[
+m + n = 56 + 3 = 59
+\]
+
+Thus, the final answer is:
+\[
+\boxed{59}
+\]
+
+Predicted answer: N/A
+Valid answer: 150

@@ -1,0 +1,165 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Quadratic polynomials $P(x)$ and $Q(x)$ have leading coefficients $2$ and $-2,$ respectively. The graphs of both polynomials pass through the two points $(16,54)$ and $(20,53).$ Find $P(0) + Q(0).$
+
+
+To solve for \( P(0) + Q(0) \), we start by expressing the quadratic polynomials \( P(x) \) and \( Q(x) \) in their general forms:
+\[
+P(x) = 2x^2 + ax + b
+\]
+\[
+Q(x) = -2x^2 + cx + d
+\]
+
+We know that both polynomials pass through the points \((16, 54)\) and \((20, 53)\). This gives us four equations.
+
+First, substitute \((16, 54)\) into \( P(x) \):
+\[
+54 = 2(16)^2 + 16a + b
+\]
+\[
+54 = 2 \cdot 256 + 16a + b
+\]
+\[
+54 = 512 + 16a + b
+\]
+\[
+16a + b = 54 - 512
+\]
+\[
+16a + b = -458 \quad \text{(Equation 1)}
+\]
+
+Next, substitute \((16, 54)\) into \( Q(x) \):
+\[
+54 = -2(16)^2 + 16c + d
+\]
+\[
+54 = -2 \cdot 256 + 16c + d
+\]
+\[
+54 = -512 + 16c + d
+\]
+\[
+16c + d = 54 + 512
+\]
+\[
+16c + d = 566 \quad \text{(Equation 2)}
+\]
+
+Now, substitute \((20, 53)\) into \( P(x) \):
+\[
+53 = 2(20)^2 + 20a + b
+\]
+\[
+53 = 2 \cdot 400 + 20a + b
+\]
+\[
+53 = 800 + 20a + b
+\]
+\[
+20a + b = 53 - 800
+\]
+\[
+20a + b = -747 \quad \text{(Equation 3)}
+\]
+
+Next, substitute \((20, 53)\) into \( Q(x) \):
+\[
+53 = -2(20)^2 + 20c + d
+\]
+\[
+53 = -2 \cdot 400 + 20c + d
+\]
+\[
+53 = -800 + 20c + d
+\]
+\[
+20c + d = 53 + 800
+\]
+\[
+20c + d = 853 \quad \text{(Equation 4)}
+\]
+
+We now have a system of linear equations:
+\[
+16a + b = -458 \quad \text{(Equation 1)}
+\]
+\[
+20a + b = -747 \quad \text{(Equation 3)}
+\]
+
+Subtract Equation 1 from Equation 3:
+\[
+(20a + b) - (16a + b) = -747 - (-458)
+\]
+\[
+4a = -289
+\]
+\[
+a = -\frac{289}{4}
+\]
+
+Substitute \( a = -\frac{289}{4} \) back into Equation 1:
+\[
+16\left(-\frac{289}{4}\right) + b = -458
+\]
+\[
+-1156 + b = -458
+\]
+\[
+b = 698
+\]
+
+Thus, \( P(x) = 2x^2 - \frac{289}{4}x + 698 \).
+
+For \( Q(x) \), we have:
+\[
+16c + d = 566 \quad \text{(Equation 2)}
+\]
+\[
+20c + d = 853 \quad \text{(Equation 4)}
+\]
+
+Subtract Equation 2 from Equation 4:
+\[
+(20c + d) - (16c + d) = 853 - 566
+\]
+\[
+4c = 287
+\]
+\[
+c = \frac{287}{4}
+\]
+
+Substitute \( c = \frac{287}{4} \) back into Equation 2:
+\[
+16\left(\frac{287}{4}\right) + d = 566
+\]
+\[
+1148 + d = 566
+\]
+\[
+d = -582
+\]
+
+Thus, \( Q(x) = -2x^2 + \frac{287}{4}x - 582 \).
+
+Finally, find \( P(0) + Q(0) \):
+\[
+P(0) = 698
+\]
+\[
+Q(0) = -582
+\]
+\[
+P(0) + Q(0) = 698 - 582 = 116
+\]
+
+Therefore, the final answer is:
+\[
+\boxed{116}
+\]
+
+Predicted answer: 116.0
+Valid answer: 116

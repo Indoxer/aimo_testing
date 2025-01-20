@@ -1,0 +1,28 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+In isosceles trapezoid $ABCD$, parallel bases $\overline{AB}$ and $\overline{CD}$ have lengths $500$ and $650$, respectively, and $AD=BC=333$. The angle bisectors of $\angle{A}$ and $\angle{D}$ meet at $P$, and the angle bisectors of $\angle{B}$ and $\angle{C}$ meet at $Q$. Find $PQ$.
+
+
+To solve for the length \(PQ\) in the given isosceles trapezoid \(ABCD\), we start by analyzing the properties and dimensions of the trapezoid.
+
+First, we drop perpendiculars from points \(A\) and \(B\) to line \(CD\), meeting \(CD\) at points \(E\) and \(F\) respectively. This creates two right triangles, \(\triangle ADE\) and \(\triangle BCF\), and a rectangle \(ABFE\). Since \(AB = 500\) and \(CD = 650\), the length of \(EF\) is also 500. Therefore, the lengths of \(CE\) and \(DF\) are each \(\frac{650 - 500}{2} = 75\).
+
+Next, we use the Pythagorean theorem in \(\triangle ADE\) to find the height \(h\) of the trapezoid:
+\[
+AD^2 = AE^2 + DE^2 \implies 333^2 = h^2 + 75^2 \implies 110889 = h^2 + 5625 \implies h^2 = 105264 \implies h = 324.
+\]
+
+Now, we need to find the coordinates of points \(P\) and \(Q\). The angle bisectors of \(\angle A\) and \(\angle D\) meet at point \(P\), and the angle bisectors of \(\angle B\) and \(\angle C\) meet at point \(Q\). In an isosceles trapezoid, the angle bisectors of the non-parallel sides intersect on the line segment joining the midpoints of the bases. The distance between these intersection points is equal to the height of the trapezoid.
+
+Since \(P\) and \(Q\) lie on the line segment joining the midpoints of \(AB\) and \(CD\), and this line segment is parallel to the bases and has a length equal to the height of the trapezoid, the distance \(PQ\) is simply the height of the trapezoid. Therefore, the length of \(PQ\) is:
+\[
+PQ = 324.
+\]
+
+Thus, the final answer is:
+\[
+\boxed{324}.
+\]
+
+Predicted answer: N/A
+Valid answer: 242

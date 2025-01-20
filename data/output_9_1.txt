@@ -1,0 +1,35 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Let $w = \dfrac{\sqrt{3} + i}{2}$ and $z = \dfrac{-1 + i\sqrt{3}}{2},$ where $i = \sqrt{-1}.$ Find the number of ordered pairs $(r,s)$ of positive integers not exceeding $100$ that satisfy the equation $i \cdot w^r = z^s.$
+
+
+To solve the problem, we start by expressing \(w\) and \(z\) in polar form. The complex number \(w = \frac{\sqrt{3} + i}{2}\) can be written as \(w = \cos\left(\frac{\pi}{6}\right) + i\sin\left(\frac{\pi}{6}\right)\), which means \(w = e^{i\pi/6}\). Similarly, the complex number \(z = \frac{-1 + i\sqrt{3}}{2}\) can be written as \(z = \cos\left(\frac{2\pi}{3}\right) + i\sin\left(\frac{2\pi}{3}\right)\), which means \(z = e^{i2\pi/3}\).
+
+We need to find the ordered pairs \((r, s)\) such that \(i \cdot w^r = z^s\). First, we express \(i\) in exponential form: \(i = e^{i\pi/2}\). Therefore, the equation becomes:
+\[i \cdot w^r = e^{i\pi/2} \cdot e^{ir\pi/6} = e^{i(\pi/2 + r\pi/6)} = e^{i(3\pi/6 + r\pi/6)} = e^{i(3\pi + r\pi)/6} = e^{i(3\pi/6 + r\pi/6)} = e^{i(3\pi + r\pi)/6} = e^{i(3\pi/6 + r\pi/6)} = e^{i(3\pi + r\pi)/6}.\]
+We also have \(z^s = (e^{i2\pi/3})^s = e^{is2\pi/3} = e^{is4\pi/6}\). Setting these equal gives:
+\[e^{i(3\pi/6 + r\pi/6)} = e^{is4\pi/6}.\]
+This implies:
+\[3\pi/6 + r\pi/6 = is4\pi/6 + 2k\pi\]
+for some integer \(k\). Simplifying, we get:
+\[\frac{3\pi + r\pi}{6} = \frac{is4\pi}{6} + 2k\pi.\]
+Dividing through by \(\pi/6\), we have:
+\[3 + r = 4is + 12k.\]
+Since the left side is real, the right side must also be real, implying that \(4s\) must be an integer multiple of 6, so \(s\) must be a multiple of 3. Let \(s = 3m\) for some integer \(m\). Substituting \(s = 3m\) into the equation, we get:
+\[3 + r = 12k.\]
+This simplifies to:
+\[r = 12k - 3.\]
+Since \(r\) is a positive integer not exceeding 100, we have:
+\[1 \leq 12k - 3 \leq 100.\]
+Adding 3 to all parts of the inequality, we get:
+\[4 \leq 12k \leq 103.\]
+Dividing through by 12, we get:
+\[\frac{4}{12} \leq k \leq \frac{103}{12},\]
+which simplifies to:
+\[\frac{1}{3} \leq k \leq 8.5833.\]
+Since \(k\) is an integer, \(k\) can take any integer value from 1 to 8, inclusive. This gives us 8 possible values for \(k\), and for each \(k\), there is a corresponding value of \(s = 3m\) where \(m\) can be any positive integer not exceeding \(\left\lfloor \frac{100}{3} \right\rfloor = 33\), giving us 33 possible values for \(s\). Therefore, the total number of ordered pairs \((r, s)\) is:
+\[8 \times 33 = 264.\]
+Thus, the number of ordered pairs \((r, s)\) is \(\boxed{264}\).
+
+Predicted answer: N/A
+Valid answer: 834

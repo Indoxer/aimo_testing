@@ -1,0 +1,21 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+In isosceles trapezoid $ABCD$, parallel bases $\overline{AB}$ and $\overline{CD}$ have lengths $500$ and $650$, respectively, and $AD=BC=333$. The angle bisectors of $\angle{A}$ and $\angle{D}$ meet at $P$, and the angle bisectors of $\angle{B}$ and $\angle{C}$ meet at $Q$. Find $PQ$.
+
+
+To solve for \(PQ\) in the isosceles trapezoid \(ABCD\), we start by noting that the trapezoid has parallel bases \(AB = 500\) and \(CD = 650\) with non-parallel sides \(AD = BC = 333\). The angle bisectors of \(\angle A\) and \(\angle D\) meet at point \(P\), and the angle bisectors of \(\angle B\) and \(\angle C\) meet at point \(Q\).
+
+First, we find the height of the trapezoid. Drop perpendiculars from points \(A\) and \(B\) to line \(CD\), meeting \(CD\) at points \(E\) and \(F\) respectively. This creates two right triangles \(ADE\) and \(BCF\) with \(DE = CF\) and \(EF = AB = 500\). Therefore, \(CD = DE + EF + CF = DE + 500 + DE = 2DE + 500\). Given \(CD = 650\), we have:
+\[2DE + 500 = 650 \implies 2DE = 150 \implies DE = 75.\]
+Now, in the right triangle \(ADE\), we use the Pythagorean theorem to find the height \(h\):
+\[AD^2 = DE^2 + h^2 \implies 333^2 = 75^2 + h^2 \implies 110889 = 5625 + h^2 \implies h^2 = 105264 \implies h = \sqrt{105264} = 324.\]
+
+Next, we need to find the distance between the angle bisectors \(PQ\). Since \(ABCD\) is an isosceles trapezoid, the angle bisectors of \(\angle A\) and \(\angle D\) are parallel, as are the angle bisectors of \(\angle B\) and \(\angle C\). The distance between these pairs of angle bisectors is equal to the height of the trapezoid because the angle bisectors are parallel and equidistant from the bases.
+
+Therefore, the length of \(PQ\) is the same as the height of the trapezoid, which is \(324\). Thus, the value of \(PQ\) is:
+\[
+\boxed{324}
+\]
+
+Predicted answer: N/A
+Valid answer: 242

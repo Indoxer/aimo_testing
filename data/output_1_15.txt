@@ -1,0 +1,71 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Three spheres with radii $11$, $13$, and $19$ are mutually externally tangent. A plane intersects the spheres in three congruent circles centered at $A$, $B$, and $C$, respectively, and the centers of the spheres all lie on the same side of this plane. Suppose that $AB^2 = 560$. Find $AC^2$.
+
+
+To solve the problem, we start by understanding the geometric configuration. We have three spheres with radii \(11\), \(13\), and \(19\) that are mutually externally tangent. A plane intersects these spheres in three congruent circles centered at points \(A\), \(B\), and \(C\) respectively, and the centers of the spheres all lie on the same side of this plane. We are given that \(AB^2 = 560\) and need to find \(AC^2\).
+
+First, let's denote the centers of the spheres as \(O_1\), \(O_2\), and \(O_3\) with radii \(11\), \(13\), and \(19\) respectively. Since the spheres are mutually externally tangent, the distances between their centers are:
+\[
+O_1O_2 = 11 + 13 = 24, \quad O_2O_3 = 13 + 19 = 32, \quad O_3O_1 = 19 + 11 = 30
+\]
+
+Next, consider the plane that intersects the spheres in congruent circles. Let the distances from the plane to the centers \(O_1\), \(O_2\), and \(O_3\) be \(d_1\), \(d_2\), and \(d_3\) respectively. Since the circles are congruent, the distances from the plane to the centers of the spheres are proportional to the radii of the spheres. Therefore, we can write:
+\[
+d_1 : d_2 : d_3 = 11 : 13 : 19
+\]
+
+Let \(d_1 = 11k\), \(d_2 = 13k\), and \(d_3 = 19k\) for some constant \(k\). The distances between the centers of the spheres can also be expressed in terms of \(k\):
+\[
+O_1O_2 = \sqrt{(11k)^2 + (13k)^2 - 2 \cdot 11k \cdot 13k \cos \theta} = 24
+\]
+\[
+O_2O_3 = \sqrt{(13k)^2 + (19k)^2 - 2 \cdot 13k \cdot 19k \cos \theta} = 32
+\]
+\[
+O_3O_1 = \sqrt{(19k)^2 + (11k)^2 - 2 \cdot 19k \cdot 11k \cos \theta} = 30
+\]
+
+However, since the plane is perpendicular to the line connecting the centers of the spheres, the distances \(d_1\), \(d_2\), and \(d_3\) are simply the differences between the radii and the distances from the plane to the surface of the spheres. Thus, we have:
+\[
+d_1 = 11 - h, \quad d_2 = 13 - h, \quad d_3 = 19 - h
+\]
+where \(h\) is the distance from the plane to the surface of the smallest sphere.
+
+Given \(AB^2 = 560\), we use the fact that \(AB\) is the distance between the centers of the circles of intersection:
+\[
+AB = \sqrt{(11 - h)^2 + (13 - h)^2 - 2(11 - h)(13 - h)\cos \theta} = \sqrt{560}
+\]
+
+Since the circles are congruent, the distance \(AB\) is related to the distance between the centers of the spheres minus twice the radius of the smaller sphere:
+\[
+AB = O_1O_2 - 2r_1 = 24 - 2 \cdot 11 = 2
+\]
+
+Thus, we have:
+\[
+(11 - h)^2 + (13 - h)^2 - 2(11 - h)(13 - h)\cos \theta = 560
+\]
+
+Solving for \(h\), we find:
+\[
+h = 11 - \sqrt{560/2} = 11 - \sqrt{280}
+\]
+
+Finally, we need to find \(AC^2\):
+\[
+AC = \sqrt{(11 - h)^2 + (19 - h)^2 - 2(11 - h)(19 - h)\cos \theta} = \sqrt{AC^2}
+\]
+
+After solving, we find:
+\[
+AC^2 = 784
+\]
+
+Thus, the final answer is:
+\[
+\boxed{784}
+\]
+
+Predicted answer: N/A
+Valid answer: 756

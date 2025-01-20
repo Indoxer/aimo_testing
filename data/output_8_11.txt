@@ -1,0 +1,68 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+In isosceles trapezoid $ABCD$, parallel bases $\overline{AB}$ and $\overline{CD}$ have lengths $500$ and $650$, respectively, and $AD=BC=333$. The angle bisectors of $\angle{A}$ and $\angle{D}$ meet at $P$, and the angle bisectors of $\angle{B}$ and $\angle{C}$ meet at $Q$. Find $PQ$.
+
+
+To solve for \(PQ\) in the given isosceles trapezoid \(ABCD\), we start by understanding the geometric properties and relationships within the trapezoid.
+
+First, let's place the trapezoid in a coordinate system for easier calculation. Assume \(A = (0, 0)\), \(B = (500, 0)\), \(D = (x, h)\), and \(C = (x+650, h)\). Since \(AD = BC = 333\), we can use the distance formula to find \(x\) and \(h\).
+
+The distance \(AD\) is given by:
+\[
+AD = \sqrt{x^2 + h^2} = 333
+\]
+The distance \(BC\) is given by:
+\[
+BC = \sqrt{(x+650-500)^2 + h^2} = \sqrt{(x+150)^2 + h^2} = 333
+\]
+
+Since \(AD = BC\), we have:
+\[
+x^2 + h^2 = (x+150)^2 + h^2
+\]
+Simplifying, we get:
+\[
+x^2 = x^2 + 300x + 22500
+\]
+\[
+0 = 300x + 22500
+\]
+\[
+x = -75
+\]
+
+Now substituting \(x = -75\) back into the equation for \(AD\):
+\[
+(-75)^2 + h^2 = 333^2
+\]
+\[
+5625 + h^2 = 110889
+\]
+\[
+h^2 = 105264
+\]
+\[
+h = \sqrt{105264} = 324
+\]
+
+So, the coordinates are \(A = (0, 0)\), \(B = (500, 0)\), \(D = (-75, 324)\), and \(C = (575, 324)\).
+
+Next, we need to find the coordinates of points \(P\) and \(Q\), which are the intersections of the angle bisectors of the trapezoid. The angle bisectors of \(\angle A\) and \(\angle D\) will intersect at a point on the line that is equidistant from \(AB\) and \(CD\), and similarly for \(\angle B\) and \(\angle C\). This line is the midsegment of the trapezoid, which is parallel to the bases and has a length equal to the average of the lengths of the bases:
+\[
+\text{Midsegment length} = \frac{500 + 650}{2} = 575
+\]
+
+The height of the trapezoid is 324, so the distance from the midsegment to each base is 162. Therefore, the coordinates of \(P\) and \(Q\) are at the same height as the midsegment, i.e., 162 units above the bases. Thus, the coordinates of \(P\) and \(Q\) are \((250, 162)\) and \((575, 162)\), respectively.
+
+Finally, the distance \(PQ\) is the horizontal distance between these two points:
+\[
+PQ = 575 - 250 = 325
+\]
+
+Thus, the length of \(PQ\) is:
+\[
+\boxed{325}
+\]
+
+Predicted answer: N/A
+Valid answer: 242

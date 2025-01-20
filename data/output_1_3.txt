@@ -1,0 +1,62 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Three spheres with radii $11$, $13$, and $19$ are mutually externally tangent. A plane intersects the spheres in three congruent circles centered at $A$, $B$, and $C$, respectively, and the centers of the spheres all lie on the same side of this plane. Suppose that $AB^2 = 560$. Find $AC^2$.
+
+
+To solve the problem, we need to determine the distance between the centers of the spheres and use the given information about the distances between the points where the plane intersects the spheres.
+
+First, let's denote the centers of the spheres as \( O_1 \), \( O_2 \), and \( O_3 \) with radii \( r_1 = 11 \), \( r_2 = 13 \), and \( r_3 = 19 \) respectively. Since the spheres are mutually externally tangent, the distances between their centers are:
+\[
+O_1O_2 = r_1 + r_2 = 11 + 13 = 24,
+\]
+\[
+O_2O_3 = r_2 + r_3 = 13 + 19 = 32,
+\]
+\[
+O_3O_1 = r_3 + r_1 = 19 + 11 = 30.
+\]
+
+Next, we know that a plane intersects the spheres in three congruent circles centered at \( A \), \( B \), and \( C \) respectively. Let the distances from the centers of the spheres to the plane be \( d_1 \), \( d_2 \), and \( d_3 \) respectively. Since the circles are congruent, the distances from the centers of the spheres to the plane are proportional to the radii of the spheres. Therefore, we have:
+\[
+d_1 = k \cdot r_1 = 11k,
+\]
+\[
+d_2 = k \cdot r_2 = 13k,
+\]
+\[
+d_3 = k \cdot r_3 = 19k,
+\]
+for some constant \( k \).
+
+The distances between the points where the plane intersects the spheres are the lengths of the segments connecting the centers of the spheres after subtracting twice the distance from the center to the plane (since the circles are congruent and the plane is equidistant from the centers of the spheres). Thus, we have:
+\[
+AB^2 = O_1O_2^2 - (d_1 - d_2)^2 = 24^2 - (11k - 13k)^2 = 576 - 4k^2,
+\]
+\[
+BC^2 = O_2O_3^2 - (d_2 - d_3)^2 = 32^2 - (13k - 19k)^2 = 1024 - 36k^2,
+\]
+\[
+CA^2 = O_3O_1^2 - (d_3 - d_1)^2 = 30^2 - (19k - 11k)^2 = 900 - 64k^2.
+\]
+
+We are given that \( AB^2 = 560 \). Therefore, we can set up the equation:
+\[
+576 - 4k^2 = 560.
+\]
+Solving for \( k^2 \), we get:
+\[
+4k^2 = 16 \implies k^2 = 4.
+\]
+
+Now, we need to find \( AC^2 \):
+\[
+AC^2 = 900 - 64k^2 = 900 - 64 \cdot 4 = 900 - 256 = 644.
+\]
+
+Thus, the value of \( AC^2 \) is:
+\[
+\boxed{644}.
+\]
+
+Predicted answer: N/A
+Valid answer: 756

@@ -1,0 +1,25 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+In isosceles trapezoid $ABCD$, parallel bases $\overline{AB}$ and $\overline{CD}$ have lengths $500$ and $650$, respectively, and $AD=BC=333$. The angle bisectors of $\angle{A}$ and $\angle{D}$ meet at $P$, and the angle bisectors of $\angle{B}$ and $\angle{C}$ meet at $Q$. Find $PQ$.
+
+
+To find the length of \(PQ\) in the given isosceles trapezoid \(ABCD\), we start by analyzing the geometry of the trapezoid and the properties of the angle bisectors.
+
+First, let's denote the height of the trapezoid as \(h\). We can drop perpendiculars from points \(A\) and \(B\) to line \(CD\), meeting \(CD\) at points \(E\) and \(F\) respectively. This creates two right triangles \(ADE\) and \(BCF\) with the same dimensions since \(ABCD\) is an isosceles trapezoid. The length of \(EF\) is equal to the length of \(AB\), which is 500. Therefore, the remaining lengths on \(CD\) are \(\frac{650 - 500}{2} = 75\) each on both sides of \(EF\). So, \(DE = CF = 75\).
+
+Now, we can use the Pythagorean theorem in triangle \(ADE\) (or \(BCF\)) to find \(h\):
+\[
+AD^2 = DE^2 + h^2 \implies 333^2 = 75^2 + h^2 \implies 110889 = 5625 + h^2 \implies h^2 = 105264 \implies h = \sqrt{105264} = 324.
+\]
+
+Next, we need to find the coordinates of points \(P\) and \(Q\). Since \(P\) is the intersection of the angle bisectors of \(\angle A\) and \(\angle D\), and \(Q\) is the intersection of the angle bisectors of \(\angle B\) and \(\angle C\), both \(P\) and \(Q\) lie on the line segment joining the midpoints of \(AB\) and \(CD\), which is parallel to the bases and at a distance of \(\frac{h}{2}\) from each base. The distance between the midpoints of the bases is the height of the trapezoid, which is 324.
+
+Since \(P\) and \(Q\) are on this line segment, the distance \(PQ\) is simply the distance between these two midpoints, which is the same as the height of the trapezoid:
+\[
+PQ = 324.
+\]
+
+Thus, the length of \(PQ\) is \(\boxed{324}\).
+
+Predicted answer: N/A
+Valid answer: 242

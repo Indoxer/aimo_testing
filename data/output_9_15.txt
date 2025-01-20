@@ -1,0 +1,83 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Let $w = \dfrac{\sqrt{3} + i}{2}$ and $z = \dfrac{-1 + i\sqrt{3}}{2},$ where $i = \sqrt{-1}.$ Find the number of ordered pairs $(r,s)$ of positive integers not exceeding $100$ that satisfy the equation $i \cdot w^r = z^s.$
+
+
+To solve the given problem, we first express \( w \) and \( z \) in polar form. We start with \( w = \frac{\sqrt{3} + i}{2} \).
+
+The magnitude of \( w \) is:
+\[
+|w| = \left| \frac{\sqrt{3} + i}{2} \right| = \frac{\sqrt{(\sqrt{3})^2 + 1^2}}{2} = \frac{\sqrt{3 + 1}}{2} = \frac{2}{2} = 1.
+\]
+The argument of \( w \) is:
+\[
+\arg(w) = \tan^{-1}\left(\frac{1}{\sqrt{3}}\right) = \frac{\pi}{6}.
+\]
+Thus, in polar form, \( w = e^{i\pi/6} \).
+
+Next, we consider \( z = \frac{-1 + i\sqrt{3}}{2} \). The magnitude of \( z \) is:
+\[
+|z| = \left| \frac{-1 + i\sqrt{3}}{2} \right| = \frac{\sqrt{(-1)^2 + (\sqrt{3})^2}}{2} = \frac{\sqrt{1 + 3}}{2} = \frac{2}{2} = 1.
+\]
+The argument of \( z \) is:
+\[
+\arg(z) = \tan^{-1}\left(\frac{\sqrt{3}}{-1}\right) = \tan^{-1}(-\sqrt{3}) = \frac{2\pi}{3}.
+\]
+Thus, in polar form, \( z = e^{i2\pi/3} \).
+
+We need to find the ordered pairs \((r, s)\) such that \( i \cdot w^r = z^s \). First, express \( i \) in polar form:
+\[
+i = e^{i\pi/2}.
+\]
+So, the equation becomes:
+\[
+e^{i\pi/2} \cdot e^{ir\pi/6} = e^{is2\pi/3}.
+\]
+This simplifies to:
+\[
+e^{i(\pi/2 + r\pi/6)} = e^{is2\pi/3}.
+\]
+Since the exponents must be equal up to a multiple of \( 2\pi \), we have:
+\[
+\frac{\pi}{2} + \frac{r\pi}{6} = \frac{2s\pi}{3} + 2k\pi \quad \text{for some integer } k.
+\]
+Dividing through by \( \pi \), we get:
+\[
+\frac{1}{2} + \frac{r}{6} = \frac{2s}{3} + 2k.
+\]
+Multiplying through by 6, we obtain:
+\[
+3 + r = 4s + 12k.
+\]
+Rearranging terms, we get:
+\[
+r = 4s + 12k - 3.
+\]
+Since \( r \) and \( s \) are positive integers not exceeding 100, we need to find the values of \( k \) such that \( r \) is a positive integer between 1 and 100. Solving for \( k \), we get:
+\[
+1 \leq 4s + 12k - 3 \leq 100.
+\]
+Adding 3 to all parts of the inequality, we get:
+\[
+4 \leq 4s + 12k \leq 103.
+\]
+Dividing through by 4, we get:
+\[
+1 \leq s + 3k \leq 25.75.
+\]
+Since \( s \) and \( k \) are integers, we have:
+\[
+1 \leq s + 3k \leq 25.
+\]
+For each integer value of \( s \) from 1 to 25, we can determine the possible values of \( k \). The smallest value of \( k \) is \( \left\lceil \frac{1 - s}{3} \right\rceil \) and the largest value of \( k \) is \( \left\lfloor \frac{25 - s}{3} \right\rfloor \). The number of possible values of \( k \) for each \( s \) is:
+\[
+\left\lfloor \frac{25 - s}{3} \right\rfloor - \left\lceil \frac{1 - s}{3} \right\rceil + 1.
+\]
+Calculating this for each \( s \) from 1 to 25, we find that the number of possible values of \( k \) is always 8. Therefore, the total number of ordered pairs \((r, s)\) is:
+\[
+25 \times 8 = 200.
+\]
+Thus, the number of ordered pairs \((r, s)\) is \(\boxed{200}\).
+
+Predicted answer: N/A
+Valid answer: 834

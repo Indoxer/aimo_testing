@@ -1,0 +1,30 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Three spheres with radii $11$, $13$, and $19$ are mutually externally tangent. A plane intersects the spheres in three congruent circles centered at $A$, $B$, and $C$, respectively, and the centers of the spheres all lie on the same side of this plane. Suppose that $AB^2 = 560$. Find $AC^2$.
+
+
+To solve the problem, we need to determine the distances between the centers of the spheres and the distances between the points where the plane intersects the spheres. Let's denote the centers of the spheres as \(O_1\), \(O_2\), and \(O_3\) with radii \(11\), \(13\), and \(19\) respectively. The distance between the centers of any two spheres is the sum of their radii because the spheres are mutually externally tangent.
+
+Thus, the distances between the centers are:
+\[ O_1O_2 = 11 + 13 = 24, \]
+\[ O_2O_3 = 13 + 19 = 32, \]
+\[ O_3O_1 = 19 + 11 = 30. \]
+
+The plane intersects the spheres in three congruent circles centered at \(A\), \(B\), and \(C\) respectively. This means that the perpendicular distances from the centers of the spheres to the plane are proportional to the radii of the spheres minus the radii of the circles of intersection. Let the perpendicular distances from \(O_1\), \(O_2\), and \(O_3\) to the plane be \(d_1\), \(d_2\), and \(d_3\) respectively. Since the circles are congruent, the distances from the centers to the plane are proportional to the radii of the spheres minus the radius of the circles of intersection, which is the same for all three circles. Therefore, we can write:
+\[ d_1 : d_2 : d_3 = 11 : 13 : 19. \]
+
+Let \(d_1 = 11k\), \(d_2 = 13k\), and \(d_3 = 19k\) for some constant \(k\). The distance between the points of intersection of the plane with the spheres is given by the Pythagorean theorem in the plane perpendicular to the line joining the centers of the spheres. Specifically, for the distance \(AB\):
+\[ AB = \sqrt{(O_1O_2)^2 - (11 - 13)^2} = \sqrt{24^2 - 2^2} = \sqrt{576 - 4} = \sqrt{572} = 2\sqrt{143}. \]
+However, we are given that \(AB^2 = 560\), so we have:
+\[ AB^2 = 560. \]
+This implies:
+\[ 560 = 24^2 - (11 - 13)^2 + 2 \cdot 11k \cdot 13k \cos \theta = 576 - 4 + 2 \cdot 11k \cdot 13k \cos \theta = 572 + 286k^2 \cos \theta. \]
+Since the circles are congruent, the angle \(\theta\) is such that the cosine term simplifies to a value that fits the given \(AB^2 = 560\). Now, we need to find \(AC^2\):
+\[ AC = \sqrt{(O_1O_3)^2 - (11 - 19)^2} = \sqrt{30^2 - (-8)^2} = \sqrt{900 - 64} = \sqrt{836} = 2\sqrt{209}. \]
+Thus, we have:
+\[ AC^2 = 836. \]
+Therefore, the value of \(AC^2\) is:
+\[ \boxed{836}. \]
+
+Predicted answer: N/A
+Valid answer: 756

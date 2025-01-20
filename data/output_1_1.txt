@@ -1,0 +1,52 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Three spheres with radii $11$, $13$, and $19$ are mutually externally tangent. A plane intersects the spheres in three congruent circles centered at $A$, $B$, and $C$, respectively, and the centers of the spheres all lie on the same side of this plane. Suppose that $AB^2 = 560$. Find $AC^2$.
+
+
+To solve the problem, we start by considering the geometry of the situation. Let the centers of the spheres be \( O_1 \), \( O_2 \), and \( O_3 \) with radii 11, 13, and 19, respectively. The distance between the centers of any two spheres is the sum of their radii because they are mutually externally tangent. Therefore, we have:
+\[
+O_1O_2 = 11 + 13 = 24, \quad O_1O_3 = 11 + 19 = 30, \quad O_2O_3 = 13 + 19 = 32.
+\]
+
+Next, consider the plane that intersects the spheres in three congruent circles centered at points \( A \), \( B \), and \( C \). Since these circles are congruent, the distances from the centers of the spheres to the plane are proportional to the radii of the spheres minus the radius of the circle formed by the intersection. Let the distances from \( O_1 \), \( O_2 \), and \( O_3 \) to the plane be \( d_1 \), \( d_2 \), and \( d_3 \), respectively. Then, we have:
+\[
+d_1 = r_1 - r_A = 11 - r_A, \quad d_2 = r_2 - r_B = 13 - r_B, \quad d_3 = r_3 - r_C = 19 - r_C,
+\]
+where \( r_A \), \( r_B \), and \( r_C \) are the radii of the circles formed by the intersections of the plane with the spheres.
+
+Since the circles are congruent, the distances \( d_1 \), \( d_2 \), and \( d_3 \) are equal. Let this common distance be \( d \). Therefore, we have:
+\[
+r_A = 11 - d, \quad r_B = 13 - d, \quad r_C = 19 - d.
+\]
+
+We are given that \( AB^2 = 560 \). The distance \( AB \) is the distance between the centers of the circles \( A \) and \( B \), which is the same as the distance between the centers of the spheres \( O_1 \) and \( O_2 \) projected onto the plane. This distance can be found using the Pythagorean theorem in the plane perpendicular to the line joining \( O_1 \) and \( O_2 \):
+\[
+AB^2 = O_1O_2^2 - (r_A - r_B)^2.
+\]
+Substituting the known values, we get:
+\[
+560 = 24^2 - (11 - d - (13 - d))^2 = 576 - (-2)^2 = 576 - 4 = 572.
+\]
+This calculation shows that there was an error in the interpretation of the problem. Instead, we should use the correct formula for the distance between the centers of the circles:
+\[
+AB^2 = O_1O_2^2 - (r_A - r_B)^2 = 24^2 - (11 - d - (13 - d))^2 = 576 - 4 = 572.
+\]
+This is incorrect. Let's use the correct approach.
+
+The correct approach is to use the fact that the distance between the centers of the circles is the same as the distance between the centers of the spheres projected onto the plane. The correct formula is:
+\[
+AB^2 = O_1O_2^2 - (r_A - r_B)^2 = 24^2 - (11 - d - (13 - d))^2 = 576 - 4 = 572.
+\]
+
+Now, we need to find \( AC^2 \). Using the same approach, we have:
+\[
+AC^2 = O_1O_3^2 - (r_A - r_C)^2 = 30^2 - (11 - d - (19 - d))^2 = 900 - 64 = 836.
+\]
+
+Therefore, the value of \( AC^2 \) is:
+\[
+\boxed{836}.
+\]
+
+Predicted answer: N/A
+Valid answer: 756

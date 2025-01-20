@@ -1,0 +1,75 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+Given $\triangle ABC$ and a point $P$ on one of its sides, call line $\ell$ the $\textit{splitting line}$ of $\triangle ABC$ through $P$ if $\ell$ passes through $P$ and divides $\triangle ABC$ into two polygons of equal perimeter. Let $\triangle ABC$ be a triangle where $BC = 219$ and $AB$ and $AC$ are positive integers. Let $M$ and $N$ be the midpoints of $\overline{AB}$ and $\overline{AC},$ respectively, and suppose that the splitting lines of $\triangle ABC$ through $M$ and $N$ intersect at $30^\circ.$ Find the perimeter of $\triangle ABC.$
+
+
+To solve the problem, we need to understand the properties of the splitting lines and how they relate to the given triangle and its midpoints.
+
+First, let's denote the lengths of the sides of the triangle as follows:
+- \( AB = c \)
+- \( AC = b \)
+- \( BC = a = 219 \)
+
+The midpoints \( M \) and \( N \) of \( \overline{AB} \) and \( \overline{AC} \) respectively divide these sides into equal halves:
+- \( AM = MB = \frac{c}{2} \)
+- \( AN = NC = \frac{b}{2} \)
+
+The splitting lines through \( M \) and \( N \) divide \( \triangle ABC \) into two polygons of equal perimeter. Since these lines intersect at \( 30^\circ \), we can use this information to find the relationship between the sides of the triangle.
+
+### Step 1: Perimeter Division
+The splitting lines through \( M \) and \( N \) divide \( \triangle ABC \) into two regions with equal perimeters. Let \( P \) be the point on \( BC \) such that the line through \( M \) and \( N \) intersects \( BC \) at \( P \).
+
+### Step 2: Midpoint Properties
+Since \( M \) and \( N \) are midpoints, the line segment \( MN \) is parallel to \( BC \) and half its length:
+\[ MN = \frac{a}{2} = \frac{219}{2} = 109.5 \]
+
+### Step 3: Intersection Angle
+The intersection of the splitting lines at \( 30^\circ \) suggests a specific geometric configuration. We need to use this angle to find the relationship between the sides of the triangle.
+
+### Step 4: Using Trigonometry
+Consider the triangle formed by \( M \), \( N \), and the intersection point of the splitting lines. This triangle has angles \( 30^\circ \) and \( 90^\circ \) (since \( MN \parallel BC \) and the intersection forms a right angle with \( MN \)).
+
+### Step 5: Applying the Law of Cosines
+We can use the Law of Cosines in the triangle formed by \( M \), \( N \), and the intersection point to find the lengths of \( AB \) and \( AC \). However, a simpler approach is to use the fact that the splitting lines divide the triangle into two regions of equal perimeter.
+
+### Step 6: Equal Perimeter Condition
+Since the splitting lines divide \( \triangle ABC \) into two regions of equal perimeter, we have:
+\[ \text{Perimeter of } \triangle ABM + \text{Perimeter of } \triangle ACM = \text{Perimeter of } \triangle ABN + \text{Perimeter of } \triangle ACN \]
+
+Given that \( M \) and \( N \) are midpoints, the perimeters of \( \triangle ABM \) and \( \triangle ACM \) are:
+\[ \text{Perimeter of } \triangle ABM = \frac{c}{2} + \frac{b}{2} + AM = \frac{c}{2} + \frac{b}{2} + \frac{c}{2} = c + \frac{b}{2} \]
+\[ \text{Perimeter of } \triangle ACM = \frac{c}{2} + \frac{b}{2} + AN = \frac{c}{2} + \frac{b}{2} + \frac{b}{2} = \frac{c}{2} + b \]
+
+Similarly, for \( \triangle ABN \) and \( \triangle ACN \):
+\[ \text{Perimeter of } \triangle ABN = \frac{c}{2} + \frac{b}{2} + BN = \frac{c}{2} + \frac{b}{2} + \frac{b}{2} = \frac{c}{2} + b \]
+\[ \text{Perimeter of } \triangle ACN = \frac{c}{2} + \frac{b}{2} + AM = \frac{c}{2} + \frac{b}{2} + \frac{c}{2} = c + \frac{b}{2} \]
+
+### Step 7: Solving for \( c \) and \( b \)
+From the equal perimeter condition:
+\[ c + \frac{b}{2} = \frac{c}{2} + b \]
+Multiplying through by 2 to clear the fractions:
+\[ 2c + b = c + 2b \]
+\[ c = b \]
+
+Thus, \( c = b \). Therefore, \( \triangle ABC \) is an isosceles triangle with \( AB = AC \).
+
+### Step 8: Finding the Perimeter
+Since \( AB = AC = b \) and \( BC = 219 \), the perimeter of \( \triangle ABC \) is:
+\[ \text{Perimeter} = AB + AC + BC = b + b + 219 = 2b + 219 \]
+
+### Step 9: Determining \( b \)
+Given that \( AB \) and \( AC \) are positive integers, we need to find \( b \) such that the triangle inequality holds:
+\[ AB + AC > BC \]
+\[ 2b > 219 \]
+\[ b > 109.5 \]
+
+Since \( b \) must be an integer, the smallest possible value for \( b \) is 110. Therefore, the perimeter is:
+\[ \text{Perimeter} = 2(110) + 219 = 220 + 219 = 439 \]
+
+Thus, the perimeter of \( \triangle ABC \) is:
+\[
+\boxed{439}
+\]
+
+Predicted answer: N/A
+Valid answer: 459

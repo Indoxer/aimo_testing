@@ -1,0 +1,47 @@
+Please reason step by step, and put your final answer within \boxed{}. Provide only one \boxed{}.
+ The problem: 
+For any finite set $X$, let $| X |$ denote the number of elements in $X$. Define
+\[S_n = \sum | A \cap B | ,\]
+where the sum is taken over all ordered pairs $(A, B)$ such that $A$ and $B$ are subsets of $\left\{ 1 , 2 , 3,  \cdots , n \right\}$ with $|A| = |B|$.
+For example, $S_2 = 4$ because the sum is taken over the pairs of subsets
+\[(A, B) \in \left\{ (\emptyset, \emptyset) , ( \{1\} , \{1\} ), ( \{1\} , \{2\} ) , ( \{2\} , \{1\} ) , ( \{2\} , \{2\} ) , ( \{1 , 2\} , \{1 , 2\} ) \right\} ,\]
+giving $S_2 = 0 + 1 + 0 + 0 + 1 + 2 = 4$.
+Let $\frac{S_{2022}}{S_{2021}} = \frac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find the remainder when $p + q$ is divided by
+1000.
+
+
+To solve for \( S_n \), we need to consider the sum of the sizes of the intersections of all pairs of subsets of \(\{1, 2, \ldots, n\}\) of the same size. Let's start by understanding the structure of the problem.
+
+For a fixed subset \( A \) of size \( k \), there are \(\binom{n}{k}\) such subsets. For each subset \( A \), there are also \(\binom{n}{k}\) subsets \( B \). The term \( |A \cap B| \) will be counted in the sum depending on the size of the intersection. Specifically, if \( |A \cap B| = i \), then there are \(\binom{k}{i} \binom{n-k}{k-i}\) ways to choose such subsets \( A \) and \( B \).
+
+Thus, we can express \( S_n \) as:
+\[
+S_n = \sum_{k=0}^n \sum_{i=0}^k \binom{n}{k} \binom{k}{i} \binom{n-k}{k-i} i.
+\]
+We can simplify this by noting that the inner sum is just the expected value of \( |A \cap B| \) when \( A \) and \( B \) are chosen uniformly at random from all subsets of size \( k \). The expected value of \( |A \cap B| \) is \( \frac{k}{2} \), so:
+\[
+S_n = \sum_{k=0}^n \binom{n}{k} \binom{k}{0} \binom{n-k}{k} \cdot 0 + \sum_{k=0}^n \binom{n}{k} \binom{k}{1} \binom{n-k}{k-1} \cdot 1 + \cdots + \sum_{k=0}^n \binom{n}{k} \binom{k}{k} \binom{n-k}{0} \cdot k.
+\]
+This simplifies to:
+\[
+S_n = \sum_{k=0}^n \binom{n}{k} \cdot \frac{k}{2} = \frac{1}{2} \sum_{k=0}^n k \binom{n}{k} = \frac{1}{2} n \sum_{k=1}^n \binom{n-1}{k-1} = \frac{1}{2} n 2^{n-1} = n 2^{n-2}.
+\]
+So, we have \( S_n = n 2^{n-2} \). Therefore,
+\[
+S_{2022} = 2022 \cdot 2^{2020}, \quad S_{2021} = 2021 \cdot 2^{2019}.
+\]
+Then,
+\[
+\frac{S_{2022}}{S_{2021}} = \frac{2022 \cdot 2^{2020}}{2021 \cdot 2^{2019}} = \frac{2022 \cdot 2}{2021} = \frac{4044}{2021}.
+\]
+Since 4044 and 2021 are relatively prime, we have \( p = 4044 \) and \( q = 2021 \). We need to find the remainder when \( p + q = 4044 + 2021 = 6065 \) is divided by 1000. This is simply:
+\[
+6065 \mod 1000 = 65.
+\]
+Thus, the answer is:
+\[
+\boxed{65}.
+\]
+
+Predicted answer: N/A
+Valid answer: 245
