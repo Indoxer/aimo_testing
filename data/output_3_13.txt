@@ -10,26 +10,34 @@ Let $\frac{S_{2022}}{S_{2021}} = \frac{p}{q}$, where $p$ and $q$ are relatively 
 1000.
 
 
-To solve for \( S_n \), we start by considering the sum \( S_n = \sum |A \cap B| \) over all ordered pairs \((A, B)\) where \(A\) and \(B\) are subsets of \(\{1, 2, \ldots, n\}\) with \(|A| = |B|\). We will first determine the contribution of each element \(i \in \{1, 2, \ldots, n\}\) to the sum \(S_n\).
+To solve for \( S_n \), we start by considering the sum \( S_n = \sum |A \cap B| \) over all ordered pairs \((A, B)\) where \(A\) and \(B\) are subsets of \(\{1, 2, \ldots, n\}\) with \(|A| = |B|\). We need to count how many times each element \(i\) appears in the intersection \(A \cap B\) over all such pairs.
 
-For a fixed element \(i\), the number of subsets \(A\) containing \(i\) is \(2^{n-1}\) (since we can choose any subset of the remaining \(n-1\) elements to form \(A\)). Similarly, the number of subsets \(B\) containing \(i\) is also \(2^{n-1}\). Therefore, the number of ordered pairs \((A, B)\) where both \(A\) and \(B\) contain \(i\) is \(2^{n-1} \times 2^{n-1} = 2^{2(n-1)}\).
+For a fixed element \(i\), the number of subsets \(A\) and \(B\) of size \(k\) that contain \(i\) is \(\binom{n-1}{k-1}^2\). The total contribution of element \(i\) to \(S_n\) is then the sum of the sizes of the intersections over all such pairs. Specifically, for each \(k\) from 0 to \(n\), the element \(i\) will appear in \(A \cap B\) for every pair of subsets \(A\) and \(B\) of size \(k\) containing \(i\), which contributes \(k^2 \binom{n-1}{k-1}^2\) to \(S_n\).
 
-Since there are \(n\) elements in the set \(\{1, 2, \ldots, n\}\), the total contribution of all elements to the sum \(S_n\) is \(n \cdot 2^{2(n-1)}\). Thus, we have:
+Thus, we have:
 \[
-S_n = n \cdot 2^{2(n-1)}.
+S_n = \sum_{k=0}^n k^2 \binom{n-1}{k-1}^2.
 \]
-
+We can simplify this sum by noting that \(\binom{n-1}{k-1} = \binom{n-1}{n-k}\), so the sum is symmetric around \(k = n/2\). We can use the identity for binomial coefficients to rewrite the sum as:
+\[
+S_n = \sum_{k=0}^n k^2 \binom{n-1}{k}^2.
+\]
+Using the identity \(\sum_{k=0}^n k^2 \binom{n}{k}^2 = n(n+1)2^{2(n-1)}\), we get:
+\[
+S_n = n(n+1)2^{2(n-1)}.
+\]
 Now, we need to find \(\frac{S_{2022}}{S_{2021}}\):
 \[
-\frac{S_{2022}}{S_{2021}} = \frac{2022 \cdot 2^{2(2022-1)}}{2021 \cdot 2^{2(2021-1)}} = \frac{2022 \cdot 2^{2 \cdot 2021}}{2021 \cdot 2^{2 \cdot 2020}} = \frac{2022 \cdot 2^2}{2021} = \frac{2022 \cdot 4}{2021} = \frac{8088}{2021}.
+\frac{S_{2022}}{S_{2021}} = \frac{2022 \cdot 2023 \cdot 2^{2 \cdot 2021}}{2021 \cdot 2022 \cdot 2^{2 \cdot 2020}} = \frac{2023 \cdot 2^2}{2021} = \frac{2023 \cdot 4}{2021} = \frac{8092}{2021}.
 \]
-
-The fraction \(\frac{8088}{2021}\) is already in its simplest form because 8088 and 2021 are relatively prime (this can be verified by checking their greatest common divisor, which is 1). Therefore, we have \(p = 8088\) and \(q = 2021\), and we need to find the remainder when \(p + q = 8088 + 2021 = 10109\) is divided by 1000:
+Since 8092 and 2021 are relatively prime, we have \(p = 8092\) and \(q = 2021\). The remainder when \(p + q = 8092 + 2021 = 10113\) is divided by 1000 is:
 \[
-10109 \mod 1000 = 109.
+10113 \mod 1000 = 113.
 \]
-
-Thus, the remainder when \(p + q\) is divided by 1000 is \(\boxed{109}\).
+Thus, the answer is:
+\[
+\boxed{113}.
+\]
 
 Predicted answer: N/A
 Valid answer: 245

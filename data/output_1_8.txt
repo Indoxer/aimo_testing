@@ -3,98 +3,99 @@ Please reason step by step, and put your final answer within \boxed{}. Provide o
 Three spheres with radii $11$, $13$, and $19$ are mutually externally tangent. A plane intersects the spheres in three congruent circles centered at $A$, $B$, and $C$, respectively, and the centers of the spheres all lie on the same side of this plane. Suppose that $AB^2 = 560$. Find $AC^2$.
 
 
-To solve the problem, we start by considering the geometry of the situation. Let the centers of the spheres be \( O_1 \), \( O_2 \), and \( O_3 \) with radii 11, 13, and 19, respectively. Since the spheres are mutually externally tangent, the distances between their centers are:
+To solve for \(AC^2\), we start by understanding the geometric configuration of the problem. We have three spheres with radii 11, 13, and 19 that are mutually externally tangent. A plane intersects these spheres in three congruent circles centered at points \(A\), \(B\), and \(C\) respectively, and the centers of the spheres all lie on the same side of this plane. We are given that \(AB^2 = 560\), and we need to find \(AC^2\).
+
+First, let's denote the centers of the spheres as \(O_1\), \(O_2\), and \(O_3\) with radii 11, 13, and 19 respectively. The distance between the centers of any two spheres is the sum of their radii. Therefore, we have:
 \[
 O_1O_2 = 11 + 13 = 24, \quad O_1O_3 = 11 + 19 = 30, \quad O_2O_3 = 13 + 19 = 32.
 \]
 
-Next, we consider the plane that intersects the spheres in three congruent circles centered at points \( A \), \( B \), and \( C \). Since the circles are congruent, the distances from the centers of the spheres to the plane are proportional to the radii of the spheres. Let the distances from \( O_1 \), \( O_2 \), and \( O_3 \) to the plane be \( d_1 \), \( d_2 \), and \( d_3 \), respectively. Then, we have:
+Since the plane intersects the spheres in congruent circles, the distances from the centers of the spheres to the plane are proportional to the radii of the spheres minus the radius of the circle of intersection. Let the distances from \(O_1\), \(O_2\), and \(O_3\) to the plane be \(d_1\), \(d_2\), and \(d_3\) respectively. Then, we have:
 \[
-d_1 = r_1 - R, \quad d_2 = r_2 - R, \quad d_3 = r_3 - R,
+d_1 = r_1 - r_A, \quad d_2 = r_2 - r_B, \quad d_3 = r_3 - r_C,
 \]
-where \( R \) is the radius of the congruent circles.
-
-Given that \( AB^2 = 560 \), we need to find \( AC^2 \). First, we use the fact that the distance between the centers of the spheres is related to the distances from these centers to the plane by the Pythagorean theorem. Specifically, we have:
+where \(r_A\), \(r_B\), and \(r_C\) are the radii of the circles of intersection, which are equal because the circles are congruent. Therefore, we can write:
 \[
-O_1O_2^2 = (r_1 - R)^2 + (r_2 - R)^2 - 2(r_1 - R)(r_2 - R)\cos(\theta),
-\]
-where \(\theta\) is the angle between the lines \( O_1A \) and \( O_2A \). However, since the circles are congruent and the plane is perpendicular to the line joining the centers, \(\theta = 0\) and the equation simplifies to:
-\[
-O_1O_2^2 = (r_1 - R)^2 + (r_2 - R)^2.
+d_1^2 + r_A^2 = 11^2 = 121, \quad d_2^2 + r_A^2 = 13^2 = 169, \quad d_3^2 + r_A^2 = 19^2 = 361.
 \]
 
-Substituting the known values, we get:
+From these equations, we can express \(d_1^2\), \(d_2^2\), and \(d_3^2\) in terms of \(r_A^2\):
 \[
-24^2 = (11 - R)^2 + (13 - R)^2.
+d_1^2 = 121 - r_A^2, \quad d_2^2 = 169 - r_A^2, \quad d_3^2 = 361 - r_A^2.
 \]
 
-Expanding and simplifying:
+The distance between the centers of the spheres \(O_1\) and \(O_2\) can also be expressed in terms of \(d_1\), \(d_2\), and the distance between the centers of the circles of intersection \(A\) and \(B\). Since the circles are congruent, the distance \(AB\) is the same as the distance between the centers of the circles of intersection, which is \(2\sqrt{r_A^2}\). Therefore, we have:
 \[
-576 = (121 - 22R + R^2) + (169 - 26R + R^2),
-\]
-\[
-576 = 2R^2 - 48R + 290,
-\]
-\[
-286 = 2R^2 - 48R,
-\]
-\[
-143 = R^2 - 24R.
+AB^2 = (d_1 - d_2)^2 + (2r_A)^2 = 560.
 \]
 
-Solving this quadratic equation for \( R \):
+Substituting the expressions for \(d_1^2\) and \(d_2^2\), we get:
 \[
-R^2 - 24R - 143 = 0.
+(d_1 - d_2)^2 + 4r_A^2 = 560.
+\]
+Expanding and substituting \(d_1^2\) and \(d_2^2\), we have:
+\[
+(121 - r_A^2) + (169 - r_A^2) - 2d_1d_2 + 4r_A^2 = 560,
+\]
+\[
+290 - 2d_1d_2 + 2r_A^2 = 560,
+\]
+\[
+-2d_1d_2 + 2r_A^2 = 270,
+\]
+\[
+-d_1d_2 + r_A^2 = 135.
 \]
 
-Using the quadratic formula \( R = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \), where \( a = 1 \), \( b = -24 \), and \( c = -143 \):
+Now, we need to find \(AC^2\). Using a similar approach, we have:
 \[
-R = \frac{24 \pm \sqrt{576 + 572}}{2},
+AC^2 = (d_1 - d_3)^2 + (2r_A)^2.
+\]
+Substituting the expressions for \(d_1^2\) and \(d_3^2\), we get:
+\[
+(d_1 - d_3)^2 + 4r_A^2.
+\]
+Expanding and substituting \(d_1^2\) and \(d_3^2\), we have:
+\[
+(121 - r_A^2) + (361 - r_A^2) - 2d_1d_3 + 4r_A^2,
 \]
 \[
-R = \frac{24 \pm \sqrt{1148}}{2},
-\]
-\[
-R = \frac{24 \pm 2\sqrt{287}}{2},
-\]
-\[
-R = 12 \pm \sqrt{287}.
-\]
-
-Since \( R \) must be positive, we take:
-\[
-R = 12 + \sqrt{287}.
+482 - 2d_1d_3 + 2r_A^2.
 \]
 
-Now, we need to find \( AC^2 \). Using the same logic as before:
+We need to find \(d_1d_3\). Using the fact that the distance between the centers of the spheres \(O_1\) and \(O_3\) is 30, we have:
 \[
-O_1O_3^2 = (11 - R)^2 + (19 - R)^2.
+d_1^2 + d_3^2 - 2d_1d_3 = 900.
+\]
+Substituting \(d_1^2 = 121 - r_A^2\) and \(d_3^2 = 361 - r_A^2\), we get:
+\[
+(121 - r_A^2) + (361 - r_A^2) - 2d_1d_3 = 900,
+\]
+\[
+482 - 2r_A^2 - 2d_1d_3 = 900,
+\]
+\[
+-2r_A^2 - 2d_1d_3 = 418,
+\]
+\[
+-r_A^2 - d_1d_3 = 209,
+\]
+\[
+d_1d_3 = -r_A^2 - 209.
 \]
 
-Substituting \( R = 12 + \sqrt{287} \):
+Substituting \(d_1d_3\) back into the expression for \(AC^2\), we get:
 \[
-O_1O_3^2 = (11 - (12 + \sqrt{287}))^2 + (19 - (12 + \sqrt{287}))^2,
+AC^2 = 482 - 2(-r_A^2 - 209) + 2r_A^2,
 \]
 \[
-O_1O_3^2 = (-1 - \sqrt{287})^2 + (7 - \sqrt{287})^2,
+AC^2 = 482 + 2r_A^2 + 418 + 2r_A^2,
 \]
 \[
-O_1O_3^2 = (1 + 2\sqrt{287} + 287) + (49 - 14\sqrt{287} + 287),
-\]
-\[
-O_1O_3^2 = 1 + 287 + 49 + 287 + 2\sqrt{287} - 14\sqrt{287},
-\]
-\[
-O_1O_3^2 = 624 - 12\sqrt{287}.
+AC^2 = 900.
 \]
 
-Thus, the value of \( AC^2 \) is:
-\[
-\boxed{624}.
-\] 
-
-Therefore, the final answer is:
-\boxed{624}. \]```
+Therefore, the value of \(AC^2\) is \(\boxed{900}\).
 
 Predicted answer: N/A
 Valid answer: 756

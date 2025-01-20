@@ -3,29 +3,21 @@ Please reason step by step, and put your final answer within \boxed{}. Provide o
 In isosceles trapezoid $ABCD$, parallel bases $\overline{AB}$ and $\overline{CD}$ have lengths $500$ and $650$, respectively, and $AD=BC=333$. The angle bisectors of $\angle{A}$ and $\angle{D}$ meet at $P$, and the angle bisectors of $\angle{B}$ and $\angle{C}$ meet at $Q$. Find $PQ$.
 
 
-To solve for the length \(PQ\) in the given isosceles trapezoid \(ABCD\), we start by understanding the geometric properties and relationships within the trapezoid.
+To solve for the length \(PQ\) in the given isosceles trapezoid \(ABCD\), we start by understanding the properties and dimensions of the trapezoid. The bases are \(AB = 500\) and \(CD = 650\), and the non-parallel sides are \(AD = BC = 333\).
 
-1. **Identify the coordinates and properties:**
-   - Let \(A = (0, 0)\), \(B = (500, 0)\), \(D = (x, h)\), and \(C = (x+650, h)\).
-   - Since \(AD = BC = 333\) and \(ABCD\) is an isosceles trapezoid, the height \(h\) can be found using the Pythagorean theorem in the right triangles formed by dropping perpendiculars from \(D\) and \(C\) to \(AB\).
+First, we drop perpendiculars from points \(A\) and \(B\) to line \(CD\), meeting \(CD\) at points \(E\) and \(F\) respectively. This creates two right triangles \(ADE\) and \(BCF\) with \(DE = CF\) and \(EF = AB = 500\). Since \(CD = DE + EF + CF = DE + 500 + DE = 2DE + 500\), we have:
+\[2DE + 500 = 650 \implies 2DE = 150 \implies DE = 75.\]
+Thus, \(DE = CF = 75\).
 
-2. **Calculate the height \(h\):**
-   - The horizontal distance between the feet of the perpendiculars from \(D\) and \(C\) to \(AB\) is \(650 - 500 = 150\). Therefore, in the right triangle formed by \(D\), the foot of the perpendicular, and the point on \(AB\), the legs are \(75\) (half of 150) and \(h\), with the hypotenuse being 333.
-   - Using the Pythagorean theorem:
-     \[
-     h = \sqrt{333^2 - 75^2} = \sqrt{110889 - 5625} = \sqrt{105264} = 324
-     \]
-   - So, the coordinates of \(D\) and \(C\) are \(D = (150, 324)\) and \(C = (800, 324)\).
+Next, we use the Pythagorean theorem in triangle \(ADE\) to find the height \(h\) of the trapezoid:
+\[AD^2 = DE^2 + h^2 \implies 333^2 = 75^2 + h^2 \implies 110889 = 5625 + h^2 \implies h^2 = 105264 \implies h = \sqrt{105264} = 324.\]
 
-3. **Find the intersection points \(P\) and \(Q\):**
-   - The angle bisectors of \(\angle A\) and \(\angle D\) meet at \(P\), and the angle bisectors of \(\angle B\) and \(\angle C\) meet at \(Q\). In an isosceles trapezoid, the angle bisectors of the non-parallel sides intersect on the line segment joining the midpoints of the parallel sides.
-   - The midpoints of \(AB\) and \(CD\) are \((250, 0)\) and \((475, 324)\), respectively. The line segment joining these midpoints is the line \(y = \frac{324}{225}(x - 250)\).
-   - The intersection of this line with the line \(y = 324\) (the height of the trapezoid) is at \(x = 475\). Therefore, \(PQ\) is the vertical distance between the points where the angle bisectors meet the height, which is simply the height of the trapezoid.
+Now, we need to find the coordinates of points \(P\) and \(Q\). Since \(P\) is the intersection of the angle bisectors of \(\angle A\) and \(\angle D\), and \(Q\) is the intersection of the angle bisectors of \(\angle B\) and \(\angle C\), both \(P\) and \(Q\) lie on the line that is the perpendicular bisector of the segment joining the midpoints of \(AB\) and \(CD\). This line is parallel to the bases and is located at a distance equal to the height of the trapezoid divided by 2 from each base.
 
-4. **Conclusion:**
-   - The length \(PQ\) is the same as the height of the trapezoid, which is 324.
-
-Thus, the length \(PQ\) is \(\boxed{324}\).
+The distance between \(P\) and \(Q\) is the same as the distance between the midpoints of \(AB\) and \(CD\) because \(P\) and \(Q\) are on the same horizontal line (parallel to the bases). The distance between the midpoints of \(AB\) and \(CD\) is half the difference of the lengths of the bases:
+\[\frac{CD - AB}{2} = \frac{650 - 500}{2} = 75.\]
+Thus, the length \(PQ\) is:
+\[\boxed{324}.\]
 
 Predicted answer: N/A
 Valid answer: 242

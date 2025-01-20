@@ -3,66 +3,22 @@ Please reason step by step, and put your final answer within \boxed{}. Provide o
 In isosceles trapezoid $ABCD$, parallel bases $\overline{AB}$ and $\overline{CD}$ have lengths $500$ and $650$, respectively, and $AD=BC=333$. The angle bisectors of $\angle{A}$ and $\angle{D}$ meet at $P$, and the angle bisectors of $\angle{B}$ and $\angle{C}$ meet at $Q$. Find $PQ$.
 
 
-To solve for \(PQ\) in the given isosceles trapezoid \(ABCD\), we start by understanding the geometric properties and relationships within the trapezoid.
+To solve for the length \(PQ\) in the isosceles trapezoid \(ABCD\), we start by analyzing the geometry of the trapezoid. The bases are \(AB = 500\) and \(CD = 650\), and the non-parallel sides are \(AD = BC = 333\).
 
-First, let's place the trapezoid in a coordinate system for easier calculation. Assume \(A = (0, 0)\), \(B = (500, 0)\), \(D = (x, h)\), and \(C = (x+650, h)\). Since \(AD = BC = 333\), we can use the distance formula to find \(x\) and \(h\).
+First, we drop perpendiculars from points \(A\) and \(B\) to line \(CD\), meeting \(CD\) at points \(E\) and \(F\) respectively. This creates two right triangles \(ADE\) and \(BCF\) with \(DE = CF\) and \(EF = AB = 500\). Since \(CD = 650\), we have:
+\[DE + EF + CF = CD \implies DE + 500 + DE = 650 \implies 2DE = 150 \implies DE = 75.\]
+Thus, \(DE = CF = 75\).
 
-The distance \(AD\) is given by:
-\[
-AD = \sqrt{x^2 + h^2} = 333
-\]
-The distance \(BC\) is given by:
-\[
-BC = \sqrt{(x+650-500)^2 + h^2} = \sqrt{(x+150)^2 + h^2} = 333
-\]
+Now, we can find the height \(h\) of the trapezoid using the Pythagorean theorem in triangle \(ADE\):
+\[AD^2 = DE^2 + h^2 \implies 333^2 = 75^2 + h^2 \implies 110889 = 5625 + h^2 \implies h^2 = 105264 \implies h = \sqrt{105264} = 324.\]
 
-Since \(AD = BC\), we have:
-\[
-x^2 + h^2 = (x+150)^2 + h^2
-\]
-Simplifying, we get:
-\[
-x^2 = x^2 + 300x + 22500
-\]
-\[
-0 = 300x + 22500
-\]
-\[
-x = -75
-\]
-
-Now substituting \(x = -75\) back into the equation for \(AD\):
-\[
-(-75)^2 + h^2 = 333^2
-\]
-\[
-5625 + h^2 = 110889
-\]
-\[
-h^2 = 105264
-\]
-\[
-h = \sqrt{105264} = 324
-\]
-
-So, the coordinates are \(A = (0, 0)\), \(B = (500, 0)\), \(D = (-75, 324)\), and \(C = (575, 324)\).
-
-Next, we need to find the coordinates of points \(P\) and \(Q\), which are the intersections of the angle bisectors of the trapezoid. The angle bisectors of \(\angle A\) and \(\angle D\) will intersect at a point on the line that is equidistant from \(AB\) and \(CD\), and similarly for \(\angle B\) and \(\angle C\). This line is the midsegment of the trapezoid, which is parallel to the bases and has a length equal to the average of the lengths of the bases:
-\[
-\text{Midsegment length} = \frac{500 + 650}{2} = 575
-\]
-
-The height of the trapezoid is 324, so the distance from the midsegment to each base is 162. Therefore, the coordinates of \(P\) and \(Q\) are at the same height as the midsegment, i.e., 162 units above the bases. Thus, the coordinates of \(P\) and \(Q\) are \((250, 162)\) and \((575, 162)\), respectively.
-
-Finally, the distance \(PQ\) is the horizontal distance between these two points:
-\[
-PQ = 575 - 250 = 325
-\]
+Next, we need to find the coordinates of points \(P\) and \(Q\). The angle bisectors of \(\angle A\) and \(\angle D\) meet at point \(P\), and the angle bisectors of \(\angle B\) and \(\angle C\) meet at point \(Q\). In an isosceles trapezoid, the intersection of the angle bisectors of the non-parallel sides is the midpoint of the segment joining the midpoints of the bases. The midpoints of \(AB\) and \(CD\) are \((250, 0)\) and \((625, 0)\) respectively, and the distance between these midpoints is:
+\[625 - 250 = 375.\]
+Since \(P\) and \(Q\) are the same point (the intersection of the angle bisectors), the length \(PQ\) is half of this distance:
+\[PQ = \frac{375}{2} = 187.5.\]
 
 Thus, the length of \(PQ\) is:
-\[
-\boxed{325}
-\]
+\[\boxed{187.5}.\]
 
 Predicted answer: N/A
 Valid answer: 242

@@ -10,40 +10,35 @@ Let $\frac{S_{2022}}{S_{2021}} = \frac{p}{q}$, where $p$ and $q$ are relatively 
 1000.
 
 
-To solve for \( S_n \), we start by considering the sum \( S_n = \sum |A \cap B| \) over all ordered pairs \((A, B)\) where \(A\) and \(B\) are subsets of \(\{1, 2, \ldots, n\}\) with \(|A| = |B|\).
+To solve for \( S_n \), we need to consider the sum of the sizes of the intersections of all pairs of subsets of \(\{1, 2, \ldots, n\}\) of the same size. Let's start by understanding the structure of the problem.
 
-First, we note that for a fixed subset \(A\) of size \(k\), there are \(\binom{n}{k}\) ways to choose \(A\). For each such \(A\), there are also \(\binom{n}{k}\) ways to choose \(B\). Therefore, the total number of ordered pairs \((A, B)\) with \(|A| = |B| = k\) is \(\binom{n}{k}^2\).
+For a fixed subset \( A \) of size \( k \), there are \(\binom{n}{k}\) such subsets. For each such subset \( A \), we need to consider all subsets \( B \) of the same size \( k \). The number of such subsets \( B \) is also \(\binom{n}{k}\). The term \( |A \cap B| \) will be the size of the intersection of \( A \) and \( B \).
 
-Next, we need to determine the contribution of each element \(i \in \{1, 2, \ldots, n\}\) to the sum \(S_n\). An element \(i\) will be in the intersection \(A \cap B\) if and only if \(i\) is in both \(A\) and \(B\). The probability that a specific element \(i\) is in a randomly chosen subset of size \(k\) is \(\frac{k}{n}\). Therefore, the expected number of times \(i\) is in both \(A\) and \(B\) over all subsets of size \(k\) is \(\binom{n-1}{k-1}^2 \cdot \frac{k}{n}\).
+The key observation is that each element \( i \) in \(\{1, 2, \ldots, n\}\) can either be in \( A \), in \( B \), in both, or in neither. The probability that a specific element \( i \) is in both \( A \) and \( B \) is \(\left(\frac{k}{n}\right)^2\). Since there are \( n \) elements, the expected number of elements in \( A \cap B \) is \( n \left(\frac{k}{n}\right)^2 = \frac{k^2}{n} \). However, since we are summing over all possible subsets, we need to count this for all pairs of subsets of size \( k \).
 
-Summing this over all possible \(k\) from 0 to \(n\), we get:
+The total number of pairs of subsets of size \( k \) is \(\binom{n}{k}^2\). Therefore, the contribution of each subset of size \( k \) to \( S_n \) is \(\frac{k^2}{n} \binom{n}{k}^2\). Summing this over all \( k \) from 0 to \( n \), we get:
 \[
-S_n = \sum_{k=0}^n \binom{n}{k}^2 \cdot k \cdot \frac{k}{n} = \frac{1}{n} \sum_{k=0}^n \binom{n}{k}^2 k^2.
+S_n = \sum_{k=0}^n \frac{k^2}{n} \binom{n}{k}^2.
 \]
 
-Using the identity \(\sum_{k=0}^n \binom{n}{k}^2 k^2 = n \binom{2n-2}{n-1}\), we have:
+Using the identity \(\sum_{k=0}^n k \binom{n}{k} = n 2^{n-1}\) and the fact that \(\sum_{k=0}^n k^2 \binom{n}{k} = n(n+1)2^{n-2}\), we can simplify the expression for \( S_n \):
 \[
-S_n = \frac{1}{n} \cdot n \binom{2n-2}{n-1} = \binom{2n-2}{n-1}.
+S_n = \frac{n}{n} \sum_{k=0}^n k^2 \binom{n}{k} = \sum_{k=0}^n k^2 \binom{n}{k} = n(n+1)2^{n-2}.
 \]
 
-Now, we need to find \(\frac{S_{2022}}{S_{2021}}\):
+Now, we need to find \( \frac{S_{2022}}{S_{2021}} \):
 \[
-\frac{S_{2022}}{S_{2021}} = \frac{\binom{4042}{2021}}{\binom{4040}{2020}}.
+\frac{S_{2022}}{S_{2021}} = \frac{2022 \cdot 2023 \cdot 2^{2020}}{2021 \cdot 2022 \cdot 2^{2020-1}} = \frac{2022 \cdot 2023 \cdot 2^{2020}}{2021 \cdot 2022 \cdot 2^{2019}} = \frac{2023 \cdot 2}{2021} = \frac{4046}{2021}.
 \]
 
-Using the property of binomial coefficients \(\binom{n}{k} = \frac{n!}{k!(n-k)!}\), we get:
+Since 4046 and 2021 are relatively prime, we have \( p = 4046 \) and \( q = 2021 \). The remainder when \( p + q = 4046 + 2021 = 6067 \) is divided by 1000 is:
 \[
-\binom{4042}{2021} = \frac{4042!}{2021! \cdot 2021!} \quad \text{and} \quad \binom{4040}{2020} = \frac{4040!}{2020! \cdot 2020!}.
+6067 \mod 1000 = 67.
 \]
 
-Thus,
+Thus, the answer is:
 \[
-\frac{S_{2022}}{S_{2021}} = \frac{\frac{4042!}{2021! \cdot 2021!}}{\frac{4040!}{2020! \cdot 2020!}} = \frac{4042 \cdot 4041}{2021 \cdot 2021} = \frac{4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4041}{2021} = \frac{8082}{2021} = 4.
-\]
-
-Therefore, \(\frac{S_{2022}}{S_{2021}} = 4\), which is already in its simplest form. Here, \(p = 4\) and \(q = 1\), so \(p + q = 5\). The remainder when \(p + q\) is divided by 1000 is:
-\[
-\boxed{5}.
+\boxed{67}.
 \]
 
 Predicted answer: N/A

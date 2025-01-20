@@ -10,63 +10,23 @@ Let $\frac{S_{2022}}{S_{2021}} = \frac{p}{q}$, where $p$ and $q$ are relatively 
 1000.
 
 
-To solve for \( S_n \), we start by considering the sum \( S_n = \sum |A \cap B| \) over all ordered pairs \((A, B)\) where \( A \) and \( B \) are subsets of \(\{1, 2, \ldots, n\}\) with \( |A| = |B| \).
+To solve for \( S_n \), we start by considering the sum \( S_n = \sum |A \cap B| \) over all ordered pairs \((A, B)\) where \(A\) and \(B\) are subsets of \(\{1, 2, \ldots, n\}\) with \(|A| = |B|\). We need to count the contribution of each element \(i\) from \(\{1, 2, \ldots, n\}\) to the sum \(S_n\).
 
-First, let's determine the number of ways to choose subsets \( A \) and \( B \) of size \( k \) from \( n \) elements. This is given by \(\binom{n}{k}^2\), since there are \(\binom{n}{k}\) ways to choose \( A \) and \(\binom{n}{k}\) ways to choose \( B \).
+For a fixed element \(i\), the number of subsets \(A\) containing \(i\) is \(2^{n-1}\) (since we can choose freely the other \(n-1\) elements). Similarly, the number of subsets \(B\) containing \(i\) is also \(2^{n-1}\). Therefore, the number of ordered pairs \((A, B)\) where both \(A\) and \(B\) contain \(i\) is \(2^{n-1} \times 2^{n-1} = 2^{2(n-1)}\).
 
-Next, we need to find the contribution of each element \( i \) in the set \(\{1, 2, \ldots, n\}\) to the sum \( S_n \). For a fixed element \( i \), it will be in both \( A \) and \( B \) if and only if it is in both subsets. The probability that \( i \) is in a randomly chosen subset of size \( k \) is \(\frac{k}{n}\). Therefore, the expected number of times \( i \) appears in both \( A \) and \( B \) over all pairs \((A, B)\) is \(\binom{n-1}{k-1}^2 \cdot \frac{k}{n}\).
+Since there are \(n\) elements in the set \(\{1, 2, \ldots, n\}\), the total contribution of all elements to the sum \(S_n\) is \(n \times 2^{2(n-1)}\). Thus, we have:
+\[ S_n = n \times 2^{2(n-1)}. \]
 
-Thus, the total contribution of element \( i \) to \( S_n \) is:
-\[
-i \cdot \binom{n-1}{k-1}^2 \cdot \frac{k}{n}
-\]
-Summing this over all \( i \) from 1 to \( n \), we get:
-\[
-S_n = \sum_{i=1}^n i \cdot \binom{n-1}{k-1}^2 \cdot \frac{k}{n} = \binom{n-1}{k-1}^2 \cdot \frac{k}{n} \sum_{i=1}^n i = \binom{n-1}{k-1}^2 \cdot \frac{k}{n} \cdot \frac{n(n+1)}{2} = \binom{n-1}{k-1}^2 \cdot \frac{k(n+1)}{2}
-\]
+Now, we need to find \(\frac{S_{2022}}{S_{2021}}\):
+\[ S_{2022} = 2022 \times 2^{2(2022-1)} = 2022 \times 2^{4042}, \]
+\[ S_{2021} = 2021 \times 2^{2(2021-1)} = 2021 \times 2^{4040}. \]
+Therefore,
+\[ \frac{S_{2022}}{S_{2021}} = \frac{2022 \times 2^{4042}}{2021 \times 2^{4040}} = \frac{2022 \times 2^2}{2021} = \frac{2022 \times 4}{2021} = \frac{8088}{2021}. \]
 
-Now, we need to sum this over all possible values of \( k \) from 0 to \( n \):
-\[
-S_n = \sum_{k=0}^n \binom{n-1}{k-1}^2 \cdot \frac{k(n+1)}{2}
-\]
-For \( k = 0 \), the term is zero, so we can start the sum from \( k = 1 \):
-\[
-S_n = \frac{n+1}{2} \sum_{k=1}^n \binom{n-1}{k-1}^2 = \frac{n+1}{2} \sum_{j=0}^{n-1} \binom{n-1}{j}^2 = \frac{n+1}{2} \binom{2(n-1)}{n-1}
-\]
-Using the identity \(\sum_{j=0}^{m} \binom{m}{j}^2 = \binom{2m}{m}\), we get:
-\[
-S_n = \frac{n+1}{2} \binom{2(n-1)}{n-1}
-\]
+The fraction \(\frac{8088}{2021}\) is already in its simplest form because 8088 and 2021 are coprime (they have no common factors other than 1). Thus, \(p = 8088\) and \(q = 2021\), and we need to find the remainder when \(p + q = 8088 + 2021 = 10109\) is divided by 1000:
+\[ 10109 \mod 1000 = 109. \]
 
-Now, we need to find \( \frac{S_{2022}}{S_{2021}} \):
-\[
-S_{2022} = \frac{2023}{2} \binom{4042}{2021}, \quad S_{2021} = \frac{2022}{2} \binom{4040}{2020}
-\]
-\[
-\frac{S_{2022}}{S_{2021}} = \frac{\frac{2023}{2} \binom{4042}{2021}}{\frac{2022}{2} \binom{4040}{2020}} = \frac{2023}{2022} \cdot \frac{\binom{4042}{2021}}{\binom{4040}{2020}} = \frac{2023}{2022} \cdot \frac{4042! / (2021! \cdot 2021!)}{4040! / (2020! \cdot 2020!)} = \frac{2023}{2022} \cdot \frac{4042 \cdot 4041}{2021 \cdot 2021} = \frac{2023 \cdot 4042 \cdot 4041}{2022 \cdot 2021^2}
-\]
-Simplifying the fraction, we get:
-\[
-\frac{S_{2022}}{S_{2021}} = \frac{2023 \cdot 4042 \cdot 4041}{2022 \cdot 2021^2} = \frac{2023 \cdot 4042 \cdot 4041}{2022 \cdot 2021^2} = \frac{2023 \cdot 4042 \cdot 4041}{2022 \cdot 2021^2} = \frac{2023 \cdot 4042 \cdot 4041}{2022 \cdot 2021^2} = \frac{2023 \cdot 4042 \cdot 4041}{2022 \cdot 2021^2} = \frac{2023 \cdot 4042 \cdot 4041}{2022 \cdot 2021^2} = \frac{2023 \cdot 4042 \cdot 4041}{2022 \cdot 2021^2}
-\]
-The simplified form is:
-\[
-\frac{S_{2022}}{S_{2021}} = \frac{2023 \cdot 4042 \cdot 4041}{2022 \cdot 2021^2} = \frac{2023 \cdot 4042 \cdot 4041}{2022 \cdot 2021^2} = \frac{2023 \cdot 4042 \cdot 4041}{2022 \cdot 2021^2} = \frac{2023 \cdot 4042 \cdot 4041}{2022 \cdot 2021^2} = \frac{2023 \cdot 4042 \cdot 4041}{2022 \cdot 2021^2} = \frac{2023 \cdot 4042 \cdot 4041}{2022 \cdot 2021^2}
-\]
-
-Finally, we need to find the remainder when \( p + q \) is divided by 1000. Since \( p = 2023 \) and \( q = 2021 \), we have:
-\[
-p + q = 2023 + 2021 = 4044
-\]
-The remainder when 4044 is divided by 1000 is:
-\[
-4044 \mod 1000 = 44
-\]
-Thus, the answer is:
-\[
-\boxed{44}
-\]```python
-# The final answer is \boxed{44}.```
+Therefore, the remainder when \(p + q\) is divided by 1000 is \(\boxed{109}\).
 
 Predicted answer: N/A
 Valid answer: 245

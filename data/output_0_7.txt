@@ -3,56 +3,54 @@ Please reason step by step, and put your final answer within \boxed{}. Provide o
 Quadratic polynomials $P(x)$ and $Q(x)$ have leading coefficients $2$ and $-2,$ respectively. The graphs of both polynomials pass through the two points $(16,54)$ and $(20,53).$ Find $P(0) + Q(0).$
 
 
-To solve for \( P(0) + Q(0) \), we start by expressing the quadratic polynomials \( P(x) \) and \( Q(x) \) in their general forms:
+To solve for \( P(0) + Q(0) \), we start by expressing the quadratic polynomials \( P(x) \) and \( Q(x) \) in their general forms. Since \( P(x) \) has a leading coefficient of 2 and \( Q(x) \) has a leading coefficient of -2, we can write:
 \[ P(x) = 2x^2 + ax + b \]
 \[ Q(x) = -2x^2 + cx + d \]
 
-We know that both polynomials pass through the points \((16, 54)\) and \((20, 53)\). This gives us the following system of equations for \( P(x) \):
-\[ 2(16)^2 + 16a + b = 54 \]
-\[ 2(20)^2 + 20a + b = 53 \]
+We know that both polynomials pass through the points \((16, 54)\) and \((20, 53)\). This gives us four equations:
+\[ P(16) = 2(16)^2 + 16a + b = 54 \]
+\[ P(20) = 2(20)^2 + 20a + b = 53 \]
+\[ Q(16) = -2(16)^2 + 16c + d = 54 \]
+\[ Q(20) = -2(20)^2 + 20c + d = 53 \]
 
-Simplifying these equations, we get:
-\[ 512 + 16a + b = 54 \]
-\[ 800 + 20a + b = 53 \]
+First, we simplify the equations for \( P(x) \):
+\[ 2(16)^2 + 16a + b = 54 \implies 512 + 16a + b = 54 \implies 16a + b = -458 \]
+\[ 2(20)^2 + 20a + b = 53 \implies 800 + 20a + b = 53 \implies 20a + b = -747 \]
 
-Subtracting the first equation from the second, we eliminate \( b \):
-\[ (800 + 20a + b) - (512 + 16a + b) = 53 - 54 \]
-\[ 288 + 4a = -1 \]
-\[ 4a = -289 \]
-\[ a = -\frac{289}{4} \]
+Next, we solve the system of linear equations for \( a \) and \( b \):
+\[ 16a + b = -458 \]
+\[ 20a + b = -747 \]
 
-Now substitute \( a = -\frac{289}{4} \) back into the first equation:
-\[ 512 + 16\left(-\frac{289}{4}\right) + b = 54 \]
-\[ 512 - 1156 + b = 54 \]
-\[ -644 + b = 54 \]
-\[ b = 698 \]
+Subtract the first equation from the second:
+\[ (20a + b) - (16a + b) = -747 - (-458) \implies 4a = -289 \implies a = -\frac{289}{4} \]
 
-So, \( P(0) = b = 698 \).
+Substitute \( a = -\frac{289}{4} \) back into the first equation:
+\[ 16\left(-\frac{289}{4}\right) + b = -458 \implies -1156 + b = -458 \implies b = 698 \]
 
-Next, we do the same for \( Q(x) \):
-\[ -2(16)^2 + 16c + d = 54 \]
-\[ -2(20)^2 + 20c + d = 53 \]
+So, the polynomial \( P(x) \) is:
+\[ P(x) = 2x^2 - \frac{289}{4}x + 698 \]
 
-Simplifying these equations, we get:
-\[ -512 + 16c + d = 54 \]
-\[ -800 + 20c + d = 53 \]
+Now, we simplify the equations for \( Q(x) \):
+\[ -2(16)^2 + 16c + d = 54 \implies -512 + 16c + d = 54 \implies 16c + d = 566 \]
+\[ -2(20)^2 + 20c + d = 53 \implies -800 + 20c + d = 53 \implies 20c + d = 853 \]
 
-Subtracting the first equation from the second, we eliminate \( d \):
-\[ ( -800 + 20c + d ) - ( -512 + 16c + d ) = 53 - 54 \]
-\[ -288 + 4c = -1 \]
-\[ 4c = 287 \]
-\[ c = \frac{287}{4} \]
+Next, we solve the system of linear equations for \( c \) and \( d \):
+\[ 16c + d = 566 \]
+\[ 20c + d = 853 \]
 
-Now substitute \( c = \frac{287}{4} \) back into the first equation:
-\[ -512 + 16\left(\frac{287}{4}\right) + d = 54 \]
-\[ -512 + 1148 + d = 54 \]
-\[ 636 + d = 54 \]
-\[ d = -582 \]
+Subtract the first equation from the second:
+\[ (20c + d) - (16c + d) = 853 - 566 \implies 4c = 287 \implies c = \frac{287}{4} \]
 
-So, \( Q(0) = d = -582 \).
+Substitute \( c = \frac{287}{4} \) back into the first equation:
+\[ 16\left(\frac{287}{4}\right) + d = 566 \implies 1148 + d = 566 \implies d = -582 \]
+
+So, the polynomial \( Q(x) \) is:
+\[ Q(x) = -2x^2 + \frac{287}{4}x - 582 \]
 
 Finally, we find \( P(0) + Q(0) \):
-\[ P(0) + Q(0) = 698 + (-582) = 116 \]
+\[ P(0) = 698 \]
+\[ Q(0) = -582 \]
+\[ P(0) + Q(0) = 698 - 582 = 116 \]
 
 Thus, the answer is:
 \[ \boxed{116} \]

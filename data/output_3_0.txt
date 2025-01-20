@@ -10,37 +10,37 @@ Let $\frac{S_{2022}}{S_{2021}} = \frac{p}{q}$, where $p$ and $q$ are relatively 
 1000.
 
 
-To solve for \( S_n \), we need to consider the sum of the sizes of the intersections of all pairs of subsets of \(\{1, 2, \ldots, n\}\) of the same size. Let's start by understanding the structure of the problem.
+To find \( S_n \), we need to sum \( |A \cap B| \) over all ordered pairs \((A, B)\) where \( A \) and \( B \) are subsets of \(\{1, 2, \ldots, n\}\) with \( |A| = |B| \). Let's start by considering the contribution of each element \( i \) in the set \(\{1, 2, \ldots, n\}\) to the sum \( S_n \).
 
-For a fixed subset \( A \) of size \( k \), there are \(\binom{n}{k}\) such subsets. For each subset \( A \), there are also \(\binom{n}{k}\) subsets \( B \). The term \( |A \cap B| \) will be counted in the sum depending on the size of the intersection. Specifically, if \( |A \cap B| = i \), then there are \(\binom{k}{i} \binom{n-k}{k-i}\) ways to choose such subsets \( A \) and \( B \).
+For a fixed element \( i \), we need to count how many times \( i \) appears in the intersection \( A \cap B \) over all valid pairs \((A, B)\). The element \( i \) will be in \( A \cap B \) if and only if it is in both \( A \) and \( B \). The number of ways to choose \( A \) and \( B \) such that \( i \) is in both is the number of ways to choose the remaining elements for \( A \) and \( B \) from the remaining \( n-1 \) elements, which is \( 2^{n-1} \) for each subset size \( k \) (where \( k \) is the size of \( A \) and \( B \)).
 
-Thus, we can express \( S_n \) as:
+Since \( |A| = |B| \), the number of ways to choose \( A \) and \( B \) such that \( i \) is in both is the sum of the number of ways to choose subsets of size \( k \) for \( A \) and \( B \) that include \( i \). This is given by:
 \[
-S_n = \sum_{k=0}^n \sum_{i=0}^k \binom{n}{k} \binom{k}{i} \binom{n-k}{k-i} i.
+\sum_{k=0}^n \binom{n-1}{k-1}^2 = \sum_{k=0}^n \binom{n-1}{k}^2 = \binom{2(n-1)}{n-1}
 \]
-We can simplify this by noting that the inner sum is just the expected value of \( |A \cap B| \) when \( A \) and \( B \) are chosen uniformly at random from all subsets of size \( k \). The expected value of \( |A \cap B| \) is \( \frac{k}{2} \), so:
+This is because the sum of the squares of binomial coefficients is given by the central binomial coefficient. Therefore, each element \( i \) contributes \( \binom{2(n-1)}{n-1} \) to the sum \( S_n \). Since there are \( n \) elements in the set, the total sum \( S_n \) is:
 \[
-S_n = \sum_{k=0}^n \binom{n}{k} \binom{k}{0} \binom{n-k}{k} \cdot 0 + \sum_{k=0}^n \binom{n}{k} \binom{k}{1} \binom{n-k}{k-1} \cdot 1 + \cdots + \sum_{k=0}^n \binom{n}{k} \binom{k}{k} \binom{n-k}{0} \cdot k.
+S_n = n \binom{2(n-1)}{n-1}
 \]
-This simplifies to:
+
+Now, we need to find \( \frac{S_{2022}}{S_{2021}} \):
 \[
-S_n = \sum_{k=0}^n \binom{n}{k} \cdot \frac{k}{2} = \frac{1}{2} \sum_{k=0}^n k \binom{n}{k} = \frac{1}{2} n \sum_{k=1}^n \binom{n-1}{k-1} = \frac{1}{2} n 2^{n-1} = n 2^{n-2}.
+S_{2022} = 2022 \binom{2 \cdot 2021}{2021} = 2022 \binom{4042}{2021}
 \]
-So, we have \( S_n = n 2^{n-2} \). Therefore,
 \[
-S_{2022} = 2022 \cdot 2^{2020}, \quad S_{2021} = 2021 \cdot 2^{2019}.
+S_{2021} = 2021 \binom{2 \cdot 2020}{2020} = 2021 \binom{4040}{2020}
 \]
-Then,
+Thus,
 \[
-\frac{S_{2022}}{S_{2021}} = \frac{2022 \cdot 2^{2020}}{2021 \cdot 2^{2019}} = \frac{2022 \cdot 2}{2021} = \frac{4044}{2021}.
+\frac{S_{2022}}{S_{2021}} = \frac{2022 \binom{4042}{2021}}{2021 \binom{4040}{2020}} = \frac{2022}{2021} \cdot \frac{\binom{4042}{2021}}{\binom{4040}{2020}} = \frac{2022}{2021} \cdot \frac{4042! / (2021! \cdot 2021!)}{4040! / (2020! \cdot 2020!)} = \frac{2022}{2021} \cdot \frac{4042 \cdot 4041}{2021} = \frac{2022 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021} = \frac{2 \cdot 4042 \cdot 4041}{2021} = 8084
 \]
-Since 4044 and 2021 are relatively prime, we have \( p = 4044 \) and \( q = 2021 \). We need to find the remainder when \( p + q = 4044 + 2021 = 6065 \) is divided by 1000. This is simply:
+The fraction \( \frac{S_{2022}}{S_{2021}} = 8084 \) is already in its simplest form, so \( p = 8084 \) and \( q = 1 \). Therefore, \( p + q = 8085 \), and the remainder when \( p + q \) is divided by 1000 is:
 \[
-6065 \mod 1000 = 65.
+8085 \mod 1000 = 85
 \]
 Thus, the answer is:
 \[
-\boxed{65}.
+\boxed{85}
 \]
 
 Predicted answer: N/A

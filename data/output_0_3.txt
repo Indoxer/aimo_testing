@@ -45,6 +45,7 @@ Subtract Equation 1 from Equation 3:
 Substitute \( a = -\frac{289}{4} \) back into Equation 1:
 \[ 16\left(-\frac{289}{4}\right) + b = -458 \]
 \[ -1156 + b = -458 \]
+\[ b = 1156 - 458 \]
 \[ b = 698 \]
 
 So, \( P(0) = b = 698 \).

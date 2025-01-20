@@ -10,43 +10,29 @@ Let $\frac{S_{2022}}{S_{2021}} = \frac{p}{q}$, where $p$ and $q$ are relatively 
 1000.
 
 
-To solve for \( S_n \), we need to understand the sum of the sizes of the intersections of all pairs of subsets of \(\{1, 2, \ldots, n\}\) of the same size. Let's start by considering the contribution of each element to the sum \( S_n \).
+To solve for \( S_n \), we need to understand the contribution of each element in the set \(\{1, 2, \ldots, n\}\) to the sum \( S_n \). Specifically, we need to count how many times each element appears in the intersection of two subsets of the same size.
 
-For a fixed element \( i \) in \(\{1, 2, \ldots, n\}\), we need to count how many times \( i \) appears in the intersection of two subsets \( A \) and \( B \) of the same size. If \( A \) and \( B \) are subsets of \(\{1, 2, \ldots, n\}\) with \( |A| = |B| = k \), then \( i \) appears in both \( A \) and \( B \) if and only if \( i \) is in both subsets. The number of ways to choose the remaining \( k-1 \) elements from the remaining \( n-1 \) elements is \(\binom{n-1}{k-1}\). Since there are \(\binom{n}{k}\) ways to choose \( A \) and \(\binom{n}{k}\) ways to choose \( B \), the total number of ordered pairs \((A, B)\) such that \( i \) is in both \( A \) and \( B \) is \(\binom{n}{k}^2 \cdot \binom{n-1}{k-1}\).
+Consider an element \( i \) in the set \(\{1, 2, \ldots, n\}\). For a subset \( A \) of size \( k \) that includes \( i \), there are \(\binom{n-1}{k-1}\) ways to choose the remaining \( k-1 \) elements from the remaining \( n-1 \) elements. Similarly, for a subset \( B \) of size \( k \) that also includes \( i \), there are \(\binom{n-1}{k-1}\) ways to choose the remaining \( k-1 \) elements from the remaining \( n-1 \) elements. Therefore, the number of pairs \((A, B)\) such that \( i \in A \cap B \) and \( |A| = |B| = k \) is \(\binom{n-1}{k-1}^2\).
 
-Summing this over all possible \( k \) from 0 to \( n \), we get:
+Summing over all possible values of \( k \) from 0 to \( n \), we get:
 \[
-S_n = \sum_{k=0}^n \binom{n}{k}^2 \binom{n-1}{k-1}.
+S_n = \sum_{k=0}^n \binom{n-1}{k-1}^2 = \sum_{k=0}^n \binom{n-1}{k}^2.
 \]
-
-Using the identity \(\binom{n}{k} = \binom{n}{n-k}\), we can rewrite the sum as:
+Using the identity \(\sum_{k=0}^m \binom{m}{k}^2 = \binom{2m}{m}\), we have:
 \[
-S_n = \sum_{k=0}^n \binom{n}{k}^2 \binom{n-1}{n-k-1}.
+S_n = \binom{2(n-1)}{n-1}.
 \]
-
-This sum can be simplified using the fact that \(\binom{n}{k} \binom{n-1}{n-k-1} = \binom{2n-1}{n-1}\). Therefore, we have:
+Therefore, we have:
 \[
-S_n = \sum_{k=0}^n \binom{n}{k} \binom{n}{k} \binom{n-1}{n-k-1} = \sum_{k=0}^n \binom{n}{k} \binom{n-1}{n-k-1} = \binom{2n-1}{n}.
+S_{2022} = \binom{4042}{2021} \quad \text{and} \quad S_{2021} = \binom{4040}{2020}.
 \]
-
-Thus, we have \( S_n = \binom{2n-1}{n} \). For \( n = 2022 \) and \( n = 2021 \), we have:
-\[
-S_{2022} = \binom{4043}{2022}, \quad S_{2021} = \binom{4041}{2021}.
-\]
-
 We need to find the ratio \(\frac{S_{2022}}{S_{2021}}\):
 \[
-\frac{S_{2022}}{S_{2021}} = \frac{\binom{4043}{2022}}{\binom{4041}{2021}} = \frac{4043! / (2022! \cdot 2021!)}{4041! / (2021! \cdot 2020!)} = \frac{4043 \cdot 4042 \cdot 4041!}{2022 \cdot 2021! \cdot 2021!} \cdot \frac{2021! \cdot 2020!}{4041!} = \frac{4043 \cdot 4042}{2022 \cdot 2021} = \frac{4043 \cdot 2021}{2022 \cdot 1011} = \frac{4043}{1011}.
+\frac{S_{2022}}{S_{2021}} = \frac{\binom{4042}{2021}}{\binom{4040}{2020}} = \frac{4042! / (2021! \cdot 2021!)}{4040! / (2020! \cdot 2020!)} = \frac{4042 \cdot 4041}{2021 \cdot 2021} = \frac{4042}{2021} = 2.
 \]
-
-Since 4043 and 1011 are relatively prime, we have \( p = 4043 \) and \( q = 1011 \). The remainder when \( p + q = 4043 + 1011 = 5054 \) is divided by 1000 is:
+Thus, we have \( p = 2 \) and \( q = 1 \), so \( p + q = 3 \). The remainder when 3 is divided by 1000 is:
 \[
-5054 \mod 1000 = 54.
-\]
-
-Thus, the answer is:
-\[
-\boxed{54}.
+\boxed{3}.
 \]
 
 Predicted answer: N/A

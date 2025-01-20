@@ -10,38 +10,46 @@ Let $\frac{S_{2022}}{S_{2021}} = \frac{p}{q}$, where $p$ and $q$ are relatively 
 1000.
 
 
-To solve for \( S_n \), we start by considering the sum \( S_n = \sum |A \cap B| \) where the sum is taken over all ordered pairs \((A, B)\) such that \(A\) and \(B\) are subsets of \(\{1, 2, \ldots, n\}\) with \(|A| = |B|\). We can express \( S_n \) as follows:
+To solve for \( S_n \), we need to consider the sum of the sizes of the intersections of all pairs of subsets of \(\{1, 2, \ldots, n\}\) of the same size. Let's start by analyzing the contribution of each element \( i \) in the set \(\{1, 2, \ldots, n\}\) to the sum \( S_n \).
 
-\[ S_n = \sum_{k=0}^n \sum_{\substack{|A|=k \\ |B|=k}} |A \cap B|. \]
+For a fixed element \( i \), the number of subsets of \(\{1, 2, \ldots, n\}\) that include \( i \) and have size \( k \) is \(\binom{n-1}{k-1}\). There are \(\binom{n}{k}\) subsets of size \( k \), so the total number of times \( i \) appears in an intersection \( A \cap B \) where \( |A| = |B| = k \) is \(\binom{n-1}{k-1}^2\). Therefore, the contribution of element \( i \) to \( S_n \) is:
 
-The term \( |A \cap B| \) represents the number of elements in the intersection of sets \(A\) and \(B\). For a fixed \(k\), the number of ways to choose \(A\) and \(B\) such that \(|A| = |B| = k\) is \(\binom{n}{k}^2\). For each such pair \((A, B)\), the expected size of \(A \cap B\) is the same for all choices of \(A\) and \(B\) of size \(k\). Specifically, if we fix an element \(x \in \{1, 2, \ldots, n\}\), the probability that \(x\) is in both \(A\) and \(B\) is \(\frac{\binom{n-1}{k-1}}{\binom{n}{k}} \cdot \frac{\binom{n-1}{k-1}}{\binom{n}{k}} = \frac{k(k-1)}{n(n-1)}\).
+\[
+\sum_{k=1}^n \binom{n-1}{k-1}^2 = \sum_{j=0}^{n-1} \binom{n-1}{j}^2 = \binom{2(n-1)}{n-1}
+\]
 
-Thus, the expected value of \(|A \cap B|\) for a fixed \(k\) is \(k \cdot \frac{k}{n}\), and the contribution to \(S_n\) from this \(k\) is \(\binom{n}{k}^2 \cdot \frac{k^2}{n}\). Summing over all \(k\) from 0 to \(n\), we get:
+This is because the sum of the squares of the binomial coefficients \(\binom{n-1}{k}\) is \(\binom{2(n-1)}{n-1}\). Since there are \( n \) elements in the set, the total sum \( S_n \) is:
 
-\[ S_n = \sum_{k=0}^n \binom{n}{k}^2 \cdot \frac{k^2}{n}. \]
+\[
+S_n = n \binom{2(n-1)}{n-1}
+\]
 
-Using the identity \(\sum_{k=0}^n \binom{n}{k}^2 x^k = \binom{2n}{n} x^{n/2}\) for even \(n\) and \(\sum_{k=0}^n \binom{n}{k}^2 x^k = \binom{2n}{n} x^{(n-1)/2} J_{n/2}(2\sqrt{x})\) for odd \(n\) (where \(J_m\) is the Bessel function of the first kind), we can simplify to find that:
+Now, we need to find \( S_{2022} \) and \( S_{2021} \):
 
-\[ S_n = \frac{n}{2} \binom{2n}{n}. \]
+\[
+S_{2022} = 2022 \binom{4042}{2021}
+\]
+\[
+S_{2021} = 2021 \binom{4042}{2021}
+\]
 
-For \(n = 2022\), we have:
+Thus, the ratio \(\frac{S_{2022}}{S_{2021}}\) is:
 
-\[ S_{2022} = \frac{2022}{2} \binom{4044}{2022}, \]
-and for \(n = 2021\), we have:
+\[
+\frac{S_{2022}}{S_{2021}} = \frac{2022 \binom{4042}{2021}}{2021 \binom{4042}{2021}} = \frac{2022}{2021}
+\]
 
-\[ S_{2021} = \frac{2021}{2} \binom{4042}{2021}. \]
+Here, \( p = 2022 \) and \( q = 2021 \), and since 2022 and 2021 are consecutive integers, they are relatively prime. Therefore, \( p + q = 2022 + 2021 = 4043 \). The remainder when 4043 is divided by 1000 is:
 
-Thus,
+\[
+4043 \mod 1000 = 43
+\]
 
-\[ \frac{S_{2022}}{S_{2021}} = \frac{\frac{2022}{2} \binom{4044}{2022}}{\frac{2021}{2} \binom{4042}{2021}} = \frac{2022 \binom{4044}{2022}}{2021 \binom{4042}{2021}} = \frac{2022 \cdot \frac{4044!}{2022! 2022!}}{2021 \cdot \frac{4042!}{2021! 2021!}} = \frac{2022 \cdot 4044 \cdot 4043}{2021 \cdot 2022} = \frac{4044 \cdot 4043}{2021} = 8086. \]
+So, the answer is:
 
-So, \( \frac{S_{2022}}{S_{2021}} = 8086 \), and we have \( p = 8086 \) and \( q = 1 \). The remainder when \( p + q = 8087 \) is divided by 1000 is:
-
-\[ 8087 \mod 1000 = 87. \]
-
-Thus, the answer is:
-
-\[ \boxed{87}. \]
+\[
+\boxed{43}
+\]
 
 Predicted answer: N/A
 Valid answer: 245

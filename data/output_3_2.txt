@@ -10,115 +10,35 @@ Let $\frac{S_{2022}}{S_{2021}} = \frac{p}{q}$, where $p$ and $q$ are relatively 
 1000.
 
 
-To find \( S_n \), we start by considering the sum \( S_n = \sum |A \cap B| \) over all ordered pairs \((A, B)\) such that \( A \) and \( B \) are subsets of \(\{1, 2, \ldots, n\}\) with \( |A| = |B| \).
+To find \( S_n \), we start by considering the sum over all ordered pairs \((A, B)\) where \(A\) and \(B\) are subsets of \(\{1, 2, \ldots, n\}\) with \(|A| = |B|\). For a fixed subset \(A\) of size \(k\), there are \(\binom{n}{k}\) ways to choose \(A\). For each such \(A\), there are also \(\binom{n}{k}\) ways to choose \(B\). Therefore, for each fixed \(k\), the contribution to \(S_n\) from all pairs \((A, B)\) of size \(k\) is \(\binom{n}{k}^2 k\).
 
-First, let's determine the number of subsets of size \( k \) from a set of size \( n \). This is given by the binomial coefficient \( \binom{n}{k} \).
-
-Next, we need to count how many times each element \( i \) (where \( 1 \leq i \leq n \)) appears in the intersection \( A \cap B \). For a fixed element \( i \), it must be in both \( A \) and \( B \) for \( i \) to contribute to \( |A \cap B| \).
-
-The number of ways to choose \( A \) and \( B \) such that \( i \in A \) and \( i \in B \) is:
-- Choose \( A \) such that \( i \in A \): there are \( \binom{n-1}{k-1} \) ways.
-- Choose \( B \) such that \( i \in B \): there are \( \binom{n-1}{k-1} \) ways.
-
-Thus, the number of pairs \((A, B)\) where \( i \in A \cap B \) is \( \binom{n-1}{k-1}^2 \).
-
-Summing over all possible values of \( k \) from 0 to \( n \), we get:
+Thus, we have:
 \[
-S_n = \sum_{k=0}^{n} \binom{n}{k} \binom{n-1}{k-1}^2
+S_n = \sum_{k=0}^n \binom{n}{k}^2 k.
 \]
 
-We can simplify this expression using the identity:
-\[
-\binom{n}{k} = \frac{n!}{k!(n-k)!}
-\]
-\[
-\binom{n-1}{k-1} = \frac{(n-1)!}{(k-1)!(n-k)!}
+We can use the identity \(\sum_{k=0}^n \binom{n}{k}^2 k = n \sum_{k=1}^n \binom{n-1}{k-1} \binom{n}{k} = n \sum_{k=1}^n \binom{n-1}{k-1} \binom{n}{k} = n \sum_{j=0}^{n-1} \binom{n-1}{j} \binom{n}{j+1} = n \sum_{j=0}^{n-1} \binom{n-1}{j} \binom{n}{n-j-1} = n \sum_{j=0}^{n-1} \binom{n-1}{j} \binom{n}{j+1} = n \sum_{j=0}^{n-1} \binom{n-1}{j} \binom{n}{j+1} = n \cdot 2^{n-1}.
 \]
 
-Substituting these into the sum, we get:
+So, we have:
 \[
-S_n = \sum_{k=1}^{n} \frac{n!}{k!(n-k)!} \left( \frac{(n-1)!}{(k-1)!(n-k)!} \right)^2
-\]
-\[
-S_n = \sum_{k=1}^{n} \frac{n!}{k!(n-k)!} \cdot \frac{(n-1)!^2}{(k-1)!^2 (n-k)!^2}
-\]
-\[
-S_n = \sum_{k=1}^{n} \frac{n! (n-1)!^2}{k! (k-1)!^2 (n-k)!^3}
+S_n = n \cdot 2^{n-1}.
 \]
 
-Using the identity \( k! = k (k-1)! \), we can rewrite:
+Now, we need to find \(\frac{S_{2022}}{S_{2021}}\):
 \[
-S_n = \sum_{k=1}^{n} \frac{n! (n-1)!^2}{k (k-1)! (k-1)!^2 (n-k)!^3}
-\]
-\[
-S_n = \sum_{k=1}^{n} \frac{n! (n-1)!^2}{k (k-1)!^3 (n-k)!^2}
+\frac{S_{2022}}{S_{2021}} = \frac{2022 \cdot 2^{2021}}{2021 \cdot 2^{2020}} = \frac{2022 \cdot 2}{2021} = \frac{4044}{2021}.
 \]
 
-This sum can be simplified further using combinatorial identities, but for our purposes, we will use the known result:
+Since 4044 and 2021 are relatively prime, we have \(p = 4044\) and \(q = 2021\). We need to find the remainder when \(p + q = 4044 + 2021 = 6065\) is divided by 1000:
 \[
-S_n = \frac{n^2 (n+1)(2n+1)}{6}
+6065 \mod 1000 = 65.
 \]
 
-Now, we need to find \( \frac{S_{2022}}{S_{2021}} \):
+Thus, the answer is:
 \[
-S_{2022} = \frac{2022^2 \cdot 2023 \cdot 4045}{6}
+\boxed{65}.
 \]
-\[
-S_{2021} = \frac{2021^2 \cdot 2022 \cdot 4043}{6}
-\]
-
-Thus,
-\[
-\frac{S_{2022}}{S_{2021}} = \frac{\frac{2022^2 \cdot 2023 \cdot 4045}{6}}{\frac{2021^2 \cdot 2022 \cdot 4043}{6}} = \frac{2022 \cdot 2023 \cdot 4045}{2021 \cdot 2022 \cdot 4043} = \frac{2023 \cdot 4045}{2021 \cdot 4043}
-\]
-
-Simplifying the fraction:
-\[
-\frac{2023 \cdot 4045}{2021 \cdot 4043}
-\]
-
-Since 2023 and 4045 are coprime, and 2021 and 4043 are coprime, the fraction is already in its simplest form. Therefore, \( p = 2023 \cdot 4045 \) and \( q = 2021 \cdot 4043 \).
-
-Finally, we need to find the remainder when \( p + q \) is divided by 1000:
-\[
-p + q = 2023 \cdot 4045 + 2021 \cdot 4043
-\]
-
-Calculating modulo 1000:
-\[
-2023 \equiv 23 \pmod{1000}
-\]
-\[
-4045 \equiv 45 \pmod{1000}
-\]
-\[
-2021 \equiv 21 \pmod{1000}
-\]
-\[
-4043 \equiv 43 \pmod{1000}
-\]
-
-Thus,
-\[
-p + q \equiv 23 \cdot 45 + 21 \cdot 43 \pmod{1000}
-\]
-\[
-23 \cdot 45 = 1035
-\]
-\[
-21 \cdot 43 = 903
-\]
-\[
-1035 + 903 = 1938
-\]
-\[
-1938 \equiv 938 \pmod{1000}
-\]
-
-Therefore, the remainder when \( p + q \) is divided by 1000 is:
-\[
-\boxed{938}
-\]  \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \] \
 
 Predicted answer: N/A
 Valid answer: 245

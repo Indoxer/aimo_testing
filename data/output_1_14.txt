@@ -3,59 +3,38 @@ Please reason step by step, and put your final answer within \boxed{}. Provide o
 Three spheres with radii $11$, $13$, and $19$ are mutually externally tangent. A plane intersects the spheres in three congruent circles centered at $A$, $B$, and $C$, respectively, and the centers of the spheres all lie on the same side of this plane. Suppose that $AB^2 = 560$. Find $AC^2$.
 
 
-To solve for \(AC^2\), we start by understanding the geometric configuration of the problem. We have three spheres with radii \(11\), \(13\), and \(19\) that are mutually externally tangent. A plane intersects these spheres in three congruent circles centered at points \(A\), \(B\), and \(C\) respectively. The centers of the spheres lie on the same side of the plane, and we know that \(AB^2 = 560\). We need to find \(AC^2\).
+To solve the problem, we need to analyze the geometric configuration of the spheres and the plane intersecting them. Let's denote the centers of the spheres as \( O_1, O_2, \) and \( O_3 \) with radii \( r_1 = 11 \), \( r_2 = 13 \), and \( r_3 = 19 \) respectively. The plane intersects these spheres in three congruent circles centered at points \( A, B, \) and \( C \) respectively.
 
-First, let's denote the centers of the spheres as \(O_1\), \(O_2\), and \(O_3\) with radii \(11\), \(13\), and \(19\) respectively. Since the spheres are mutually externally tangent, the distances between their centers are:
-\[ O_1O_2 = 11 + 13 = 24, \]
-\[ O_2O_3 = 13 + 19 = 32, \]
-\[ O_3O_1 = 19 + 11 = 30. \]
+First, we need to find the distance between the centers of the spheres. Since the spheres are mutually externally tangent, the distances between their centers are:
+\[
+O_1O_2 = r_1 + r_2 = 11 + 13 = 24,
+\]
+\[
+O_2O_3 = r_2 + r_3 = 13 + 19 = 32,
+\]
+\[
+O_1O_3 = r_1 + r_3 = 11 + 19 = 30.
+\]
 
-The plane intersects the spheres in congruent circles, so the distances from the centers of the spheres to the plane are proportional to the radii of the spheres minus the radius of the circle of intersection. Let the distances from \(O_1\), \(O_2\), and \(O_3\) to the plane be \(d_1\), \(d_2\), and \(d_3\) respectively. Then, the radii of the circles of intersection are:
-\[ \sqrt{11^2 - d_1^2}, \]
-\[ \sqrt{13^2 - d_2^2}, \]
-\[ \sqrt{19^2 - d_3^2}. \]
-Since the circles are congruent, we have:
-\[ \sqrt{11^2 - d_1^2} = \sqrt{13^2 - d_2^2} = \sqrt{19^2 - d_3^2}. \]
-Let this common radius be \(r\). Then:
-\[ 11^2 - d_1^2 = 13^2 - d_2^2 = 19^2 - d_3^2 = r^2. \]
-This gives us the equations:
-\[ 121 - d_1^2 = 169 - d_2^2, \]
-\[ 121 - d_1^2 = 361 - d_3^2. \]
-From the first equation, we get:
-\[ d_2^2 - d_1^2 = 48, \]
-and from the second equation, we get:
-\[ d_3^2 - d_1^2 = 240. \]
-We also know that the distance between the centers of the spheres is related to the distances from the centers to the plane. Specifically, the distance between the centers of the spheres is the sum of the distances from the centers to the plane minus the sum of the radii of the circles of intersection. Therefore, we have:
-\[ O_1O_2^2 = (d_1 + d_2)^2 = 24^2 = 576, \]
-\[ O_2O_3^2 = (d_2 + d_3)^2 = 32^2 = 1024, \]
-\[ O_3O_1^2 = (d_3 + d_1)^2 = 30^2 = 900. \]
-Expanding these, we get:
-\[ d_1^2 + d_2^2 + 2d_1d_2 = 576, \]
-\[ d_2^2 + d_3^2 + 2d_2d_3 = 1024, \]
-\[ d_3^2 + d_1^2 + 2d_3d_1 = 900. \]
-We already know that \(d_2^2 - d_1^2 = 48\) and \(d_3^2 - d_1^2 = 240\). Adding these two equations, we get:
-\[ d_2^2 + d_3^2 - d_1^2 - d_1^2 = 288, \]
-\[ d_2^2 + d_3^2 - 2d_1^2 = 288. \]
-Substituting \(d_2^2 = d_1^2 + 48\) into this equation, we get:
-\[ d_1^2 + 48 + d_3^2 - 2d_1^2 = 288, \]
-\[ d_3^2 - d_1^2 = 240, \]
-which is consistent. Now, we can find \(d_1^2\):
-\[ d_1^2 + d_2^2 + 2d_1d_2 = 576, \]
-\[ d_1^2 + (d_1^2 + 48) + 2d_1\sqrt{d_1^2 + 48} = 576, \]
-\[ 2d_1^2 + 48 + 2d_1\sqrt{d_1^2 + 48} = 576, \]
-\[ 2d_1^2 + 2d_1\sqrt{d_1^2 + 48} = 528, \]
-\[ d_1^2 + d_1\sqrt{d_1^2 + 48} = 264. \]
-Solving this quadratic equation, we get:
-\[ d_1 = 10. \]
-Then, we can find \(d_2\) and \(d_3\):
-\[ d_2^2 = d_1^2 + 48 = 10^2 + 48 = 144, \]
-\[ d_2 = 12, \]
-\[ d_3^2 = d_1^2 + 240 = 10^2 + 240 = 340, \]
-\[ d_3 = \sqrt{340}. \]
-Finally, we can find \(AC^2\):
-\[ AC^2 = d_1^2 + d_3^2 - 2d_1d_3\cos\theta = 10^2 + (\sqrt{340})^2 - 2 \cdot 10 \cdot \sqrt{340} \cdot \frac{10}{\sqrt{19^2}} = 100 + 340 - 2 \cdot 10 \cdot \sqrt{340} \cdot \frac{10}{19} = 440 - 2 \cdot 10 \cdot \sqrt{340} \cdot \frac{10}{19} = 440 - 2 \cdot 10 \cdot \sqrt{340} \cdot \frac{10}{19} = 560. \]
-Thus, the value of \(AC^2\) is:
-\[ \boxed{560}. \]
+Next, we consider the plane that intersects the spheres. The points \( A, B, \) and \( C \) are the centers of the circles formed by the intersections of the plane with the spheres. Since the circles are congruent, the distances from the centers of the spheres to the plane are equal. Let the distance from \( O_1 \) to the plane be \( d_1 \), from \( O_2 \) to the plane be \( d_2 \), and from \( O_3 \) to the plane be \( d_3 \). These distances are related to the radii of the spheres and the distances between the centers of the spheres.
+
+The power of a point theorem for a sphere states that the power of a point with respect to a sphere is given by the square of the distance from the point to the center of the sphere minus the square of the radius of the sphere. For the plane intersecting the spheres, the power of the point (which is the distance from the center of the sphere to the plane squared minus the square of the radius of the sphere) is the same for all three spheres because the circles are congruent.
+
+We know that \( AB^2 = 560 \). Since \( A, B, \) and \( C \) are the centers of the congruent circles, the distance \( AB \) is the same as the distance between the projections of the centers of the spheres onto the plane. This distance is the same as the distance between the centers of the spheres minus twice the distance from the center of each sphere to the plane. Therefore, we can write:
+\[
+AB^2 = (r_2 - r_1)^2 + (d_2 - d_1)^2 = 560.
+\]
+Since the circles are congruent, the distances \( d_1, d_2, \) and \( d_3 \) are such that the power of the points is the same. This implies that the distances between the centers of the spheres are related to the distances from the centers to the plane in a consistent manner. By symmetry and the given information, we can deduce that the distance \( AC^2 \) will be the same as \( AB^2 \) because the problem setup is symmetric and the distances are consistent.
+
+Thus, we have:
+\[
+AC^2 = AB^2 = 560.
+\]
+
+Therefore, the value of \( AC^2 \) is:
+\[
+\boxed{560}.
+\]
 
 Predicted answer: N/A
 Valid answer: 756

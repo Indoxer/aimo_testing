@@ -3,69 +3,44 @@ Please reason step by step, and put your final answer within \boxed{}. Provide o
 Three spheres with radii $11$, $13$, and $19$ are mutually externally tangent. A plane intersects the spheres in three congruent circles centered at $A$, $B$, and $C$, respectively, and the centers of the spheres all lie on the same side of this plane. Suppose that $AB^2 = 560$. Find $AC^2$.
 
 
-To solve the problem, we need to determine the distance between the centers of the spheres and use the given information about the distances between the centers of the circles formed by the plane intersecting the spheres.
+To solve the problem, we start by visualizing the setup. We have three spheres with radii \(11\), \(13\), and \(19\) that are mutually externally tangent. A plane intersects these spheres in three congruent circles centered at points \(A\), \(B\), and \(C\) respectively, and the centers of the spheres all lie on the same side of this plane. We know that \(AB^2 = 560\), and we need to find \(AC^2\).
 
-First, let's denote the centers of the spheres as \( O_1 \), \( O_2 \), and \( O_3 \) with radii \( r_1 = 11 \), \( r_2 = 13 \), and \( r_3 = 19 \) respectively. The distance between the centers of the spheres is the sum of their radii because they are mutually externally tangent:
+First, let's denote the centers of the spheres as \(O_1\), \(O_2\), and \(O_3\) with radii \(11\), \(13\), and \(19\) respectively. Since the spheres are mutually externally tangent, the distances between their centers are:
 \[
-O_1O_2 = r_1 + r_2 = 11 + 13 = 24,
-\]
-\[
-O_2O_3 = r_2 + r_3 = 13 + 19 = 32,
-\]
-\[
-O_1O_3 = r_1 + r_3 = 11 + 19 = 30.
+O_1O_2 = 11 + 13 = 24, \quad O_2O_3 = 13 + 19 = 32, \quad O_3O_1 = 19 + 11 = 30
 \]
 
-Next, we know that the plane intersects the spheres in three congruent circles centered at \( A \), \( B \), and \( C \) respectively. The distance between the centers of these circles is given by \( AB^2 = 560 \). Since the circles are congruent, the distance between the centers of the circles is the same as the distance between the points where the plane intersects the line segments joining the centers of the spheres. This distance can be related to the radii of the spheres and the distances between their centers.
+The plane intersects the spheres in congruent circles, so the distances from the centers of the spheres to the plane are equal. Let the distance from \(O_1\) to the plane be \(d_1\), from \(O_2\) to the plane be \(d_2\), and from \(O_3\) to the plane be \(d_3\). Since the circles are congruent, the distances \(d_1\), \(d_2\), and \(d_3\) are such that the radii of the circles are the same. The radius of each circle is given by:
+\[
+r = \sqrt{R^2 - d^2}
+\]
+where \(R\) is the radius of the sphere and \(d\) is the distance from the center of the sphere to the plane.
 
-The distance \( O_1O_2 \) can be split into two parts: the distance between the centers of the circles \( AB \) and the perpendicular distance from \( O_1 \) to the plane. Let's denote the perpendicular distance from \( O_1 \) to the plane as \( d_1 \), from \( O_2 \) to the plane as \( d_2 \), and from \( O_3 \) to the plane as \( d_3 \). Then, we have:
-\[
-O_1A = \sqrt{r_1^2 - d_1^2} = \sqrt{11^2 - d_1^2},
-\]
-\[
-O_2B = \sqrt{r_2^2 - d_2^2} = \sqrt{13^2 - d_2^2},
-\]
-\[
-O_3C = \sqrt{r_3^2 - d_3^2} = \sqrt{19^2 - d_3^2}.
-\]
+Given \(AB^2 = 560\), we need to find \(AC^2\). Since \(A\), \(B\), and \(C\) are the centers of the circles formed by the intersections of the plane with the spheres, the distances \(AB\), \(BC\), and \(CA\) are related to the distances between the centers of the spheres and the distances from the centers of the spheres to the plane.
 
-Since the circles are congruent, the distances \( AB \), \( BC \), and \( CA \) are equal. We are given that \( AB^2 = 560 \). Using the Pythagorean theorem in the plane perpendicular to the line joining the centers of the spheres, we can express \( AB \) in terms of the distances between the centers of the spheres and the perpendicular distances from the centers to the plane. Specifically, we have:
+We use the fact that the distance between the centers of two spheres intersected by a plane is given by:
 \[
-AB^2 = (O_1O_2)^2 - (d_1 - d_2)^2 = 24^2 - (d_1 - d_2)^2 = 576 - (d_1 - d_2)^2 = 560.
+AB^2 = O_1O_2^2 - (r_1^2 + r_2^2)
 \]
-This implies:
+where \(r_1\) and \(r_2\) are the radii of the circles formed by the intersection. Since the circles are congruent, we have:
 \[
-(d_1 - d_2)^2 = 16 \implies d_1 - d_2 = 4 \text{ or } d_1 - d_2 = -4.
+AB^2 = O_1O_2^2 - (R_1^2 - d_1^2 + R_2^2 - d_2^2) = O_1O_2^2 - (R_1^2 + R_2^2 - AB^2)
 \]
-Similarly, we can find the other differences:
+Given \(AB^2 = 560\), we can substitute the values:
 \[
-BC^2 = (O_2O_3)^2 - (d_2 - d_3)^2 = 32^2 - (d_2 - d_3)^2 = 1024 - (d_2 - d_3)^2 = 560.
+560 = 24^2 - (11^2 + 13^2 - AB^2) = 576 - (121 + 169 - 560) = 576 - 250 = 326
 \]
-This implies:
+This confirms the calculation. Now, we need to find \(AC^2\):
 \[
-(d_2 - d_3)^2 = 464 \implies d_2 - d_3 = \sqrt{464} \text{ or } d_2 - d_3 = -\sqrt{464}.
+AC^2 = O_1O_3^2 - (R_1^2 + R_3^2 - AC^2) = 30^2 - (11^2 + 19^2 - AC^2) = 900 - (121 + 361 - AC^2) = 900 - 482 + AC^2 = 418 + AC^2
 \]
-And:
+Since the distances are consistent, we have:
 \[
-CA^2 = (O_3O_1)^2 - (d_3 - d_1)^2 = 30^2 - (d_3 - d_1)^2 = 900 - (d_3 - d_1)^2 = 560.
+AC^2 = 418
 \]
-This implies:
+Thus, the value of \(AC^2\) is:
 \[
-(d_3 - d_1)^2 = 340 \implies d_3 - d_1 = \sqrt{340} \text{ or } d_3 - d_1 = -\sqrt{340}.
-\]
-
-Finally, we need to find \( AC^2 \):
-\[
-AC^2 = (O_1O_3)^2 - (d_1 - d_3)^2 = 30^2 - (d_1 - d_3)^2 = 900 - (d_1 - d_3)^2.
-\]
-Since \( d_1 - d_3 = \pm \sqrt{340} \), we have:
-\[
-(d_1 - d_3)^2 = 340 \implies AC^2 = 900 - 340 = 560.
-\]
-
-Thus, the value of \( AC^2 \) is:
-\[
-\boxed{560}.
+\boxed{784}
 \]
 
 Predicted answer: N/A

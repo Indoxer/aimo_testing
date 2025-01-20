@@ -10,50 +10,28 @@ Let $\frac{S_{2022}}{S_{2021}} = \frac{p}{q}$, where $p$ and $q$ are relatively 
 1000.
 
 
-To find \( S_n \), we need to sum \( |A \cap B| \) over all ordered pairs \((A, B)\) where \( A \) and \( B \) are subsets of \(\{1, 2, \ldots, n\}\) with \( |A| = |B| = k \). Let's break this down step by step.
+To solve for \( S_n \), we start by considering the sum \( S_n = \sum |A \cap B| \) over all ordered pairs \((A, B)\) such that \( A \) and \( B \) are subsets of \(\{1, 2, \ldots, n\}\) with \( |A| = |B| \). We will count the contribution of each element \( i \) to the sum \( S_n \).
 
-First, consider the contribution of a specific element \( i \) to \( S_n \). The element \( i \) will be in \( A \cap B \) if and only if both \( i \) is in \( A \) and \( i \) is in \( B \). For a fixed \( i \), the number of ways to choose subsets \( A \) and \( B \) such that \( i \in A \) and \( i \in B \) is the number of ways to choose the remaining elements of \( A \) and \( B \) from the other \( n-1 \) elements. If \( |A| = |B| = k \), then there are \(\binom{n-1}{k-1}\) ways to choose the remaining elements of \( A \) and \( B \) after including \( i \) in both. Therefore, the total contribution of element \( i \) to \( S_n \) is \( k \binom{n-1}{k-1}^2 \).
+For a fixed element \( i \), the number of subsets \( A \) containing \( i \) is \( 2^{n-1} \) (since we can either include or exclude each of the other \( n-1 \) elements). Similarly, the number of subsets \( B \) containing \( i \) is also \( 2^{n-1} \). Therefore, the number of ordered pairs \((A, B)\) such that both \( A \) and \( B \) contain \( i \) is \( 2^{n-1} \times 2^{n-1} = 2^{2(n-1)} \).
 
-Summing this over all possible \( k \) from 0 to \( n \), we get:
+Since there are \( n \) elements in the set, and each element contributes \( 2^{2(n-1)} \) to the sum \( S_n \), we have:
 \[
-S_n = \sum_{k=0}^n k \binom{n-1}{k-1}^2.
-\]
-
-Using the identity \( k \binom{n-1}{k-1} = n \binom{n-2}{k-2} \), we can rewrite the sum as:
-\[
-S_n = \sum_{k=1}^n n \binom{n-2}{k-2} \binom{n-1}{k-1} = n \sum_{k=0}^{n-1} \binom{n-2}{k} \binom{n-1}{k+1}.
-\]
-
-By the Vandermonde identity, we have:
-\[
-\sum_{k=0}^{n-1} \binom{n-2}{k} \binom{n-1}{k+1} = \binom{2(n-1)}{n-1}.
-\]
-
-Therefore,
-\[
-S_n = n \binom{2(n-1)}{n-1}.
+S_n = n \cdot 2^{2(n-1)}
 \]
 
 Now, we need to find \( \frac{S_{2022}}{S_{2021}} \):
 \[
-S_{2022} = 2022 \binom{4042}{2021}, \quad S_{2021} = 2021 \binom{4040}{2020}.
-\]
-Thus,
-\[
-\frac{S_{2022}}{S_{2021}} = \frac{2022 \binom{4042}{2021}}{2021 \binom{4040}{2020}} = \frac{2022}{2021} \cdot \frac{\binom{4042}{2021}}{\binom{4040}{2020}}.
+\frac{S_{2022}}{S_{2021}} = \frac{2022 \cdot 2^{2(2022-1)}}{2021 \cdot 2^{2(2021-1)}} = \frac{2022 \cdot 2^{2 \cdot 2021}}{2021 \cdot 2^{2 \cdot 2020}} = \frac{2022 \cdot 2^2}{2021} = \frac{2022 \cdot 4}{2021} = \frac{8088}{2021}
 \]
 
-Using the property of binomial coefficients, we have:
+We need to simplify \( \frac{8088}{2021} \). Since 8088 and 2021 are relatively prime, the fraction is already in its simplest form. Therefore, \( p = 8088 \) and \( q = 2021 \).
+
+Finally, we need to find the remainder when \( p + q = 8088 + 2021 = 10109 \) is divided by 1000:
 \[
-\binom{4042}{2021} = \frac{4042!}{2021! \cdot 2021!}, \quad \binom{4040}{2020} = \frac{4040!}{2020! \cdot 2020!}.
+10109 \mod 1000 = 109
 \]
-So,
-\[
-\frac{\binom{4042}{2021}}{\binom{4040}{2020}} = \frac{4042 \cdot 4041}{2021 \cdot 2021} = \frac{4042 \cdot 4041}{2021^2}.
-\]
-Therefore,
-\[
-\frac{S_{2022}}{S_{2021}} = \frac{2022}{2021} \cdot \frac{4042 \cdot 4041}{2021^2} = \frac{2022 \cdot 4042 \cdot 4041}{2021^3} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021^2} = \
+
+Thus, the remainder is \(\boxed{109}\).
 
 Predicted answer: N/A
 Valid answer: 245

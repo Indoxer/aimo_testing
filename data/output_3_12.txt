@@ -10,34 +10,68 @@ Let $\frac{S_{2022}}{S_{2021}} = \frac{p}{q}$, where $p$ and $q$ are relatively 
 1000.
 
 
-To solve for \( S_n \), we start by considering the sum \( S_n = \sum |A \cap B| \) over all ordered pairs \((A, B)\) where \(A\) and \(B\) are subsets of \(\{1, 2, \ldots, n\}\) with \(|A| = |B|\). Let's denote the size of \(A\) and \(B\) by \(k\), so \(|A| = |B| = k\).
+To solve for \( S_n \), we need to understand the sum of the sizes of the intersections of all pairs of subsets of \(\{1, 2, \ldots, n\}\) with the same size. Let's start by considering the contribution of each element \( i \) in the set \(\{1, 2, \ldots, n\}\) to the sum \( S_n \).
 
-The number of ways to choose two subsets \(A\) and \(B\) each of size \(k\) from a set of size \(n\) is given by \(\binom{n}{k}^2\). For each such pair \((A, B)\), the term \(|A \cap B|\) contributes to the sum \(S_n\). To find the total contribution of \(|A \cap B|\) over all pairs \((A, B)\), we need to count how many times each element of \(\{1, 2, \ldots, n\}\) appears in the intersection \(A \cap B\).
+For a fixed element \( i \), we need to count how many times it appears in the intersection of two subsets \( A \) and \( B \) of the same size. If \( A \) and \( B \) are subsets of \(\{1, 2, \ldots, n\}\) with \( |A| = |B| = k \), then the number of such pairs \((A, B)\) where \( i \in A \cap B \) is given by choosing \( k-1 \) elements from the remaining \( n-1 \) elements to form \( A \) and \( B \). The number of ways to choose these elements is \(\binom{n-1}{k-1}^2\).
 
-Consider a fixed element \(i \in \{1, 2, \ldots, n\}\). The number of subsets \(A\) of size \(k\) that contain \(i\) is \(\binom{n-1}{k-1}\). Similarly, the number of subsets \(B\) of size \(k\) that contain \(i\) is also \(\binom{n-1}{k-1}\). Therefore, the number of pairs \((A, B)\) such that \(i \in A \cap B\) is \(\binom{n-1}{k-1}^2\).
+Thus, the total contribution of element \( i \) to \( S_n \) is:
+\[
+\sum_{k=1}^n \binom{n-1}{k-1}^2 = \sum_{j=0}^{n-1} \binom{n-1}{j}^2 = \binom{2(n-1)}{n-1}.
+\]
+This is because the sum of the squares of binomial coefficients is given by the central binomial coefficient of twice the upper index.
 
-Since there are \(n\) elements in the set, and each element contributes \(\binom{n-1}{k-1}^2\) to the sum \(S_n\), we have:
+Therefore, the total sum \( S_n \) is:
 \[
-S_n = n \sum_{k=0}^n \binom{n-1}{k-1}^2.
+S_n = n \binom{2(n-1)}{n-1}.
 \]
-However, we need to adjust the index of summation to start from \(k=1\) instead of \(k=0\) (since \(\binom{n-1}{k-1}\) is zero for \(k=0\)):
-\[
-S_n = n \sum_{k=1}^n \binom{n-1}{k-1}^2 = n \sum_{j=0}^{n-1} \binom{n-1}{j}^2 = n \binom{2(n-1)}{n-1}.
-\]
-This follows from the identity \(\sum_{j=0}^{m} \binom{m}{j}^2 = \binom{2m}{m}\).
 
-Now, we need to find \(S_{2022}\) and \(S_{2021}\):
+Now, we need to find \( S_{2022} \) and \( S_{2021} \):
 \[
-S_{2022} = 2022 \binom{4042}{2021}, \quad S_{2021} = 2021 \binom{4040}{2020}.
+S_{2022} = 2022 \binom{2022 \cdot 2021}{2021},
 \]
-We need to find the ratio \(\frac{S_{2022}}{S_{2021}}\):
 \[
-\frac{S_{2022}}{S_{2021}} = \frac{2022 \binom{4042}{2021}}{2021 \binom{4040}{2020}} = \frac{2022}{2021} \cdot \frac{\binom{4042}{2021}}{\binom{4040}{2020}} = \frac{2022}{2021} \cdot \frac{4042! / (2021! 2021!)}{4040! / (2020! 2020!)} = \frac{2022}{2021} \cdot \frac{4042 \cdot 4041}{2021} = \frac{2022 \cdot 4042 \cdot 4041}{2021^2} = \frac{2 \cdot 4042 \cdot 4041}{2021} = 2 \cdot 4042 = 8084.
+S_{2021} = 2021 \binom{2021 \cdot 2020}{2020}.
 \]
-Thus, \(\frac{S_{2022}}{S_{2021}} = \frac{8084}{1}\), and \(p = 8084\) and \(q = 1\). Therefore, \(p + q = 8085\), and the remainder when \(8085\) is divided by \(1000\) is:
+
+We need to find the ratio \( \frac{S_{2022}}{S_{2021}} \):
 \[
-\boxed{85}.
+\frac{S_{2022}}{S_{2021}} = \frac{2022 \binom{2022 \cdot 2021}{2021}}{2021 \binom{2021 \cdot 2020}{2020}} = \frac{2022}{2021} \cdot \frac{\binom{2022 \cdot 2021}{2021}}{\binom{2021 \cdot 2020}{2020}}.
 \]
+
+Using the property of binomial coefficients, we have:
+\[
+\binom{2022 \cdot 2021}{2021} = \frac{(2022 \cdot 2021)!}{2021! (2022 \cdot 2021 - 2021)!} = \frac{(2022 \cdot 2021)!}{2021! (2021 \cdot 2020)!},
+\]
+\[
+\binom{2021 \cdot 2020}{2020} = \frac{(2021 \cdot 2020)!}{2020! (2021 \cdot 2020 - 2020)!} = \frac{(2021 \cdot 2020)!}{2020! (2020 \cdot 2019)!}.
+\]
+
+Thus,
+\[
+\frac{\binom{2022 \cdot 2021}{2021}}{\binom{2021 \cdot 2020}{2020}} = \frac{(2022 \cdot 2021)! / (2021! (2021 \cdot 2020)!)}{(2021 \cdot 2020)! / (2020! (2020 \cdot 2019)!)} = \frac{(2022 \cdot 2021)!}{2021! (2021 \cdot 2020)!} \cdot \frac{2020! (2020 \cdot 2019)!}{(2021 \cdot 2020)!} = \frac{2022 \cdot 2021}{2021} = 2022.
+\]
+
+So,
+\[
+\frac{S_{2022}}{S_{2021}} = \frac{2022}{2021} \cdot 2022 = \frac{2022^2}{2021}.
+\]
+
+The fraction \(\frac{2022^2}{2021}\) is already in its simplest form because 2022 and 2021 are consecutive integers and thus coprime. Therefore, \( p = 2022^2 \) and \( q = 2021 \).
+
+Finally, we need to find the remainder when \( p + q = 2022^2 + 2021 \) is divided by 1000. First, calculate \( 2022^2 \mod 1000 \):
+\[
+2022^2 = (2000 + 22)^2 = 2000^2 + 2 \cdot 2000 \cdot 22 + 22^2 = 4000000 + 88000 + 484 = 4088484,
+\]
+\[
+4088484 \mod 1000 = 484.
+\]
+
+Then,
+\[
+2022^2 + 2021 \equiv 484 + 2021 \equiv 2505 \equiv 505 \pmod{1000}.
+\]
+
+Thus, the remainder when \( p + q \) is divided by 1000 is \(\boxed{505}\).
 
 Predicted answer: N/A
 Valid answer: 245

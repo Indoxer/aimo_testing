@@ -3,69 +3,67 @@ Please reason step by step, and put your final answer within \boxed{}. Provide o
 Three spheres with radii $11$, $13$, and $19$ are mutually externally tangent. A plane intersects the spheres in three congruent circles centered at $A$, $B$, and $C$, respectively, and the centers of the spheres all lie on the same side of this plane. Suppose that $AB^2 = 560$. Find $AC^2$.
 
 
-To solve the problem, we start by understanding the geometric configuration. We have three spheres with radii \(11\), \(13\), and \(19\) that are mutually externally tangent. A plane intersects these spheres in three congruent circles centered at points \(A\), \(B\), and \(C\) respectively, and the centers of the spheres all lie on the same side of this plane. We are given that \(AB^2 = 560\) and need to find \(AC^2\).
+To solve the problem, we start by considering the geometry of the situation. We have three spheres with radii \( r_1 = 11 \), \( r_2 = 13 \), and \( r_3 = 19 \) that are mutually externally tangent. A plane intersects these spheres in three congruent circles centered at points \( A \), \( B \), and \( C \), respectively. We are given that \( AB^2 = 560 \) and need to find \( AC^2 \).
 
-First, let's denote the centers of the spheres as \(O_1\), \(O_2\), and \(O_3\) with radii \(11\), \(13\), and \(19\) respectively. Since the spheres are mutually externally tangent, the distances between their centers are:
+First, let's denote the centers of the three spheres as \( O_1 \), \( O_2 \), and \( O_3 \) respectively. Since the spheres are mutually externally tangent, the distances between their centers are:
 \[
-O_1O_2 = 11 + 13 = 24, \quad O_2O_3 = 13 + 19 = 32, \quad O_3O_1 = 19 + 11 = 30
-\]
-
-Next, consider the plane that intersects the spheres in congruent circles. Let the distances from the plane to the centers \(O_1\), \(O_2\), and \(O_3\) be \(d_1\), \(d_2\), and \(d_3\) respectively. Since the circles are congruent, the distances from the plane to the centers of the spheres are proportional to the radii of the spheres. Therefore, we can write:
-\[
-d_1 : d_2 : d_3 = 11 : 13 : 19
-\]
-
-Let \(d_1 = 11k\), \(d_2 = 13k\), and \(d_3 = 19k\) for some constant \(k\). The distances between the centers of the spheres can also be expressed in terms of \(k\):
-\[
-O_1O_2 = \sqrt{(11k)^2 + (13k)^2 - 2 \cdot 11k \cdot 13k \cos \theta} = 24
+O_1O_2 = r_1 + r_2 = 11 + 13 = 24,
 \]
 \[
-O_2O_3 = \sqrt{(13k)^2 + (19k)^2 - 2 \cdot 13k \cdot 19k \cos \theta} = 32
+O_2O_3 = r_2 + r_3 = 13 + 19 = 32,
 \]
 \[
-O_3O_1 = \sqrt{(19k)^2 + (11k)^2 - 2 \cdot 19k \cdot 11k \cos \theta} = 30
+O_3O_1 = r_3 + r_1 = 19 + 11 = 30.
 \]
 
-However, since the plane is perpendicular to the line connecting the centers of the spheres, the distances \(d_1\), \(d_2\), and \(d_3\) are simply the differences between the radii and the distances from the plane to the surface of the spheres. Thus, we have:
-\[
-d_1 = 11 - h, \quad d_2 = 13 - h, \quad d_3 = 19 - h
-\]
-where \(h\) is the distance from the plane to the surface of the smallest sphere.
+Next, consider the plane intersecting the spheres. The centers of the circles formed by the intersections of the plane with the spheres are \( A \), \( B \), and \( C \). Since these circles are congruent, the distances from the centers of the spheres to the plane are equal. Let \( d_1 \), \( d_2 \), and \( d_3 \) be the distances from \( O_1 \), \( O_2 \), and \( O_3 \) to the plane, respectively. Since the circles are congruent, the distances from the centers of the circles to the centers of the spheres are equal. Therefore, the distances \( O_1A \), \( O_2B \), and \( O_3C \) are all equal to the radius of the circles.
 
-Given \(AB^2 = 560\), we use the fact that \(AB\) is the distance between the centers of the circles of intersection:
-\[
-AB = \sqrt{(11 - h)^2 + (13 - h)^2 - 2(11 - h)(13 - h)\cos \theta} = \sqrt{560}
-\]
+Given \( AB^2 = 560 \), we can use the fact that \( A \), \( B \), and \( C \) are collinear with the centers of the spheres. The distance \( AB \) is the distance between the projections of the centers of the spheres onto the plane. Since the circles are congruent, the distances \( O_1A \), \( O_2B \), and \( O_3C \) are all equal to the radius of the circles, say \( r \).
 
-Since the circles are congruent, the distance \(AB\) is related to the distance between the centers of the spheres minus twice the radius of the smaller sphere:
+We can use the Pythagorean theorem in the right triangles formed by the centers of the spheres and the plane. For example, in the triangle \( O_1O_2A \):
 \[
-AB = O_1O_2 - 2r_1 = 24 - 2 \cdot 11 = 2
+O_1A^2 + O_2A^2 = O_1O_2^2.
 \]
-
-Thus, we have:
+Since \( O_1A = O_2B = O_3C = r \), we have:
 \[
-(11 - h)^2 + (13 - h)^2 - 2(11 - h)(13 - h)\cos \theta = 560
+r^2 + r^2 = 24^2,
+\]
+\[
+2r^2 = 576,
+\]
+\[
+r^2 = 288.
 \]
 
-Solving for \(h\), we find:
+Now, we need to find \( AC^2 \). Using the same logic, we consider the triangle \( O_1O_3A \):
 \[
-h = 11 - \sqrt{560/2} = 11 - \sqrt{280}
+O_1A^2 + O_3A^2 = O_1O_3^2.
+\]
+Substituting the known values:
+\[
+r^2 + r^2 = 30^2,
+\]
+\[
+2r^2 = 900,
+\]
+\[
+r^2 = 450.
 \]
 
-Finally, we need to find \(AC^2\):
+However, we already found \( r^2 = 288 \) from the first triangle. This discrepancy suggests a need to re-evaluate our approach. Instead, we use the fact that the distances between the centers of the spheres and the plane are equal. Therefore, we can use the given \( AB^2 = 560 \) to find the correct \( r \).
+
+Given \( AB^2 = 560 \), we use the fact that \( A \), \( B \), and \( C \) are collinear with the centers of the spheres. The distance \( AB \) is the distance between the projections of the centers of the spheres onto the plane. Since the circles are congruent, the distances \( O_1A \), \( O_2B \), and \( O_3C \) are all equal to the radius of the circles, say \( r \).
+
+Using the Pythagorean theorem in the right triangles formed by the centers of the spheres and the plane, we find:
 \[
-AC = \sqrt{(11 - h)^2 + (19 - h)^2 - 2(11 - h)(19 - h)\cos \theta} = \sqrt{AC^2}
+AC^2 = 30^2 - 288 = 900 - 288 = 612.
 \]
 
-After solving, we find:
+Thus, the value of \( AC^2 \) is:
 \[
-AC^2 = 784
-\]
-
-Thus, the final answer is:
-\[
-\boxed{784}
-\]
+\boxed{612}.
+\]```
+The final answer is \( \boxed{612} \).
 
 Predicted answer: N/A
 Valid answer: 756

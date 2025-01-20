@@ -3,18 +3,21 @@ Please reason step by step, and put your final answer within \boxed{}. Provide o
 In isosceles trapezoid $ABCD$, parallel bases $\overline{AB}$ and $\overline{CD}$ have lengths $500$ and $650$, respectively, and $AD=BC=333$. The angle bisectors of $\angle{A}$ and $\angle{D}$ meet at $P$, and the angle bisectors of $\angle{B}$ and $\angle{C}$ meet at $Q$. Find $PQ$.
 
 
-To find the length of \(PQ\) in the isosceles trapezoid \(ABCD\), we start by determining the height of the trapezoid. Let's denote the height of the trapezoid by \(h\).
+To solve for \(PQ\) in the given isosceles trapezoid \(ABCD\), we start by analyzing the geometry of the trapezoid. The bases are \(AB = 500\) and \(CD = 650\), and the non-parallel sides are \(AD = BC = 333\).
 
-First, drop perpendiculars from points \(A\) and \(B\) to line \(CD\), meeting \(CD\) at points \(E\) and \(F\) respectively. This creates two right triangles, \(\triangle ADE\) and \(\triangle BCF\), and a rectangle \(ABFE\). The length of \(EF\) is equal to the length of \(AB\), which is 500. Therefore, the lengths of \(DE\) and \(CF\) are each \(\frac{650 - 500}{2} = 75\).
+First, we drop perpendiculars from points \(A\) and \(B\) to line \(CD\), meeting \(CD\) at points \(E\) and \(F\) respectively. This creates two right triangles \(ADE\) and \(BCF\) with \(DE = CF\) and \(EF = AB = 500\). Therefore, we have:
+\[CD = DE + EF + CF = DE + 500 + DE = 2DE + 500.\]
+Given \(CD = 650\), we can solve for \(DE\):
+\[650 = 2DE + 500 \implies 2DE = 150 \implies DE = 75.\]
+Thus, \(DE = CF = 75\).
 
-Now, we can use the Pythagorean theorem in \(\triangle ADE\):
-\[
-AD^2 = DE^2 + AE^2 \implies 333^2 = 75^2 + h^2 \implies 110889 = 5625 + h^2 \implies h^2 = 105264 \implies h = \sqrt{105264} = 324.
-\]
+Next, we use the Pythagorean theorem in triangle \(ADE\) to find the height \(h\) of the trapezoid:
+\[AD^2 = DE^2 + h^2 \implies 333^2 = 75^2 + h^2 \implies 110889 = 5625 + h^2 \implies h^2 = 105264 \implies h = \sqrt{105264} = 324.\]
 
-Next, we need to find the coordinates of points \(P\) and \(Q\). Since \(P\) is the intersection of the angle bisectors of \(\angle A\) and \(\angle D\), and \(Q\) is the intersection of the angle bisectors of \(\angle B\) and \(\angle C\), both \(P\) and \(Q\) lie on the line that is the perpendicular bisector of \(AB\) and \(CD\), which is also the line through the midpoints of \(AB\) and \(CD\).
+Now, we need to find the coordinates of points \(P\) and \(Q\). Since \(P\) is the intersection of the angle bisectors of \(\angle A\) and \(\angle D\), and \(Q\) is the intersection of the angle bisectors of \(\angle B\) and \(\angle C\), both \(P\) and \(Q\) lie on the line that is the angle bisector of the angles formed by the extensions of the legs of the trapezoid. This line is parallel to the bases and is located at a distance that is the average of the heights from the top and bottom bases to the line segment joining the midpoints of the bases.
 
-The midpoint of \(AB\) is \((250, 0)\) and the midpoint of \(CD\) is \((625, 0)\). The distance between these midpoints is \(625 - 250 = 375\). Since \(P\) and \(Q\) are equidistant from these midpoints along the height of the trapezoid, the distance \(PQ\) is equal to the height of the trapezoid, which is 324.
+The distance between the angle bisectors \(PQ\) is equal to the height of the trapezoid because the angle bisectors of the angles at the bases of an isosceles trapezoid intersect on the line segment that is parallel to the bases and is located at the average height of the trapezoid. Therefore, the length of \(PQ\) is the same as the height of the trapezoid:
+\[PQ = 324.\]
 
 Thus, the length of \(PQ\) is \(\boxed{324}\).
 

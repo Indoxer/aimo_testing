@@ -3,68 +3,160 @@ Please reason step by step, and put your final answer within \boxed{}. Provide o
 Quadratic polynomials $P(x)$ and $Q(x)$ have leading coefficients $2$ and $-2,$ respectively. The graphs of both polynomials pass through the two points $(16,54)$ and $(20,53).$ Find $P(0) + Q(0).$
 
 
-To find \( P(0) + Q(0) \), we start by expressing the quadratic polynomials \( P(x) \) and \( Q(x) \) in their general forms:
-\[ P(x) = 2x^2 + ax + b \]
-\[ Q(x) = -2x^2 + cx + d \]
+To solve for \( P(0) + Q(0) \), we start by expressing the quadratic polynomials \( P(x) \) and \( Q(x) \) in their general forms:
+\[
+P(x) = 2x^2 + ax + b
+\]
+\[
+Q(x) = -2x^2 + cx + d
+\]
 
-We know that both polynomials pass through the points \((16, 54)\) and \((20, 53)\). Therefore, we can substitute these points into the equations for \( P(x) \) and \( Q(x) \).
+We know that both polynomials pass through the points \((16, 54)\) and \((20, 53)\). This gives us four equations:
 
-For \( P(x) \):
-\[ P(16) = 2(16)^2 + 16a + b = 54 \]
-\[ 512 + 16a + b = 54 \]
-\[ 16a + b = 54 - 512 \]
-\[ 16a + b = -458 \quad \text{(1)} \]
+1. For \( P(x) \):
+\[
+2(16)^2 + a(16) + b = 54
+\]
+\[
+2(256) + 16a + b = 54
+\]
+\[
+512 + 16a + b = 54
+\]
+\[
+16a + b = 54 - 512
+\]
+\[
+16a + b = -458 \quad \text{(Equation 1)}
+\]
 
-\[ P(20) = 2(20)^2 + 20a + b = 53 \]
-\[ 800 + 20a + b = 53 \]
-\[ 20a + b = 53 - 800 \]
-\[ 20a + b = -747 \quad \text{(2)} \]
+2. For \( P(x) \):
+\[
+2(20)^2 + a(20) + b = 53
+\]
+\[
+2(400) + 20a + b = 53
+\]
+\[
+800 + 20a + b = 53
+\]
+\[
+20a + b = 53 - 800
+\]
+\[
+20a + b = -747 \quad \text{(Equation 2)}
+\]
 
-For \( Q(x) \):
-\[ Q(16) = -2(16)^2 + 16c + d = 54 \]
-\[ -512 + 16c + d = 54 \]
-\[ 16c + d = 54 + 512 \]
-\[ 16c + d = 566 \quad \text{(3)} \]
+3. For \( Q(x) \):
+\[
+-2(16)^2 + c(16) + d = 54
+\]
+\[
+-2(256) + 16c + d = 54
+\]
+\[
+-512 + 16c + d = 54
+\]
+\[
+16c + d = 54 + 512
+\]
+\[
+16c + d = 566 \quad \text{(Equation 3)}
+\]
 
-\[ Q(20) = -2(20)^2 + 20c + d = 53 \]
-\[ -800 + 20c + d = 53 \]
-\[ 20c + d = 53 + 800 \]
-\[ 20c + d = 853 \quad \text{(4)} \]
+4. For \( Q(x) \):
+\[
+-2(20)^2 + c(20) + d = 53
+\]
+\[
+-2(400) + 20c + d = 53
+\]
+\[
+-800 + 20c + d = 53
+\]
+\[
+20c + d = 53 + 800
+\]
+\[
+20c + d = 853 \quad \text{(Equation 4)}
+\]
 
-Next, we solve the system of linear equations for \( a \) and \( b \) from equations (1) and (2):
-\[ 16a + b = -458 \]
-\[ 20a + b = -747 \]
+Next, we solve the system of linear equations for \( P(x) \):
 
-Subtract equation (1) from equation (2):
-\[ (20a + b) - (16a + b) = -747 - (-458) \]
-\[ 4a = -289 \]
-\[ a = -\frac{289}{4} \]
+Subtract Equation 1 from Equation 2:
+\[
+(20a + b) - (16a + b) = -747 - (-458)
+\]
+\[
+4a = -289
+\]
+\[
+a = -\frac{289}{4}
+\]
 
-Substitute \( a = -\frac{289}{4} \) back into equation (1):
-\[ 16\left(-\frac{289}{4}\right) + b = -458 \]
-\[ -1156 + b = -458 \]
-\[ b = 698 \]
+Substitute \( a = -\frac{289}{4} \) back into Equation 1:
+\[
+16\left(-\frac{289}{4}\right) + b = -458
+\]
+\[
+-1156 + b = -458
+\]
+\[
+b = 1156 - 458
+\]
+\[
+b = 698
+\]
 
-Now, solve the system of linear equations for \( c \) and \( d \) from equations (3) and (4):
-\[ 16c + d = 566 \]
-\[ 20c + d = 853 \]
+Thus, \( P(x) = 2x^2 - \frac{289}{4}x + 698 \).
 
-Subtract equation (3) from equation (4):
-\[ (20c + d) - (16c + d) = 853 - 566 \]
-\[ 4c = 287 \]
-\[ c = \frac{287}{4} \]
+Now, solve the system of linear equations for \( Q(x) \):
 
-Substitute \( c = \frac{287}{4} \) back into equation (3):
-\[ 16\left(\frac{287}{4}\right) + d = 566 \]
-\[ 1148 + d = 566 \]
-\[ d = -582 \]
+Subtract Equation 3 from Equation 4:
+\[
+(20c + d) - (16c + d) = 853 - 566
+\]
+\[
+4c = 287
+\]
+\[
+c = \frac{287}{4}
+\]
 
-Finally, we find \( P(0) + Q(0) \):
-\[ P(0) = b = 698 \]
-\[ Q(0) = d = -582 \]
-\[ P(0) + Q(0) = 698 - 582 = 116 \]
+Substitute \( c = \frac{287}{4} \) back into Equation 3:
+\[
+16\left(\frac{287}{4}\right) + d = 566
+\]
+\[
+1148 + d = 566
+\]
+\[
+d = 566 - 1148
+\]
+\[
+d = -582
+\]
 
-Thus, the value of \( P(0) + Q(0) \) is \(\boxed{116}\).
+Thus, \( Q(x) = -2x^2 + \frac{287}{4}x - 582 \).
+
+Finally, find \( P(0) + Q(0) \):
+\[
+P(0) = 698
+\]
+\[
+Q(0) = -582
+\]
+\[
+P(0) + Q(0) = 698 - 582
+\]
+\[
+P(0) + Q(0) = 116
+\]
+
+Therefore, the final answer is:
+\[
+\boxed{116}
+\]
 
 Predicted answer: 116.0
 Valid answer: 116
