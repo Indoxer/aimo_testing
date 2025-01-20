@@ -11,7 +11,7 @@ MODEL_CONFIG = {
     "gpu_memory_utilization": 0.95,
     "enable_chunked_prefill": True,
     "max_num_seqs": 16,
-    "max_num_batched_tokens": 512,
+    "max_num_batched_tokens": 8192,
     "max_model_len": 32768,
 }
 
