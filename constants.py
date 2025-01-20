@@ -10,9 +10,9 @@ MODEL_CONFIG = {
     "dtype": "half",
     "gpu_memory_utilization": 0.95,
     "enable_chunked_prefill": True,
-    "max_num_seqs": 8,
-    "max_num_batched_tokens": 2048,
-    "max_model_len": 16384,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 512,
+    "max_model_len": 32768,
 }
 
 # Sampling parameters
@@ -21,7 +21,7 @@ SAMPLING_CONFIG = {
     "repetition_penalty": 1.05,
     "top_p": 0.95,
     "min_tokens": 32,
-    "max_tokens": 12288,
+    "max_tokens": 32768 - 1024,
     "skip_special_tokens": True,
     "n": 1,
 }
