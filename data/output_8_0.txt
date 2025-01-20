@@ -3,24 +3,644 @@ Please reason step by step, and put your final answer within \boxed{}. Provide o
 In isosceles trapezoid $ABCD$, parallel bases $\overline{AB}$ and $\overline{CD}$ have lengths $500$ and $650$, respectively, and $AD=BC=333$. The angle bisectors of $\angle{A}$ and $\angle{D}$ meet at $P$, and the angle bisectors of $\angle{B}$ and $\angle{C}$ meet at $Q$. Find $PQ$.
 
 
-To find the length of \(PQ\) in the isosceles trapezoid \(ABCD\), we start by analyzing the geometry of the trapezoid. Given that \(AB = 500\), \(CD = 650\), and \(AD = BC = 333\), we can drop perpendiculars from points \(A\) and \(B\) to line \(CD\), meeting \(CD\) at points \(E\) and \(F\) respectively. This creates two right triangles, \(\triangle ADE\) and \(\triangle BCF\), and a rectangle \(ABFE\).
+Okay, so I've got this problem about an isosceles trapezoid \(ABCD\) with bases \(AB = 500\) and \(CD = 650\), and the legs \(AD = BC = 333\). They mention points \(P\) and \(Q\), which are the intersections of the angle bisectors of angles \(A\) and \(D\), and angles \(B\) and \(C\), respectively. The goal is to find the distance between \(P\) and \(Q\).
 
-Since \(ABFE\) is a rectangle, \(EF = AB = 500\). Therefore, the segments \(DE\) and \(CF\) are equal and can be calculated as follows:
-\[
-DE = CF = \frac{CD - EF}{2} = \frac{650 - 500}{2} = 75.
-\]
-Now, we can use the Pythagorean theorem in \(\triangle ADE\) to find the height \(h\) of the trapezoid:
-\[
-AD^2 = DE^2 + h^2 \implies 333^2 = 75^2 + h^2 \implies 110889 = 5625 + h^2 \implies h^2 = 105264 \implies h = \sqrt{105264} = 324.
-\]
-Next, we need to find the coordinates of points \(P\) and \(Q\). Since \(P\) and \(Q\) are the intersection points of the angle bisectors of the angles at \(A\) and \(D\) and at \(B\) and \(C\) respectively, they lie on the line segment joining the midpoints of the bases \(AB\) and \(CD\). The length of \(PQ\) is the same as the distance between these midpoints, which is half the difference of the lengths of the bases:
-\[
-PQ = \frac{CD - AB}{2} = \frac{650 - 500}{2} = 75.
-\]
-Thus, the length of \(PQ\) is \(\boxed{333}\). However, upon re-evaluating the problem, we realize that the correct interpretation should be that \(PQ\) is actually the height of the trapezoid, which is \(324\). Therefore, the correct answer is:
-\[
-\boxed{324}.
-\]
+First off, I need to recall some properties of isosceles trapezoids. In an isosceles trapezoid, the non-parallel sides (legs) are equal in length, which they are here (\(AD = BC = 333\)). Also, the base angles are equal. So, angle \(A\) is equal to angle \(B\), and angle \(C\) is equal to angle \(D\). Wait, actually, no. Since it's isosceles, angles adjacent to each base are equal. That would mean angle \(A\) is equal to angle \(B\), but wait, hold on. No, in a trapezoid, consecutive angles between the bases are supplementary because the bases are parallel.
 
-Predicted answer: 324.0
-Valid answer: 242
+Wait, maybe I should draw the trapezoid to visualize better. Let me sketch it mentally: \(AB\) is the top base of length 500, \(CD\) is the bottom base of length 650. Sides \(AD\) and \(BC\) are the legs, each 333 units long. So, the trapezoid is symmetric along the vertical axis through the midpoints of \(AB\) and \(CD\).
+
+Given that, all the base angles at \(A\) and \(B\) are equal, and those at \(C\) and \(D\) are equal. Since the trapezoid is isosceles, the legs are congruent, and the base angles are congruent. Therefore, angle \(A\) equals angle \(B\), and angle \(C\) equals angle \(D\).
+
+But since \(AB\) and \(CD\) are parallel, consecutive angles are supplementary. So, for example, angle \(A + angle D = 180^\circ\). Similarly, angle \(B + angle C = 180^\circ\).
+
+Now, we're told that the angle bisectors of angles \(A\) and \(D\) meet at point \(P\), and those of angles \(B\) and \(C\) meet at point \(Q\). We need to find the distance between \(P\) and \(Q\).
+
+I think I should figure out where exactly \(P\) and \(Q\) are located. Since these are angle bisectors, their intersection points might lie somewhere inside the trapezoid. Maybe near the center?
+
+Perhaps I can use coordinate geometry to model this trapezoid and then find equations for the angle bisectors, compute their intersection points \(P\) and \(Q\), and then calculate the distance between them.
+
+Let's set up a coordinate system. Let me place the trapezoid such that the midpoint of \(AB\) is at the origin. Then, since \(AB = 500\), the coordinates of \(A\) and \(B\) will be \((-250, 0)\) and \((250, 0)\), respectively. Similarly, since \(CD = 650\), and it's parallel to \(AB\), its midpoint will also lie on the y-axis. But how far up? Well, the height of the trapezoid can be found using the Pythagorean theorem.
+
+The difference in the lengths of the bases is \(650 - 500 = 150\). This difference is split equally on both sides when projecting from the longer base to the shorter one. So, each side extends beyond the shorter base by \(75\) units. Therefore, if I consider the legs \(AD\) and \(BC\), each forms the hypotenuse of a right triangle with base \(75\) and height equal to the height of the trapezoid.
+
+So, the height \(h\) can be calculated as:
+\( h = \sqrt{AD^2 - 75^2} = \sqrt{333^2 - 75^2} \)
+
+Let me compute that:
+
+First, \(333^2 = 110889\), and \(75^2 = 5625\). So, subtracting gives \(110889 - 5625 = 105264\). Taking the square root of that: \(\sqrt{105264}\).
+
+Hmm, let me see if that simplifies. 105264 divided by 16 is 6579, which doesn't seem helpful. Maybe I can factor it differently. Alternatively, perhaps approximate the value? Or keep it symbolic.
+
+Wait, actually, maybe I made a mistake in the calculation. Let me check:
+
+\(333^2 = (300 + 33)^2 = 300^2 + 2*300*33 + 33^2 = 90000 + 19800 + 1089 = 90000 + 19800 = 109800 + 1089 = 110,889\). Correct.
+
+And \(75^2 = 5625\). So, yes, 110,889 - 5,625 = 105,264.
+
+Now, sqrt(105,264). Let me see:
+
+Divide by 16: 105,264 /16=6,579. Is 6,579 a perfect square? Hmm, 81 squared is 6,561, which is close. 81^2=6561, 82^2=6724. So, 6579 isn't a perfect square. Hmm, maybe I miscalculated something earlier.
+
+Wait, maybe the difference in the bases isn't 150? Wait, AB is 500, CD is 650, so the difference is indeed 150. So, each side extends beyond by 75. So, my calculations seem correct.
+
+Alternatively, perhaps instead of computing the exact height, I can assign a variable to it. Let’s denote the height as \(h\). Then,
+
+\( h = \sqrt{333^2 - 75^2} \)
+
+Which is approximately, well, 333^2 is 110,889, minus 5,625 is 105,264, as before. So sqrt(105,264) ≈ 324.44 (since 324^2 = 105,056; 325^2=105,625, so it's between 324 and 325). Let's say approximately 324.44.
+
+But maybe it's better to keep it as \( h = \sqrt{333^2 - 75^2} \). So, moving forward.
+
+So, placing the trapezoid in the coordinate system:
+
+- Point \( A \): (-250, 0)
+- Point \( B \): (250, 0)
+- Point \( C \): (325, h)
+- Point \( D \): (-325, h)
+
+Wait, hold on. If the longer base \(CD\) is 650, its midpoint is at (0, h). So, extending 325 units on either side, yes. So, points \( C \) and \( D \) are at (325, h) and (-325, h) respectively.
+
+Wait, but hang on, AB is 500, so from -250 to 250 on the x-axis, and CD is 650, so from -325 to 325 on the x-axis, with height h.
+
+Yes, that seems correct.
+
+So, now, I need to find the angle bisectors of angles \( A \), \( D \), \( B \), and \( C \). Let me first figure out the coordinates of these points.
+
+Points:
+
+- \( A = (-250, 0) \)
+- \( B = (250, 0) \)
+- \( C = (325, h) \)
+- \( D = (-325, h) \)
+
+Where \( h = \sqrt{333^2 - 75^2} ≈ 324.44 \). But let's keep it as \( h \) for exactness.
+
+Now, let's think about angle bisectors. For angle \( A \), which is at point \( (-250, 0) \). Similarly, angle \( D \) is at \( (-325, h) \). So, the bisector of angle \( A \) goes into the trapezoid, and similarly, the bisector of angle \( D \) goes into the trapezoid as well. Their intersection is point \( P \). Similarly, for angles \( B \) and \( C \), their bisectors intersect at \( Q \).
+
+To find \( PQ \), I probably need to find the coordinates of \( P \) and \( Q \) first.
+
+So, let's tackle angle bisectors one by one.
+
+Starting with angle \( A \). At point \( A = (-250, 0) \), the two sides forming the angle are \( AB \) and \( AD \). Side \( AB \) goes from \( A \) to \( B \) (from (-250,0) to (250,0)), and side \( AD \) goes from \( A \) to \( D \) (from (-250,0) to (-325, h)).
+
+Similarly, angle \( D \) is at (-325, h), formed by sides \( DC \) and \( DA \). So, sides \( DC \) go from (-325,h) to (325,h), and \( DA \) go from (-325,h) to (-250,0).
+
+Since it's an isosceles trapezoid, angles \( A \) and \( B \) are equal, and angles \( C \) and \( D \) are equal. Moreover, consecutive angles are supplementary. So, angle \( A + angle D = 180^\circ \). Therefore, each of these angles is less than 180°, specifically, angle \( A = angle B = \alpha \), angle \( D = angle C = 180^\circ - \alpha \).
+
+Since angle \( A \) and \( D \) are supplementary, their bisectors would create angles of \( \alpha/2 \) and \( (180^\circ - \alpha)/2 = 90^\circ - \alpha/2 \).
+
+Therefore, the angle bisectors from \( A \) and \( D \) will form certain angles with the sides of the trapezoid, and their intersection \( P \) will be equidistant from the sides... Hmm, maybe not necessarily, but perhaps lying along some symmetry line.
+
+Wait, given the symmetry of the trapezoid, perhaps points \( P \) and \( Q \) lie along the vertical axis of symmetry? Since the trapezoid is symmetric over the y-axis, any constructions that are symmetrical in terms of angles and sides might result in \( P \) and \( Q \) lying on this axis.
+
+If that's the case, then \( P \) and \( Q \) would both lie somewhere along the y-axis, meaning their x-coordinates are zero. Therefore, the distance \( PQ \) would just be the absolute difference of their y-coordinates.
+
+So, perhaps I can exploit this symmetry.
+
+But before jumping to conclusions, let me verify whether the angle bisectors from \( A \) and \( D \) indeed meet on the y-axis.
+
+Considering angle \( A \) is at (-250, 0). The bisector of angle \( A \) will head towards the interior of the trapezoid. Similarly, the bisector of angle \( D \) at (-325, h) will also head towards the interior.
+
+Because of the symmetry, it's plausible that these bisectors intersect on the y-axis. Similarly, the bisectors of angles \( B \) and \( C \) will meet on the y-axis as well, at point \( Q \).
+
+Therefore, assuming \( P \) and \( Q \) lie on the y-axis, their coordinates are (0, p) and (0, q) respectively, so the distance \( PQ \) is |p - q|.
+
+Alright, so with that assumption, let's try to find the coordinates of \( P \) and \( Q \).
+
+To find the equations of the angle bisectors, I need to know their slopes or some other information about their direction.
+
+First, let's handle angle bisector at \( A \).
+
+At point \( A = (-250, 0) \), the two sides are \( AB \) going to (250,0) and \( AD \) going to (-325, h). So, vectors from \( A \) are:
+
+- Along \( AB \): direction vector is (250 - (-250), 0 - 0) = (500, 0)
+- Along \( AD \): direction vector is (-325 - (-250), h - 0) = (-75, h)
+
+The angle bisector will divide the angle between these two vectors. To find the direction of the bisector, I can use the angle bisector theorem or find a vector that is a normalized sum of the unit vectors in the directions of \( AB \) and \( AD \).
+
+First, let's find the unit vectors.
+
+Vector \( AB \): (500, 0). Its magnitude is 500, so unit vector is (1, 0).
+
+Vector \( AD \): (-75, h). Its magnitude is sqrt((-75)^2 + h^2) = sqrt(5625 + h^2). But wait, \( h^2 = 333^2 - 75^2 = 110889 - 5625 = 105264 \). So, sqrt(5625 + 105264) = sqrt(110889) = 333. Wait, that makes sense because \( AD \) is a leg of the trapezoid with length 333.
+
+So, vector \( AD \) has magnitude 333, so unit vector is (-75/333, h/333) = (-25/111, h/333). Simplify fractions: 75 divides into 333 four times with remainder 333 - 75*4 = 333 - 300 = 33, so 75 and 333 have a common divisor of 3: 75 ÷ 3 = 25, 333 ÷ 3 = 111. So yeah, (-25/111, h/333).
+
+Therefore, the angle bisector direction vector is the sum of the unit vectors of \( AB \) and \( AD \):
+
+Unit vector along \( AB \): (1, 0)
+Unit vector along \( AD \): (-25/111, h/333)
+
+Sum: (1 - 25/111, 0 + h/333) = (86/111, h/333)
+
+Simplify 86/111: 86 and 111 share a common divisor of 43? 86 ÷ 43 = 2, 111 ÷ 43 ≈ 2.58... No, wait, 111 is 3*37, 86 is 2*43. No common divisors. So, 86/111 is simplest.
+
+Thus, the direction vector is (86/111, h/333). To make it simpler, multiply numerator and denominator by 333 to eliminate denominators:
+
+Multiply by 333: (86*(333/111), h). Since 333/111 = 3, so 86*3 = 258. Thus, the direction vector becomes (258, h).
+
+Therefore, the angle bisector from \( A \) has direction vector (258, h). So, the slope of this bisector is \( \frac{h}{258} \).
+
+Hence, the equation of the angle bisector from \( A \) is:
+
+\( y - 0 = \frac{h}{258}(x + 250) \)
+
+Simplifying:
+
+\( y = \frac{h}{258}x + \frac{250h}{258} \)
+
+We can reduce the constants:
+
+250/258 = 125/129, so:
+
+\( y = \frac{h}{258}x + \frac{125h}{129} \)
+
+Alright, that's the equation for the angle bisector at \( A \).
+
+Now, let's do the same for angle bisector at \( D \).
+
+Point \( D = (-325, h) \). The two sides forming angle \( D \) are \( DC \) and \( DA \).
+
+Side \( DC \) goes from (-325, h) to (325, h), direction vector (650, 0).
+Side \( DA \) goes from (-325, h) to (-250, 0), direction vector (75, -h).
+
+So, similar to above, let's find the unit vectors.
+
+Vector \( DC \): (650, 0). Length is 650, unit vector is (1, 0).
+
+Vector \( DA \): (75, -h). Its magnitude is sqrt(75^2 + h^2) = sqrt(5625 + h^2) = sqrt(5625 + 105264) = sqrt(110889) = 333, as before.
+
+So, unit vector along \( DA \) is (75/333, -h/333) = (25/111, -h/333).
+
+Therefore, the direction vector of the angle bisector is the sum of the unit vectors of \( DC \) and \( DA \):
+
+(1, 0) + (25/111, -h/333) = (1 + 25/111, 0 - h/333) = (136/111, -h/333)
+
+Simplify 136/111: 136 ÷ 37 = 3.65, not helpful. Wait, 136 and 111 share a GCD of 37? 136 ÷ 37 ≈ 3.65, nope. 136 is 17*8, 111 is 3*37. No common factors. So, 136/111 is as simple as it gets.
+
+To make it easier, multiply numerator and denominator by 333:
+
+136*(333)/111 = 136*3 = 408
+
+-h*333/333 = -h
+
+Therefore, the direction vector becomes (408, -h). So, the slope of the angle bisector is \( \frac{-h}{408} \).
+
+Hence, the equation of the angle bisector from \( D \) is:
+
+\( y - h = \frac{-h}{408}(x + 325) \)
+
+Simplify:
+
+\( y = \frac{-h}{408}x - \frac{325h}{408} + h \)
+
+Combine the constants:
+
+\( - \frac{325h}{408} + h = h - \frac{325h}{408} = h \left(1 - \frac{325}{408}\right) = h \left(\frac{408 - 325}{408}\right) = h \left(\frac{83}{408}\right) \)
+
+So, the equation becomes:
+
+\( y = \frac{-h}{408}x + \frac{83h}{408} \)
+
+Alright, now we have two equations:
+
+1. From angle bisector at \( A \):
+\( y = \frac{h}{258}x + \frac{125h}{129} \)
+
+2. From angle bisector at \( D \):
+\( y = \frac{-h}{408}x + \frac{83h}{408} \)
+
+We need to find their intersection point \( P \).
+
+Set the two equations equal to each other:
+
+\( \frac{h}{258}x + \frac{125h}{129} = \frac{-h}{408}x + \frac{83h}{408} \)
+
+We can cancel out \( h \) from all terms since \( h \neq 0 \):
+
+\( \frac{x}{258} + \frac{125}{129} = \frac{-x}{408} + \frac{83}{408} \)
+
+Multiply all terms by 408 to eliminate denominators:
+
+\( \frac{408x}{258} + \frac{125*408}{129} = -x + 83 \)
+
+Simplify each term:
+
+408 ÷ 258 = 408/(258) = 408 ÷ 258. Let's see: 258 * 1 = 258, 258*1.58≈408. Not sure, maybe simplify fraction:
+
+Divide numerator and denominator by 6: 408 ÷6=68, 258 ÷6=43. So, 68/43.
+
+Similarly, 125*408/129: 408 ÷129=3.163..., but 129 is 43*3. So, 408 ÷129= (408 ÷43)/3= 9.697/3≈3.232, but maybe express as fractions:
+
+408/129= (408 ÷43)/(129 ÷43)= 9.697/3? Wait, perhaps another approach.
+
+Wait, 125*408/129: notice that 408=129*3 + 31? Wait, 129*3=387, 408-387=21. So, 408=129*3 +21. Not particularly helpful.
+
+Alternatively, 125*408=125*(400+8)=125*400 +125*8=50,000 +1,000=51,000.
+
+Then, 51,000 ÷129. Let's divide 51,000 by 129:
+
+129*395=129*(400 -5)=129*400 -129*5=51,600 -645=50,955.
+
+Subtract: 51,000 -50,955=45. So, 51,000 ÷129=395 +45/129=395 +15/43≈395.348.
+
+But perhaps leave it as fractions.
+
+Wait, 125*408/129= (125/129)*408= (125/129)*408.
+
+Wait, 408 divided by 129 is 3.163... Hmm, not helpful.
+
+Maybe it's better to keep it as is for now.
+
+So, going back to the equation:
+
+\( \frac{68}{43}x + \frac{125*408}{129} = -x +83 \)
+
+Wait, let me re-express the first term correctly. Earlier, 408x/258 simplified to 68x/43, which is correct because 408 ÷6=68, 258 ÷6=43.
+
+Similarly, 125*408/129: 408 ÷129= 3.163, but let me note that 129=43*3, so 408=43*9.452? Wait, 43*9=387, 43*9.452≈408. Wait, no, 43*9=387, 408-387=21, so 408=43*9 +21. Which doesn't help much.
+
+Alternatively, write 125*408/129 as (125*408)/(129). Let me see if 129 divides into 408:
+
+408 ÷129=3.163, as before, so 125*3.163≈125*3 +125*0.163≈375 +20.375≈395.375.
+
+But again, not very helpful.
+
+Wait, perhaps instead of multiplying through by 408, I could have simplified earlier.
+
+Original equation after cancelling h:
+
+\( \frac{x}{258} + \frac{125}{129} = \frac{-x}{408} + \frac{83}{408} \)
+
+Multiply both sides by 408*129 to eliminate denominators. Let's see:
+
+Denominators are 258, 129, 408, and 408.
+
+Note that 258=43*6, 129=43*3, 408=43*9.452? Wait, 408 ÷43=9.488, not integer. Wait, 43*9=387, 43*10=430, so no, 408 isn't divisible by 43.
+
+Wait, maybe prime factors:
+
+258=2*3*43
+
+129=3*43
+
+408=16*25.5=16*25 +16*0.5=400 +8=408. Hmm, 408=16*25.5, but 25.5 isn't integer. Alternatively, 408= 8*51=8*3*17. So, 408=2^3 *3*17.
+
+So, LCM of denominators 258,129,408:
+
+Prime factors:
+
+258: 2, 3, 43
+
+129: 3, 43
+
+408: 2^3, 3, 17
+
+So, LCM needs:
+
+2^3, 3, 43, 17.
+
+Thus, LCM=8*3*43*17.
+
+Compute that:
+
+8*3=24
+
+24*43=1032
+
+1032*17: 1000*17=17,000; 32*17=544; total=17,544.
+
+So, LCM=17,544.
+
+Multiply both sides by 17,544:
+
+Left side: 17,544*(x/258 + 125/129)
+
+Right side: 17,544*(-x/408 +83/408)
+
+Compute each term:
+
+Left side:
+
+17,544*(x/258) = (17,544/258)x = Let's compute 17,544 ÷258:
+
+258*60=15,480
+
+17,544 -15,480=2,064
+
+258*8=2,064
+
+Thus, 60+8=68. So, 17,544/258=68. Hence, 68x.
+
+17,544*(125/129)= (17,544/129)*125
+
+17,544 ÷129: 129*136=17,544 (since 129*100=12,900; 129*36=4,644; 12,900+4,644=17,544). So, 17,544/129=136. Therefore, 136*125=17,000.
+
+So, left side becomes 68x +17,000.
+
+Right side:
+
+17,544*(-x/408 +83/408)= (-17,544/408)x + (17,544/408)*83
+
+Compute 17,544 ÷408:
+
+408*40=16,320
+
+17,544 -16,320=1,224
+
+408*3=1,224
+
+So, 40+3=43. Thus, 17,544/408=43.
+
+Hence, first term: -43x
+
+Second term: 43*83= Let's compute 43*80=3,440 and 43*3=129, so total=3,440+129=3,569.
+
+Therefore, right side becomes -43x +3,569.
+
+Putting it all together:
+
+Left side: 68x +17,000
+
+Right side: -43x +3,569
+
+Bring variables to left and constants to right:
+
+68x +43x = 3,569 -17,000
+
+111x = -13,431
+
+x = -13,431 /111
+
+Simplify:
+
+Divide numerator and denominator by 3:
+
+-13,431 ÷3= -4,477
+
+111 ÷3=37
+
+So, x= -4,477 /37
+
+Compute 4,477 ÷37:
+
+37*120=4,440
+
+4,477 -4,440=37
+
+So, 37*121=4,477.
+
+Thus, x= -121.
+
+Therefore, x-coordinate of P is -121.
+
+Plugging back into one of the equations to find y-coordinate. Let's use the equation from angle bisector at \( A \):
+
+\( y = \frac{h}{258}x + \frac{125h}{129} \)
+
+Substitute x=-121:
+
+\( y = \frac{h}{258}*(-121) + \frac{125h}{129} \)
+
+Simplify:
+
+First term: -121h/258
+
+Second term: 125h/129 = 250h/258
+
+So, combining:
+
+-121h/258 +250h/258 = (250h -121h)/258=129h/258= (129/258)h= (1/2)h
+
+Therefore, y= h/2.
+
+So, point \( P \) is at (-121, h/2).
+
+Cool, that wasn't too bad.
+
+Now, let's find point \( Q \), the intersection of angle bisectors from \( B \) and \( C \). Given the symmetry, I expect \( Q \) to be at (121, h/2). But let me verify.
+
+Proceeding similarly, let's find the equations of the angle bisectors from \( B \) and \( C \) and find their intersection.
+
+Starting with angle bisector at \( B \).
+
+Point \( B = (250, 0) \). The sides meeting at \( B \) are \( AB \) and \( BC \).
+
+Side \( AB \) goes from (250,0) to (-250,0), direction vector (-500,0). Unit vector is (-1, 0).
+
+Side \( BC \) goes from (250,0) to (325, h), direction vector (75, h). Magnitude is sqrt(75^2 + h^2)=333, as before. Unit vector is (75/333, h/333)= (25/111, h/333).
+
+Therefore, the direction vector of the angle bisector is the sum of the unit vectors of \( AB \) and \( BC \):
+
+(-1, 0) + (25/111, h/333)= (-1 +25/111, 0 + h/333)= (-86/111, h/333)
+
+Simplify -86/111: It reduces to -2/3 because 86=2*43, 111=3*37. No common factors, so stays as -86/111.
+
+Alternatively, multiply numerator and denominator by 333 to get the direction vector:
+
+(-86/111, h/333) => Multiply by 333: (-86*3, h)= (-258, h)
+
+So, the slope is h / (-258) = -h/258.
+
+Thus, equation of the angle bisector from \( B \):
+
+Passing through (250,0) with slope -h/258:
+
+\( y -0 = (-h/258)(x -250) \)
+
+Simplify:
+
+\( y = (-h/258)x + (250h)/258 \)
+
+Simplify constants:
+
+250/258 = 125/129
+
+Thus, equation is:
+
+\( y = (-h/258)x + (125h)/129 \)
+
+Now, angle bisector from \( C \).
+
+Point \( C = (325, h) \). The sides meeting at \( C \) are \( BC \) and \( CD \).
+
+Side \( BC \) goes from (325, h) to (250,0), direction vector (-75, -h). Unit vector is (-75/333, -h/333)= (-25/111, -h/333).
+
+Side \( CD \) goes from (325, h) to (-325, h), direction vector (-650,0). Unit vector is (-1, 0).
+
+Therefore, the direction vector of the angle bisector is the sum of the unit vectors of \( BC \) and \( CD \):
+
+(-25/111, -h/333) + (-1, 0)= (-25/111 -1, -h/333 +0)= (-136/111, -h/333)
+
+Convert to simpler terms:
+
+-136/111 is as simplified as it gets.
+
+Alternatively, multiply numerator and denominator by 333:
+
+(-136/111, -h/333) => (-136*3, -h)= (-408, -h)
+
+So, the direction vector is (-408, -h). Therefore, the slope is (-h)/(-408)= h/408.
+
+Hence, equation of the angle bisector from \( C \):
+
+Passing through (325, h) with slope h/408:
+
+\( y - h = (h/408)(x -325) \)
+
+Simplify:
+
+\( y = (h/408)x - (325h)/408 + h \)
+
+Combine constants:
+
+-325h/408 + h = h - 325h/408 = h(1 - 325/408) = h*(83/408)
+
+Thus, equation is:
+
+\( y = (h/408)x + (83h)/408 \)
+
+Alright, now we have equations for both angle bisectors from \( B \) and \( C \):
+
+1. From \( B \): \( y = (-h/258)x + (125h)/129 \)
+2. From \( C \): \( y = (h/408)x + (83h)/408 \)
+
+Find their intersection \( Q \).
+
+Set the two equations equal:
+
+\( (-h/258)x + (125h)/129 = (h/408)x + (83h)/408 \)
+
+Cancel \( h \):
+
+\( (-1/258)x + 125/129 = (1/408)x + 83/408 \)
+
+Multiply both sides by 408*129 to eliminate denominators:
+
+LCM of denominators 258,129,408 is 17,544 as before.
+
+Multiply both sides by 17,544:
+
+Left side: 17,544*(-1/258 x + 125/129 )
+
+Right side: 17,544*(1/408 x +83/408 )
+
+Compute left side:
+
+17,544*(-1/258 x) = -17,544/258 x = -68x
+
+17,544*(125/129 )= (17,544/129 )*125=136*125=17,000
+
+Right side:
+
+17,544*(1/408 x)= (17,544/408 )x=43x
+
+17,544*(83/408 )= (17,544/408 )*83=43*83=3,569
+
+So, the equation becomes:
+
+-68x +17,000 =43x +3,569
+
+Bring variables to left and constants to right:
+
+-68x -43x = 3,569 -17,000
+
+-111x = -13,431
+
+Multiply both sides by -1:
+
+111x =13,431
+
+x=13,431 /111
+
+Simplify:
+
+Divide numerator and denominator by 3:
+
+13,431 ÷3=4,477
+
+111 ÷3=37
+
+So, x=4,477 /37
+
+Compute 4,477 ÷37:
+
+37*120=4,440
+
+4,477 -4,440=37
+
+So, 37*121=4,477.
+
+Thus, x=121.
+
+Plug back into one of the equations to find y-coordinate. Let's use equation from \( B \):
+
+\( y = (-h/258)x + (125h)/129 \)
+
+Substitute x=121:
+
+\( y = (-h/258)*121 + (125h)/129 \)
+
+Simplify:
+
+First term: -121h /258
+
+Second term:125h /129 =250h /258
+
+Thus, combine:
+
+-121h/258 +250h/258=(250h -121h)/258=129h/258=h/2
+
+Hence, y=h/2.
+
+Therefore, point \( Q \) is at (121, h/2).
+
+Perfect, as expected due to symmetry.
+
+So, points \( P \) and \( Q \) are at (-121, h/2) and (121, h/2) respectively.
+
+Thus, the distance \( PQ \) is simply the distance between (-121, h/2) and (121, h/2). Since the y-coordinates are the same, it's just the difference in x-coordinates.
+
+Distance \( PQ = |121 - (-121)| = |242| =242 \).
+
+Therefore, the distance between \( P \) and \( Q \) is 242.
+
+**Final Answer**
+\boxed{242}
+</think>
+
+Given an isosceles trapezoid \(ABCD\) with parallel bases \(AB = 500\) and \(CD = 650\), and legs \(AD = BC = 333\), we need to find the distance between points \(P\) and \(Q\), where \(P\) is the intersection of the angle bisectors of \(\angle A\) and \(\angle D\), and \(Q\) is the intersection of the angle bisectors of \(\angle B\) and \(\angle C\).
+
+1. **Coordinate System Setup**:
+   - Place the trapezoid in a coordinate system with the midpoint of \(AB\) at the origin.
+   - Points: \(A = (-250, 0)\), \(B = (250, 0)\), \(C = (325, h)\), \(D = (-325, h)\).
+   - Height \(h\) of the trapezoid is calculated as \(h = \sqrt{333^2 - 75^2} = \sqrt{105264}\).
+
+2. **Equations of Angle Bisectors**:
+   - **Angle Bisector at \(A\)**:
+     - Direction vector: \((258, h)\).
+     - Equation: \(y = \frac{h}{258}x + \frac{125h}{129}\).
+   - **Angle Bisector at \(D\)**:
+     - Direction vector: \((408, -h)\).
+     - Equation: \(y = \frac{-h}{408}x + \frac{83h}{408}\).
+   - **Intersection \(P\)**:
+     - Solving the equations, \(P\) is found at \((-121, \frac{h}{2})\).
+
+   - **Angle Bisector at \(B\)**:
+     - Direction vector: \((-258, -h)\).
+     - Equation: \(y = \frac{-h}{258}x + \frac{125h}{129}\).
+   - **Angle Bisector at \(C\)**:
+     - Direction vector: \((-408, -h)\).
+     - Equation: \(y = \frac{h}{408}x + \frac{83h}{408}\).
+   - **Intersection \(Q\)**:
+     - Solving the equations, \(Q\) is found at \((121, \frac{h}{2})\).
+
+3. **Distance Calculation**:
+   - Points \(P\) and \(Q\) are at \((-121, \frac{h}{2})\) and \((121, \frac{h}{2})\) respectively.
+   - Distance \(PQ\) is the horizontal distance between these points: \(|121 - (-121)| = 242\).
+
+Thus, the distance between \(P\) and \(Q\) is \(\boxed{242}\).
+
+Predicted answer: 242.0
+Valid answer: 242.0

@@ -3,115 +3,427 @@ Please reason step by step, and put your final answer within \boxed{}. Provide o
 Let $w = \dfrac{\sqrt{3} + i}{2}$ and $z = \dfrac{-1 + i\sqrt{3}}{2},$ where $i = \sqrt{-1}.$ Find the number of ordered pairs $(r,s)$ of positive integers not exceeding $100$ that satisfy the equation $i \cdot w^r = z^s.$
 
 
-To solve the given problem, we start by expressing the complex numbers \( w \) and \( z \) in polar form. 
+Alright, so I have this problem here. Let me try to understand it step by step.
 
-First, consider \( w = \dfrac{\sqrt{3} + i}{2} \). We can rewrite this as:
-\[
-w = \cos\left(\frac{\pi}{6}\right) + i\sin\left(\frac{\pi}{6}\right)
-\]
-This is because:
-\[
-\cos\left(\frac{\pi}{6}\right) = \frac{\sqrt{3}}{2} \quad \text{and} \quad \sin\left(\frac{\pi}{6}\right) = \frac{1}{2}
-\]
+We are given two complex numbers:
+- \( w = \dfrac{\sqrt{3} + i}{2} \)
+- \( z = \dfrac{-1 + i\sqrt{3}}{2} \)
 
-Next, consider \( z = \dfrac{-1 + i\sqrt{3}}{2} \). We can rewrite this as:
-\[
-z = \cos\left(\frac{2\pi}{3}\right) + i\sin\left(\frac{2\pi}{3}\right)
-\]
-This is because:
-\[
-\cos\left(\frac{2\pi}{3}\right) = -\frac{1}{2} \quad \text{and} \quad \sin\left(\frac{2\pi}{3}\right) = \frac{\sqrt{3}}{2}
-\]
+And we need to find the number of ordered pairs \( (r, s) \) of positive integers not exceeding 100 that satisfy the equation:
+\[ i \cdot w^r = z^s \]
 
-Given the equation \( i \cdot w^r = z^s \), we substitute the polar forms of \( w \) and \( z \):
-\[
-i \left( \cos\left(\frac{\pi}{6}\right) + i\sin\left(\frac{\pi}{6}\right) \right)^r = \left( \cos\left(\frac{2\pi}{3}\right) + i\sin\left(\frac{2\pi}{3}\right) \right)^s
-\]
+First off, both \( w \) and \( z \) look like complex numbers in the form \( a + ib \). Maybe they can be expressed in polar form? That might make exponentiation easier because when you raise a complex number to a power, you can use De Moivre's theorem.
 
-Using Euler's formula, \( e^{i\theta} = \cos\theta + i\sin\theta \), we rewrite:
-\[
-i \cdot e^{i\frac{\pi}{6}r} = e^{i\frac{2\pi}{3}s}
-\]
+Let me recall that any complex number \( a + ib \) can be written in polar form as \( r(\cos \theta + i \sin \theta) \), where \( r \) is the modulus and \( \theta \) is the argument.
 
-We know that \( i = e^{i\frac{\pi}{2}} \), so the equation becomes:
-\[
-e^{i\frac{\pi}{2}} \cdot e^{i\frac{\pi}{6}r} = e^{i\frac{2\pi}{3}s}
-\]
+So, let me compute the modulus and argument for both \( w \) and \( z \).
 
-Combining the exponents on the left-hand side:
-\[
-e^{i\left(\frac{\pi}{2} + \frac{\pi}{6}r\right)} = e^{i\frac{2\pi}{3}s}
-\]
+Starting with \( w \):
+\( w = \dfrac{\sqrt{3}}{2} + i \cdot \dfrac{1}{2} \)
+Modulus \( |w| \) is \( \sqrt{ (\sqrt{3}/2)^2 + (1/2)^2 } = \sqrt{ (3/4) + (1/4) } = \sqrt{1} = 1 \).
+So, it's on the unit circle. Nice.
 
-Since the exponents must be equal modulo \( 2\pi \), we have:
-\[
-\frac{\pi}{2} + \frac{\pi}{6}r = \frac{2\pi}{3}s + 2k\pi \quad \text{for some integer } k
-\]
+Argument \( \theta_w \): Since the real part is \( \sqrt{3}/2 \) and the imaginary part is \( 1/2 \), this corresponds to 30 degrees or \( \pi/6 \) radians in the first quadrant. So, \( \theta_w = \pi/6 \).
 
-Dividing through by \( \pi \):
-\[
-\frac{1}{2} + \frac{1}{6}r = \frac{2}{3}s + 2k
-\]
+Therefore, \( w = \cos(\pi/6) + i \sin(\pi/6) \). So, using Euler's formula, \( w = e^{i\pi/6} \).
 
-Multiplying through by 6 to clear the fractions:
-\[
-3 + r = 4s + 12k
-\]
+Now, moving on to \( z \):
+\( z = \dfrac{-1}{2} + i \cdot \dfrac{\sqrt{3}}{2} \)
+Compute modulus \( |z| \): \( \sqrt{ (-1/2)^2 + (\sqrt{3}/2)^2 } = \sqrt{ 1/4 + 3/4 } = \sqrt{1} = 1 \).
+Again, it's on the unit circle.
 
-Rearranging terms:
-\[
-r - 4s = 12k - 3
-\]
+Argument \( \theta_z \): Real part is negative, imaginary part is positive, so it's in the second quadrant. The reference angle would be \( \tan^{-1}( (\sqrt{3}/2) / (1/2) ) = \tan^{-1}( \sqrt{3} ) = \pi/3 \). Therefore, since it's in the second quadrant, \( \theta_z = \pi - \pi/3 = 2\pi/3 \).
 
-We need to find positive integer solutions \( (r, s) \) such that \( 1 \leq r, s \leq 100 \). Let’s solve for \( r \):
-\[
-r = 4s + 12k - 3
-\]
+Thus, \( z = \cos(2\pi/3) + i \sin(2\pi/3) = e^{i2\pi/3} \).
 
-For \( r \) to be a positive integer, \( 4s + 12k - 3 \) must be positive:
-\[
-4s + 12k - 3 > 0 \implies 4s + 12k > 3 \implies s + 3k > \frac{3}{4}
-\]
+Great, now both \( w \) and \( z \) are expressed in exponential form. This should make taking powers straightforward.
 
-Since \( s \) and \( k \) are integers, \( s + 3k \geq 1 \). We also need \( r \leq 100 \):
-\[
-4s + 12k - 3 \leq 100 \implies 4s + 12k \leq 103 \implies s + 3k \leq \frac{103}{4} \implies s + 3k \leq 25.75
-\]
+So, let's rewrite the original equation:
+\[ i \cdot w^r = z^s \]
+Substitute \( w = e^{i\pi/6} \) and \( z = e^{i2\pi/3} \):
+Left-hand side (LHS): \( i \cdot (e^{i\pi/6})^r = i \cdot e^{i r \pi/6} \)
+Right-hand side (RHS): \( (e^{i2\pi/3})^s = e^{i 2\pi s /3} \)
 
-Thus, \( s + 3k \leq 25 \). We now count the number of pairs \( (s, k) \) that satisfy these conditions.
+But wait, what is \( i \) in exponential form? \( i \) is \( e^{i\pi/2} \) because \( e^{i\pi/2} = \cos(\pi/2) + i \sin(\pi/2) = 0 + i \cdot 1 = i \).
 
-For each \( s \) from 1 to 25, we find the range of \( k \):
-\[
-s + 3k \geq 1 \implies 3k \geq 1 - s \implies k \geq \frac{1 - s}{3}
-\]
-\[
-s + 3k \leq 25 \implies 3k \leq 25 - s \implies k \leq \frac{25 - s}{3}
-\]
+So, LHS becomes:
+\( e^{i\pi/2} \cdot e^{i r \pi/6} = e^{i(\pi/2 + r \pi/6)} \)
 
-The number of integer values for \( k \) is:
-\[
-\left\lfloor \frac{25 - s}{3} \right\rfloor - \left\lceil \frac{1 - s}{3} \right\rceil + 1
-\]
+Therefore, our equation simplifies to:
+\[ e^{i(\pi/2 + r \pi/6)} = e^{i 2\pi s /3} \]
 
-Summing this over all \( s \) from 1 to 25:
-\[
-\sum_{s=1}^{25} \left( \left\lfloor \frac{25 - s}{3} \right\rfloor - \left\lceil \frac{1 - s}{3} \right\rceil + 1 \right)
-\]
+Since two complex numbers in exponential form are equal if their exponents differ by an integer multiple of \( 2\pi \). That is:
+\[ \pi/2 + r \pi/6 = 2\pi s /3 + 2\pi k \]
+for some integer \( k \).
 
-Calculating each term:
-- For \( s = 1 \): \( \left\lfloor \frac{24}{3} \right\rfloor - \left\lceil \frac{0}{3} \right\rceil + 1 = 8 - 0 + 1 = 9 \)
-- For \( s = 2 \): \( \left\lfloor \frac{23}{3} \right\rfloor - \left\lceil \frac{-1}{3} \right\rceil + 1 = 7 - 0 + 1 = 8 \)
-- For \( s = 3 \): \( \left\lfloor \frac{22}{3} \right\rfloor - \left\lceil \frac{-2}{3} \right\rceil + 1 = 7 - 1 + 1 = 7 \)
-- For \( s = 4 \): \( \left\lfloor \frac{21}{3} \right\rfloor - \left\lceil \frac{-3}{3} \right\rceil + 1 = 7 - 1 + 1 = 7 \)
-- For \( s = 5 \): \( \left\lfloor \frac{20}{3} \right\rfloor - \left\lceil \frac{-4}{3} \right\rceil + 1 = 6 - 2 + 1 = 5 \)
-- For \( s = 6 \): \( \left\lfloor \frac{19}{3} \right\rfloor - \left\lceil \frac{-5}{3} \right\rceil + 1 = 6 - 2 + 1 = 5 \)
-- For \( s = 7 \): \( \left\lfloor \frac{18}{3} \right\rfloor - \left\lceil \frac{-6}{3} \right\rceil + 1 = 6 - 2 + 1 = 5 \)
-- For \( s = 8 \): \( \left\lfloor \frac{17}{3} \right\rfloor - \left\lceil \frac{-7}{3} \right\rceil + 1 = 5 - 3 + 1 = 3 \)
-- For \( s = 9 \): \( \left\lfloor \frac{16}{3} \right\rfloor - \left\lceil \frac{-8}{3} \right\rceil + 1 = 5 - 3 + 1 = 3 \)
-- For \( s = 10 \): \( \left\lfloor \frac{15}{3} \right\rfloor - \left\lceil \frac{-9}{3} \right\rceil + 1 = 5 - 3 + 1 = 3 \)
-- For \( s = 11 \): \( \left\lfloor \frac{14}{3} \right\rfloor - \left\lceil \frac{-10}{3} \right\rceil + 1 = 4 - 4 + 1 = 1 \)
-- For \( s = 12 \): \( \left\lfloor \frac{13}{3} \right\rfloor - \left\lceil \frac{-11}{3} \right\rceil + 1 = 4 - 4 + 1 = 1 \)
-- For \( s = 13 \): \( \left\lfloor \frac{
+Let me write that equation down:
+\[ \frac{\pi}{2} + \frac{r \pi}{6} = \frac{2\pi s}{3} + 2\pi k \]
 
-Predicted answer: N/A
-Valid answer: 834
+We can divide both sides by \( \pi \) to simplify:
+\[ \frac{1}{2} + \frac{r}{6} = \frac{2s}{3} + 2k \]
+
+Multiply all terms by 6 to eliminate denominators:
+\[ 3 + r = 4s + 12k \]
+
+Let me rearrange this equation:
+\[ r = 4s + 12k - 3 \]
+
+So, we have \( r \) expressed in terms of \( s \) and \( k \). Remember that both \( r \) and \( s \) are positive integers not exceeding 100. So, \( 1 \leq r \leq 100 \) and \( 1 \leq s \leq 100 \).
+
+Our task is to find all pairs \( (r, s) \) such that \( r = 4s + 12k - 3 \) with \( r \) and \( s \) in the specified range.
+
+But before that, let's note that \( k \) must be chosen such that \( r \) remains positive. Similarly, \( s \) must remain positive.
+
+Let me think about possible values of \( k \). Let's analyze the equation:
+
+\( r = 4s + 12k - 3 \)
+
+Given that \( r \geq 1 \), so:
+\[ 4s + 12k - 3 \geq 1 \]
+\[ 4s + 12k \geq 4 \]
+Which is always true for positive integers \( s, k \), since even if \( s=1 \) and \( k=0 \), \( 4 + 0 = 4 \geq 4 \). Wait, but if \( k=0 \), then \( r = 4s - 3 \). If \( s=1 \), \( r = 1 \). That seems okay.
+
+However, \( k \) can't be too large, otherwise \( r \) will exceed 100.
+
+Similarly, \( s \) has its own constraints. Since \( s \leq 100 \), and \( r \leq 100 \), let's see how \( k \) affects this.
+
+Let me write the inequalities:
+
+For \( r \leq 100 \):
+\[ 4s + 12k - 3 \leq 100 \]
+\[ 4s + 12k \leq 103 \]
+
+Also, since \( s \geq 1 \):
+\[ 4(1) + 12k - 3 \leq 100 \]
+\[ 1 + 12k \leq 100 \]
+\[ 12k \leq 99 \]
+\[ k \leq 8.25 \]
+
+Since \( k \) must be an integer, the maximum \( k \) can be is 8.
+
+But let's check whether \( k=8 \) gives valid \( r \) and \( s \):
+
+If \( k=8 \):
+\( r = 4s + 12*8 -3 = 4s + 96 -3 = 4s + 93 \)
+We need \( r \leq 100 \):
+\( 4s + 93 \leq 100 \)
+\( 4s \leq 7 \)
+\( s \leq 7/4 \)
+Since \( s \) is at least 1, the only possible value is \( s=1 \). Then \( r = 4*1 +93=97 \). So, pair (97,1) is valid for \( k=8 \).
+
+Similarly, \( k=7 \):
+\( r = 4s + 84 -3 = 4s + 81 \)
+\( r \leq 100 \Rightarrow 4s +81 \leq100 \Rightarrow 4s \leq19 \Rightarrow s \leq4.75 \). So, \( s=1,2,3,4 \)
+Calculating corresponding \( r \):
+- s=1: r=85
+- s=2: r=89
+- s=3: r=93
+- s=4: r=97
+
+All these r's are ≤100, so those are acceptable. Each s from 1 to 4 gives a valid r.
+
+Similarly, for each k from 0 up to 8, we can find possible s and r.
+
+Wait, but earlier when k=0, we saw that s=1 gives r=1, which is valid. So, let's go step by step.
+
+I think the approach is to iterate over possible k values from 0 upwards until the minimal r exceeds 100, then stop.
+
+But to formalize it, let's consider k starting from 0.
+
+Case 1: k=0
+Equation: \( r = 4s -3 \)
+Constraints:
+- \( r \geq 1 \Rightarrow 4s -3 \geq1 \Rightarrow 4s \geq4 \Rightarrow s \geq1 \)
+- \( r \leq100 \Rightarrow 4s -3 \leq100 \Rightarrow 4s \leq103 \Rightarrow s \leq25.75 \)
+Thus, s can be from 1 to25, inclusive. So, 25 solutions for k=0.
+
+Case 2: k=1
+Equation: \( r =4s +12 -3=4s+9 \)
+Constraints:
+- \( 4s +9 \leq100 \Rightarrow4s \leq91 \Rightarrow s \leq22.75 \Rightarrow s=1 to22 \)
+Total solutions:22
+
+Case3: k=2
+\( r=4s +24 -3=4s+21 \)
+\(4s +21 \leq100 \Rightarrow4s \leq79 \Rightarrow s \leq19.75 \Rightarrow s=1 to19 \)
+Solutions:19
+
+Case4: k=3
+\( r=4s +36 -3=4s+33 \)
+\(4s +33 \leq100 \Rightarrow4s \leq67 \Rightarrow s \leq16.75 \Rightarrow s=1 to16 \)
+Solutions:16
+
+Case5:k=4
+\( r=4s +48 -3=4s+45 \)
+\(4s +45 \leq100 \Rightarrow4s \leq55 \Rightarrow s \leq13.75 \Rightarrow s=1 to13 \)
+Solutions:13
+
+Case6:k=5
+\( r=4s +60 -3=4s+57 \)
+\(4s +57 \leq100 \Rightarrow4s \leq43 \Rightarrow s \leq10.75 \Rightarrow s=1 to10 \)
+Solutions:10
+
+Case7:k=6
+\( r=4s +72 -3=4s+69 \)
+\(4s +69 \leq100 \Rightarrow4s \leq31 \Rightarrow s \leq7.75 \Rightarrow s=1 to7 \)
+Solutions:7
+
+Case8:k=7
+\( r=4s +84 -3=4s+81 \)
+\(4s +81 \leq100 \Rightarrow4s \leq19 \Rightarrow s \leq4.75 \Rightarrow s=1 to4 \)
+Solutions:4
+
+Case9:k=8
+\( r=4s +96 -3=4s+93 \)
+\(4s +93 \leq100 \Rightarrow4s \leq7 \Rightarrow s \leq1.75 \Rightarrow s=1 \)
+Solution:1
+
+Case10:k=9
+\( r=4s +108 -3=4s+105 \)
+But \(4s +105 \leq100\) would require \(4s \leq-5\), which is impossible. Thus, no solutions for k=9 onwards.
+
+So, summarizing:
+
+k : Number of solutions
+0 :25
+1 :22
+2 :19
+3 :16
+4 :13
+5 :10
+6 :7
+7 :4
+8 :1
+Total: ?
+
+Let me add them up step by step.
+
+Start adding from k=0 to k=8:
+
+25 (k=0)
+25 +22=47 (k=0,1)
+47 +19=66 (k=0,1,2)
+66 +16=82 (k=0,1,2,3)
+82 +13=95 (k=0,1,2,3,4)
+95 +10=105 (k=0,...,5)
+105 +7=112 (k=0,...,6)
+112 +4=116 (k=0,...,7)
+116 +1=117 (k=0,...,8)
+
+Wait, hold on, that adds up to 117. But let me verify:
+
+From k=0:25
+k=1:22 → total 47
+k=2:19 → 66
+k=3:16 →82
+k=4:13→95
+k=5:10→105
+k=6:7→112
+k=7:4→116
+k=8:1→117
+
+Yes, total 117 ordered pairs.
+
+But hold on! I have to ensure that for each k, the resulting r and s are positive integers not exceeding 100, which we considered when setting the bounds. So, each solution counted is valid.
+
+But just to cross-validate, perhaps another approach could be taken?
+
+Alternatively, looking back at the original equation:
+\( i \cdot w^r = z^s \)
+
+Expressed in exponential form, as before, leads us to the condition:
+\( e^{i(\pi/2 + r \pi/6)} = e^{i 2\pi s /3} \)
+
+Which implies that the exponents differ by an integer multiple of \( 2\pi \). So,
+
+\( \pi/2 + r \pi/6 = 2\pi s /3 + 2\pi k \)
+
+Divide both sides by \( \pi \):
+
+\( 1/2 + r/6 = 2s/3 + 2k \)
+
+Multiply by 6:
+
+\( 3 + r = 4s + 12k \)
+
+So, same equation as before.
+
+So, the equation is linear in r and s, with coefficients depending on k. So, solving for r:
+
+\( r = 4s + 12k -3 \)
+
+This equation shows that for each integer k, s must be such that r remains between 1 and 100.
+
+Hence, for each k, s can range from 1 up to floor((100 + 3 -12k)/4). But perhaps more precise is:
+
+For each k, solve for s:
+
+From \( r =4s +12k -3 \leq100 \Rightarrow4s \leq103 -12k \Rightarrow s \leq(103 -12k)/4 \)
+
+And \( r \geq1 \Rightarrow4s +12k -3 \geq1 \Rightarrow4s \geq4 -12k \Rightarrow s \geq(4 -12k)/4 =1 -3k \)
+
+But since s must be at least 1, the lower bound is s≥ max(1, (1 -3k)).
+
+But for k ≥0, (1 -3k)≤1, so s≥1.
+
+Therefore, for each k, s ranges from1 to floor( (103 -12k)/4 )
+
+But also, s must be positive integers, so floor((103 -12k)/4).
+
+But since we already found for each k the number of s is as above, the total comes to 117.
+
+Wait, but 25 +22 +19 +16 +13 +10 +7 +4 +1 =117.
+
+But let me check for k=0: s=1 to25: 25 terms. Correct.
+
+k=1:s=1 to22:22
+
+k=2:s=1 to19:19
+
+k=3:s=1 to16:16
+
+k=4:s=1 to13:13
+
+k=5:s=1 to10:10
+
+k=6:s=1 to7:7
+
+k=7:s=1 to4:4
+
+k=8:s=1:1
+
+Total:25+22=47; 47+19=66; 66+16=82;82+13=95;95+10=105;105+7=112;112+4=116;116+1=117.
+
+Yes, 117 ordered pairs.
+
+Wait, but let me think again—are there overlapping solutions for different k's?
+
+In other words, could a particular (r,s) pair satisfy the equation for more than one k?
+
+I don't think so, because each pair (r,s) defines a unique k via the equation.
+
+Because once r and s are fixed, k is determined by \( k = ( \pi/2 + r \pi/6 - 2\pi s /3 ) / (2\pi) \)
+
+But actually, in the equation \( \pi/2 + r \pi/6 = 2\pi s /3 + 2\pi k \), k is an integer uniquely determined by r and s. Because angles differing by multiples of \( 2\pi \) are equivalent in complex plane.
+
+Therefore, for each (r,s), there is exactly one integer k that satisfies the equation. Hence, the count of 117 is correct without overcounting.
+
+But hang on, the problem says "ordered pairs (r,s) of positive integers not exceeding 100". So, both r and s are between 1 and 100. Our calculation counts all such pairs that satisfy the equation, regardless of k, so as long as for each pair, the corresponding k exists, which it does.
+
+But wait, do we need to ensure that k is an integer?
+
+Yes, because the original equation involves periodicity of \( 2\pi \), so k must adjust so that the angles match modulo \( 2\pi \). Therefore, k must be integer. But in our derivation, k came out as integer because we subtracted angles and divided by \( 2\pi \). So, as long as the equation is satisfied, k will be integer.
+
+Therefore, yes, each solution (r,s) corresponds to exactly one integer k, which may vary per pair.
+
+Therefore, the total number of solutions is indeed 117.
+
+But wait, just to make sure, let me test a couple of small cases.
+
+Take k=0, s=1: r=4*1 -3=1. So, (1,1). Let's plug into the original equation:
+
+Left-hand side: i * w^1 = i*(sqrt(3)/2 +i/2)=i*sqrt(3)/2 + i^2/2= i sqrt(3)/2 -1/2
+
+Right-hand side: z^1= -1/2 +i sqrt(3)/2
+
+Are these equal? Let's see:
+
+Left-hand side: -1/2 + i sqrt(3)/2
+
+Right-hand side: -1/2 + i sqrt(3)/2
+
+Yes, they are equal. So, (1,1) is a valid solution.
+
+Another example: k=0, s=25: r=4*25 -3=100 -3=97. So, (97,25). Let's check:
+
+Left-hand side: i*w^97
+
+But w is e^{i pi /6}, so w^97= e^{i 97 pi /6}. Let's compute 97 pi /6 modulo 2 pi.
+
+Compute 97 /6=16.166..., so 16 full circles (32 pi) plus 0.166... pi. 0.166 pi is approximately pi/6, so 97 pi /6=16 pi + pi/6=8*2 pi + pi/6. Therefore, w^97= e^{i pi/6}=w.
+
+Thus, i*w^97=i*w= left-hand side.
+
+Right-hand side: z^{25}= [e^{i2 pi /3}]^{25}= e^{i50 pi /3}
+
+Compute 50 pi /3 mod 2 pi:
+
+50 /3≈16.666, so 16*2 pi=32 pi, 50 pi /3 -32 pi= (50 pi /3 -96 pi /3)= (-46 pi /3). Hmm, negative angle.
+
+But angles are modulo 2 pi, so add 18 pi /3=6 pi:
+
+(-46 pi /3)+6 pi= (-46 pi /3 +18 pi /3)= (-28 pi /3). Still negative. Add another 6 pi:
+
+(-28 pi /3 +18 pi /3)= (-10 pi /3). Still negative. Add another 6 pi:
+
+(-10 pi /3 +18 pi /3)=8 pi /3.
+
+But 8 pi /3 is still larger than 2 pi, subtract 2 pi=8 pi /3 -6 pi /3=2 pi /3.
+
+Thus, z^{25}=e^{i2 pi /3}=z.
+
+So, LHS:i*w= Right-hand side:z.
+
+Compute LHS: i*w= i*(sqrt(3)/2 +i/2)=i sqrt(3)/2 -1/2
+
+RHS:z= -1/2 +i sqrt(3)/2, which is same as LHS.
+
+Thus, (97,25) is a valid solution.
+
+Another example: k=8, s=1: r=4*1 +93=97. Which is same as above.
+
+Wait, so same (r,s)=(97,1) and (97,25). Different s, same r? Wait, no, for k=8, s=1: r=97.
+
+Earlier for k=0, s=25: r=97. So, same r but different s. So, both (97,25) and (97,1) are valid solutions with different k.
+
+So, each r can correspond to multiple s's, but in our case, for each k, a different set of (r,s) is generated.
+
+Hence, 117 is the correct count.
+
+Therefore, the number of ordered pairs is 117.
+
+**Final Answer**
+The number of ordered pairs is \boxed{117}.
+</think>
+
+Given the complex numbers \( w = \dfrac{\sqrt{3} + i}{2} \) and \( z = \dfrac{-1 + i\sqrt{3}}{2} \), we need to find the number of ordered pairs \((r, s)\) of positive integers not exceeding 100 that satisfy the equation \( i \cdot w^r = z^s \).
+
+First, we express \( w \) and \( z \) in polar form:
+- \( w \) has modulus 1 and argument \( \pi/6 \), so \( w = e^{i\pi/6} \).
+- \( z \) has modulus 1 and argument \( 2\pi/3 \), so \( z = e^{i2\pi/3} \).
+
+Rewriting the given equation in exponential form:
+\[ i \cdot (e^{i\pi/6})^r = (e^{i2\pi/3})^s \]
+
+Since \( i = e^{i\pi/2} \), the equation becomes:
+\[ e^{i(\pi/2 + r \pi/6)} = e^{i 2\pi s /3} \]
+
+Equating the exponents modulo \( 2\pi \):
+\[ \frac{\pi}{2} + \frac{r \pi}{6} = \frac{2\pi s}{3} + 2\pi k \]
+for some integer \( k \).
+
+Dividing by \( \pi \) and multiplying by 6:
+\[ 3 + r = 4s + 12k \]
+Rearranging gives:
+\[ r = 4s + 12k - 3 \]
+
+We need \( r \) and \( s \) to be positive integers not exceeding 100. For each integer \( k \), we determine the range of \( s \) such that \( r \) remains within the bounds.
+
+Analyzing the possible values of \( k \):
+- For \( k = 0 \), \( r = 4s - 3 \). Valid \( s \) range: 1 to 25 (25 solutions).
+- For \( k = 1 \), \( r = 4s + 9 \). Valid \( s \) range: 1 to 22 (22 solutions).
+- For \( k = 2 \), \( r = 4s + 21 \). Valid \( s \) range: 1 to 19 (19 solutions).
+- For \( k = 3 \), \( r = 4s + 33 \). Valid \( s \) range: 1 to 16 (16 solutions).
+- For \( k = 4 \), \( r = 4s + 45 \). Valid \( s \) range: 1 to 13 (13 solutions).
+- For \( k = 5 \), \( r = 4s + 57 \). Valid \( s \) range: 1 to 10 (10 solutions).
+- For \( k = 6 \), \( r = 4s + 69 \). Valid \( s \) range: 1 to 7 (7 solutions).
+- For \( k = 7 \), \( r = 4s + 81 \). Valid \( s \) range: 1 to 4 (4 solutions).
+- For \( k = 8 \), \( r = 4s + 93 \). Valid \( s \) range: 1 (1 solution).
+
+Summing the number of solutions for each \( k \):
+\[ 25 + 22 + 19 + 16 + 13 + 10 + 7 + 4 + 1 = 117 \]
+
+Thus, the number of ordered pairs \((r, s)\) is \(\boxed{117}\).
+
+Predicted answer: 117.0
+Valid answer: 834.0
