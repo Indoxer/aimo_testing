@@ -3,215 +3,289 @@ Please reason step by step, and put your final answer within \boxed{}. Provide o
 Quadratic polynomials $P(x)$ and $Q(x)$ have leading coefficients $2$ and $-2,$ respectively. The graphs of both polynomials pass through the two points $(16,54)$ and $(20,53).$ Find $P(0) + Q(0).$
 
 
-Alright, so I've got this problem about quadratic polynomials P(x) and Q(x). Their leading coefficients are 2 and -2, respectively. Both of their graphs pass through the points (16,54) and (20,53). I need to find P(0) + Q(0). Hmm, okay.
+Alright, so I've got this problem here about quadratic polynomials P(x) and Q(x). Their leading coefficients are 2 and -2 respectively. Both of their graphs pass through the points (16, 54) and (20, 53). I need to find P(0) + Q(0). Hmm, okay, let me think about how to approach this.
 
-Let me start by recalling that a quadratic polynomial has the general form P(x) = ax² + bx + c, where a is the leading coefficient. Similarly, Q(x) would be something like Q(x) = dx² + ex + f. Since we know the leading coefficients, for P(x) it's 2, so P(x) = 2x² + bx + c. For Q(x), the leading coefficient is -2, so Q(x) = -2x² + ex + f.
+First off, since they're quadratic polynomials, they have the general form:
 
-Both polynomials pass through the points (16,54) and (20,53). That means if we plug in x=16 into P(x), we get 54, and similarly for Q(x). Same with x=20, giving us 53. So, let me write down these equations.
+For P(x): \( P(x) = 2x^2 + bx + c \)
+
+And for Q(x): \( Q(x) = -2x^2 + dx + e \)
+
+So, each has a quadratic term with coefficients 2 and -2, followed by linear terms with some coefficients b and d, and constant terms c and e. My goal is to find P(0) + Q(0), which would be c + e because P(0) is just c and Q(0) is just e. So, if I can figure out what c and e are, adding them together will give me the answer.
+
+Now, both polynomials pass through the points (16, 54) and (20, 53). That means when x is 16, P(16) = 54 and Q(16) = 54 as well. Similarly, when x is 20, P(20) = 53 and Q(20) = 53. So, essentially, both polynomials satisfy these equations:
 
 For P(x):
+1. \( 2(16)^2 + b(16) + c = 54 \)
+2. \( 2(20)^2 + b(20) + c = 53 \)
 
-1) When x=16, P(16)=54:
-2*(16)² + b*16 + c = 54
+For Q(x):
+3. \( -2(16)^2 + d(16) + e = 54 \)
+4. \( -2(20)^2 + d(20) + e = 53 \)
 
-2) When x=20, P(20)=53:
-2*(20)² + b*20 + c = 53
+So now I have four equations, but actually, since both quadratics share the same two points, maybe I can pair the equations from P(x) and Q(x) together?
+
+Wait, hold on, perhaps it's better to consider that both quadratics pass through these points, so maybe we can set up a system of equations where the differences between the quadratics can help us solve for the unknowns. Let me think.
+
+Let’s denote the difference between P(x) and Q(x). Since both pass through those points, maybe subtracting one equation from the other could lead somewhere? Alternatively, maybe subtracting the two functions at those points.
+
+But before that, perhaps it's better to write down all four equations explicitly.
+
+Starting with P(x):
+
+1. \( 2(16)^2 + 16b + c = 54 \)
+2. \( 2(20)^2 + 20b + c = 53 \)
 
 Similarly, for Q(x):
 
-3) When x=16, Q(16)=54:
--2*(16)² + e*16 + f = 54
+3. \( -2(16)^2 + 16d + e = 54 \)
+4. \( -2(20)^2 + 20d + e = 53 \)
 
-4) When x=20, Q(20)=53:
--2*(20)² + e*20 + f = 53
+Calculating the constants:
 
-So, now I have four equations:
+First, compute \( 2(16)^2 \):
 
-From P(x):
-Equation 1: 2*(256) + 16b + c = 54
-Equation 2: 2*(400) + 20b + c = 53
+\( 2*256 = 512 \)
 
-From Q(x):
-Equation 3: -2*(256) + 16e + f = 54
-Equation 4: -2*(400) + 20e + f = 53
+Then, \( 2(20)^2 = 2*400 = 800 \)
 
-Let me compute the constants first.
+Similarly, \( -2(16)^2 = -512 \)
 
-Compute Equation 1:
-2*256 = 512, so:
-512 + 16b + c = 54
-Which simplifies to:
-16b + c = 54 - 512 = -458
+And \( -2(20)^2 = -800 \)
 
-Equation 2:
-2*400 = 800, so:
-800 + 20b + c = 53
-Simplifying:
-20b + c = 53 - 800 = -747
+So substituting back into the equations:
 
-Similarly for Equations 3 and 4.
+Equation 1: 512 + 16b + c = 54
 
-Equation 3:
--2*256 = -512, so:
--512 + 16e + f = 54
-Which gives:
-16e + f = 54 + 512 = 566
+Equation 2: 800 + 20b + c = 53
 
-Equation 4:
--2*400 = -800, so:
--800 + 20e + f = 53
-Simplifying:
-20e + f = 53 + 800 = 853
+Equation 3: -512 + 16d + e = 54
 
-Okay, so now we have simplified systems for P(x) and Q(x).
+Equation 4: -800 + 20d + e = 53
 
-For P(x):
-16b + c = -458  ...(A)
-20b + c = -747  ...(B)
+Okay, so now Equations 1 and 2 are for P(x), Equations 3 and 4 for Q(x).
 
-Subtract equation (A) from equation (B) to eliminate c:
+So, perhaps I can solve for b and c first using Equations 1 and 2, then solve for d and e using Equations 3 and 4.
+
+Starting with P(x):
+
+Equation 1: 512 + 16b + c = 54
+
+Equation 2: 800 + 20b + c = 53
+
+Let me rewrite these:
+
+From Equation 1:
+
+16b + c = 54 - 512
+
+Which is 16b + c = -458
+
+Similarly, Equation 2:
+
+20b + c = 53 - 800
+
+Which is 20b + c = -747
+
+Now, subtract Equation 1 from Equation 2 to eliminate c:
+
 (20b + c) - (16b + c) = (-747) - (-458)
-That's 4b = (-747 + 458)
-Calculate -747 + 458. Let's see, 747 - 458 is 289, so negative is -289.
 
-Therefore, 4b = -289 => b = -289 / 4
+This simplifies to:
 
-Hmm, that's a fraction. Let me compute that: 289 divided by 4 is 72.25, so b = -72.25 or -289/4.
+4b = (-747 + 458) = (-289)
 
-Then, substitute back into equation (A): 16b + c = -458
+Therefore, 4b = -289 => b = -289 / 4 = -72.25
+
+Hmm, not the nicest number, but it's a fraction. Let me keep it as a fraction for precision.
+
+So, b = -289/4.
+
+Now plug this back into Equation 1 to find c.
+
+From Equation 1: 16b + c = -458
 
 So, 16*(-289/4) + c = -458
 
-Compute 16*(289/4) first: 16 divided by 4 is 4, so 4*289 = 1156
+Calculate 16*(289/4): 16 divided by 4 is 4, so 4*289 = 1156
 
-So, 16b = -1156, thus:
+So, 16*(-289/4) = -1156
 
--1156 + c = -458
+Thus, -1156 + c = -458
 
-So, c = -458 + 1156 = 698
+Therefore, c = -458 + 1156 = 698
 
-Alright, so P(x) is fully determined: P(x) = 2x² - (289/4)x + 698
+So, c = 698.
 
-Now, moving on to Q(x):
+So, P(x) is defined as \( 2x^2 - (289/4)x + 698 \)
 
-We have:
-16e + f = 566  ...(C)
-20e + f = 853  ...(D)
+Similarly, moving on to Q(x):
 
-Again, subtract (C) from (D):
+Equation 3: -512 + 16d + e = 54
 
-(20e + f) - (16e + f) = 853 - 566
-Which is 4e = 287
+Equation 4: -800 + 20d + e = 53
 
-Thus, e = 287 / 4 = 71.75 or 287/4
+Again, let's rewrite these:
 
-Now, substitute back into equation (C): 16e + f = 566
+Equation 3: 16d + e = 54 + 512 = 566
 
-Compute 16*(287/4) = 4*287 = 1148
+Equation 4: 20d + e = 53 + 800 = 853
 
-Hence, 1148 + f = 566
+So, Equation 3: 16d + e = 566
 
-Therefore, f = 566 - 1148 = -582
+Equation 4: 20d + e = 853
 
-So, Q(x) is Q(x) = -2x² + (287/4)x - 582
+Subtract Equation 3 from Equation 4 to eliminate e:
 
-Now, we need to find P(0) + Q(0). 
+(20d + e) - (16d + e) = 853 - 566
 
-But wait, P(0) is just c, which is 698, and Q(0) is just f, which is -582. So, adding them together:
+Which gives 4d = 287
 
-698 + (-582) = 698 - 582 = 116
+Thus, d = 287 / 4 = 71.75
 
-Wait, hold on, let me double-check my calculations because 698 - 582 is indeed 116?
+Again, a fractional coefficient, but okay.
 
-Yes, 698 minus 500 is 198, then minus 82 more is 116. Yeah, that seems right.
+Now, substitute back into Equation 3 to find e.
 
-But let me make sure I didn't make any mistakes in solving for b and e.
+From Equation 3: 16d + e = 566
 
-In P(x):
+16*(287/4) + e = 566
 
-Equation A: 16b + c = -458
+Calculate 16*(287/4): 16 divided by 4 is 4, so 4*287 = 1148
 
-Equation B: 20b + c = -747
+So, 1148 + e = 566
 
-Subtracting gives 4b = -289, so b = -289/4.
+Therefore, e = 566 - 1148 = -582
 
-Then, plugging back in:
+So, e = -582
+
+Thus, Q(x) is \( -2x^2 + (287/4)x - 582 \)
+
+Now, the question asks for P(0) + Q(0). As established earlier, P(0) is c = 698, and Q(0) is e = -582.
+
+Adding them together: 698 + (-582) = 116
+
+Wait, that seems straightforward. But let me double-check my calculations to make sure I didn't make any arithmetic errors.
+
+Starting with P(x):
+
+Equation 1: 512 + 16b + c = 54
+
+16b + c = 54 - 512 = -458
+
+Equation 2: 800 + 20b + c = 53
+
+20b + c = 53 - 800 = -747
+
+Subtracting Equation 1 from Equation 2:
+
+4b = (-747) - (-458) = -747 + 458 = -289
+
+Hence, b = -289/4. Correct.
+
+Then plugging back into Equation 1:
 
 16*(-289/4) = -4*289 = -1156
 
-So, c = -458 + 1156 = 698. That looks correct.
+So, -1156 + c = -458 => c = 698. Correct.
 
 For Q(x):
 
-Equation C: 16e + f = 566
+Equation 3: -512 + 16d + e = 54
 
-Equation D: 20e + f = 853
+16d + e = 54 + 512 = 566
 
-Subtracting gives 4e = 287, so e = 287/4.
+Equation 4: -800 + 20d + e = 53
 
-Plugging back in:
+20d + e = 53 + 800 = 853
+
+Subtracting Equation 3 from Equation 4:
+
+4d = 853 - 566 = 287
+
+Hence, d = 287/4. Correct.
+
+Then plugging back into Equation 3:
 
 16*(287/4) = 4*287 = 1148
 
-Thus, f = 566 - 1148 = -582. Correct.
+So, 1148 + e = 566 => e = -582. Correct.
 
-So, P(0) = c = 698, Q(0) = f = -582. Sum is 698 - 582 = 116.
+Therefore, P(0) + Q(0) = 698 + (-582) = 116.
 
-Alternatively, maybe there's another way without finding all coefficients?
+Hmm, 116. That seems like the right answer, but just to be thorough, let me verify whether these quadratics actually pass through the given points.
 
-Wait, perhaps since both quadratics pass through the same two points, the difference between them might be a linear function? Let me think.
+Testing P(x):
 
-If I consider R(x) = P(x) - Q(x). Then R(x) is a quadratic minus another quadratic, so it's also a quadratic. But since both P and Q pass through the same two points, (16,54) and (20,53), then R(16) = 0 and R(20) = 0. Therefore, R(x) has roots at x=16 and x=20, so it can be written as R(x) = k(x -16)(x -20), where k is some constant.
+At x=16:
 
-But let's see, R(x) = P(x) - Q(x) = [2x² + bx + c] - [-2x² + ex + f] = 4x² + (b - e)x + (c - f)
+\( 2*(16)^2 + (-289/4)*16 + 698 \)
 
-But R(x) is equal to k(x -16)(x -20). Let's expand that:
+Compute each term:
 
-k(x² -36x + 320)
+2*256 = 512
 
-So, R(x) = kx² -36kx + 320k
+(-289/4)*16 = -289*4 = -1156
 
-Comparing to our earlier expression for R(x):
+Plus 698.
 
-4x² + (b - e)x + (c - f) = kx² -36kx + 320k
+So, total: 512 - 1156 + 698 = (512 + 698) - 1156 = 1210 - 1156 = 54. Correct.
 
-So, equate coefficients:
+At x=20:
 
-4 = k
+2*(400) + (-289/4)*20 + 698
 
-Then, coefficient of x: (b - e) = -36k = -36*4 = -144
+2*400 = 800
 
-And constant term: (c - f) = 320k = 320*4 = 1280
+(-289/4)*20 = -289*5 = -1445
 
-So, we have c - f = 1280
+Plus 698.
 
-But we already found c = 698 and f = -582, so c - f = 698 - (-582) = 698 + 582 = 1280, which matches. So that checks out.
+Total: 800 - 1445 + 698 = (800 + 698) - 1445 = 1498 - 1445 = 53. Correct.
 
-Additionally, from b - e = -144, but we had b = -289/4 and e = 287/4.
+Testing Q(x):
 
-So, b - e = (-289/4) - (287/4) = (-289 - 287)/4 = (-576)/4 = -144. Which also matches. So, that confirms our previous calculations.
+At x=16:
 
-Thus, R(x) = 4x² -144x + 1280, which is consistent with k=4.
+-2*(256) + (287/4)*16 + (-582)
 
-So, another way to approach this problem is to realize that P(0) + Q(0) = c + f. And since c - f = 1280, and we can find c + f if we have another equation. Wait, do we know anything else about c and f?
+Compute each term:
 
-Alternatively, maybe not, unless we use other relations.
+-512
 
-Wait, but since we already have c = 698 and f = -582, adding them gives 116, as before.
+(287/4)*16 = 287*4 = 1148
 
-I think either way, whether going through each coefficient or considering R(x), we end up with the same result.
+-582
 
-So, after thorough calculation, I believe P(0) + Q(0) is 116.
+Total: -512 + 1148 - 582 = (1148 - 512) - 582 = 636 - 582 = 54. Correct.
+
+At x=20:
+
+-2*(400) + (287/4)*20 + (-582)
+
+Compute each term:
+
+-800
+
+(287/4)*20 = 287*5 = 1435
+
+-582
+
+Total: -800 + 1435 - 582 = (1435 - 800) - 582 = 635 - 582 = 53. Correct.
+
+Everything checks out. So, P(0) is 698, Q(0) is -582, their sum is 116.
+
+I don't see any mistakes in the reasoning or calculations, so I'm confident the answer is 116.
 
 **Final Answer**
 \boxed{116}
 </think>
 
-Given quadratic polynomials \( P(x) \) and \( Q(x) \) with leading coefficients 2 and -2, respectively, both passing through the points (16, 54) and (20, 53). We need to find \( P(0) + Q(0) \).
+Given quadratic polynomials \( P(x) \) and \( Q(x) \) with leading coefficients 2 and -2 respectively, we know they pass through the points \((16, 54)\) and \((20, 53)\). We need to find \( P(0) + Q(0) \).
 
-First, we express the polynomials:
+The general forms of the polynomials are:
 \[ P(x) = 2x^2 + bx + c \]
-\[ Q(x) = -2x^2 + ex + f \]
+\[ Q(x) = -2x^2 + dx + e \]
 
 Using the given points, we set up the following equations:
 
@@ -220,32 +294,36 @@ For \( P(x) \):
 2. \( 2(20)^2 + 20b + c = 53 \)
 
 For \( Q(x) \):
-3. \( -2(16)^2 + 16e + f = 54 \)
-4. \( -2(20)^2 + 20e + f = 53 \)
+3. \( -2(16)^2 + 16d + e = 54 \)
+4. \( -2(20)^2 + 20d + e = 53 \)
 
-Simplifying these equations:
+Calculating the constants:
+- \( 2(16)^2 = 512 \)
+- \( 2(20)^2 = 800 \)
+- \( -2(16)^2 = -512 \)
+- \( -2(20)^2 = -800 \)
 
-For \( P(x) \):
-1. \( 512 + 16b + c = 54 \) ⟹ \( 16b + c = -458 \)
-2. \( 800 + 20b + c = 53 \) ⟹ \( 20b + c = -747 \)
+Rewriting the equations:
+1. \( 512 + 16b + c = 54 \)
+2. \( 800 + 20b + c = 53 \)
+3. \( -512 + 16d + e = 54 \)
+4. \( -800 + 20d + e = 53 \)
 
-Subtracting the first equation from the second:
-\[ 4b = -289 \] ⟹ \( b = -\frac{289}{4} \)
+Solving for \( b \) and \( c \):
+- From equations 1 and 2:
+  - \( 16b + c = -458 \)
+  - \( 20b + c = -747 \)
+  - Subtracting these: \( 4b = -289 \) ⟹ \( b = -\frac{289}{4} \)
+  - Substituting \( b \) back: \( 16(-\frac{289}{4}) + c = -458 \) ⟹ \( -1156 + c = -458 \) ⟹ \( c = 698 \)
 
-Substituting \( b \) back into the first equation:
-\[ 16\left(-\frac{289}{4}\right) + c = -458 \] ⟹ \( -1156 + c = -458 \) ⟹ \( c = 698 \)
+Solving for \( d \) and \( e \):
+- From equations 3 and 4:
+  - \( 16d + e = 566 \)
+  - \( 20d + e = 853 \)
+  - Subtracting these: \( 4d = 287 \) ⟹ \( d = \frac{287}{4} \)
+  - Substituting \( d \) back: \( 16(\frac{287}{4}) + e = 566 \) ⟹ \( 1148 + e = 566 \) ⟹ \( e = -582 \)
 
-For \( Q(x) \):
-3. \( -512 + 16e + f = 54 \) ⟹ \( 16e + f = 566 \)
-4. \( -800 + 20e + f = 53 \) ⟹ \( 20e + f = 853 \)
-
-Subtracting the third equation from the fourth:
-\[ 4e = 287 \] ⟹ \( e = \frac{287}{4} \)
-
-Substituting \( e \) back into the third equation:
-\[ 16\left(\frac{287}{4}\right) + f = 566 \] ⟹ \( 1148 + f = 566 \) ⟹ \( f = -582 \)
-
-Thus, \( P(0) = c = 698 \) and \( Q(0) = f = -582 \). Therefore, \( P(0) + Q(0) = 698 + (-582) = 116 \).
+Thus, \( P(0) = c = 698 \) and \( Q(0) = e = -582 \). Therefore, \( P(0) + Q(0) = 698 + (-582) = 116 \).
 
 \[
 \boxed{116}
