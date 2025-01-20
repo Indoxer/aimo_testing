@@ -31,11 +31,6 @@ class EvaluationResult:
             f"{self.has_correct_answer}/{self.total_problems} "
             f"({self.has_correct_answer/self.total_problems:.2%})"
         )
-        print(
-            f"Average correct per problem: "
-            f"{self.total_correct}/{self.total_problems*16} "
-            f"({self.total_correct/(self.total_problems*16):.2%})"
-        )
 
 
 class ProblemEvaluator:

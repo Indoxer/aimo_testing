@@ -6,7 +6,7 @@ LATEX_DIR = Path("data2")
 
 # Model configuration
 MODEL_CONFIG = {
-    "model": "Qwen/Qwen2.5-Math-1.5B-Instruct",
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
     "dtype": "half",
     "gpu_memory_utilization": 0.85,
     "enable_chunked_prefill": True,
