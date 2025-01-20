@@ -25,7 +25,7 @@ class EvaluationResult:
         )
         print(
             f"Average correct per problem: "
-            f"{self.total_correct/(self.total_problems*16):.2%}"
+            f"{self.total_correct/(self.total_problems*16)::.2%}"
         )
 
 
@@ -33,10 +33,17 @@ class ProblemEvaluator:
     @staticmethod
     def extract_answer(text: str) -> float:
         """Extract and convert boxed answer from generated text."""
-        match = re.findall(r"\\boxed{(.+?)}", text)
+        # Look for \boxed{...} pattern, handling potential whitespace
+        match = re.search(r"\\boxed\s*{\s*([^{}]+?)\s*}", text)
         if not match:
             raise ValueError("No boxed answer found")
-        return float(match[0])
+        try:
+            # Clean up the answer string and convert to float
+            answer_str = match.group(1).strip()
+            return float(answer_str)
+        except ValueError:
+            print(f"Failed to convert answer to float: {match.group(1)}")
+            raise
 
     @staticmethod
     def evaluate_sample(generated: str, solution: float) -> bool:
