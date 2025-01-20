@@ -14,7 +14,9 @@ class EvaluationResult:
 
     def print_statistics(self) -> None:
         total_attempts = self.total_problems * 16
-        print(f"\nTotal AMC Correct: {self.total_correct}/{total_attempts}")
+        print(
+            f"\nTotal AIME Correct (correct/attempts): {self.total_correct}/{total_attempts}"
+        )
         print(f"Single try accuracy: {self.correct_first_try/self.total_problems:.2%}")
         print(
             f"Majority vote accuracy: {self.correct_majority/self.total_problems:.2%}"
