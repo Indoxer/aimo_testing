@@ -12,6 +12,7 @@ MODEL_CONFIG = {
     "enable_chunked_prefill": True,
     "max_num_seqs": 32,
     "max_num_batched_tokens": 4096,
+    "max_model_len": 32768,
 }
 
 # Sampling parameters

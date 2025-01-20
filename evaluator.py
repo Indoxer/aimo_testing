@@ -15,7 +15,7 @@ class EvaluationResult:
     def print_statistics(self) -> None:
         total_attempts = self.total_problems * 16
         print(
-            f"\nTotal AIME Correct: {self.total_correct}/{total_attempts} "
+            f"\nTotal AIME (correct attempts/total attempts): {self.total_correct}/{total_attempts} "
             f"({self.total_correct/total_attempts:.2%})"
         )
         print(
