@@ -15,19 +15,26 @@ class EvaluationResult:
     def print_statistics(self) -> None:
         total_attempts = self.total_problems * 16
         print(
-            f"\nTotal AIME Correct (correct/attempts): {self.total_correct}/{total_attempts}"
+            f"\nTotal AIME Correct: {self.total_correct}/{total_attempts} "
+            f"({self.total_correct/total_attempts:.2%})"
         )
-        print(f"Single try accuracy: {self.correct_first_try/self.total_problems:.2%}")
         print(
-            f"Majority vote accuracy: {self.correct_majority/self.total_problems:.2%}"
+            f"Single try accuracy: {self.correct_first_try}/{self.total_problems} "
+            f"({self.correct_first_try/self.total_problems:.2%})"
+        )
+        print(
+            f"Majority vote accuracy: {self.correct_majority}/{self.total_problems} "
+            f"({self.correct_majority/self.total_problems:.2%})"
         )
         print(
             f"Problems with at least one correct answer: "
-            f"{self.has_correct_answer/self.total_problems:.2%}"
+            f"{self.has_correct_answer}/{self.total_problems} "
+            f"({self.has_correct_answer/self.total_problems:.2%})"
         )
         print(
             f"Average correct per problem: "
-            f"{self.total_correct/(self.total_problems*16)::.2%}"
+            f"{self.total_correct}/{self.total_problems*16} "
+            f"({self.total_correct/(self.total_problems*16):.2%})"
         )
 
 

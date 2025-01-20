@@ -35,6 +35,3 @@ PROBLEM_PROMPT = "Please reason step by step, and put your final answer within \
 
 # Feature flags
 ENABLE_LATEX = False  # Set to True to enable LaTeX compilation
-
-# Evaluation settings
-MAJORITY_THRESHOLD = 8  # More than half of samples needed for majority vote

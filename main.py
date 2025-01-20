@@ -1,4 +1,5 @@
 import os
+from collections import Counter
 from pathlib import Path
 from typing import List, Optional, Tuple
 
@@ -54,6 +55,24 @@ def render_latex(
     doc.generate_pdf(str(filename))
 
 
+def get_most_common_answer(
+    samples: List[str], evaluator: ProblemEvaluator
+) -> Optional[float]:
+    """Return the most common answer from a list of sample outputs."""
+    answers = []
+    for sample in samples:
+        try:
+            answer = evaluator.extract_answer(sample)
+            answers.append(answer)
+        except ValueError:
+            continue
+
+    if not answers:
+        return None
+
+    return Counter(answers).most_common(1)[0][0]
+
+
 def main():
     setup_directories()
 
@@ -73,6 +92,12 @@ def main():
     # Process outputs
     for prob_idx, output in enumerate(outputs):
         real_answer = solutions[prob_idx]
+
+        # Get most common answer from all samples
+        sample_texts = [sample.text for sample in output.outputs]
+        majority_answer = get_most_common_answer(sample_texts, evaluator)
+        if majority_answer is not None and abs(majority_answer - real_answer) < 1e-6:
+            correct_majority += 1
 
         # Process samples for current problem
         for sample_idx, sample in enumerate(output.outputs):
@@ -112,8 +137,6 @@ def main():
         # Update statistics
         if correct_per_problem[prob_idx] > 0:
             has_correct_answer += 1
-        if correct_per_problem[prob_idx] >= MAJORITY_THRESHOLD:
-            correct_majority += 1
 
         # Check first try
         if evaluator.evaluate_sample(output.outputs[0].text, real_answer):
@@ -121,7 +144,8 @@ def main():
 
         print(
             f"Problem {prob_idx}: {correct_per_problem[prob_idx]}/16 correct "
-            f"(First try: {correct_first_try > prob_idx})"
+            f"(First try: {correct_first_try > prob_idx}, "
+            f"Majority answer: {majority_answer})"
         )
 
     # Clean up non-PDF files if LaTeX was enabled
