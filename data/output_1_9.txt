@@ -87,5 +87,5 @@ Thus, the value of \( AC^2 \) is:
 
 This solution involves using the properties of tangency and the Pythagorean theorem to find the required distances and radii. The key insight is recognizing the congruence of the circles formed by the intersections and using the given information to solve for the unknowns. The final answer is obtained by ensuring consistency with the given conditions and the geometric properties of the problem. The final boxed answer is \( \boxed{560} \).
 
-Predicted answer: N/A
+Predicted answer: 560.0
 Valid answer: 756

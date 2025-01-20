@@ -48,5 +48,5 @@ Thus, \(\frac{S_{2022}}{S_{2021}} = 2\), and we have \( p = 2 \) and \( q = 1 \)
 \boxed{3}.
 \]
 
-Predicted answer: N/A
+Predicted answer: 3.0
 Valid answer: 245

@@ -51,5 +51,5 @@ The final answer is:
 \]```
 The final answer is \(\boxed{39}\).
 
-Predicted answer: N/A
+Predicted answer: 39.0
 Valid answer: 150

@@ -52,5 +52,5 @@ This is correct.
 
 Therefore, the three-digit number is \(\boxed{341}\).
 
-Predicted answer: N/A
+Predicted answer: 341.0
 Valid answer: 227

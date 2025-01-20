@@ -182,5 +182,5 @@ The correct answer is:
 The correct answer is:
 \[ \boxed{504
 
-Predicted answer: N/A
+Predicted answer: 504.0
 Valid answer: 150

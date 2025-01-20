@@ -91,5 +91,5 @@ Summing these, we get:
 \]
 Thus, the number of ordered pairs \((r, s)\) is \(\boxed{299}\).
 
-Predicted answer: N/A
+Predicted answer: 299.0
 Valid answer: 834

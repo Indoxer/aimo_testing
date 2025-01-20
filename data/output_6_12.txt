@@ -69,5 +69,5 @@ The answer is:
 \boxed{91}.
 \]
 
-Predicted answer: N/A
+Predicted answer: 91.0
 Valid answer: 033

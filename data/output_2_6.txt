@@ -43,5 +43,5 @@ Thus, \(m = 144\) and \(n = 3\), and the final answer is:
 Therefore, the answer is:
 \[ \boxed{147}. \]
 
-Predicted answer: N/A
+Predicted answer: 147.0
 Valid answer: 150

@@ -20,5 +20,5 @@ The horizontal distance between the midpoints of \(AB\) and \(CD\) is \(\frac{65
 
 Therefore, the length of \(PQ\) is \(\boxed{375}\).
 
-Predicted answer: N/A
+Predicted answer: 375.0
 Valid answer: 242

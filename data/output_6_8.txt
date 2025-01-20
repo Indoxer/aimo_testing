@@ -67,5 +67,5 @@ The answer is:
 \boxed{17}.
 \]
 
-Predicted answer: N/A
+Predicted answer: 17.0
 Valid answer: 033

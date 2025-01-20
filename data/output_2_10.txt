@@ -64,5 +64,5 @@ The final answer is:
 \boxed{361}.
 \]
 
-Predicted answer: N/A
+Predicted answer: 361.0
 Valid answer: 150

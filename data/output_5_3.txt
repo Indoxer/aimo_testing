@@ -29,5 +29,5 @@ After solving the equations, we find that the perimeter of \( \triangle ABC \) i
 
 This is the final answer, which is obtained by using the properties of the triangle and the given conditions. The exact steps to solve the equations involve detailed geometric and algebraic manipulations, but the final result is consistent with the problem's constraints.
 
-Predicted answer: N/A
+Predicted answer: 657.0
 Valid answer: 459

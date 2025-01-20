@@ -21,5 +21,5 @@ PQ = \frac{h}{2} = \frac{324}{2} = 162.
 
 Thus, the length of \(PQ\) is \(\boxed{162}\).
 
-Predicted answer: N/A
+Predicted answer: 162.0
 Valid answer: 242

@@ -52,5 +52,5 @@ The answer is:
 \boxed{349}.
 \]
 
-Predicted answer: N/A
+Predicted answer: 349.0
 Valid answer: 033

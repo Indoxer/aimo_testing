@@ -45,5 +45,5 @@ To solve the problem, we need to analyze the given conditions and use geometric 
 
 Thus, the perimeter of \(\triangle ABC\) is \(\boxed{437}\).
 
-Predicted answer: N/A
+Predicted answer: 437.0
 Valid answer: 459

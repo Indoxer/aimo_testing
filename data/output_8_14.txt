@@ -22,5 +22,5 @@ Thus, the answer is:
 \boxed{324}.
 \]
 
-Predicted answer: N/A
+Predicted answer: 324.0
 Valid answer: 242

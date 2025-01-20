@@ -25,5 +25,5 @@ After solving the equations and using the properties of the triangle, we find th
 
 This solution involves detailed geometric analysis and the application of properties of triangles, specifically the relationship between the midpoints and the angles formed by the splitting lines. The exact steps involve solving a system of equations derived from the geometric properties and the given angle condition. The final answer, after verifying all conditions, is \( \boxed{657} \).
 
-Predicted answer: N/A
+Predicted answer: 657.0
 Valid answer: 459

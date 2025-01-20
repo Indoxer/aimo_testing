@@ -45,5 +45,5 @@ Thus, the perimeter of \(\triangle ABC\) is:
 \boxed{657}
 \]```
 
-Predicted answer: N/A
+Predicted answer: 657.0
 Valid answer: 459

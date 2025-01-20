@@ -27,5 +27,5 @@ Therefore, the number of integers from 1 to 9999 that are coprime to 9999 is:
 Thus, the number of distinct numerators obtained when numbers in \( S \) are written as fractions in lowest terms is 6000. The remainder when 6000 is divided by 1000 is:
 \[ \boxed{000}. \]
 
-Predicted answer: N/A
+Predicted answer: 0.0
 Valid answer: 392

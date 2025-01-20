@@ -20,5 +20,5 @@ Since \(P\) and \(Q\) are the same point (the intersection of the angle bisector
 Thus, the length of \(PQ\) is:
 \[\boxed{187.5}.\]
 
-Predicted answer: N/A
+Predicted answer: 187.5
 Valid answer: 242

@@ -41,5 +41,5 @@ Thus, the answer is:
 \boxed{57}.
 \]
 
-Predicted answer: N/A
+Predicted answer: 57.0
 Valid answer: 245

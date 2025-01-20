@@ -38,5 +38,5 @@ Therefore, the perimeter of \( \triangle ABC \) is:
 \boxed{528}
 \]
 
-Predicted answer: N/A
+Predicted answer: 528.0
 Valid answer: 459

@@ -42,5 +42,5 @@ The correct answer is:
 \boxed{618}
 \]
 
-Predicted answer: N/A
+Predicted answer: 618.0
 Valid answer: 459

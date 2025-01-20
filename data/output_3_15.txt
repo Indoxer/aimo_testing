@@ -62,5 +62,5 @@ Thus,
 \]
 The remainder when \( p + q \) is divided by 1000 is \(\boxed{333}\).
 
-Predicted answer: N/A
+Predicted answer: 333.0
 Valid answer: 245

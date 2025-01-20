@@ -33,5 +33,5 @@ Therefore, the number of four-digit numbers not divisible by 3, 11, or 101 is:
 Thus, the number of distinct numerators is 5401. The remainder when 5401 is divided by 1000 is:
 \[ \boxed{401}. \]
 
-Predicted answer: N/A
+Predicted answer: 401.0
 Valid answer: 392

@@ -87,5 +87,5 @@ We need to check the bounds for \( s \). For \( s = 1 \), \( k \) ranges from 0 
 \]
 Thus, the number of ordered pairs \((r, s)\) is \(\boxed{100}\).
 
-Predicted answer: N/A
+Predicted answer: 100.0
 Valid answer: 834

@@ -49,5 +49,5 @@ Summing these, we get:
 \[ 3 \cdot 8 + 6 \cdot 7 + 7 \cdot 6 + 8 \cdot 5 + 1 \cdot 0 = 24 + 42 + 42 + 40 + 0 = 148. \]
 Therefore, the number of ordered pairs \((r, s)\) is \(\boxed{148}\).
 
-Predicted answer: N/A
+Predicted answer: 148.0
 Valid answer: 834

@@ -43,5 +43,5 @@ Thus, the value of \(AC^2\) is:
 \boxed{784}
 \]
 
-Predicted answer: N/A
+Predicted answer: 784.0
 Valid answer: 756

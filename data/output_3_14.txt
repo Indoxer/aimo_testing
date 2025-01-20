@@ -28,5 +28,5 @@ The fraction \(\frac{8088}{2021}\) is already in its simplest form because 8088 
 
 Therefore, the remainder when \(p + q\) is divided by 1000 is \(\boxed{109}\).
 
-Predicted answer: N/A
+Predicted answer: 109.0
 Valid answer: 245

@@ -41,5 +41,5 @@ So, the remainder when \(N\) is divided by 1000 is:
 \boxed{0}
 \]
 
-Predicted answer: N/A
+Predicted answer: 0.0
 Valid answer: 392

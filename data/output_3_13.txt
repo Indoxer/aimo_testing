@@ -39,5 +39,5 @@ Thus, the answer is:
 \boxed{113}.
 \]
 
-Predicted answer: N/A
+Predicted answer: 113.0
 Valid answer: 245

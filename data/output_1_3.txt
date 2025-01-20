@@ -66,5 +66,5 @@ The final answer is:
 \boxed{8}
 \]
 
-Predicted answer: N/A
+Predicted answer: 8.0
 Valid answer: 756

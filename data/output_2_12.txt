@@ -83,5 +83,5 @@ The final answer is:
 \]```python
 \boxed{111}
 
-Predicted answer: N/A
+Predicted answer: 111.0
 Valid answer: 150

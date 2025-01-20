@@ -24,5 +24,5 @@ However, since we are asked to find the exact value, we use the simplified form 
 Thus, the length \(PQ\) is:
 \[ \boxed{324}. \]
 
-Predicted answer: N/A
+Predicted answer: 324.0
 Valid answer: 242

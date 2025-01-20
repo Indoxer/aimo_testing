@@ -36,5 +36,5 @@ Therefore, the value of \( AC^2 \) is:
 \boxed{560}.
 \]
 
-Predicted answer: N/A
+Predicted answer: 560.0
 Valid answer: 756

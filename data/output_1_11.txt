@@ -78,5 +78,5 @@ Therefore, the value of \(AC^2\) is:
 The correct answer is \(\boxed{784}\). The value of \(AC^2\) is calculated using the fact that the distance between the centers of the spheres is the sum of the distances from the centers to the plane plus the distance between the centers of the circles, and the fact that the circles are congruent. This gives us:
 \[ AC^2 = 3(d_1 - d_3)^2 = 3 \left( \frac{560}{2} \right) = 3 \times
 
-Predicted answer: N/A
+Predicted answer: 784.0
 Valid answer: 756

@@ -15,5 +15,5 @@ Finally, we need to find the remainder when 6000 is divided by 1000:
 \[6000 \mod 1000 = 0.\]
 Therefore, the remainder when \(N\) is divided by 1000 is \(\boxed{0}\).
 
-Predicted answer: N/A
+Predicted answer: 0.0
 Valid answer: 392

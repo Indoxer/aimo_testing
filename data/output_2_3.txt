@@ -25,5 +25,5 @@ After solving for the height and the base, we find that the area of the parallel
 \[ \boxed{147}. \]```
 The final answer is \(\boxed{147}\).
 
-Predicted answer: N/A
+Predicted answer: 147.0
 Valid answer: 150

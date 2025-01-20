@@ -119,5 +119,5 @@ Thus, the perimeter of \(\triangle ABC\) is \(\boxed{438}\). (Note: This value i
 
 Thus,
 
-Predicted answer: N/A
+Predicted answer: 438.0
 Valid answer: 459

@@ -73,5 +73,5 @@ The value of \( AC^2 \) is:
 \boxed{869}.
 \]
 
-Predicted answer: N/A
+Predicted answer: 869.0
 Valid answer: 756

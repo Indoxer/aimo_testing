@@ -37,5 +37,5 @@ These are the numbers \(abcd\) that can be the numerators of the fractions in th
 
 \[\boxed{400}.\]
 
-Predicted answer: N/A
+Predicted answer: 400.0
 Valid answer: 392

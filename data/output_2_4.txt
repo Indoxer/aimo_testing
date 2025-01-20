@@ -102,5 +102,5 @@ Thus, the final answer is:
 \]```python
 \boxed{199}```
 
-Predicted answer: N/A
+Predicted answer: 199.0
 Valid answer: 150

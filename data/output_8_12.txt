@@ -43,5 +43,5 @@ So, the final answer is:
 \boxed{333}
 \]
 
-Predicted answer: N/A
+Predicted answer: 333.0
 Valid answer: 242

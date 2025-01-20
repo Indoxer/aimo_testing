@@ -19,5 +19,5 @@ The distance between \(P\) and \(Q\) is the same as the distance between the mid
 Thus, the length \(PQ\) is:
 \[\boxed{324}.\]
 
-Predicted answer: N/A
+Predicted answer: 324.0
 Valid answer: 242

@@ -21,5 +21,5 @@ The distance between the angle bisectors \(PQ\) is equal to the height of the tr
 
 Thus, the length of \(PQ\) is \(\boxed{324}\).
 
-Predicted answer: N/A
+Predicted answer: 324.0
 Valid answer: 242
