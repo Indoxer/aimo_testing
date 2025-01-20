@@ -45,4 +45,5 @@ class ProblemEvaluator:
             predicted = ProblemEvaluator.extract_answer(generated)
             return float(solution) == predicted
         except (ValueError, IndexError):
+            print("Error evaluating sample")
             return False

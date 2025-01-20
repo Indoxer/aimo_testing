@@ -78,7 +78,7 @@ def main():
                     correct_per_problem[prob_idx] += 1
                     predicted_answer = str(evaluator.extract_answer(sample.text))
             except ValueError:
-                pass
+                print(f"Error evaluating problem {prob_idx}, sample {sample_idx}")
 
             # Save output files
             output_path = DATA_DIR / f"output_{prob_idx}_{sample_idx}.txt"
