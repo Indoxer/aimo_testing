@@ -3,10 +3,11 @@ from pathlib import Path
 from typing import List, Optional, Tuple
 
 import pandas as pd
-from constants import *
-from evaluator import EvaluationResult, ProblemEvaluator
 from pylatex import Document, NoEscape
 from vllm import LLM, SamplingParams
+
+from constants import *
+from evaluator import EvaluationResult, ProblemEvaluator
 
 
 def setup_directories() -> None:
@@ -22,6 +23,8 @@ def setup_directories() -> None:
 def load_problems() -> Tuple[List[str], List[float]]:
     """Load problems and solutions from dataset."""
     df = pd.read_parquet(DATASET_PATH)
+    # get first 10 problems
+    df = df.head(10)
     problems = [PROBLEM_PROMPT.format(p) for p in df["problem"]]
     solutions = df["answer"].tolist()  # Changed from "solutions" to "answer"
     return problems, solutions
