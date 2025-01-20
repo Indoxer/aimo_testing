@@ -12,7 +12,7 @@ MODEL_CONFIG = {
     "enable_chunked_prefill": True,
     "max_num_seqs": 32,
     "max_num_batched_tokens": 4096,
-    "max_model_len": 32768,
+    "max_model_len": 16384,
 }
 
 # Sampling parameters
@@ -21,9 +21,9 @@ SAMPLING_CONFIG = {
     "repetition_penalty": 1.05,
     "top_p": 0.95,
     "min_tokens": 32,
-    "max_tokens": 32768,
+    "max_tokens": 12288,
     "skip_special_tokens": True,
-    "n": 16,
+    "n": 1,
 }
 
 # Data paths
