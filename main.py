@@ -91,7 +91,7 @@ def main():
 
     # Process outputs
     for prob_idx, output in enumerate(outputs):
-        real_answer = solutions[prob_idx]
+        real_answer = float(solutions[prob_idx])  # Convert to float here
 
         # Get most common answer from all samples
         sample_texts = [sample.text for sample in output.outputs]
