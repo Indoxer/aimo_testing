@@ -12,7 +12,11 @@ from evaluator import EvaluationResult, ProblemEvaluator
 
 def setup_directories() -> None:
     """Set up and clean output directories."""
-    for dir_path in [DATA_DIR, LATEX_DIR]:
+    dirs_to_setup = [DATA_DIR]
+    if ENABLE_LATEX:
+        dirs_to_setup.append(LATEX_DIR)
+
+    for dir_path in dirs_to_setup:
         if dir_path.exists():
             for file in dir_path.glob("*"):
                 file.unlink()
@@ -90,19 +94,20 @@ def main():
                 f.write(f"Predicted answer: {predicted_answer}\n")
                 f.write(f"Valid answer: {real_answer}")
 
-            # Generate LaTeX
-            try:
-                render_latex(
-                    output.prompt,
-                    sample.text,
-                    predicted_answer,
-                    real_answer,
-                    LATEX_DIR / f"latex_{prob_idx}_{sample_idx}",
-                )
-            except Exception as e:
-                print(
-                    f"Error generating LaTeX for problem {prob_idx}, sample {sample_idx}: {str(e)}"
-                )
+            # Generate LaTeX if enabled
+            if ENABLE_LATEX:
+                try:
+                    render_latex(
+                        output.prompt,
+                        sample.text,
+                        predicted_answer,
+                        real_answer,
+                        LATEX_DIR / f"latex_{prob_idx}_{sample_idx}",
+                    )
+                except Exception as e:
+                    print(
+                        f"Error generating LaTeX for problem {prob_idx}, sample {sample_idx}: {str(e)}"
+                    )
 
         # Update statistics
         if correct_per_problem[prob_idx] > 0:
@@ -119,10 +124,11 @@ def main():
             f"(First try: {correct_first_try > prob_idx})"
         )
 
-    # Clean up non-PDF files
-    for file in LATEX_DIR.glob("*"):
-        if file.suffix != ".pdf":
-            file.unlink()
+    # Clean up non-PDF files if LaTeX was enabled
+    if ENABLE_LATEX:
+        for file in LATEX_DIR.glob("*"):
+            if file.suffix != ".pdf":
+                file.unlink()
 
     # Create and print evaluation results
     results = EvaluationResult(

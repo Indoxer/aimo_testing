@@ -33,5 +33,8 @@ DATASET_PATH = (
 # Problem prompt template
 PROBLEM_PROMPT = "Please reason step by step, and put your final answer within \\boxed{{}}. Provide only one \\boxed{{}}.\n The problem: \n{}\n"
 
+# Feature flags
+ENABLE_LATEX = False  # Set to True to enable LaTeX compilation
+
 # Evaluation settings
 MAJORITY_THRESHOLD = 8  # More than half of samples needed for majority vote
