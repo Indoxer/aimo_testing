@@ -8,9 +8,9 @@ LATEX_DIR = Path("data2")
 MODEL_CONFIG = {
     "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
     "dtype": "half",
-    "gpu_memory_utilization": 0.85,
+    "gpu_memory_utilization": 0.95,
     "enable_chunked_prefill": True,
-    "max_num_seqs": 32,
+    "max_num_seqs": 16,
     "max_num_batched_tokens": 4096,
     "max_model_len": 16384,
 }
