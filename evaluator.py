@@ -34,18 +34,22 @@ class EvaluationResult:
 class ProblemEvaluator:
     @staticmethod
     def extract_answer(text: str) -> float:
-        """Extract and convert boxed answer from generated text."""
-        # Look for \boxed{...} pattern, handling potential whitespace
-        match = re.search(r"\\boxed\s*{\s*([^{}]+?)\s*}", text)
-        if not match:
-            raise ValueError("No boxed answer found")
+        """Extract and convert the last boxed answer from generated text."""
+        # Find all \boxed{...} patterns in the text, handling potential whitespace
+        matches = list(re.finditer(r"\\boxed\s*{\s*([^{}]+?)\s*}", text))
+        if not matches:
+            raise ValueError("No \\boxed{} answer found in the generated text")
+
+        # Get the last match
+        last_match = matches[-1]
         try:
             # Clean up the answer string and convert to float
-            answer_str = match.group(1).strip()
+            answer_str = last_match.group(1).strip()
             return float(answer_str)
         except ValueError:
-            print(f"Failed to convert answer to float: {match.group(1)}")
-            raise
+            raise ValueError(
+                f"Failed to convert answer '{last_match.group(1)}' to a number"
+            )
 
     @staticmethod
     def evaluate_sample(generated: str, solution: float) -> bool:
@@ -53,6 +57,6 @@ class ProblemEvaluator:
         try:
             predicted = ProblemEvaluator.extract_answer(generated)
             return float(solution) == predicted
-        except (ValueError, IndexError):
-            print("Error evaluating sample")
+        except (ValueError, IndexError) as e:
+            print(f"Error evaluating sample: {str(e)}")
             return False

@@ -76,9 +76,11 @@ def main():
             try:
                 if evaluator.evaluate_sample(sample.text, real_answer):
                     correct_per_problem[prob_idx] += 1
-                    predicted_answer = str(evaluator.extract_answer(sample.text))
-            except ValueError:
-                print(f"Error evaluating problem {prob_idx}, sample {sample_idx}")
+                predicted_answer = str(evaluator.extract_answer(sample.text))
+            except ValueError as e:
+                print(
+                    f"Error evaluating problem {prob_idx}, sample {sample_idx}: {str(e)}"
+                )
 
             # Save output files
             output_path = DATA_DIR / f"output_{prob_idx}_{sample_idx}.txt"
@@ -97,8 +99,10 @@ def main():
                     real_answer,
                     LATEX_DIR / f"latex_{prob_idx}_{sample_idx}",
                 )
-            except:
-                pass
+            except Exception as e:
+                print(
+                    f"Error generating LaTeX for problem {prob_idx}, sample {sample_idx}: {str(e)}"
+                )
 
         # Update statistics
         if correct_per_problem[prob_idx] > 0:
