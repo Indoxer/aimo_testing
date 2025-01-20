@@ -10,7 +10,7 @@ MODEL_CONFIG = {
     "dtype": "half",
     "gpu_memory_utilization": 0.85,
     "enable_chunked_prefill": True,
-    "max_num_seqs": 64,
+    "max_num_seqs": 32,
     "max_num_batched_tokens": 4096,
 }
 
